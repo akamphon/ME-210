@@ -728,6 +728,62 @@ So the magnitude of the reaction is inversely proportional to the distance away 
 \end{gathered} \]
 \end{solution}
 
+\begin{example} Three bars attached to a rigid beam
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{pictures/Axial-load/3-bars-rigid-beam}
+  \end{figure}
+
+  Determine the internal forces in the three horizontal members if they have the same $A$ and $E$?
+\end{example}
+\begin{solution}
+
+  Drawing a free body diagram of each component shows that the application of equlibrium equation should be done on the rigid beam to express $P$ in terms of internal forces in the members $F_1, F_2, F_3$. Assuming all internal forces are tensile, they all point upward on the rigid beam. As such, the force equilibrium equation can be written as.
+
+ \[ F_1 + F_2 + F_3 = P \]
+
+ The internal forces and not acting along the axis of the rigid beam, hence we must make sure that the total moment on the beam is zero as well. Using the leftmost point on the rigid beam as a fulcrum, we have that
+
+ $$ F_2 L + F_3 (2L) = P \frac{L}{2} $$
+
+ This can be reduced to 
+
+ $$ F_2 + 2F_3 = \frac{P}{2} $$
+
+ At this point we have 3 unknown internal forces, but only 2 equations. We need an additional one using compatibility equation
+
+ At this point we have 3 unknown internal forces, but only 2 equations. We need an additional one using compatibility equation. In this problem, the horizontal rigid beam is key. Being rigid, the beam must remain straight (though not necessarily horizontal), and we can use this to derive our compatibility equation. The problem is asymmetrical, as $P$ is off-center, so we may assume that the rigid beam would tilt slightly. This will results in the deformation of all three members being proportional, as shown in the following figure.
+
+ % \begin{figure}[H]
+ % \end{figure}
+
+ From the given geometry, we can derive a compatibility equation using a similar triangle relation.
+
+ $$ \frac{\delta_1 - \delta_3}{2L} = \frac{\delta_2 - \delta_3}{L} $$
+ $$ \delta_1 - \delta_3 = 2\delta_2 - 2\delta_3 $$
+ $$ \delta_1 = 2\delta_2 - \delta_3 $$
+
+ The next step is to convert the compatibility equation to its expression in force using Hooke's law.
+
+ $$ \frac{F_1 L}{AE} = 2\frac{F_2 L}{AE} - \frac{F_3 L}{AE} $$
+ $$ F_1 = 2F_2 - F_3 $$
+
+ We now have the third equation to solve for our system. You may choose to solve for each internal force in any order, though in this example we will start with $F_3$. So write all other internal forces in terms of $F_3$.
+
+ $$ F_2 = \frac{P}{2} - 2F_3 $$
+ $$ F_1 = 2F_2 - F_3 = P - 5F_3 $$
+
+ Now, substitute this into the first equilibrium equation.
+
+ $$ F_1 + F_2 + F_3 = P - 5F_3 + {P \over 2} - 2F_3 + F_3 = P $$
+ $$ 6F_3 = {P \over 2} $$
+ $$ F_3 = {P \over 12} $$
+
+ $$ F_1 = P - 5 {P \over 12} = {7P \over 12} $$
+ $$ F_2 = {P \over 2} - {2P \over 12} = {P \over 3} $$
+\end{solution}
+
+
 \section{Statically Indeterminate Systems with Thermal Effects}
 
 As mentioned in section 1.3, external loads are not the only sources of stress and strains in a structure. Changes in temperature can produce expansion or contraction of the material, resulting in thermal strains and stresses.
@@ -739,9 +795,11 @@ In statically indeterminate structures, the total change in length when consider
   
   \centering
   \begin{tikzpicture}
-    \node [draw, rectangle, pattern=north east lines, minimum height=3cm, minimum width=1.5cm](lwall){};
+    \node [rectangle, pattern=north east lines, minimum height=3cm, minimum width=1.5cm](lwall){};
+    \draw (lwall.south east) -- (lwall.north east);
     \node at (lwall.east) [anchor=west, draw, rectangle, top color=LightSkyBlue, bottom color=LightSkyBlue, middle color=LightSkyBlue!50, minimum height=5mm, minimum width=7cm](bar){};
-    \node at (bar.east) [anchor=west, draw, rectangle, pattern=north east lines, minimum height=3cm, minimum width=1.5cm](rwall){};
+    \node at (bar.east) [anchor=west, rectangle, pattern=north east lines, minimum height=3cm, minimum width=1.5cm](rwall){};
+    \draw (rwall.south west) -- (rwall.north west);
     \node at (bar.north west) [above right]{A};
     \node at (bar.north east) [above left]{B};
     \draw [->, line width=5pt] (bar.center) ++ (0:0.5) node[above, yshift=0.2cm]{C} --++ (180:1.5) node[left]{$P$};
@@ -780,6 +838,7 @@ In statically indeterminate structures, the total change in length when consider
   \[\Delta T =  - \frac{{PAE}}{\alpha }\frac{{{L_{CB}}}}{L}\]
   
 \end{solution}
+
 \section{Inelastic Deformation}
 
 In the previous sections, we have discussed the analysis of structures when the material stress never exceeds yield strength. However, in some engineering applications, especially in designing steel members, the design must take into account the behavior after the stress has reached yield strength. To meaningfully analyze the behavior into the plastic regime of deformation, we must first introduce the concept of elastic perfectly plastic materials.

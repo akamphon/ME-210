@@ -35,114 +35,114 @@
 \contentsline {subsection}{Changes in Length of Axially Loaded Members}{11}{section.2.1}
 \contentsline {subsection}{Change in Length of Nonuniform Members}{12}{equation.2.1.1}
 \contentsline {section}{\numberline {2.2}Statically Indeterminate Systems}{14}{section.2.2}
-\contentsline {section}{\numberline {2.3}Statically Indeterminate Systems with Thermal Effects}{15}{section.2.3}
-\contentsline {section}{\numberline {2.4}Inelastic Deformation}{16}{section.2.4}
-\contentsline {subsection}{Elastic perfectly plastic materials}{16}{section.2.4}
-\contentsline {subsection}{Residual Stress}{17}{figure.caption.19}
-\contentsline {section}{\numberline {2.5}Dynamic Loading and Material Response}{18}{section.2.5}
-\contentsline {subsection}{Impact loading}{19}{section.2.5}
-\contentsline {chapter}{\numberline {3}Analysis of Members under Torsion}{23}{chapter.3}
-\contentsline {section}{\numberline {3.1}Simple torsion}{23}{section.3.1}
-\contentsline {subsection}{Torsion of circular elastic bars}{23}{section.3.1}
-\contentsline {section}{\numberline {3.2}Nonuniform Torsion}{26}{section.3.2}
-\contentsline {subsection}{Nonuniform Torsion}{26}{section.3.2}
-\contentsline {section}{\numberline {3.3}Statically Indeterminate Members under Torsion}{27}{section.3.3}
-\contentsline {section}{\numberline {3.4}Power Transmission}{28}{section.3.4}
-\contentsline {section}{\numberline {3.5}Torsion of Thin-walled Tubular Members}{28}{section.3.5}
-\contentsline {paragraph}{Shear flow.}{29}{section.3.5}
-\contentsline {paragraph}{Shear stress.}{29}{equation.3.5.12}
-\contentsline {paragraph}{Angle of twist.}{29}{equation.3.5.13}
-\contentsline {chapter}{\numberline {4}Analysis of Beam Bending}{32}{chapter.4}
-\contentsline {section}{\numberline {4.1}Symmetric Beam Bending}{32}{section.4.1}
-\contentsline {subsection}{Longitudinal strains in beams}{32}{section.4.1}
-\contentsline {subsection}{Normal stresses in beams}{33}{equation.4.1.1}
-\contentsline {subsection}{Moment-curvature formula}{34}{equation.4.1.3}
-\contentsline {subsection}{Elastic Flexure Formula}{35}{equation.4.1.4}
-\contentsline {subsection}{Maximum stress at a cross section}{35}{equation.4.1.5}
-\contentsline {section}{\numberline {4.2}Beams of Composite Cross Sections}{36}{section.4.2}
-\contentsline {subsection}{Strains and stresses}{36}{section.4.2}
-\contentsline {subsection}{Neutral axis}{36}{equation.4.2.8}
-\contentsline {subsection}{Moment-curvature relationship}{37}{equation.4.2.10}
-\contentsline {paragraph}{Parallel Axis Theorem}{38}{equation.4.2.12}
-\contentsline {subsection}{Normal stresses}{38}{equation.4.2.13}
-\contentsline {section}{\numberline {4.3}Doubly Symmetric Beams with Inclined Loads}{40}{section.4.3}
-\contentsline {subsection}{Bending stresses}{40}{figure.caption.42}
-\contentsline {subsection}{Neutral axis}{41}{equation.4.3.15}
-\contentsline {section}{\numberline {4.4}Shear stresses in beams}{41}{section.4.4}
-\contentsline {section}{\numberline {4.5}Shear Flow}{43}{section.4.5}
-\contentsline {subsection}{Shear flow in Built-Up Members}{43}{section.4.5}
-\contentsline {subsection}{Shear flow in thin-walled members}{43}{figure.caption.44}
-\contentsline {section}{\numberline {4.6}Shear Center}{45}{section.4.6}
-\contentsline {section}{\numberline {4.7}Bending in Curved Beams}{47}{section.4.7}
-\contentsline {subsection}{Strains and stresses}{47}{figure.caption.47}
-\contentsline {subsection}{Neutral axis}{48}{equation.4.7.24}
-\contentsline {subsection}{Moment-stress distribution relationship}{49}{thmt@dummyctr.dummy.28}
-\contentsline {chapter}{\numberline {5}Analysis of Beam Deflection}{52}{chapter.5}
-\contentsline {section}{\numberline {5.1}Direct Integration Approach}{52}{section.5.1}
-\contentsline {subsection}{Deflections by integration of the shear force and load equations}{55}{thmt@dummyctr.dummy.30}
-\contentsline {section}{\numberline {5.2}Energy Approach}{55}{section.5.2}
-\contentsline {subsection}{Strain Energy of Bending}{55}{section.5.2}
-\contentsline {subsection}{Castigliano\IeC {\textquoteright }s theorem}{56}{equation.5.2.11}
-\contentsline {subsection}{The use of a fictitious load}{57}{equation.5.2.12}
-\contentsline {subsection}{Differentiation under the integral sign}{59}{figure.caption.53}
-\contentsline {chapter}{\numberline {6}Analysis of Multiaxial Stress}{62}{chapter.6}
-\contentsline {section}{\numberline {6.1}Plane Stress}{62}{section.6.1}
-\contentsline {section}{\numberline {6.2}Stress Transformation for Plane Stress}{62}{section.6.2}
-\contentsline {paragraph}{Sign Convention:}{62}{section.6.2}
-\contentsline {paragraph}{Normal and Shear Stress Components:}{63}{figure.caption.58}
-\contentsline {section}{\numberline {6.3}Mohr\IeC {\textquoteright }s Circle for Stress Transformation}{63}{section.6.3}
-\contentsline {subsection}{Principal Stresses for Plane Stress}{65}{equation.6.3.2}
-\contentsline {subsection}{Maximum In-Plane Shear Stresses}{65}{equation.6.3.3}
-\contentsline {section}{\numberline {6.4}Hooke\IeC {\textquoteright }s Law for Plane Stress}{66}{section.6.4}
-\contentsline {subsection}{Special cases of Hooke\IeC {\textquoteright }s law}{67}{equation.6.4.8}
-\contentsline {subsection}{Unit volume change}{67}{equation.6.4.11}
-\contentsline {section}{\numberline {6.5}Triaxial Stress}{68}{section.6.5}
-\contentsline {subsection}{Hooke\IeC {\textquoteright }s law for triaxial stress}{68}{equation.6.5.14}
-\contentsline {subsection}{Unit Volume Change}{69}{equation.6.5.16}
-\contentsline {subsection}{Spherical stress}{69}{equation.6.5.18}
-\contentsline {subsection}{Absolute Maximum Shear Stress}{70}{thmt@dummyctr.dummy.38}
-\contentsline {section}{\numberline {6.6}Plane Strain}{71}{section.6.6}
-\contentsline {section}{\numberline {6.7}Plane-Strain Transformation}{72}{section.6.7}
-\contentsline {subsection}{Principal Strains}{74}{equation.6.7.28}
-\contentsline {subsection}{Maximum In-Plane Shear Strain}{74}{equation.6.7.30}
-\contentsline {subsection}{Mohr's Circle for Plane Strain}{74}{equation.6.7.32}
-\contentsline {section}{\numberline {6.8}Absolute Maximum Shear Strain}{75}{section.6.8}
-\contentsline {section}{\numberline {6.9}Strain Rosette}{75}{section.6.9}
-\contentsline {chapter}{\numberline {7}Analysis of Members under Combined Loadings}{80}{chapter.7}
-\contentsline {section}{\numberline {7.1}Thin-Walled Pressure Vessels}{80}{section.7.1}
-\contentsline {subsection}{Cylindrical vessels}{80}{section.7.1}
-\contentsline {subsection}{Spherical Vessels}{81}{equation.7.1.2}
-\contentsline {section}{\numberline {7.2}State of Stress Caused by Combined Loadings}{82}{section.7.2}
-\contentsline {chapter}{\numberline {8}Energy Method}{85}{chapter.8}
-\contentsline {section}{\numberline {8.1}Mechanical Work}{85}{section.8.1}
-\contentsline {paragraph}{Work of a force.}{85}{section.8.1}
-\contentsline {paragraph}{Work of a Moment.}{86}{equation.8.1.3}
-\contentsline {section}{\numberline {8.2}Strain Energy}{87}{section.8.2}
-\contentsline {subparagraph}{Normal Stress.}{87}{section.8.2}
-\contentsline {paragraph}{Shear Stress.}{87}{equation.8.2.9}
-\contentsline {paragraph}{Multiaxial Stress.}{87}{equation.8.2.11}
-\contentsline {section}{\numberline {8.3}Strain Energy for Different Types of Loading}{88}{section.8.3}
-\contentsline {paragraph}{Axial Load.}{88}{section.8.3}
-\contentsline {paragraph}{Bending Moment.}{88}{equation.8.3.16}
-\contentsline {paragraph}{Transverse Shear.}{89}{equation.8.3.17}
-\contentsline {paragraph}{Torsional Moment.}{89}{equation.8.3.19}
-\contentsline {section}{\numberline {8.4}Principle of Virtual Work}{89}{section.8.4}
-\contentsline {paragraph}{Internal Virtual Work.}{90}{equation.8.4.23}
-\contentsline {section}{\numberline {8.5}Application of Energy Methods}{90}{section.8.5}
-\contentsline {subsection}{Trusses}{90}{section.8.5}
-\contentsline {subsection}{Beams}{92}{thmt@dummyctr.dummy.48}
-\contentsline {chapter}{\numberline {9}Introduction to Theories of Failure}{95}{chapter.9}
-\contentsline {section}{\numberline {9.1}Yield and Fracture}{95}{section.9.1}
-\contentsline {subsection}{Maximum shear stress theory (Tresca criteria)}{95}{section.9.1}
-\contentsline {subsection}{Maximum distortion energy theory (Von Mises criteria)}{96}{equation.9.1.4}
-\contentsline {subsection}{Ductile Coulomb-Mohr theory}{99}{Item.88}
-\contentsline {subsection}{Maximum principal stress theory}{100}{equation.9.1.9}
-\contentsline {subsection}{Modified Coulomb-Mohr theory}{101}{equation.9.1.10}
-\contentsline {subsection}{Criterion selection}{101}{figure.caption.88}
-\contentsline {section}{\numberline {9.2}Fatigue}{101}{section.9.2}
-\contentsline {subsection}{Fatigue under zero mean stress}{103}{figure.caption.90}
-\contentsline {subsection}{Fatigue under nonzero mean stress}{103}{equation.9.2.14}
-\contentsline {section}{\numberline {9.3}Buckling}{104}{section.9.3}
-\contentsline {subsection}{Ideal column with pin supports}{105}{section.9.3}
-\contentsline {subsection}{Columns having various types of supports}{107}{equation.9.3.22}
-\contentsline {chapter}{Bibliography}{112}{chapter*.102}
+\contentsline {section}{\numberline {2.3}Statically Indeterminate Systems with Thermal Effects}{17}{section.2.3}
+\contentsline {section}{\numberline {2.4}Inelastic Deformation}{18}{section.2.4}
+\contentsline {subsection}{Elastic perfectly plastic materials}{18}{section.2.4}
+\contentsline {subsection}{Residual Stress}{18}{figure.caption.20}
+\contentsline {section}{\numberline {2.5}Dynamic Loading and Material Response}{20}{section.2.5}
+\contentsline {subsection}{Impact loading}{20}{section.2.5}
+\contentsline {chapter}{\numberline {3}Analysis of Members under Torsion}{24}{chapter.3}
+\contentsline {section}{\numberline {3.1}Simple torsion}{24}{section.3.1}
+\contentsline {subsection}{Torsion of circular elastic bars}{24}{section.3.1}
+\contentsline {section}{\numberline {3.2}Nonuniform Torsion}{27}{section.3.2}
+\contentsline {subsection}{Nonuniform Torsion}{27}{section.3.2}
+\contentsline {section}{\numberline {3.3}Statically Indeterminate Members under Torsion}{28}{section.3.3}
+\contentsline {section}{\numberline {3.4}Power Transmission}{29}{section.3.4}
+\contentsline {section}{\numberline {3.5}Torsion of Thin-walled Tubular Members}{29}{section.3.5}
+\contentsline {paragraph}{Shear flow.}{30}{section.3.5}
+\contentsline {paragraph}{Shear stress.}{30}{equation.3.5.12}
+\contentsline {paragraph}{Angle of twist.}{30}{equation.3.5.13}
+\contentsline {chapter}{\numberline {4}Analysis of Beam Bending}{33}{chapter.4}
+\contentsline {section}{\numberline {4.1}Symmetric Beam Bending}{33}{section.4.1}
+\contentsline {subsection}{Longitudinal strains in beams}{33}{section.4.1}
+\contentsline {subsection}{Normal stresses in beams}{34}{equation.4.1.1}
+\contentsline {subsection}{Moment-curvature formula}{35}{equation.4.1.3}
+\contentsline {subsection}{Elastic Flexure Formula}{36}{equation.4.1.4}
+\contentsline {subsection}{Maximum stress at a cross section}{36}{equation.4.1.5}
+\contentsline {section}{\numberline {4.2}Beams of Composite Cross Sections}{37}{section.4.2}
+\contentsline {subsection}{Strains and stresses}{37}{section.4.2}
+\contentsline {subsection}{Neutral axis}{37}{equation.4.2.8}
+\contentsline {subsection}{Moment-curvature relationship}{38}{equation.4.2.10}
+\contentsline {paragraph}{Parallel Axis Theorem}{39}{equation.4.2.12}
+\contentsline {subsection}{Normal stresses}{39}{equation.4.2.13}
+\contentsline {section}{\numberline {4.3}Doubly Symmetric Beams with Inclined Loads}{41}{section.4.3}
+\contentsline {subsection}{Bending stresses}{41}{figure.caption.43}
+\contentsline {subsection}{Neutral axis}{42}{equation.4.3.15}
+\contentsline {section}{\numberline {4.4}Shear stresses in beams}{42}{section.4.4}
+\contentsline {section}{\numberline {4.5}Shear Flow}{44}{section.4.5}
+\contentsline {subsection}{Shear flow in Built-Up Members}{44}{section.4.5}
+\contentsline {subsection}{Shear flow in thin-walled members}{44}{figure.caption.45}
+\contentsline {section}{\numberline {4.6}Shear Center}{46}{section.4.6}
+\contentsline {section}{\numberline {4.7}Bending in Curved Beams}{48}{section.4.7}
+\contentsline {subsection}{Strains and stresses}{48}{figure.caption.48}
+\contentsline {subsection}{Neutral axis}{49}{equation.4.7.24}
+\contentsline {subsection}{Moment-stress distribution relationship}{50}{thmt@dummyctr.dummy.30}
+\contentsline {chapter}{\numberline {5}Analysis of Beam Deflection}{53}{chapter.5}
+\contentsline {section}{\numberline {5.1}Direct Integration Approach}{53}{section.5.1}
+\contentsline {subsection}{Deflections by integration of the shear force and load equations}{56}{thmt@dummyctr.dummy.32}
+\contentsline {section}{\numberline {5.2}Energy Approach}{56}{section.5.2}
+\contentsline {subsection}{Strain Energy of Bending}{56}{section.5.2}
+\contentsline {subsection}{Castigliano\IeC {\textquoteright }s theorem}{57}{equation.5.2.11}
+\contentsline {subsection}{The use of a fictitious load}{58}{equation.5.2.12}
+\contentsline {subsection}{Differentiation under the integral sign}{60}{figure.caption.54}
+\contentsline {chapter}{\numberline {6}Analysis of Multiaxial Stress}{63}{chapter.6}
+\contentsline {section}{\numberline {6.1}Plane Stress}{63}{section.6.1}
+\contentsline {section}{\numberline {6.2}Stress Transformation for Plane Stress}{63}{section.6.2}
+\contentsline {paragraph}{Sign Convention:}{63}{section.6.2}
+\contentsline {paragraph}{Normal and Shear Stress Components:}{64}{figure.caption.59}
+\contentsline {section}{\numberline {6.3}Mohr\IeC {\textquoteright }s Circle for Stress Transformation}{64}{section.6.3}
+\contentsline {subsection}{Principal Stresses for Plane Stress}{66}{equation.6.3.2}
+\contentsline {subsection}{Maximum In-Plane Shear Stresses}{66}{equation.6.3.3}
+\contentsline {section}{\numberline {6.4}Hooke\IeC {\textquoteright }s Law for Plane Stress}{67}{section.6.4}
+\contentsline {subsection}{Special cases of Hooke\IeC {\textquoteright }s law}{68}{equation.6.4.8}
+\contentsline {subsection}{Unit volume change}{68}{equation.6.4.11}
+\contentsline {section}{\numberline {6.5}Triaxial Stress}{69}{section.6.5}
+\contentsline {subsection}{Hooke\IeC {\textquoteright }s law for triaxial stress}{69}{equation.6.5.14}
+\contentsline {subsection}{Unit Volume Change}{70}{equation.6.5.16}
+\contentsline {subsection}{Spherical stress}{70}{equation.6.5.18}
+\contentsline {subsection}{Absolute Maximum Shear Stress}{71}{thmt@dummyctr.dummy.40}
+\contentsline {section}{\numberline {6.6}Plane Strain}{72}{section.6.6}
+\contentsline {section}{\numberline {6.7}Plane-Strain Transformation}{73}{section.6.7}
+\contentsline {subsection}{Principal Strains}{75}{equation.6.7.28}
+\contentsline {subsection}{Maximum In-Plane Shear Strain}{75}{equation.6.7.30}
+\contentsline {subsection}{Mohr's Circle for Plane Strain}{75}{equation.6.7.32}
+\contentsline {section}{\numberline {6.8}Absolute Maximum Shear Strain}{76}{section.6.8}
+\contentsline {section}{\numberline {6.9}Strain Rosette}{76}{section.6.9}
+\contentsline {chapter}{\numberline {7}Analysis of Members under Combined Loadings}{81}{chapter.7}
+\contentsline {section}{\numberline {7.1}Thin-Walled Pressure Vessels}{81}{section.7.1}
+\contentsline {subsection}{Cylindrical vessels}{81}{section.7.1}
+\contentsline {subsection}{Spherical Vessels}{82}{equation.7.1.2}
+\contentsline {section}{\numberline {7.2}State of Stress Caused by Combined Loadings}{83}{section.7.2}
+\contentsline {chapter}{\numberline {8}Energy Method}{86}{chapter.8}
+\contentsline {section}{\numberline {8.1}Mechanical Work}{86}{section.8.1}
+\contentsline {paragraph}{Work of a force.}{86}{section.8.1}
+\contentsline {paragraph}{Work of a Moment.}{87}{equation.8.1.3}
+\contentsline {section}{\numberline {8.2}Strain Energy}{88}{section.8.2}
+\contentsline {subparagraph}{Normal Stress.}{88}{section.8.2}
+\contentsline {paragraph}{Shear Stress.}{88}{equation.8.2.9}
+\contentsline {paragraph}{Multiaxial Stress.}{88}{equation.8.2.11}
+\contentsline {section}{\numberline {8.3}Strain Energy for Different Types of Loading}{89}{section.8.3}
+\contentsline {paragraph}{Axial Load.}{89}{section.8.3}
+\contentsline {paragraph}{Bending Moment.}{89}{equation.8.3.16}
+\contentsline {paragraph}{Transverse Shear.}{90}{equation.8.3.17}
+\contentsline {paragraph}{Torsional Moment.}{90}{equation.8.3.19}
+\contentsline {section}{\numberline {8.4}Principle of Virtual Work}{90}{section.8.4}
+\contentsline {paragraph}{Internal Virtual Work.}{91}{equation.8.4.23}
+\contentsline {section}{\numberline {8.5}Application of Energy Methods}{91}{section.8.5}
+\contentsline {subsection}{Trusses}{91}{section.8.5}
+\contentsline {subsection}{Beams}{93}{thmt@dummyctr.dummy.50}
+\contentsline {chapter}{\numberline {9}Introduction to Theories of Failure}{96}{chapter.9}
+\contentsline {section}{\numberline {9.1}Yield and Fracture}{96}{section.9.1}
+\contentsline {subsection}{Maximum shear stress theory (Tresca criteria)}{96}{section.9.1}
+\contentsline {subsection}{Maximum distortion energy theory (Von Mises criteria)}{97}{equation.9.1.4}
+\contentsline {subsection}{Ductile Coulomb-Mohr theory}{100}{Item.88}
+\contentsline {subsection}{Maximum principal stress theory}{101}{equation.9.1.9}
+\contentsline {subsection}{Modified Coulomb-Mohr theory}{102}{equation.9.1.10}
+\contentsline {subsection}{Criterion selection}{102}{figure.caption.89}
+\contentsline {section}{\numberline {9.2}Fatigue}{102}{section.9.2}
+\contentsline {subsection}{Fatigue under zero mean stress}{104}{figure.caption.91}
+\contentsline {subsection}{Fatigue under nonzero mean stress}{104}{equation.9.2.14}
+\contentsline {section}{\numberline {9.3}Buckling}{105}{section.9.3}
+\contentsline {subsection}{Ideal column with pin supports}{106}{section.9.3}
+\contentsline {subsection}{Columns having various types of supports}{108}{equation.9.3.22}
+\contentsline {chapter}{Bibliography}{113}{chapter*.103}

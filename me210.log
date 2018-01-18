@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.1.11)  16 JAN 2018 11:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.1.11)  18 JAN 2018 12:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -3003,324 +3003,352 @@ Package mdframed Info: mdframed works in twoside mode on input line 707.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 707.
-Package mdframed Info: mdframed works in twoside mode on input line 738.
+Package mdframed Info: mdframed works in twoside mode on input line 731.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 738.
- [15]
-Package mdframed Info: mdframed works in twoside mode on input line 754.
+(mdframed)              on input line 731.
+<pictures/Axial-load/3-bars-rigid-beam.pdf, id=663, 161.29059pt x 161.56158pt>
+File: pictures/Axial-load/3-bars-rigid-beam.pdf Graphic file (type pdf)
+<use pictures/Axial-load/3-bars-rigid-beam.pdf>
+Package pdftex.def Info: pictures/Axial-load/3-bars-rigid-beam.pdf  used on inp
+ut line 734.
+(pdftex.def)             Requested size: 173.18451pt x 173.483pt.
+ [15 <./pictures/Axial-load/3-bars-rigid-beam.pdf>]
+Package mdframed Info: mdframed works in twoside mode on input line 740.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 754.
- [16]
-Package mdframed Info: mdframed works in twoside mode on input line 811.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 811.
-Package mdframed Info: mdframed works in twoside mode on input line 821.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 821.
- [17] [18] [19] [20] [21] [22]
-Chapter 3.
-[23
+(mdframed)              on input line 740.
 
-] [24]
-Package mdframed Info: mdframed works in twoside mode on input line 1154.
+
+Package amsmath Warning: Foreign command \over;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 778.
+
+[16]
+Package mdframed Info: mdframed works in twoside mode on input line 794.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1154.
-<pictures/Static-body-load-analysis/torsion-problem.pdf, id=758, 505.89pt x 144
+(mdframed)              on input line 794.
+Package mdframed Info: mdframed works in twoside mode on input line 812.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 812.
+ [17] [18]
+Package mdframed Info: mdframed works in twoside mode on input line 870.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 870.
+Package mdframed Info: mdframed works in twoside mode on input line 880.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 880.
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 927.
+ [19]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[20] [21] [22] [23]
+Chapter 3.
+[24
+
+] [25]
+Package mdframed Info: mdframed works in twoside mode on input line 1213.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1213.
+<pictures/Static-body-load-analysis/torsion-problem.pdf, id=775, 505.89pt x 144
 .54pt>
 File: pictures/Static-body-load-analysis/torsion-problem.pdf Graphic file (type
  pdf)
 <use pictures/Static-body-load-analysis/torsion-problem.pdf>
 Package pdftex.def Info: pictures/Static-body-load-analysis/torsion-problem.pdf
-  used on input line 1160.
+  used on input line 1219.
 (pdftex.def)             Requested size: 379.41655pt x 108.40471pt.
-Package mdframed Info: mdframed works in twoside mode on input line 1166.
+Package mdframed Info: mdframed works in twoside mode on input line 1225.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1166.
- [25 <./pictures/Static-body-load-analysis/torsion-problem.pdf>]
-[26] [27]
-Package mdframed Info: mdframed works in twoside mode on input line 1309.
+(mdframed)              on input line 1225.
+ [26 <./pictures/Static-body-load-analysis/torsion-problem.pdf>]
+[27] [28]
+Package mdframed Info: mdframed works in twoside mode on input line 1368.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1309.
-Package mdframed Info: mdframed works in twoside mode on input line 1324.
+(mdframed)              on input line 1368.
+Package mdframed Info: mdframed works in twoside mode on input line 1383.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1324.
- [28]
-Package mdframed Info: mdframed works in twoside mode on input line 1387.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 1387.
+(mdframed)              on input line 1383.
  [29]
-Package mdframed Info: Not enough space on this page on input line 1413.
-Package mdframed Info: mdframed works in twoside mode on input line 1415.
+Package mdframed Info: mdframed works in twoside mode on input line 1446.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1415.
- [30] [31]
+(mdframed)              on input line 1446.
+ [30]
+Package mdframed Info: Not enough space on this page on input line 1472.
+Package mdframed Info: mdframed works in twoside mode on input line 1474.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1474.
+ [31] [32]
 Chapter 4.
-[32
+[33
 
-] [33] [34]
-Package mdframed Info: mdframed works in twoside mode on input line 1642.
+] [34] [35]
+Package mdframed Info: mdframed works in twoside mode on input line 1701.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1642.
-Package mdframed Info: mdframed works in twoside mode on input line 1659.
+(mdframed)              on input line 1701.
+Package mdframed Info: mdframed works in twoside mode on input line 1718.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1659.
- [35]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[36] [37]
+(mdframed)              on input line 1718.
+ [36]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-Package mdframed Info: mdframed works in twoside mode on input line 1829.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 1829.
-[38]
-Package mdframed Info: mdframed works in twoside mode on input line 1850.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 1850.
- [39] [40] [41]
-Package mdframed Info: mdframed works in twoside mode on input line 1990.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 1990.
-Package mdframed Info: mdframed works in twoside mode on input line 2012.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 2012.
- [42] [43] [44]
+[37] [38]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[45]
-Package mdframed Info: mdframed works in twoside mode on input line 2194.
+Package mdframed Info: mdframed works in twoside mode on input line 1888.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2194.
-Package mdframed Info: mdframed works in twoside mode on input line 2197.
+(mdframed)              on input line 1888.
+[39]
+Package mdframed Info: mdframed works in twoside mode on input line 1909.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2197.
- [46]
+(mdframed)              on input line 1909.
+ [40] [41] [42]
+Package mdframed Info: mdframed works in twoside mode on input line 2049.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 2049.
+Package mdframed Info: mdframed works in twoside mode on input line 2071.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 2071.
+ [43] [44] [45]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[47] [48]
-Package mdframed Info: mdframed works in twoside mode on input line 2332.
+[46]
+Package mdframed Info: mdframed works in twoside mode on input line 2253.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2332.
-Package mdframed Info: mdframed works in twoside mode on input line 2337.
+(mdframed)              on input line 2253.
+Package mdframed Info: mdframed works in twoside mode on input line 2256.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2337.
- [49] [50] [51]
+(mdframed)              on input line 2256.
+ [47]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[48] [49]
+Package mdframed Info: mdframed works in twoside mode on input line 2391.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 2391.
+Package mdframed Info: mdframed works in twoside mode on input line 2396.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 2396.
+ [50] [51] [52]
 Chapter 5.
-[52
+[53
 
-] [53]
-Package mdframed Info: mdframed works in twoside mode on input line 2545.
+] [54]
+Package mdframed Info: mdframed works in twoside mode on input line 2604.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2545.
-Package mdframed Info: mdframed works in twoside mode on input line 2562.
+(mdframed)              on input line 2604.
+Package mdframed Info: mdframed works in twoside mode on input line 2621.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2562.
- [54] [55]
+(mdframed)              on input line 2621.
+ [55] [56]
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 2651.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 2710.
 
-[56]
-Package mdframed Info: mdframed works in twoside mode on input line 2692.
+[57]
+Package mdframed Info: mdframed works in twoside mode on input line 2751.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2692.
-Package mdframed Info: mdframed works in twoside mode on input line 2710.
+(mdframed)              on input line 2751.
+Package mdframed Info: mdframed works in twoside mode on input line 2769.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2710.
- [57] [58]
-Package mdframed Info: mdframed works in twoside mode on input line 2787.
+(mdframed)              on input line 2769.
+ [58] [59]
+Package mdframed Info: mdframed works in twoside mode on input line 2846.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2787.
-Package mdframed Info: mdframed works in twoside mode on input line 2790.
+(mdframed)              on input line 2846.
+Package mdframed Info: mdframed works in twoside mode on input line 2849.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2790.
- [59]
-<pictures/Static-body-load-analysis/beam-def-midpoint-exercise.pdf, id=1064, 25
+(mdframed)              on input line 2849.
+ [60]
+<pictures/Static-body-load-analysis/beam-def-midpoint-exercise.pdf, id=1080, 25
 9.97125pt x 130.4875pt>
 File: pictures/Static-body-load-analysis/beam-def-midpoint-exercise.pdf Graphic
  file (type pdf)
 <use pictures/Static-body-load-analysis/beam-def-midpoint-exercise.pdf>
 Package pdftex.def Info: pictures/Static-body-load-analysis/beam-def-midpoint-e
-xercise.pdf  used on input line 2823.
+xercise.pdf  used on input line 2882.
 (pdftex.def)             Requested size: 181.97862pt x 91.3406pt.
-<pictures/Static-body-load-analysis/beam-def-moving-force-exercise.pdf, id=1067
+<pictures/Static-body-load-analysis/beam-def-moving-force-exercise.pdf, id=1083
 , 259.97125pt x 130.4875pt>
 File: pictures/Static-body-load-analysis/beam-def-moving-force-exercise.pdf Gra
 phic file (type pdf)
 <use pictures/Static-body-load-analysis/beam-def-moving-force-exercise.pdf>
 Package pdftex.def Info: pictures/Static-body-load-analysis/beam-def-moving-for
-ce-exercise.pdf  used on input line 2833.
+ce-exercise.pdf  used on input line 2892.
 (pdftex.def)             Requested size: 246.97128pt x 123.9624pt.
- [60 <./pictures/Static-body-load-analysis/beam-def-midpoint-exercise.pdf> <./p
+ [61 <./pictures/Static-body-load-analysis/beam-def-midpoint-exercise.pdf> <./p
 ictures/Static-body-load-analysis/beam-def-moving-force-exercise.pdf
 
 pdfTeX warning: pdflatex (file ./pictures/Static-body-load-analysis/beam-def-mo
 ving-force-exercise.pdf): PDF inclusion: multiple pdfs with page group included
  in a single page
->] [61]
+>] [62]
 Chapter 6.
-<pictures/Multiaxial/plane-stress.pdf, id=1103, 296.10625pt x 245.91875pt>
+<pictures/Multiaxial/plane-stress.pdf, id=1119, 296.10625pt x 245.91875pt>
 File: pictures/Multiaxial/plane-stress.pdf Graphic file (type pdf)
 <use pictures/Multiaxial/plane-stress.pdf>
 Package pdftex.def Info: pictures/Multiaxial/plane-stress.pdf  used on input li
-ne 2867.
+ne 2926.
 (pdftex.def)             Requested size: 207.27295pt x 172.14194pt.
 
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 2874.
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 2933.
 
 
 
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 2874.
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 2933.
 
 
 
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 2878.
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 2937.
 
 
 
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 2878.
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 2937.
 
 
-<pictures/Static-body-load-analysis/stress-transformation.pdf, id=1104, 578.16p
+<pictures/Static-body-load-analysis/stress-transformation.pdf, id=1120, 578.16p
 t x 289.08pt>
 File: pictures/Static-body-load-analysis/stress-transformation.pdf Graphic file
  (type pdf)
 <use pictures/Static-body-load-analysis/stress-transformation.pdf>
 Package pdftex.def Info: pictures/Static-body-load-analysis/stress-transformati
-on.pdf  used on input line 2882.
+on.pdf  used on input line 2941.
 (pdftex.def)             Requested size: 404.70924pt x 202.35461pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[62
+[63
 
  <./pictures/Multiaxial/plane-stress.pdf>]
 
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 2900.
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 2959.
 
 
 
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 2900.
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 2959.
 
 
-[63 <./pictures/Static-body-load-analysis/stress-transformation.pdf>] [64]
-Package mdframed Info: mdframed works in twoside mode on input line 2989.
+[64 <./pictures/Static-body-load-analysis/stress-transformation.pdf>] [65]
+Package mdframed Info: mdframed works in twoside mode on input line 3048.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2989.
-<pictures/Static-body-load-analysis/plane-stress-example.pdf, id=1133, 361.35pt
+(mdframed)              on input line 3048.
+<pictures/Static-body-load-analysis/plane-stress-example.pdf, id=1150, 361.35pt
  x 289.08pt>
 File: pictures/Static-body-load-analysis/plane-stress-example.pdf Graphic file 
 (type pdf)
 <use pictures/Static-body-load-analysis/plane-stress-example.pdf>
 Package pdftex.def Info: pictures/Static-body-load-analysis/plane-stress-exampl
-e.pdf  used on input line 2995.
+e.pdf  used on input line 3054.
 (pdftex.def)             Requested size: 180.67456pt x 144.53964pt.
-Package mdframed Info: mdframed works in twoside mode on input line 3000.
+Package mdframed Info: mdframed works in twoside mode on input line 3059.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 3000.
+(mdframed)              on input line 3059.
 
-[65 <./pictures/Static-body-load-analysis/plane-stress-example.pdf>] [66]
-[67] [68]
-Package mdframed Info: mdframed works in twoside mode on input line 3203.
+[66 <./pictures/Static-body-load-analysis/plane-stress-example.pdf>] [67]
+[68] [69]
+Package mdframed Info: mdframed works in twoside mode on input line 3262.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 3203.
-Package mdframed Info: mdframed works in twoside mode on input line 3206.
+(mdframed)              on input line 3262.
+Package mdframed Info: mdframed works in twoside mode on input line 3265.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 3206.
+(mdframed)              on input line 3265.
 Package mdframed Info: Box was splittet wrong
  starting loop to iterate the splitting point
-(mdframed)              on input line 3222.
- [69]
+(mdframed)              on input line 3281.
+ [70]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[70] [71]
+[71] [72]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[72] [73] [74] [75]
-Package mdframed Info: mdframed works in twoside mode on input line 3586.
+[73] [74] [75] [76]
+Package mdframed Info: mdframed works in twoside mode on input line 3645.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 3586.
-Package mdframed Info: mdframed works in twoside mode on input line 3604.
+(mdframed)              on input line 3645.
+Package mdframed Info: mdframed works in twoside mode on input line 3663.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 3604.
-Package mdframed Info: Not enough space on this page on input line 3653.
- [76]
-Package mdframed Info: Not enough space on this page on input line 3653.
+(mdframed)              on input line 3663.
+Package mdframed Info: Not enough space on this page on input line 3712.
  [77]
-<pictures/Static-body-load-analysis/plane-stress-exercise1.pdf, id=1253, 361.35
+Package mdframed Info: Not enough space on this page on input line 3712.
+ [78]
+<pictures/Static-body-load-analysis/plane-stress-exercise1.pdf, id=1269, 361.35
 pt x 289.08pt>
 File: pictures/Static-body-load-analysis/plane-stress-exercise1.pdf Graphic fil
 e (type pdf)
 <use pictures/Static-body-load-analysis/plane-stress-exercise1.pdf>
 Package pdftex.def Info: pictures/Static-body-load-analysis/plane-stress-exerci
-se1.pdf  used on input line 3669.
+se1.pdf  used on input line 3728.
 (pdftex.def)             Requested size: 234.87471pt x 187.89977pt.
-<pictures/Static-body-load-analysis/plane-stress-exercise2.pdf, id=1254, 361.35
+<pictures/Static-body-load-analysis/plane-stress-exercise2.pdf, id=1270, 361.35
 pt x 289.08pt>
 File: pictures/Static-body-load-analysis/plane-stress-exercise2.pdf Graphic fil
 e (type pdf)
 <use pictures/Static-body-load-analysis/plane-stress-exercise2.pdf>
 Package pdftex.def Info: pictures/Static-body-load-analysis/plane-stress-exerci
-se2.pdf  used on input line 3670.
+se2.pdf  used on input line 3729.
 (pdftex.def)             Requested size: 234.87471pt x 187.89977pt.
-<pictures/Static-body-load-analysis/plane-stress-exercise3.pdf, id=1255, 361.35
+<pictures/Static-body-load-analysis/plane-stress-exercise3.pdf, id=1271, 361.35
 pt x 289.08pt>
 File: pictures/Static-body-load-analysis/plane-stress-exercise3.pdf Graphic fil
 e (type pdf)
 <use pictures/Static-body-load-analysis/plane-stress-exercise3.pdf>
 Package pdftex.def Info: pictures/Static-body-load-analysis/plane-stress-exerci
-se3.pdf  used on input line 3671.
+se3.pdf  used on input line 3730.
 (pdftex.def)             Requested size: 234.87471pt x 187.89977pt.
 
-Overfull \hbox (18.28146pt too wide) in paragraph at lines 3669--3672
+Overfull \hbox (18.28146pt too wide) in paragraph at lines 3728--3731
 [][] [] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [78]
-[79 <./pictures/Static-body-load-analysis/plane-stress-exercise1.pdf> <./pictur
+ [79]
+[80 <./pictures/Static-body-load-analysis/plane-stress-exercise1.pdf> <./pictur
 es/Static-body-load-analysis/plane-stress-exercise2.pdf
 
 pdfTeX warning: pdflatex (file ./pictures/Static-body-load-analysis/plane-stres
@@ -3333,204 +3361,204 @@ s-exercise3.pdf): PDF inclusion: multiple pdfs with page group included in a si
 ngle page
 >]
 Chapter 7.
-<pictures/Combined-loadings/cylindrical-vessel-circ.pdf, id=1293, 252.945pt x 1
+<pictures/Combined-loadings/cylindrical-vessel-circ.pdf, id=1309, 252.945pt x 1
 51.56625pt>
 File: pictures/Combined-loadings/cylindrical-vessel-circ.pdf Graphic file (type
  pdf)
 <use pictures/Combined-loadings/cylindrical-vessel-circ.pdf>
 Package pdftex.def Info: pictures/Combined-loadings/cylindrical-vessel-circ.pdf
-  used on input line 3710.
+  used on input line 3769.
 (pdftex.def)             Requested size: 177.06029pt x 106.09564pt.
-<pictures/Combined-loadings/cylindrical-vessel-long.pdf, id=1294, 238.8925pt x 
+<pictures/Combined-loadings/cylindrical-vessel-long.pdf, id=1310, 238.8925pt x 
 259.97125pt>
 File: pictures/Combined-loadings/cylindrical-vessel-long.pdf Graphic file (type
  pdf)
 <use pictures/Combined-loadings/cylindrical-vessel-long.pdf>
 Package pdftex.def Info: pictures/Combined-loadings/cylindrical-vessel-long.pdf
-  used on input line 3728.
+  used on input line 3787.
 (pdftex.def)             Requested size: 167.2236pt x 181.97862pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[80
+[81
 
  <./pictures/Combined-loadings/cylindrical-vessel-circ.pdf>]
-<pictures/Combined-loadings/spherical-vessel.pdf, id=1312, 325.215pt x 303.1325
+<pictures/Combined-loadings/spherical-vessel.pdf, id=1329, 325.215pt x 303.1325
 pt>
 File: pictures/Combined-loadings/spherical-vessel.pdf Graphic file (type pdf)
 <use pictures/Combined-loadings/spherical-vessel.pdf>
 Package pdftex.def Info: pictures/Combined-loadings/spherical-vessel.pdf  used 
-on input line 3750.
+on input line 3809.
 (pdftex.def)             Requested size: 195.1305pt x 181.8809pt.
-Package mdframed Info: mdframed works in twoside mode on input line 3764.
+Package mdframed Info: mdframed works in twoside mode on input line 3823.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 3764.
- [81 <./pictures/Combined-loadings/cylindrical-vessel-long.pdf> <./pictures/Com
+(mdframed)              on input line 3823.
+ [82 <./pictures/Combined-loadings/cylindrical-vessel-long.pdf> <./pictures/Com
 bined-loadings/spherical-vessel.pdf
 
 pdfTeX warning: pdflatex (file ./pictures/Combined-loadings/spherical-vessel.pd
 f): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-Package mdframed Info: Not enough space on this page on input line 3765.
-Package mdframed Info: mdframed works in twoside mode on input line 3767.
+Package mdframed Info: Not enough space on this page on input line 3824.
+Package mdframed Info: mdframed works in twoside mode on input line 3826.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 3767.
-Package mdframed Info: mdframed works in twoside mode on input line 3790.
+(mdframed)              on input line 3826.
+Package mdframed Info: mdframed works in twoside mode on input line 3849.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 3790.
-Package mdframed Info: mdframed works in twoside mode on input line 3807.
+(mdframed)              on input line 3849.
+Package mdframed Info: mdframed works in twoside mode on input line 3866.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 3807.
- [82]
+(mdframed)              on input line 3866.
+ [83]
 <pictures/Static-body-load-analysis/multiaxial-cantilever-beam-exercise.pdf, id
-=1355, 390.45876pt x 180.675pt>
+=1372, 390.45876pt x 180.675pt>
 File: pictures/Static-body-load-analysis/multiaxial-cantilever-beam-exercise.pd
 f Graphic file (type pdf)
 <use pictures/Static-body-load-analysis/multiaxial-cantilever-beam-exercise.pdf
 >
 Package pdftex.def Info: pictures/Static-body-load-analysis/multiaxial-cantilev
-er-beam-exercise.pdf  used on input line 3835.
+er-beam-exercise.pdf  used on input line 3894.
 (pdftex.def)             Requested size: 273.31926pt x 126.47162pt.
 <pictures/Static-body-load-analysis/multiaxial-generator-shaft-exercise.pdf, id
-=1358, 79.29625pt x 209.78375pt>
+=1375, 79.29625pt x 209.78375pt>
 File: pictures/Static-body-load-analysis/multiaxial-generator-shaft-exercise.pd
 f Graphic file (type pdf)
 <use pictures/Static-body-load-analysis/multiaxial-generator-shaft-exercise.pdf
 >
 Package pdftex.def Info: pictures/Static-body-load-analysis/multiaxial-generato
-r-shaft-exercise.pdf  used on input line 3843.
+r-shaft-exercise.pdf  used on input line 3902.
 (pdftex.def)             Requested size: 63.43706pt x 167.82721pt.
- [83 <./pictures/Static-body-load-analysis/multiaxial-cantilever-beam-exercise.
-pdf>] [84 <./pictures/Static-body-load-analysis/multiaxial-generator-shaft-exer
+ [84 <./pictures/Static-body-load-analysis/multiaxial-cantilever-beam-exercise.
+pdf>] [85 <./pictures/Static-body-load-analysis/multiaxial-generator-shaft-exer
 cise.pdf>]
 Chapter 8.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[85
+[86
 
-] [86] [87] [88] [89] [90]
-Package mdframed Info: mdframed works in twoside mode on input line 4203.
+] [87] [88] [89] [90] [91]
+Package mdframed Info: mdframed works in twoside mode on input line 4262.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 4203.
-Package mdframed Info: mdframed works in twoside mode on input line 4217.
+(mdframed)              on input line 4262.
+Package mdframed Info: mdframed works in twoside mode on input line 4276.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 4217.
-Package mdframed Info: mdframed works in twoside mode on input line 4225.
+(mdframed)              on input line 4276.
+Package mdframed Info: mdframed works in twoside mode on input line 4284.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 4225.
-Package mdframed Info: mdframed works in twoside mode on input line 4244.
+(mdframed)              on input line 4284.
+Package mdframed Info: mdframed works in twoside mode on input line 4303.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 4244.
- [91]
-Package mdframed Info: mdframed works in twoside mode on input line 4294.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 4294.
+(mdframed)              on input line 4303.
  [92]
-Package mdframed Info: mdframed works in twoside mode on input line 4305.
+Package mdframed Info: mdframed works in twoside mode on input line 4353.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 4305.
+(mdframed)              on input line 4353.
+ [93]
+Package mdframed Info: mdframed works in twoside mode on input line 4364.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 4364.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [93]
-[94]
+ [94]
+[95]
 Chapter 9.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[95
+[96
 
-] [96]
+] [97]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-Package mdframed Info: mdframed works in twoside mode on input line 4500.
+Package mdframed Info: mdframed works in twoside mode on input line 4559.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 4500.
+(mdframed)              on input line 4559.
 Package mdframed Info: Box was splittet wrong
  starting loop to iterate the splitting point
-(mdframed)              on input line 4527.
-[97]
-Package mdframed Info: mdframed works in twoside mode on input line 4530.
+(mdframed)              on input line 4586.
+[98]
+Package mdframed Info: mdframed works in twoside mode on input line 4589.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 4530.
+(mdframed)              on input line 4589.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [98]
-[99] [100] [101]
+ [99]
+[100] [101] [102]
 Underfull \vbox (badness 2057) has occurred while \output is active []
 
- [102]
-Package mdframed Info: mdframed works in twoside mode on input line 4793.
+ [103]
+Package mdframed Info: mdframed works in twoside mode on input line 4852.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 4793.
-<pictures/Failure-theories/fatigue-example.pdf, id=1545, 296.10625pt x 158.5925
+(mdframed)              on input line 4852.
+<pictures/Failure-theories/fatigue-example.pdf, id=1562, 296.10625pt x 158.5925
 pt>
 File: pictures/Failure-theories/fatigue-example.pdf Graphic file (type pdf)
 <use pictures/Failure-theories/fatigue-example.pdf>
 Package pdftex.def Info: pictures/Failure-theories/fatigue-example.pdf  used on
- input line 4803.
+ input line 4862.
 (pdftex.def)             Requested size: 266.49315pt x 142.7319pt.
 
-[103]
-Package mdframed Info: mdframed works in twoside mode on input line 4809.
+[104]
+Package mdframed Info: mdframed works in twoside mode on input line 4868.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 4809.
- [104 <./pictures/Failure-theories/fatigue-example.pdf>]
+(mdframed)              on input line 4868.
+ [105 <./pictures/Failure-theories/fatigue-example.pdf>]
 
-LaTeX Warning: Command \textendash invalid in math mode on input line 4842.
+LaTeX Warning: Command \textendash invalid in math mode on input line 4901.
 
-[105] [106]
+[106] [107]
 
-LaTeX Warning: Command \textendash invalid in math mode on input line 4983.
+LaTeX Warning: Command \textendash invalid in math mode on input line 5042.
 
-[107]
-Package mdframed Info: mdframed works in twoside mode on input line 5057.
+[108]
+Package mdframed Info: mdframed works in twoside mode on input line 5116.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 5057.
-<pictures/Failure-theories/Rail_buckle.jpg, id=1604, 351.3125pt x 214.8025pt>
+(mdframed)              on input line 5116.
+<pictures/Failure-theories/Rail_buckle.jpg, id=1620, 351.3125pt x 214.8025pt>
 File: pictures/Failure-theories/Rail_buckle.jpg Graphic file (type jpg)
 <use pictures/Failure-theories/Rail_buckle.jpg>
 Package pdftex.def Info: pictures/Failure-theories/Rail_buckle.jpg  used on inp
-ut line 5061.
+ut line 5120.
 (pdftex.def)             Requested size: 245.91707pt x 150.36072pt.
-Package mdframed Info: mdframed works in twoside mode on input line 5066.
+Package mdframed Info: mdframed works in twoside mode on input line 5125.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 5066.
-Package mdframed Info: Not enough space on this page on input line 5104.
- [108 <./pictures/Failure-theories/Rail_buckle.jpg>]
-Package mdframed Info: Not enough space on this page on input line 5104.
- [109] [110] [111]
-[112
+(mdframed)              on input line 5125.
+Package mdframed Info: Not enough space on this page on input line 5163.
+ [109 <./pictures/Failure-theories/Rail_buckle.jpg>]
+Package mdframed Info: Not enough space on this page on input line 5163.
+ [110] [111] [112]
+[113
 
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 5244.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 5244.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 5303.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 5303.
  (./me210.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 5244.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 5244.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 5303.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 5303.
 
 Package rerunfilecheck Info: File `me210.out' has not changed.
-(rerunfilecheck)             Checksum: C2AEECFC3496B310E4A1B1C691FC930D;3708.
+(rerunfilecheck)             Checksum: A30B939F17CA1911AFABBC95C88C8EE6;3708.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -3540,10 +3568,10 @@ Package logreq Info: Writing requests to 'me210.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 47217 strings out of 492980
- 950653 string characters out of 6132974
- 1342405 words of memory out of 5000000
- 49366 multiletter control sequences out of 15000+600000
+ 47231 strings out of 492980
+ 951042 string characters out of 6132974
+ 1341503 words of memory out of 5000000
+ 49374 multiletter control sequences out of 15000+600000
  610913 words of font info for 116 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,16n,82p,10379b,1301s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3552,25 +3580,25 @@ e/sup/texlive/2017/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc}{/home/sup/tex
 live/2017/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}{/home/sup/texlive/2
 017/texmf-dist/fonts/enc/dvips/base/8r.enc}{/home/sup/texlive/2017/texmf-dist/f
 onts/enc/dvips/tex-gyre/q-ec.enc}</home/sup/texlive/2017/texmf-dist/fonts/type1
-/public/amsfonts/symbols/msam10.pfb></home/sup/texlive/2017/texmf-dist/fonts/ty
-pe1/public/tex-gyre/qhvb.pfb></home/sup/texlive/2017/texmf-dist/fonts/type1/pub
-lic/tex-gyre/qhvr.pfb></home/sup/texlive/2017/texmf-dist/fonts/type1/public/tex
--gyre/qtmb.pfb></home/sup/texlive/2017/texmf-dist/fonts/type1/public/tex-gyre/q
-tmr.pfb></home/sup/texlive/2017/texmf-dist/fonts/type1/public/tex-gyre/qtmri.pf
-b></home/sup/texlive/2017/texmf-dist/fonts/type1/public/newtx/rntxmi.pfb></home
-/sup/texlive/2017/texmf-dist/fonts/type1/public/newtx/rntxmi5.pfb></home/sup/te
-xlive/2017/texmf-dist/fonts/type1/public/newtx/rntxmi7.pfb></home/sup/texlive/2
-017/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></home/sup/texlive/2017/tex
-mf-dist/fonts/type1/public/newtx/rtxmi7.pfb></home/sup/texlive/2017/texmf-dist/
-fonts/type1/public/txfonts/rtxr.pfb></home/sup/texlive/2017/texmf-dist/fonts/ty
-pe1/public/newtx/txexs.pfb></home/sup/texlive/2017/texmf-dist/fonts/type1/publi
-c/txfonts/txmia.pfb></home/sup/texlive/2017/texmf-dist/fonts/type1/public/newtx
-/txsys.pfb></home/sup/texlive/2017/texmf-dist/fonts/type1/urw/times/utmri8a.pfb
->
-Output written on me210.pdf (120 pages, 1946540 bytes).
+/public/amsfonts/cm/cmmi10.pfb></home/sup/texlive/2017/texmf-dist/fonts/type1/p
+ublic/amsfonts/symbols/msam10.pfb></home/sup/texlive/2017/texmf-dist/fonts/type
+1/public/tex-gyre/qhvb.pfb></home/sup/texlive/2017/texmf-dist/fonts/type1/publi
+c/tex-gyre/qhvr.pfb></home/sup/texlive/2017/texmf-dist/fonts/type1/public/tex-g
+yre/qtmb.pfb></home/sup/texlive/2017/texmf-dist/fonts/type1/public/tex-gyre/qtm
+r.pfb></home/sup/texlive/2017/texmf-dist/fonts/type1/public/tex-gyre/qtmri.pfb>
+</home/sup/texlive/2017/texmf-dist/fonts/type1/public/newtx/rntxmi.pfb></home/s
+up/texlive/2017/texmf-dist/fonts/type1/public/newtx/rntxmi5.pfb></home/sup/texl
+ive/2017/texmf-dist/fonts/type1/public/newtx/rntxmi7.pfb></home/sup/texlive/201
+7/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></home/sup/texlive/2017/texmf
+-dist/fonts/type1/public/newtx/rtxmi7.pfb></home/sup/texlive/2017/texmf-dist/fo
+nts/type1/public/txfonts/rtxr.pfb></home/sup/texlive/2017/texmf-dist/fonts/type
+1/public/newtx/txexs.pfb></home/sup/texlive/2017/texmf-dist/fonts/type1/public/
+txfonts/txmia.pfb></home/sup/texlive/2017/texmf-dist/fonts/type1/public/newtx/t
+xsys.pfb></home/sup/texlive/2017/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on me210.pdf (121 pages, 1958621 bytes).
 PDF statistics:
- 1857 PDF objects out of 2073 (max. 8388607)
- 1570 compressed objects within 16 object streams
- 646 named destinations out of 1000 (max. 500000)
- 727 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1878 PDF objects out of 2073 (max. 8388607)
+ 1587 compressed objects within 16 object streams
+ 651 named destinations out of 1000 (max. 500000)
+ 732 words of extra memory for PDF output out of 10000 (max. 10000000)
 
