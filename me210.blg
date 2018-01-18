@@ -1,0 +1,15 @@
+[0] Config.pm:302> INFO - This is Biber 2.10
+[0] Config.pm:305> INFO - Logfile is 'me210.blg'
+[20] biber:313> INFO - === Thu Jan 11, 2018, 13:55:17
+[34] Biber.pm:371> INFO - Reading 'me210.bcf'
+[81] Biber.pm:854> INFO - Using all citekeys in bib section 0
+[90] Biber.pm:3976> INFO - Processing section 0
+[98] Biber.pm:4136> INFO - Looking for bibtex format file 'me210.bib' for section 0
+[114] bibtex.pm:1490> INFO - LaTeX decoding ...
+[119] bibtex.pm:1306> INFO - Found BibTeX data source 'me210.bib'
+[152] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[152] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[152] Biber.pm:3804> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[152] Biber.pm:3810> INFO - No sort tailoring available for locale 'en-US'
+[156] bbl.pm:617> INFO - Writing 'me210.bbl' with encoding 'UTF-8'
+[158] bbl.pm:720> INFO - Output to me210.bbl

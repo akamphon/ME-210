@@ -1,0 +1,11 @@
+# Fdb version 3
+["pdflatex"] 1495097114 "me210style.tex" "me210style.pdf" "me210style" 1495097114
+  "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1492575644 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
+  "/usr/share/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1492575650 1328 c834bbb027764024c09d3d2bf908b5f0 ""
+  "/usr/share/texmf-dist/web2c/texmf.cnf" 1492575665 31661 3832dc67fcae1bb0c47594ea86c25797 ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1492655225 7587051 7589450ac6ec9ba5040f05cf117ecf19 ""
+  "me210style.aux" 1495097114 8 a94a2480d3289e625eea47cd1b285758 ""
+  "me210style.tex" 1495097114 6586 50b9c5d251d1807cabc2f1b1f648dd3a ""
+  (generated)
+  "me210style.log"
+  "me210style.pdf"
