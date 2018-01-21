@@ -682,7 +682,7 @@ In the case where the deformation of the member can be determine solely from equ
 
 However, most structures are more complex than this. The internal forces and reactions cannot be determined from the equation of equilibrium alone. For example, consider a bar that is attached on both sides to walls. A force P is applied in the middle of the beam towards the right wall. Now, it is impossible to determine the internal force and reaction forces since there is only one useful equation of equilibrium but two unknown forces (reaction forces at either end). This type of structure is classified as statically indeterminate. To analyze such structures we must supplement the equilibrium equations with additional equations pertaining to the displacement of the structure.
 
-The equation that pertains to the displacement requirements of the structure is called an equation of compatibility.
+The equation that pertains to the displacement requirements of the structure is called an equation of \emph{compatibility} or \emph{kinematic} equation.
 
 To solve both the equation of equilibrium and equation of compatibility, we must establish the relationship between the force and displacement, this we can borrow from our knowledge of statically determinate system of axially loaded members that
 	
@@ -692,16 +692,17 @@ We shall now look at a simple example to better understand the steps in analyzin
   A circular bar AB is fixed on both end between the two walls of the same distance apart as the unstretched length of the bar $L$. The bar has a constant cross-sectional area $A$. Force $P$ is exerted on the bar at point C. Find the reaction at both point A and B.
   \centering
   \begin{tikzpicture}
-    \node [draw, rectangle, pattern=north east lines, minimum height=3cm, minimum width=1.5cm](lwall){};
+    \node [rectangle, pattern=north east lines, minimum height=3cm, minimum width=1.5cm](lwall){};
+    \draw (lwall.south east) -- (lwall.north east);
     \node at (lwall.east) [anchor=west, draw, rectangle, top color=LightSkyBlue, bottom color=LightSkyBlue, middle color=LightSkyBlue!50, minimum height=5mm, minimum width=7cm](bar){};
-    \node at (bar.east) [anchor=west, draw, rectangle, pattern=north east lines, minimum height=3cm, minimum width=1.5cm](rwall){};
+    \node at (bar.east) [anchor=west, rectangle, pattern=north east lines, minimum height=3cm, minimum width=1.5cm](rwall){};
+    \draw (rwall.south west) -- (rwall.north west);
     \node at (bar.north west) [above right]{A};
     \node at (bar.north east) [above left]{B};
-    \draw [->, line width=5pt] (bar.center) ++ (0:0.5) node[above, yshift=0.2cm]{C} --++ (180:1.5) node[left]{$P$};
+    \draw [->, line width=3pt] (bar.center) ++ (0:0.5) node[above, yshift=0.2cm]{C} --++ (180:1.5) node[left]{$P$};
     \draw [|<->|] (bar.south west) ++ (-90:0.5) --++ (0:4) node[midway, fill=LightSkyBlue]{$L_{AC}$};
     \draw [|<->|] (bar.south east) ++ (-90:0.5) --++ (180:3) node[midway, fill=LightSkyBlue]{$L_{CB}$};
   \end{tikzpicture}
-  % \includegraphics[scale=0.7]{pictures/Axial-load/statically-indet}
 \end{example}
 \begin{solution}
 First, we know that there would be reactions at both points A and B. Using the equation of equilibrium, we know that the bar is in equilibrium, and therefore
@@ -731,7 +732,15 @@ So the magnitude of the reaction is inversely proportional to the distance away 
 \begin{example} Three bars attached to a rigid beam
   \begin{figure}[H]
     \centering
-    \includegraphics[width=0.4\textwidth]{pictures/Axial-load/3-bars-rigid-beam}
+    \begin{tikzpicture}[>=latex]
+      \node [draw, rectangle, minimum height=0.5cm, minimum width=5cm, fill=Grey](rigid){};
+      \node at (rigid.north west) [anchor=south west, draw, fill=LightGrey, minimum height=3cm, minimum width=3mm](left){};
+      \node at (rigid.north) [anchor=south, draw, fill=LightGrey, minimum height=3cm, minimum width=3mm](mid){};
+      \node at (rigid.north east) [anchor=south east, draw, fill=LightGrey, minimum height=3cm, minimum width=3mm](right){};
+      \node at (mid.north) [anchor=south, minimum height=5mm, minimum width=6cm, pattern=north east lines](ceil){};
+      \draw (ceil.south west) -- (ceil.south east);
+      \draw [->, ultra thick] (rigid.south) ++ (180:1.25) --++ (-90:1) node[right]{$P$};
+    \end{tikzpicture}
   \end{figure}
 
   Determine the internal forces in the three horizontal members if they have the same $A$ and $E$?
@@ -802,11 +811,10 @@ In statically indeterminate structures, the total change in length when consider
     \draw (rwall.south west) -- (rwall.north west);
     \node at (bar.north west) [above right]{A};
     \node at (bar.north east) [above left]{B};
-    \draw [->, line width=5pt] (bar.center) ++ (0:0.5) node[above, yshift=0.2cm]{C} --++ (180:1.5) node[left]{$P$};
+    \draw [->, line width=3pt] (bar.center) ++ (0:0.5) node[above, yshift=0.2cm]{C} --++ (180:1.5) node[left]{$P$};
     \draw [|<->|] (bar.south west) ++ (-90:0.5) --++ (0:4) node[midway, fill=LightSkyBlue]{$L_{AC}$};
     \draw [|<->|] (bar.south east) ++ (-90:0.5) --++ (180:3) node[midway, fill=LightSkyBlue]{$L_{CB}$};
   \end{tikzpicture}
-  % \includegraphics[scale=0.7]{pictures/Axial-load/statically-indet}
 \end{example}
 \begin{solution}
 
@@ -1073,9 +1081,11 @@ When the deformation of a body is negligible, its longitudinal deformation can b
   \begin{figure}[H]
     \centering
     \begin{tikzpicture}
-      \node at (0,0) [rectangle, draw, minimum height=0.5cm, minimum width=7cm, top color=Grey, bottom color=Grey, middle color=Grey!50](A){};
-      \node at (A.west) [anchor=east, draw, rectangle, minimum height=2cm, minimum width=1cm, pattern=north east lines]{};
-      \node at (A.east) [anchor=west, draw, rectangle, minimum height=2cm, minimum width=1cm, pattern=north east lines]{};
+      \node at (0,0) [rectangle, minimum height=0.5cm, minimum width=7cm, top color=Grey, bottom color=Grey, middle color=Grey!50](A){};
+      \node at (A.west) [anchor=east, rectangle, minimum height=2cm, minimum width=1cm, pattern=north east lines](C){};
+      \draw (C.south east) -- (C.north east);
+      \node at (A.east) [anchor=west, rectangle, minimum height=2cm, minimum width=1cm, pattern=north east lines](B){};
+      \draw (B.south west) -- (B.north west);
     \end{tikzpicture}
   \end{figure}
   
@@ -1373,7 +1383,7 @@ where $\omega$  is the angular speed of the shaft. For machinery, the frequency 
       \node [rectangle, fill=white, minimum height=4cm, minimum width=10cm]{};
       \node [draw, xshift=1cm, rectangle, top color=SkyBlue, bottom color=SkyBlue, middle color=SkyBlue!20, minimum height=4mm, minimum width=5cm](shaft){};
       \node at (shaft.north) [above right]{100 - 2000 rpm};
-      \node at (shaft.west)[anchor=east, draw, rectangle, fill=Grey, minimum height=2cm, minimum width=2cm](motor){Motor};
+      \node at (shaft.west)[anchor=east, draw, rectangle, top color=Grey, bottom color=Grey, middle color=Grey!20, minimum height=1.5cm, minimum width=2cm](motor){Motor};
       \draw [fill=Grey] (motor.south east) --++ (-45:0.5) --++ (180:2.7) -- (motor.south west);
     \end{tikzpicture}
   \end{figure}
@@ -1705,7 +1715,7 @@ The quantities $S_1$ and $S_2$ are known as the section moduli of the cross sect
     \begin{tikzpicture}[>=latex]
       \node [rectangle, fill=white, minimum height=4cm, minimum width=10cm]{};
       \node [draw, rectangle, fill=SkyBlue, minimum width=8cm, minimum height=2mm](beam){};
-      \node at (beam.south west)[anchor=north, xshift=1cm, draw, fill=LightGray, regular polygon, regular polygon sides=3, minimum height=5mm, inner sep=0](left){};
+      \node at (beam.south west)[anchor=north, xshift=1cm, draw, fill=LightGray, circle, minimum height=3.9mm, inner sep=0](left){};
       \node at (beam.south east)[anchor=north, xshift=-1cm, draw, fill=LightGray, regular polygon, regular polygon sides=3, minimum height=5mm, inner sep=0](right){};
       \draw [<-, ultra thick] (beam.north) --++ (90:1) node[above]{$P$};
       \draw[<->] (left.south) ++ (-90:0.5) --++ (0:3) node[midway, below]{50 cm};
