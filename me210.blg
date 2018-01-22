@@ -1,15 +1,15 @@
 [0] Config.pm:302> INFO - This is Biber 2.10
 [0] Config.pm:305> INFO - Logfile is 'me210.blg'
-[18] biber:313> INFO - === Thu Jan 18, 2018, 16:58:47
-[32] Biber.pm:371> INFO - Reading 'me210.bcf'
-[76] Biber.pm:854> INFO - Using all citekeys in bib section 0
-[86] Biber.pm:3976> INFO - Processing section 0
-[93] Biber.pm:4136> INFO - Looking for bibtex format file 'me210.bib' for section 0
-[94] bibtex.pm:1490> INFO - LaTeX decoding ...
-[100] bibtex.pm:1306> INFO - Found BibTeX data source 'me210.bib'
-[151] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[151] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[151] Biber.pm:3804> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[152] Biber.pm:3810> INFO - No sort tailoring available for locale 'en-US'
-[156] bbl.pm:617> INFO - Writing 'me210.bbl' with encoding 'UTF-8'
-[158] bbl.pm:720> INFO - Output to me210.bbl
+[21] biber:313> INFO - === Mon Jan 22, 2018, 10:50:37
+[38] Biber.pm:371> INFO - Reading 'me210.bcf'
+[84] Biber.pm:854> INFO - Using all citekeys in bib section 0
+[94] Biber.pm:3976> INFO - Processing section 0
+[101] Biber.pm:4136> INFO - Looking for bibtex format file 'me210.bib' for section 0
+[138] bibtex.pm:1490> INFO - LaTeX decoding ...
+[144] bibtex.pm:1306> INFO - Found BibTeX data source 'me210.bib'
+[249] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[249] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[249] Biber.pm:3804> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[249] Biber.pm:3810> INFO - No sort tailoring available for locale 'en-US'
+[255] bbl.pm:617> INFO - Writing 'me210.bbl' with encoding 'UTF-8'
+[257] bbl.pm:720> INFO - Output to me210.bbl

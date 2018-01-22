@@ -743,7 +743,7 @@ So the magnitude of the reaction is inversely proportional to the distance away 
     \end{tikzpicture}
   \end{figure}
 
-  Determine the internal forces in the three horizontal members if they have the same $A$ and $E$?
+  Determine the internal forces in the three vertical members if they have the same $A$ and $E$?
 \end{example}
 \begin{solution}
 
@@ -845,6 +845,64 @@ In statically indeterminate structures, the total change in length when consider
   
   \[\Delta T =  - \frac{{PAE}}{\alpha }\frac{{{L_{CB}}}}{L}\]
   
+\end{solution}
+
+\begin{example} Three bars and a rigid beam under thermal change
+
+  The leftmost and rightmost members have identical thermal properties $\alpha_1$, while the middle member has $\alpha_2$.
+
+  \centering
+  \begin{tikzpicture}[>=latex]
+    \node [draw, rectangle, minimum height=0.5cm, minimum width=5cm, fill=Grey](rigid){};
+    \node at (rigid.south west) [anchor=north west, draw, fill=LightGrey, minimum height=3cm, minimum width=3mm](left){};
+    \node at (rigid.south) [anchor=north, draw, fill=LightGrey, minimum height=3cm, minimum width=3mm](mid){};
+    \node at (rigid.south east) [anchor=north east, draw, fill=LightGrey, minimum height=3cm, minimum width=3mm](right){};
+    \node at (mid.south) [anchor=north, minimum height=5mm, minimum width=6cm, pattern=north east lines](ceil){};
+    \draw (ceil.north west) -- (ceil.north east);
+  \end{tikzpicture}
+
+  If the temperatures of the vertical bars are increased by $\Delta T$, determine the internal force in each member.
+\end{example}
+\begin{solution}
+  First we must establish equilibrium equations for the members. For the force equilibrium in $y$-axis, we have
+
+  $$ F_1 + F_2 + F_3 = 0 $$
+
+  A second equilibrium equation can be derived in one of the two ways. The first exploits the problem's symmetry about the middle member.
+
+  $$ F_1 = F_3 $$
+
+  Substituting this into the force equilibrium equation gives
+
+  $$ F_2 = 2F_3 = 2F_1 $$
+  
+  The second method employs the moment equilibrium about the left side of the rigid beam.
+
+  $$ F_2 L + F_3 (2L) = 0 $$
+  $$ F_2 = -2F_3 $$
+
+  Moment equilibrium about the right side of the rigid beam gives the same equation.
+
+  $$ F_2 = -2F_1 = 2F_3 $$
+
+  The next step is to determine the compatibility equation. We can still apply similar triangle equation, but it is obvious that, with symmetry, all three vertical members undergo identical deformations. 
+
+  $$ \delta_1 = \delta_2 = \delta_3 $$
+
+  Converting deformation to internal force and thermal change, we have
+
+  $$ \frac{F_1 L}{AE} + \alpha_1 \Delta TL = \frac{F_2 L}{AE} + \alpha_2 \Delta TL $$ 
+
+  Substituting $F_1 = F_2 / 2$, we have
+
+  $$ F_2 = \frac{2}{3} \left( \alpha_1 - \alpha_2 \right) \Delta T A E $$
+  $$ F_1 = F_3 = \frac{1}{3} \left( \alpha_2 - \alpha_1 \right) \Delta T A E $$
+
+  Now, let us analyze the solution. We have previously assumed all internal forces tensile, so if the sign comes out positive, the force \emph{is} tensile. It is compressive otherwise. For $\alpha_1 > \alpha_2$ and $\Delta T > 0$
+
+  $$ F_2 > 0 \text{ and } F_1, F_3 < 0 $$
+
+  When the members are heated the left and right members will try to expand more than the middle one due to their higher coefficients of thermal expansion $\alpha_1$. However, because of the rigid beam restriction, the left and right members are squeezed down, while the middle part is pulled. Other situations can be analyzed with similar logic.
 \end{solution}
 
 \section{Inelastic Deformation}
