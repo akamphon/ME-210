@@ -6,7 +6,177 @@ svgnames,
 ]{book} % use larger type; default would be 10pt
 
 %%%% stylin %%%%
-\input{me210style.tex}
+\setcounter{secnumdepth}{1}
+\setcounter{tocdepth}{1}
+
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+
+%%% PAGE DIMENSIONS
+\usepackage{geometry} % to change the page dimensions
+\geometry{a4paper} % or letterpaper (US) or a5paper or....
+\geometry{margin=1in} % for example, change the margins to 2 inches all round
+% \geometry{landscape} % set up the page for landscape
+
+\usepackage{graphicx} % support the \includegraphics command and options
+
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+
+%%% PACKAGES
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{enumitem}
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+
+%%% HEADERS & FOOTERS
+\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{1pt} % customise the layout...
+\renewcommand{\footrulewidth}{1pt}
+\lhead{\rightmark}\chead{}\rhead{\thepage}
+\lfoot{ME 210: Mechanical of Materials}\cfoot{}\rfoot{S. Akamphon}
+
+\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
+
+\usepackage{newtxtext}
+\usepackage{newtxmath}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks,
+  citecolor=black,
+  filecolor=black,
+  linkcolor=black,
+  urlcolor=black
+}
+\let\openbox\relax
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{multirow}
+\usepackage{gensymb}
+\usepackage{array}
+\usepackage{cleveref}
+\usepackage{siunitx}
+
+%% Chapter Heading %%%%%
+\usepackage[explicit]{titlesec}
+\newcommand*\chapterlabel{}
+%\usepackage{kpfonts}
+%% Drawing pics with tikz %%%
+\usepackage{tikz,calc}
+\tikzset{>=latex}
+\usetikzlibrary{arrows,calc,decorations,shapes,decorations.pathmorphing,patterns,snakes,decorations.fractals,shadings,lindenmayersystems,shadows}
+\newcommand{\AxisRotator}[1][rotate=0]{%
+    \tikz[x=0.25cm,y=0.60cm,line width=.2ex,-stealth,#1] \draw(0,0) arc (150:-150:1 and 1);%
+}
+
+\titleformat{\chapter}
+{\gdef\chapterlabel{}
+  \normalfont\huge\bfseries}
+{\gdef\chapterlabel{\thechapter}}{0pt}
+{\begin{tikzpicture}[remember picture,overlay]
+    \node[yshift=-3cm] at (current page.north west)
+    {\begin{tikzpicture}[remember picture,overlay]
+        \draw[fill=LightSkyBlue] (0,0) rectangle
+        (\paperwidth,3cm) ;
+        \node[anchor=east,xshift=.9\paperwidth,rectangle,
+        rounded corners=5pt,inner sep=11pt,
+        fill=DarkBlue]
+        {\color{white}#1};
+        \ifnum\value{chapter}>0
+        \node[right, xshift=1cm, yshift=1.5cm]{\scalebox{4}{\Huge\thechapter}};
+        \fi
+      \end{tikzpicture}   
+    };
+  \end{tikzpicture}
+}
+
+\titleformat{name=\chapter, numberless}
+{\gdef\chapterlabel{}
+  \normalfont\huge\bfseries}
+{\gdef\chapterlabel{\thechapter}}{0pt}
+{\begin{tikzpicture}[remember picture,overlay]
+    \node[yshift=-3cm] at (current page.north west)
+    {\begin{tikzpicture}[remember picture,overlay]
+        \draw[fill=LightSkyBlue] (0,0) rectangle
+        (\paperwidth,3cm) ;
+        \node[anchor=east,xshift=.9\paperwidth,rectangle,
+        rounded corners=5pt,inner sep=11pt,
+        fill=DarkBlue]
+        {\color{white}#1};
+      \end{tikzpicture}   
+    };
+  \end{tikzpicture}
+}
+
+\titlespacing*{\chapter}{0pt}{50pt}{-10pt}
+
+%%% New column type
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+%Example environment
+\usepackage{thmtools}
+\usepackage{mdframed}
+\usepackage{float}
+\definecolor{example}{RGB}{204,255,204}
+\definecolor{titlepagecolor}{cmyk}{0.3,.50,0.50,.40}
+\definecolor{namecolor}{cmyk}{0.3,.50,0.5,.10}
+\declaretheoremstyle[
+spaceabove=6pt, spacebelow=0pt,
+headfont=\normalfont\bfseries,
+notefont=\mdseries, notebraces={(}{)},
+bodyfont=\normalfont,
+postheadspace=1em,
+numberwithin=chapter,
+preheadhook={\begin{mdframed}[backgroundcolor=LightSkyBlue,
+    innertopmargin=6pt, splittopskip=\topskip, % 
+    skipbelow= 0pt, skipabove=6pt, %
+    topline=false,bottomline=false,leftline=false,rightline=false] \sloppy},
+  postfoothook=\end{mdframed},
+headpunct={}
+]{exstyle}
+\declaretheoremstyle[
+spaceabove=6pt, spacebelow=6pt,
+headfont=\normalfont\bfseries,
+notefont=\mdseries, notebraces={(}{)},
+bodyfont=\normalfont,
+postheadspace=1em,
+preheadhook={\begin{mdframed}[backgroundcolor=LightSkyBlue,
+    innertopmargin =6pt, splittopskip = \topskip, % 
+    skipbelow=6pt, skipabove=0pt, %
+    topline=false,bottomline=false,leftline=false,rightline=false] \sloppy},
+  postfoothook=\end{mdframed},
+headpunct={},
+numbered=no
+]{solstyle}
+\declaretheorem[style=exstyle]{example}
+\declaretheorem[style=solstyle]{solution}
+
+% New list for exercises
+\newlist{exercises}{enumerate}{2}
+\setlist[exercises]{%
+  label=\textbf{\thechapter-\arabic*}~,  % Label: Exercise C.E
+  ref=\thechapter-\arabic*, % References: C.E (important!)
+  align=left,               % Left align labels
+  labelindent=0pt,          % No space betw. margin of list and label
+  leftmargin=0pt,           % No space betw. margin of list and following lines
+  itemindent=!,             % Indention of item computet automatically
+}
+
+%\setlist[enumerate, 1]{label=(\alph*)}            % Label for subexercises
+
+\newcommand{\exercise}{%
+\item\label{lab:\arabic{chapter}.\arabic{exercisesi}}  % Append label to item
+}
+
+%% bibliography %%%%
+
+\usepackage[style=numeric,backend=biber]{biblatex}
+\addbibresource{me210.bib}
+
+%%% END Article customizations
 
 %%% The "real" document content comes below...
 \begin{document}
