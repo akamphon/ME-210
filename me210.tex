@@ -65,7 +65,22 @@ svgnames,
 %% Drawing pics with tikz %%%
 \usepackage{tikz,calc}
 \tikzset{>=latex}
-\usetikzlibrary{arrows,calc,decorations,shapes,decorations.pathmorphing,patterns,snakes,decorations.fractals,shadings,lindenmayersystems,shadows}
+\usetikzlibrary{arrows,calc,decorations,decorations.pathreplacing,shapes,decorations.pathmorphing,patterns,snakes,decorations.fractals,shadings,lindenmayersystems,shadows}
+\usepackage{pgfplots}
+\usepackage{tikz-3dplot}
+\usepackage[inline]{asymptote}
+
+%% For drawing spherical vessels
+\pgfkeys{/tikz/.cd, view angle/.initial=0, view angle/.store in=\picangle}
+\tikzset{
+  horizontal/.style={y={(0,sin(\picangle))}},
+  vertical at/.style={x={([horizontal] #1:1)}, y={(0,cos(\picangle)cm)}},
+  every label/.style={font=\tiny, inner sep=1pt},
+  shorten/.style={shorten <=#1, shorten >=#1},
+  shorten/.default=3pt,
+  ->-/.style={decoration={markings, mark=at position #1 with {\arrow{>}}}, postaction={decorate}},
+  ->-/.default=0.5
+}
 \newcommand{\AxisRotator}[1][rotate=0]{%
     \tikz[x=0.25cm,y=0.60cm,line width=.2ex,-stealth,#1] \draw(0,0) arc (150:-150:1 and 1);%
 }
@@ -130,7 +145,7 @@ notefont=\mdseries, notebraces={(}{)},
 bodyfont=\normalfont,
 postheadspace=1em,
 numberwithin=chapter,
-preheadhook={\begin{mdframed}[backgroundcolor=LightSkyBlue,
+preheadhook={\begin{mdframed}[backgroundcolor=titlepagecolor!50,
     innertopmargin=6pt, splittopskip=\topskip, % 
     skipbelow= 0pt, skipabove=6pt, %
     topline=false,bottomline=false,leftline=false,rightline=false] \sloppy},
@@ -143,8 +158,8 @@ headfont=\normalfont\bfseries,
 notefont=\mdseries, notebraces={(}{)},
 bodyfont=\normalfont,
 postheadspace=1em,
-preheadhook={\begin{mdframed}[backgroundcolor=LightSkyBlue,
-    innertopmargin =6pt, splittopskip = \topskip, % 
+preheadhook={\begin{mdframed}[backgroundcolor=titlepagecolor!50,
+    innertopmargin=6pt, splittopskip=\topskip, % 
     skipbelow=6pt, skipabove=0pt, %
     topline=false,bottomline=false,leftline=false,rightline=false] \sloppy},
   postfoothook=\end{mdframed},
@@ -166,10 +181,6 @@ numbered=no
 }
 
 %\setlist[enumerate, 1]{label=(\alph*)}            % Label for subexercises
-
-\newcommand{\exercise}{%
-\item\label{lab:\arabic{chapter}.\arabic{exercisesi}}  % Append label to item
-}
 
 %% bibliography %%%%
 
@@ -310,7 +321,35 @@ Consider an infinitesimal cubic element, illustrated in \cref{fig: 3d-stress-ele
 
 \begin{figure}[h]
   \centering
-  \includegraphics[scale=0.5]{pictures/Static-body-load-analysis/3d-element-stress}
+  % \includegraphics[scale=0.5]{pictures/Static-body-load-analysis/3d-element-stress}
+  \tdplotsetmaincoords{70}{110}
+  \begin{tikzpicture}[tdplot_main_coords, >=latex]
+    \def\length{4}
+    \draw [dashed]
+    (0,0,0) node(origin){} --++ (\length,0,0) node(x){}
+    (origin.center) --++ (0,\length,0) node(y){}
+    (origin.center) --++ (0,0,\length) node(z){};
+    \draw [thin, left color=LightSkyBlue, right color=LightSkyBlue!\length0]
+    (x.center) --++ (0,0,\length) --++ (0,\length,0) --++ (0,0,-\length) -- cycle;
+    \draw [thin, right color=LightSkyBlue, left color=LightSkyBlue!\length0]
+    (y.center) --++ (0,0,\length) --++ (\length,0,0) --++ (0,0,-\length) -- cycle;
+    \draw [thin, top color=LightSkyBlue, bottom color=LightSkyBlue!\length0]
+    (z.center) --++ (\length,0,0) --++ (0,\length,0) --++ (-\length,0,0) -- cycle;
+    \draw [dashed, ->] (x.center) --++ (\length/3,0,0) node[below left]{$x$};
+    \draw [dashed, ->] (y.center) --++ (0,\length/3,0) node[below right]{$y$} ;
+    \draw [dashed, ->] (z.center) --++ (0,0,1) node[above]{$z$};
+    % shear stresses
+    \draw [->, ultra thick] (x.center) ++ (0,\length/2,\length/3) --++ (0,0,\length/3) node[above]{$\tau_{xz}$};
+    \draw [->, ultra thick] (x.center) ++ (0,\length/3,\length/2) --++ (0,\length/3,0) node[right]{$\tau_{xy}$};
+    \draw [->, ultra thick] (y.center) ++ (\length/2,0,\length/3) --++ (0,0,\length/3) node[above]{$\tau_{yz}$};
+    \draw [->, ultra thick] (y.center) ++ (\length/3,0,\length/2) --++ (\length/3,0,0) node[left]{$\tau_{yx}$};
+    \draw [->, ultra thick] (z.center) ++ (\length/2,\length/3,0) --++ (0,\length/3,0) node[right]{$\tau_{zy}$};
+    \draw [->, ultra thick] (z.center) ++ (\length/3,\length/2,0) --++ (\length/3,0,0) node[below left]{$\tau_{zx}$};
+    % normal stresses
+    \draw [->, ultra thick] (x.center) ++ (0,\length/2,\length/2) --++ (\length/2,0,0) node[left]{$\sigma_{x}$};
+    \draw [->, ultra thick] (y.center) ++ (\length/2,0,\length/2) --++ (0,\length/2,0) node[right]{$\sigma_{y}$};
+    \draw [->, ultra thick] (z.center) ++ (\length/2,\length/2,0) --++ (0,0,\length/2) node[above]{$\sigma_{z}$};
+  \end{tikzpicture}
   \caption{Stresses on a three-dimensional element when considering a static equilibrium}
   \label{fig: 3d-stress-element}
 \end{figure}
@@ -322,8 +361,8 @@ If we apply the equation of force equilibrium in the $x$ direction, then
 \begin{equation}
   \arraycolsep=1.4pt\def\arraystretch{1.5}
   \begin{array}{c}
-    {\sigma _x}(\Delta y\Delta z) + \sigma_x'(\Delta y\Delta z) = 0\\
-    {\sigma _x} =  - \sigma_x'
+    \sigma_x(\Delta y\Delta z) + \sigma_x'(\Delta y\Delta z) = 0\\
+    \sigma_x =  - \sigma_x'
   \end{array}
 \end{equation}
 
@@ -387,13 +426,37 @@ Therefore, strain is positive when the line elongates and is negative when the l
 
 \begin{figure}[h]
   \centering
-  \includegraphics[scale=0.5]{pictures/Static-body-load-analysis/3d-shear-deformation}
+  % \includegraphics[scale=0.5]{pictures/Static-body-load-analysis/3d-shear-deformation}
+  \tdplotsetmaincoords{70}{110}
+  \begin{tikzpicture}[tdplot_main_coords, >=latex]
+    \draw [dashed]
+    (0,0,0) node(origin){} --++ (3,0,0) node(x){}
+    (origin.center) --++ (0,3,0) node(y){}
+    (origin.center) --++ (0,0,3) node(z){};
+    \draw [thin, left color=LightSkyBlue, right color=LightSkyBlue!30]
+    (x.center) --++ (0,0,3) --++ (0,3,0) --++ (0,0,-3) -- cycle;
+    \draw [thin, right color=LightSkyBlue, left color=LightSkyBlue!30]
+    (y.center) --++ (0,0,3) --++ (3,0,0) --++ (0,0,-3) -- cycle;
+    \draw [thin, top color=LightSkyBlue, bottom color=LightSkyBlue!30]
+    (z.center) --++ (3,0,0) --++ (0,3,0) --++ (-3,0,0) -- cycle;
+    \draw [dashed, ->] (x.center) --++ (1,0,0) node[below left]{$x$};
+    \draw [dashed, ->] (y.center) --++ (0,1,0) node[below right]{$y$} ;
+    \draw [dashed, ->] (z.center) --++ (0,0,1) node[above]{$z$};
+    % deformed shape
+    \draw [dashed]
+    (z.center) --++ (1,3,0) node[above left]{$\theta$} --++ (3,0,0)
+    (x.center) ++ (0,0,3) --++ (1,3,0) --++ (0,0,-3)
+    (x.center) --++ (1,3,0) --++ (-1,0,0);
+    % shear stresses
+    \draw [->, ultra thick] (x.center) ++ (0,1,1.5) --++ (0,1,0) node[midway, above]{$\tau_{xy}$};
+    \draw [->, ultra thick] (y.center) ++ (1,0,1.5) --++ (1,0,0) node[midway, above]{$\tau_{yx}$};
+  \end{tikzpicture}
   \caption{3-dimensional element under shear deformation.}
   \label{fig: 3d shear deformation}
 \end{figure}
 
 \begin{equation}
-  {\gamma _{xy}} = \mathop {\lim }\limits_{y \to 0} \frac{{dx}}{y} = \tan \theta  \approx \theta
+  \gamma_{xy} = \mathop {\lim} \limits_{y \to 0} \frac{{dx}}{y} = \tan \theta  \approx \theta
 \end{equation}
  
 \paragraph{Cartesian Strain Components}
@@ -416,12 +479,33 @@ While the actual stress-strain diagrams of different materials can be vastly dif
 
 \begin{figure}[h]
   \centering
-  \includegraphics[scale=1]{pictures/Basic-material-behavior/stress-strain-diagram}
+  % \includegraphics[scale=1]{pictures/Basic-material-behavior/stress-strain-diagram} \\
+  \begin{tikzpicture}[>=latex]
+    % axes
+    \draw [<->] (0,8) node[left]{$\sigma$} --++ (-90:8) node(O){} --++ (0:11) node[below]{$\varepsilon$};
+    % braces
+    \draw [decorate, decoration={brace, mirror, amplitude=2mm}] (O.center) ++ (-90:0.2) --++ (0:2.5) node(B){} node[midway, below, yshift=-3mm]{elastic region};
+    \draw [decorate, decoration={brace, mirror, amplitude=2mm}] (B.center) --++ (0:2) node(C){} node[midway, below, yshift=-3mm]{yielding};
+    \draw [decorate, decoration={brace, mirror, amplitude=2mm}] (C.center) --++ (0:3) node(D){} node[midway, below, yshift=-3mm]{strain hardening};
+    \draw [decorate, decoration={brace, mirror, amplitude=2mm}] (D.center) --++ (0:2.5) node(E){} node[midway, below, yshift=-3mm]{necking};
+    % area under curve
+    \draw [ultra thin, fill=ForestGreen] (B.center) ++ (90:0.2) node(F){} -- (O.center) --++ (60:4.5) node(pl){} arc (150:90:0.3) node(G){} -- cycle;
+    \draw [ultra thin, fill=Khaki] (C.center) ++ (90:0.2) node(H){} -- (F.center) -- (G.center) --++ (0:2) node(I){} -- cycle;
+    \draw [ultra thin, fill=Chocolate] (D.center) ++ (90:0.2) node(J){} -- (H.center) -- (I.center) to [out=0, in=-140] +(1.5,1) to [out=40,in=180] +(1.5,0.5) node(K){} -- cycle;
+    \draw [ultra thin, fill=SaddleBrown] (E.center) ++ (90:0.2) node(L){} -- (J.center) -- (K.center) to [out=0, in=155] +(2.5,-0.7) node(M){} -- cycle;
+    % stress indicators
+    \draw [dashed] (pl.center) -- +(180:2.3) node[below left]{$S_{pl}$};
+    \draw [dashed] (G.center) -- +(180:2.5) node[above left]{$S_{y}$};
+    \draw [dashed] (K.center) -- +(180:7.5) node[left]{$S_{ut}$};
+    \draw [dashed] (M.center) -- +(180:10) node[left]{$S_{f}$};
+    % actual curve
+    \draw [very thick, Blue!80](O.center) -- (pl.center) arc (150:90:0.3) -- (I.center) to [out=0, in=-140] +(1.5,1) to [out=40,in=180] +(1.5,0.5) to [out=0, in=155] +(2.5,-0.7);
+  \end{tikzpicture}
   \caption{A general stress-strain diagram obtained from a tensile test.}
   \label{fig: stress-strain diagram}
 \end{figure}
 
-\paragraph{Elastic Behavior:} occurs when the stress-strain relationship remains linear, where the strain is still in the green region. The upper lilmit stress of this linear relationship is called the \emph{proportionality limit}, $\sigma_{pl}$. If the applied stress exceeds this value, the curve no longer remains linear and usually curves down and flattens out. This continues until the \emph{elastic limit} below which any deformation occured due to this stress disappears when the stress is removed. For most materials, this elastic limit can be difficult to determine and distinguish from the proportionality limit.
+\paragraph{Elastic Behavior:} occurs when the stress-strain relationship remains linear, where the strain is still in the green region. The upper lilmit stress of this linear relationship is called the \emph{proportionality limit}, $S_{pl}$. If the applied stress exceeds this value, the curve no longer remains linear and usually curves down and flattens out. This continues until the \emph{elastic limit} below which any deformation occured due to this stress disappears when the stress is removed. For most materials, this elastic limit can be difficult to determine and distinguish from the proportionality limit.
 
 \paragraph{Yielding:} Just beyond the elastic limit is the stress that will cause a permanent deformation in the specimen, also called the \emph{yield stress}, $S_y$. The permanent deformation that occurs is called \emph{plastic deformation}. During this period, the specimen will continue to elongate without any increase in the load. This is referred to as being \emph{perfectly plastic}.
 
@@ -661,21 +745,52 @@ In this chapter, we have learned that bodies are deformable, the degree of which
 
 \begin{exercises}
 
-  \exercise Determine the stress in each section of the bar shown in figure below when subjected to an axial tensile load of 20 kN. The central section is 30-mm square cross-section; the other portions are of circular section, their diameters being indicated. What will be the total extension of the bar? For the bar material E = 210 GPa
+  \item Determine the stress in each section of the bar shown in figure below when subjected to an axial tensile load of 20 kN. The central section is 30-mm square cross-section; the other portions are of circular section, their diameters being indicated. What will be the total extension of the bar? For the bar material $E$ = 210 GPa
+
+  \begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+      \node [draw, fill=LightSkyBlue, minimum height=1cm, minimum width=2.5cm](left){};
+      \node at (left.east) [anchor=west, draw, fill=LightGreen, minimum height=1.5cm, minimum width=1cm](mid){};
+      \node at (mid.east) [anchor=west, draw, fill=LightGrey, minimum height=0.7cm, minimum width=4cm](right){};
+      \draw [->, ultra thick] (left.west) --++ (180:1) node[above]{20 kN};
+      \draw [->, ultra thick] (right.east) --++ (0:1) node[above]{20 kN};
+      \draw [|<->|] (left.north west) ++ (90:0.7) --++ (0:2.5) node[midway, fill=White]{250} node(A){};
+      \draw [|<->|] (A.center) --++ (0:1) node[midway, fill=White]{100} node(B){};
+      \draw [|<->|] (B.center) --++ (0:4) node[midway, fill=White]{400};
+      \draw [<-, thick] (left.north) --++ (90:0.3);
+      \draw [<-, thick] (left.south) --++ (-90:0.3) node[below]{20};
+      \draw [<-, thick] (mid.north) --++ (90:0.2);
+      \draw [<-, thick] (mid.south) --++ (-90:0.2) node[below]{30};
+      \draw [<-, thick] (right.north) --++ (90:0.4);
+      \draw [<-, thick] (right.south) --++ (-90:0.4) node[below]{15};
+    \end{tikzpicture}
+  \end{figure} 
   
-  \exercise A 25 mm diameter bar is subjected to an axial tensile load of 100 kN. Under the action of this load a 200 mm gauge length is found to extend 0.19 mm. Determine
+  \item A 25 mm diameter bar is subjected to an axial tensile load of 100 kN. Under the action of this load a 200 mm gauge length is found to extend 0.19 mm. Determine
   \begin{enumerate}
   \item the modulus of elasticity for the bar material.
   \item the maximum diameter of axial bore (to make the shaft hollow) possible given that the maximum allowable stress is 240 MPa? The load can be assumed to remain constant at 100 kN.
-  \item the change in the outside diameter of the bar under the limiting stress quoted in b)? (E = 210 GPa and v = 0.3).
+  \item the change in the outside diameter of the bar under the limiting stress quoted in b)? ($E$ = 210 GPa and $v$ = 0.3).
   \end{enumerate} 
 
-  \exercise The coupling shown below is constructed from steel of rectangular cross-section and is designed to transmit a tensile force of 50 kN. If the bolt is of 15 mm diameter, calculate:
+  \item The coupling shown below is constructed from steel of rectangular cross-section and is designed to transmit a tensile force of 50 kN. If the bolt is of 15 mm diameter, calculate:
   \begin{enumerate}
   \item the shear stress in the bolt;
   \item the normal stress in the plate;
   \item the normal stress in the forked end of the coupling.
   \end{enumerate}
+
+  \begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+      \draw [fill=LightSkyBlue] (0,0) --++ (0:1) --++ (90:0.4) --++ (0:2) --++ (-90:0.5) --++ (180:1.4) --++ (-90:0.5) --++ (0:1.4) --++ (-90:0.5) --++ (180:2) --++ (90:0.4) --++ (180:1) -- cycle;
+      \node at (1.8,-0.1) [anchor=north west, draw, fill=LightSkyBlue!40, minimum height=0.49cm, minimum width=2cm](right){};
+      \node at (right.center) [anchor=east, draw, fill=LightGrey, minimum height=1.8cm, minimum width=4mm](){};
+      \draw [->, ultra thick] (0,-0.3) --++ (180:1) node[left]{50 kN};
+      \draw [->, ultra thick] (right.east) --++ (0:1) node[right]{50 kN};
+    \end{tikzpicture}
+  \end{figure}
 \end{exercises}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -796,14 +911,27 @@ And the total elongation of the entire bar is
   A cylinder with continuously variable cross sections of length $L$ is supported at end A and subjected to a tensile load $P$ at the free end B. The radii of the bar at ends A and B are $r_A$ and $r_B$ respectively. Determine the elongation of the bar due to the load $P$.
   \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.6]{pictures/Axial-load/axial-load-cone}
+    % \includegraphics[scale=0.6]{pictures/Axial-load/axial-load-cone}
+    \begin{tikzpicture}
+      \node [ellipse, dashed, minimum height=3cm, minimum width=1cm](left){};
+      \draw (left.north) arc (90:270:0.5 and 1.5);
+      \draw [dashed] (left.north) arc (90:-90:0.5 and 1.5);
+      \node [ellipse, xshift=5cm, minimum height=1.5cm, minimum width=0.5cm, draw](right){};
+      \draw
+      (left.north) -- (right.north)
+      (left.south) -- (right.south);
+      \draw [->] (left.center) -- (left.south) node[midway, above left]{$r_A$};
+      \draw [->] (right.center) -- (right.south) node[below]{$r_B$};
+      \draw [->, ultra thick] (right.center) --++ (0:1) node[right]{$P$};
+    \draw [|<->|] (left.south) ++ (-90:0.5) --++ (0:5) node[midway, above]{$L$};
+    \end{tikzpicture}
   \end{figure}
 \end{example}
 
 \begin{solution}
   From the equation
   
-\[\delta  = \int_0^L {d\delta }  = \int_0^L {\frac{{P(x)dx}}{{EA(x)}}} \]
+\[\delta  = \int_0^L d\delta  = \int_0^L \frac{P(x)dx}{EA(x)} \]
 
 We know that the load is constant throughout the length of the cylinder. The only thing varying is the diameter of the cross section. Therefore, we will write the diameter as a function of length.
 First to simplify the expression for the integral, we set the origin of the $x$ coordinate by extending the sides of the tapered bar until they meet at point O.
@@ -811,7 +939,24 @@ The distance $L_A$ and $L_B$ from the origin O to ends A and B respectively are 
 
 \begin{figure}[H]
   \centering
-  \includegraphics[scale=0.6]{pictures/Axial-load/axial-load-cone-mod}
+  % \includegraphics[scale=0.6]{pictures/Axial-load/axial-load-cone-mod}
+  \begin{tikzpicture}
+    \node [ellipse, dashed, minimum height=3cm, minimum width=1cm](left){};
+    \draw (left.north) arc (90:270:0.5 and 1.5);
+    \draw [dashed] (left.north) arc (90:-90:0.5 and 1.5);
+    \node [ellipse, xshift=5cm, minimum height=1.5cm, minimum width=0.5cm, draw](right){};
+    \draw
+    (left.north) -- (right.north)
+    (left.south) -- (right.south);
+    \draw [dashed]
+    (right.north) --++ (5,-0.75)
+    (right.south) --++ (5,0.75) node(O){} node[right]{$O$};
+    \draw [->] (left.center) -- (left.south) node[midway, above left]{$r_A$};
+    \draw [->] (right.center) -- (right.south) node[below]{$r_B$};
+    \draw [->, ultra thick] (right.center) --++ (0:1) node[right]{$P$};
+    \draw [|<->|] (left.south) ++ (-90:0.5) --++ (0:10) node[midway, above]{$L_A$};
+    \draw [|<->|] (right.south) ++ (-90:0.5) --++ (0:5) node[midway, above]{$L_B$};
+  \end{tikzpicture}
 \end{figure}
 
 \[\frac{L_A}{L_B} = \frac{r_A}{r_B}\]	
@@ -830,19 +975,19 @@ The change in length is, thus,
 
 Performing the integration, we have
 
-\[\delta  = \frac{{PL_A^2}}{{E\pi r_A^2}}\left[ { - \frac{1}{x}} \right]_{{L_A}}^{{L_B}} = \frac{{PL_A^2}}{{E\pi r_A^2}}\left( {\frac{1}{{{L_A}}} - \frac{1}{{{L_B}}}} \right)\]	
+\[\delta  = \frac{PL_A^2}{E\pi r_A^2}\left[ - \frac{1}{x} \right]_{L_A}^{L_B} = \frac{PL_A^2}{E\pi r_A^2}\left( \frac{1}{L_A} - \frac{1}{L_B} \right)\]	
 
 The quantity in the parentheses can be simplified to
 
-\[\left( {\frac{1}{{{L_A}}} - \frac{1}{{{L_B}}}} \right) = \frac{{{L_B} - {L_A}}}{{{L_A}{L_B}}} = \frac{L}{{{L_A}{L_B}}}\]	
+\[\left( \frac{1}{L_A} - \frac{1}{L_B} \right) = \frac{L_B - L_A}{L_AL_B} = \frac{L}{L_AL_B}\]	
 
 So the equation becomes
 
-\[\delta  = \frac{{PL_A^2}}{{E\pi r_A^2}}\frac{L}{{{L_A}{L_B}}} = \frac{{PL}}{{E\pi r_A^2}}\left( {\frac{{{L_A}}}{{{L_B}}}} \right)\]	
+\[\delta  = \frac{PL_A^2}{E\pi r_A^2}\frac{L}{L_AL_B} = \frac{PL}{E\pi r_A^2}\left( \frac{L_A}{L_B} \right)\]	
 
 Finally, we know from similar triangles that $L_A/L_B = r_A/r_B$.
 
-\[\delta  = \frac{{PL}}{{E\pi r_A^2}}\left( {\frac{{{r_A}}}{{{r_B}}}} \right) = \frac{{PL}}{{\pi E{r_A}{r_B}}}\]
+\[\delta  = \frac{PL}{E\pi r_A^2}\left( \frac{r_A}{r_B} \right) = \frac{PL}{\pi Er_Ar_B}\]
 
 \end{solution}
 
@@ -870,8 +1015,8 @@ We shall now look at a simple example to better understand the steps in analyzin
     \node at (bar.north west) [above right]{A};
     \node at (bar.north east) [above left]{B};
     \draw [->, line width=3pt] (bar.center) ++ (0:0.5) node[above, yshift=0.2cm]{C} --++ (180:1.5) node[left]{$P$};
-    \draw [|<->|] (bar.south west) ++ (-90:0.5) --++ (0:4) node[midway, fill=LightSkyBlue]{$L_{AC}$};
-    \draw [|<->|] (bar.south east) ++ (-90:0.5) --++ (180:3) node[midway, fill=LightSkyBlue]{$L_{CB}$};
+    \draw [|<->|] (bar.south west) ++ (-90:0.5) --++ (0:4) node[midway, below]{$L_{AC}$};
+    \draw [|<->|] (bar.south east) ++ (-90:0.5) --++ (180:3) node[midway, below]{$L_{CB}$};
   \end{tikzpicture}
 \end{example}
 \begin{solution}
@@ -982,8 +1127,8 @@ In statically indeterminate structures, the total change in length when consider
     \node at (bar.north west) [above right]{A};
     \node at (bar.north east) [above left]{B};
     \draw [->, line width=3pt] (bar.center) ++ (0:0.5) node[above, yshift=0.2cm]{C} --++ (180:1.5) node[left]{$P$};
-    \draw [|<->|] (bar.south west) ++ (-90:0.5) --++ (0:4) node[midway, fill=LightSkyBlue]{$L_{AC}$};
-    \draw [|<->|] (bar.south east) ++ (-90:0.5) --++ (180:3) node[midway, fill=LightSkyBlue]{$L_{CB}$};
+    \draw [|<->|] (bar.south west) ++ (-90:0.5) --++ (0:4) node[midway, below]{$L_{AC}$};
+    \draw [|<->|] (bar.south east) ++ (-90:0.5) --++ (180:3) node[midway, below]{$L_{CB}$};
   \end{tikzpicture}
 \end{example}
 \begin{solution}
@@ -999,9 +1144,9 @@ In statically indeterminate structures, the total change in length when consider
   Finally, we apply force-displacement relationship based on Hooke’s law. We know that the force in segment AC is $F_A$ in the compressive direction, and that the force in segment CB is $F_B$ in the tensile direction. However, there is also the change in length of each segment due to the temperature change, so we must substitute in the change in length of both segments with force-displacement and displacement-temperature change relationships
   
   \[\begin{gathered}
-      - \frac{{{F_A}{L_{AC}}}}{{AE}} + \alpha \Delta T{L_{AC}} + \frac{{{F_B}{L_{CB}}}}{{AE}} + \alpha \Delta T{L_{CB}} = 0 \\ 
-      - \frac{{{F_A}{L_{AC}}}}{{AE}} + \frac{{{F_B}{L_{CB}}}}{{AE}} + \alpha \Delta T({L_{CB}} + {L_{AC}}) = 0 \\ 
-      - \frac{{{F_A}{L_{AC}}}}{{AE}} + \frac{{{F_B}{L_{CB}}}}{{AE}} + \alpha \Delta TL = 0 \\ 
+      - \frac{F_AL_{AC}}{AE} + \alpha \Delta T{L_{AC}} + \frac{F_BL_{CB}}{AE} + \alpha \Delta T{L_{CB}} = 0 \\ 
+      - \frac{F_AL_{AC}}{AE} + \frac{F_BL_{CB}}{AE} + \alpha \Delta T(L_{CB} + L_{AC}) = 0 \\ 
+      - \frac{F_AL_{AC}}{AE} + \frac{F_BL_{CB}}{AE} + \alpha \Delta TL = 0 \\ 
     \end{gathered} \]	
   
   Solving this equation we have
@@ -1129,7 +1274,7 @@ To solve a residual stress problem, where there is a cycle of loading and unload
   
   \begin{align*}
     P = {F_A} + {F_B} &= 2(20 \times {10^3} \text{ psi})(\pi ){(1 \text{ in})^2} \\ 
-                      &= 1.26 \times {10^3} \text{ lb}
+                      &= 1.26 \times {10^5} \text{ lb}
   \end{align*}	
   
   Note that the support forces at A and B are equal because the stresses in both segments have the same magnitude.
@@ -1137,8 +1282,8 @@ To solve a residual stress problem, where there is a cycle of loading and unload
   To find the permanent deformation, we first need to find the residual stress. By applying the principle of superposition, we can find the residual stress after unloading by summing the stresses from loading $P$ to the left and to the right. Since we have already found the stresses from loading P to the left, we will proceed to find the stresses from the ‘unloading’ force $P$ at point C to the right.
   
   \begin{align*}
-    {({\sigma _{AC}})_{unload}} &= \frac{{{L_{CB}}}}{L}\frac{P}{A} = \frac{{(3)(1.26 \times {{20}^5} \text{ lb})}}{{(5)\pi {{(1 \text{ in})}^2}}} = 2.4 \times {10^4} \text{ psi} \text{ (tensile)} \\
-  {({\sigma _{CB}})_{unload}} &= \frac{{{L_{AC}}}}{L}\frac{P}{A} = \frac{{(2)(1.26 \times {{20}^5} \text{ lb})}}{{(5)\pi {{(1 \text{ in})}^2}}} = 1.6 \times {10^4} \text{ psi} \text{ (compressive)}
+    (\sigma _{AC})_{unload} &= \frac{L_{CB}}{L}\frac{P}{A} = \frac{3}{5} \frac{(1.26 \times 10^5 \text{ lb})}{\pi {(1 \text{ in})^2}} = 2.4 \times {10^4} \text{ psi} \text{ (tensile)} \\
+  (\sigma _{CB})_{unload} &= \frac{L_{AC}}{L}\frac{P}{A} = \frac{2}{5} \frac{(1.26 \times 10^5 \text{ lb})}{\pi (1 \text{ in})^2} = 1.6 \times {10^4} \text{ psi} \text{ (compressive)}
   \end{align*}	
   
   Note that we do not need to be concern about the stress going beyond the yield point in the unloading case because this is a ‘fictitious’ load used to apply the principle of superposition.
@@ -1244,35 +1389,115 @@ When the deformation of a body is negligible, its longitudinal deformation can b
 
 \begin{exercises}
 
-  \exercise A compound bar consists of four brass wires of 2.5 mm diameter and one steel wire of 1.5 mm diameter. Determine
+  \item A compound bar consists of four brass wires of 2.5 mm diameter and one steel wire of 1.5 mm diameter. Determine
+
+  \begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+      \node [circle, draw, minimum height=0.5cm, fill=LightGrey](steel){};
+      \node at (steel.north) [anchor=south, circle, draw, minimum height=0.75cm, fill=LightSkyBlue]{};
+      \node at (steel.east) [anchor=west, circle, draw, minimum height=0.75cm, fill=LightSkyBlue](right){};
+      \node at (steel.south) [anchor=north, circle, draw, minimum height=0.75cm, fill=LightSkyBlue]{};
+      \node at (steel.west) [anchor=east, circle, draw, minimum height=0.75cm, fill=LightSkyBlue]{};
+      \draw [<-] (right.north east) --++ (45:0.3) --++ (0:0.3) node[right]{diameter = 2.5 mm};
+      \draw [<-] (steel.north west) --++ (135:1) --++ (180:1) node[left]{diameter = 1.5 mm};
+    \end{tikzpicture}
+  \end{figure}
   \begin{enumerate}
   \item the stresses in each of the wires when the bar supports a load of 500 N, assuming all the wires are of equal lengths.
   \item The ‘equivalent’ or ‘combined’ modulus for the compound bar and its total extension if it is initially 0.75 m long. 
     For brass $E$ = 100 GPa and for steel $E$ = 200 GPa.
   \end{enumerate}
 
-  \exercise A compound bar is constructed from three bars 50 mm wide by 12 mm thick fastened together to form a bar 50 mm wide by 36 mm thick. The middle bar is of aluminum alloy for which $E$ = 70 GPa and the outside bars are of brass with $E$ = 100 GPa.
+  \item A compound bar is constructed from three bars 50 mm wide by 12 mm thick fastened together to form a bar 50 mm wide by 36 mm thick. The middle bar is of aluminum alloy for which $E$ = 70 GPa and the outside bars are of brass with $E$ = 100 GPa.
+
+\begin{figure}[H]
+      \centering
+      \begin{tikzpicture}
+        \node [draw, thin, minimum height=0.5cm, minimum width=2cm, fill=Goldenrod](bottom){};
+        \node at (bottom.north) [anchor=south, draw, thin, minimum height=0.5cm, minimum width=2cm, fill=LightGrey](mid){};
+        \node at (mid.north) [anchor=south, draw, thin, minimum height=0.5cm, minimum width=2cm, fill=Goldenrod](top){};
+        \draw [|<->|] (bottom.south east) ++ (-90:0.5) --++ (180:2) node[midway, fill=White]{50 mm};
+        \draw [|<->|] (bottom.south east) ++ (0:0.5) --++ (90:0.5) node[midway, right]{12 mm};
+        \draw [|<->|] (mid.south east) ++ (0:0.5) --++ (90:0.5) node[midway, right]{12 mm};
+        \draw [|<->|] (top.south east) ++ (0:0.5) --++ (90:0.5) node[midway, right]{12 mm};
+      \end{tikzpicture}
+    \end{figure}
+
   \begin{enumerate}
   \item If the bars are initially fastened at 18$\degree$C and the temperature of the assembly is raised to 50$\degree$C, determine the stresses set up in the brass and the aluminum.
-    
+        
   \item What will be the changes in these stresses if an external compressive load of 15 kN is applied to the compound bar at the higher temperature?
   \end{enumerate}
     
-  \exercise A composite bar is constructed from a steel rod of 25 mm diameter surrounded by a copper tube of 50 mm outside diameter and 25 mm inside diameter. The rod and tube are joined by two 20 mm diameter pins as shown in the figure below. Find the shear stress in the pins if, after pinning, the temperature is raised by 50 C.
+  \item A composite bar is constructed from a steel rod of 25 mm diameter surrounded by a copper tube of 50 mm outside diameter and 25 mm inside diameter. The rod and tube are joined by two 20 mm diameter pins as shown in the figure below. Find the shear stress in the pins if, after pinning, the temperature is raised by 50 C.
+
+  \begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+      \node [draw, minimum width=6cm, minimum height=1cm, fill=LightGrey](outer){};
+      \node [draw, minimum width=6cm, minimum height=0.5cm, fill=LightSkyBlue](inner){};
+      \node at (outer.north west) [anchor=north west, xshift=2mm, draw, minimum width=3mm, minimum height=1cm, fill=Grey](lpin){};
+      \node at (outer.north east) [anchor=north east, xshift=-2mm, draw, minimum width=3mm, minimum height=1cm, fill=Grey](rpin){};
+      \node at (outer.north) [yshift=5mm](pinnames){pins};
+      \draw [<-] (lpin.north east) -- (pinnames);
+      \draw [->] (pinnames)-- (rpin.north west);
+      \draw [|<->|] (outer.north east) ++ (0:2) --++ (-90:1) node[midway, fill=white]{50 mm};
+      \draw [|<->|] (inner.north east) ++ (0:1) --++ (-90:0.5) node[at start, above, fill=white]{25 mm};
+    \end{tikzpicture}
+  \end{figure}
   For steel $E$ = 210 GPa and $\alpha = 11 x 10^{-6}$ per C
   For copper $E$ = 105 GPa and $\alpha = 17 x 10^{-6}$ per C
   
-  \exercise A rigid beam of length $L$ is pinned to a wall on one side so it is only allow to rotate within the plane of this paper. A spring with constant $k$ is connected to the beam at the middle. If a mass $M$ is falling from height h above on to the end of the beam, prove that the deflection of the end of the beam is equal to
+  \item A rigid beam of length $L$ is pinned to a wall on one side so it is only allow to rotate within the plane of this paper. A spring with constant $k$ is connected to the beam at the middle. If a mass $M$ is falling from height h above on to the end of the beam, prove that the deflection of the end of the beam is equal to
+
+  $$ \delta = \dfrac{4Mg}{k} \left[ 1 + \left( 1 + \dfrac{kh}{2Mg} \right)^{1/2}
+  \right] $$
+
+  \begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+      \node [minimum height=2cm, minimum width=1cm, pattern=north west lines](wall){};
+      \draw (wall.north east) -- (wall.south east);
+      \node at (wall.east) [anchor=west, minimum height=5mm, minimum width=5mm, draw](hinge){};
+      \node at (hinge.center) [circle, minimum height=4mm, draw](pin){};
+      \node at (hinge.east) [anchor=west, minimum height=3mm, minimum width=8cm, draw](beam){};
+      \draw (beam.north) --++ (90:1) node[midway, right]{$k$} node[anchor=south, minimum height=5mm, minimum width=1cm, pattern=north east lines](ceiling){};
+      \draw (ceiling.south east) -- (ceiling.south west);
+      \node at (beam.north east) [anchor=south, draw, yshift=1.5cm, minimum height=1cm, minimum width=1.2cm](mass){$M$};
+      \draw [->] (mass.south) ++ (-90:0.2) --++ (-90:0.5) node[midway, right]{$g$};
+      \draw [|<->|] (mass.south east) ++ (0:0.3) --++ (-90:1.5) node[midway, fill=White]{$h$};
+      \draw [|<->|] (beam.south west) ++ (-90:0.5) --++ (0:4) node(A){} node[midway, fill=White]{$\dfrac{L}{2}$};
+      \draw [|<->|] (A.center) --++ (0:4) node[midway, fill=White]{$\dfrac{L}{2}$};
+    \end{tikzpicture}
+  \end{figure}
   
-  \exercise Beam AB is fixed between two walls distance 3 m apart. The beam has a cross-sectional area of 0.1 m$^2$ and the material is elastic-perfectly plastic, has $E$ = 70 GPa, and has a yield stress = 200 MPa. A load $P$ is applied at point C toward point A. Find
+  \item Beam AB is fixed between two walls distance 3 m apart. The beam has a cross-sectional area of 0.1 m$^2$ and the material is elastic-perfectly plastic, has $E$ = 70 GPa, and has a yield stress = 200 MPa. A load $P$ is applied at point C toward point A. Find
+
+  \begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+      \node [minimum height=2cm, minimum width=0.5cm, pattern=north east lines](lwall){};
+      \draw (lwall.north east) -- (lwall.south east);
+      \node at (lwall.east) [anchor=west, draw, minimum height=0.3cm, minimum width=8cm](beam){};
+      \node at (beam.east) [anchor=west, minimum height=2cm, minimum width=0.5cm, pattern=north east lines](rwall){};
+      \draw (rwall.north west) -- (rwall.south west);
+      \node at (beam.north west) [above right]{A};
+      \node at (beam.north east) [above left]{B};
+      \node at (beam.north) [above, xshift=-1cm]{C};
+      \draw [|<->|] (beam.south west) ++ (-90:0.4) --++ (0:3) node[midway, fill=White]{1 m};
+      \draw [|<->|] (beam.south east) ++ (-90:0.4) --++ (180:5) node[midway, fill=White]{2 m};
+      \draw [->, ultra thick] (beam.center) ++ (180:1) --++ (180:1) node[left]{$P$};
+    \end{tikzpicture}
+  \end{figure}
   
   \begin{enumerate}
-  \item The load P in which both segments will start to yield.
+  \item The load $P$ in which both segments will start to yield.
   \item The residual stress in both segments after load P is removed.
   \item The elongation of beam AB after the walls and load P are removed.
   \end{enumerate}
 
-  \exercise A 2-m long compound cable is used to hoist a weight $W$ up onto a platform. It consists of one steel section and one aluminum section, both with circular cross sections. Steel and aluminum have the following properties: 
+  \item A 2-m long compound cable is used to hoist a weight $W$ up onto a platform. It consists of one steel section and one aluminum section, both with circular cross sections. Steel and aluminum have the following properties: 
 
   \begin{table}[H]
     \centering
@@ -1304,7 +1529,7 @@ When the deformation of a body is negligible, its longitudinal deformation can b
   \item What are the final volumes of both sections when $W$ found in (a) is hoisted?
   \end{enumerate}
 
-  \exercise A 2-m long $6 \times 10$ cm$^2$  railroad track, fixed on both ends, is sitting in the sun. Solar radiation causes the track to heat up by $\Delta T$. The track is made of AISI1023 steel, with the following properties: $\alpha = 12 \times 10^{-6}$ /C, $E = 200$ GPa, and maximum allowable stress $\sigma_{allow} = 50$ MPa.
+  \item A 2-m long $6 \times 10$ cm$^2$  railroad track, fixed on both ends, is sitting in the sun. Solar radiation causes the track to heat up by $\Delta T$. The track is made of AISI1023 steel, with the following properties: $\alpha = 12 \times 10^{-6}$ /C, $E = 200$ GPa, and maximum allowable stress $\sigma_{allow} = 50$ MPa.
 
   \begin{figure}[H]
     \centering
@@ -1319,7 +1544,7 @@ When the deformation of a body is negligible, its longitudinal deformation can b
   
   Determine the maximum temperature change $\Delta T$ allowed on the track.
 	
-  \exercise A 2-m compound bar made of steel and copper is undergoing a heat treatment process for which the materials are heated from 25 C to 300 C. Afterwards, the bar is compressed back by force $P$ until it is back to its original 2-m length while its temperature remains at 300 C. The section properties are as follows:
+  \item A 2-m compound bar made of steel and copper is undergoing a heat treatment process for which the materials are heated from 25 C to 300 C. Afterwards, the bar is compressed back by force $P$ until it is back to its original 2-m length while its temperature remains at 300 C. The section properties are as follows:
   
   \begin{table}
     \centering
@@ -1454,7 +1679,15 @@ where $k_T = GJ/L$ is called the torsional stiffness of the bar.
 
   \begin{figure}[H]
   \centering
-  \includegraphics[scale=0.75]{pictures/Static-body-load-analysis/torsion-problem}
+  \begin{tikzpicture}
+    % \fill [white] (-7,-2) rectangle (6,2);
+    \node[draw, top color=LightSkyBlue, bottom color=LightSkyBlue, middle color=LightSkyBlue!20, cylinder, minimum height=10cm, minimum width=1cm, inner sep=2mm](cyl){};
+    \draw [->>, ultra thick] (cyl.west) --++ (180:1) node[above]{275 N-m};
+    \draw [->>, ultra thick] (cyl.east) ++ (180:0.2) --++ (180:1) node[above]{175 N-m};
+    \draw [->>, ultra thick] (cyl.east) ++ (180:4.5) --++ (0:1) node[above]{450 N-m};
+    \draw [|<->|] (cyl.west) ++ (-90:1) --++ (0:5.5) node[midway, fill=white]{0.5 m};
+    \draw [|<->|] (cyl.west) ++ (-90:1) ++ (0:5.5) --++ (0:4.5) node[midway, fill=white]{0.4 m};
+  \end{tikzpicture}
 \end{figure}
   
 \end{example}
@@ -1564,7 +1797,7 @@ To illustrate the procedure, we will divide nonuniform torsion problems into 3 c
 
     \begin{figure}[h]
     \centering
-    \begin{tikzpicture}[>=stealth]
+    \begin{tikzpicture}
       \draw[fill=SkyBlue] (0,-0.5) -- (5,0) -- (5,1) -- (0,1.5) -- (0,-0.5);
       \draw[->>,ultra thick] (1,0.5) -- (2,0.5) node[right]{$T(x)$};
       \draw[<->] (0,-1.5) -- (2.5,-1.5) node[above]{$L$} -- (5,-1.5);
@@ -1608,7 +1841,6 @@ where $\omega$  is the angular speed of the shaft. For machinery, the frequency 
     \begin{figure}[H]
     \centering
     \begin{tikzpicture}
-      \node [rectangle, fill=white, minimum height=4cm, minimum width=10cm]{};
       \node [draw, xshift=1cm, rectangle, top color=SkyBlue, bottom color=SkyBlue, middle color=SkyBlue!20, minimum height=4mm, minimum width=5cm](shaft){};
       \node at (shaft.north) [above right]{100 - 2000 rpm};
       \node at (shaft.west)[anchor=east, draw, rectangle, top color=Grey, bottom color=Grey, middle color=Grey!20, minimum height=1.5cm, minimum width=2cm](motor){Motor};
@@ -1697,7 +1929,7 @@ Note that the line integral has to be performed around the entire median circumf
       % cross section
       \draw[fill=LightGrey] (4, -1) rectangle ++(2.2, 3.2);
       \draw[dashed] (4.1,-0.9) rectangle ++ (2,3);
-      \draw[fill=LightSkyBlue] (4.2,-0.8) rectangle ++(1.8,2.8);
+      \draw[fill=titlepagecolor!50] (4.2,-0.8) rectangle ++(1.8,2.8);
       % dimensioning
       \draw[|<->|] (4.1, -1.2) -- ++ (1, 0) node[below]{20 cm} -- ++ (1,0);
       \draw[|<->|] (3.8, -0.9) -- ++ (90: 1.5) node[left]{30 cm} --++ (90:1.5);
@@ -1733,7 +1965,7 @@ Torque applied in the direction of the longitudinal axis a body leads to torsion
 
 \begin{exercises}
 
-  \exercise A solid shaft, 100 mm diameter, transmits 75 kW at 150 rev/min. Determine
+  \item A solid shaft, 100 mm diameter, transmits 75 kW at 150 rev/min. Determine
 
   \begin{figure}[H]
     \centering
@@ -1750,15 +1982,59 @@ Torque applied in the direction of the longitudinal axis a body leads to torsion
   \item The maximum torque the shaft could carry without exceeding the same maximum shear stress, if the shaft has now been bored so that its inner diameter is 60 mm in order to reduce weight.
   \end{enumerate}
   
-  \exercise  Determine the dimensions of a hollow shaft with a diameter ratio of 3:4 which is to transmit 60 kW at 200 rev/min. The maximum shear stress in the shaft is limited to 70 MPa and the angle of twist is 3.8 degree in a length of 4 m. The shaft material has G = 80 GPa.
+  \item  Determine the dimensions of a hollow shaft with a diameter ratio of 3:4 which is to transmit 60 kW at 200 rev/min. The maximum shear stress in the shaft is limited to 70 MPa and the angle of twist is 3.8 degree in a length of 4 m. The shaft material has G = 80 GPa.
 
-  \exercise A circular bar ABC, 3 m long, is rigidly fixed at its ends A and C. The portion AB is 1.8 m long and of 50 mm diameter and BC is 1.2 m long and of 25 mm diameter. If a twisting moment of 680 Nm is applied at B, determine the values of the resisting moments at A and C and the maximum stress in each section of the shaft. What will be the angle of twist of each portion? The shaft material has G = 80 GPa.
+  \begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+      \node [draw, circle, minimum height=4cm, fill=LightSkyBlue](outer){};
+      \node [draw, circle, minimum height=3cm, fill=White](inner){};
+      \draw [->] (inner.center) -- (inner.north east) node[midway, left]{$r_i$};
+      \draw [->] (outer.center) -- (outer.east) node[midway, below]{$r_o$};
+      \node at (outer.east) [xshift=1cm] {$\dfrac{r_i}{r_o} = \dfrac{3}{4}$};
+    \end{tikzpicture}
+  \end{figure}
 
-  \exercise An engineer is working on designing a new electric car model. He planned to reuse the shaft from an old model which uses a gasoline (benzene) engine. The old shaft radius was the minimum that can still operate with the engine, whose power output (in Watt) follows the function
+  \item A circular bar ABC, 3 m long, is rigidly fixed at its ends A and C. The portion AB is 1.8 m long and of 50 mm diameter and BC is 1.2 m long and of 25 mm diameter. If a twisting moment of $T$ = 680 Nm is applied at B, determine the values of the resisting moments at A and C and the maximum stress in each section of the shaft. What will be the angle of twist of each portion? The shaft material has $G$ = 80 GPa.
+
+  \begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+      \node [minimum height=2cm, minimum width=0.5cm, pattern=north east lines](lwall){};
+      \draw (lwall.north east) -- (lwall.south east);
+      \node at (lwall.east) [anchor=west, draw, minimum height=0.6cm, minimum width=5cm](beam){};
+      \node at (beam.east) [anchor=west, draw, minimum height=0.4cm, minimum width=3cm](beam1){};
+      \node at (beam1.east) [anchor=west, minimum height=2cm, minimum width=0.5cm, pattern=north east lines](rwall){};
+      \draw (rwall.north west) -- (rwall.south west);
+      \node at (beam.north west) [above right]{A};
+      \node at (beam1.north east) [above left]{C};
+      \node at (beam.north east) [above, xshift=1cm]{B};
+      \draw [|<->|] (beam.south west) ++ (-90:0.4) --++ (0:5) node[midway, fill=White]{1.8 m};
+      \draw [|<->|] (beam1.south east) ++ (-90:0.5) --++ (180:3.05) node[midway, fill=White]{1.2 m};
+      \draw [->>, ultra thick] (beam.east) --++ (180:1) node[left]{$T$};
+    \end{tikzpicture}
+  \end{figure}
+
+  \item An engineer is working on designing a new electric car model. He planned to reuse the shaft from an old model which uses a gasoline (benzene) engine. The old shaft radius was the minimum that can still operate with the engine, whose power output (in Watt) follows the function
 	$$ P_{engine} = -2\times10^{-6} (rpm)^3 + 1.5 \times 10^{-2} (rpm)^2; 1000 < rpm < 6000 $$ 
-where $rpm$ is the engine speed in revolutions per minute. The new electric car uses a motor for which its power output in Watt varies with its angular velocity as
+  where $rpm$ is the engine speed in revolutions per minute. The new electric car uses a motor for which its power output in Watt varies with its angular velocity as
 	$$ P_{motor} = -3 \times 10^{-6}(rpm)^3 + 2.5 \times 10^{-2} (rpm)^2; 1000 < rpm < 6000 $$
-        Is it safe the use the old shaft? Show your work. If not, what should the radius of the new shaft be? Assume that the old and new shafts are manufactured from the same material (AISI 1023), whose $\tau_{allow}$ = 200 MPa.
+
+  \begin{tikzpicture}
+    \centering
+    \begin{axis}[
+      width=0.8\textwidth,
+      height=.5\textwidth,
+      xmin=1,xmax=6,
+      xlabel={$rpm$},
+      ylabel={Power $P$},
+      ]
+      \addplot [very thick, blue, domain=1:6]{-2*10^3*x^3 + 1.5*10^4*x^2} node[near end, below right]{Engine};
+      \addplot [very thick, red, domain=1:6]{-3*10^3*x^3 + 2.5*10^4*x^2} node[near end, below right]{Motor};
+    \end{axis}
+  \end{tikzpicture}
+  
+  Is it safe the use the old shaft? Show your work. If not, what should the radius of the new shaft be? Assume that the old and new shafts are manufactured from the same material (AISI 1023), whose $\tau_{allow}$ = 200 MPa.
         
 \end{exercises}
 
@@ -1921,16 +2197,16 @@ From \cref{eqn: flexure formula}, we know that the maximum tensile stress and co
 
 \begin{equation} \label{eqn: section modulus}
   \begin{gathered}
-    {\sigma _1} =  - \frac{{M{c_1}}}{I} =  - \frac{M}{{{S_1}}} \hfill \\
-    {\sigma _2} =  - \frac{{M{c_2}}}{I} =  - \frac{M}{{{S_2}}} \hfill \\ 
+    \sigma _1 =  - \frac{Mc_1}{I} =  - \frac{M}{S_1} \hfill \\
+    \sigma _2 =  - \frac{Mc_2}{I} =  - \frac{M}{S_2} \hfill \\ 
   \end{gathered}
 \end{equation}
 
 in which
 
 \[\begin{gathered}
-  {S_1} = \frac{I}{{{c_1}}} \hfill \\
-  {S_2} = \frac{I}{{{c_2}}} \hfill \\ 
+  S_1 = \frac{I}{c_1} \hfill \\
+  S_2 = \frac{I}{c_2} \hfill \\ 
 \end{gathered} \]
 
 The quantities $S_1$ and $S_2$ are known as the section moduli of the cross section.
@@ -1941,19 +2217,19 @@ The quantities $S_1$ and $S_2$ are known as the section moduli of the cross sect
   \begin{figure}[H]
     \centering
     \begin{tikzpicture}[>=latex]
-      \node [rectangle, fill=white, minimum height=4cm, minimum width=10cm]{};
+      % \node [rectangle, fill=white, minimum height=4cm, minimum width=10cm]{};
       \node [draw, rectangle, fill=SkyBlue, minimum width=8cm, minimum height=2mm](beam){};
       \node at (beam.south west)[anchor=north, xshift=1cm, draw, fill=LightGray, circle, minimum height=3.9mm, inner sep=0](left){};
       \node at (beam.south east)[anchor=north, xshift=-1cm, draw, fill=LightGray, regular polygon, regular polygon sides=3, minimum height=5mm, inner sep=0](right){};
-      \draw [<-, ultra thick] (beam.north) --++ (90:1) node[above]{$P$};
-      \draw[<->] (left.south) ++ (-90:0.5) --++ (0:3) node[midway, below]{50 cm};
-      \draw[<->] (right.south) ++ (-90:0.5) --++ (180:3) node[midway, below]{50 cm};
+      \draw [<-, ultra thick] (beam.north) --++ (90:1) node[above]{500 N};
+      \draw[|<->|] (left.south) ++ (-90:0.5) --++ (0:3) node[midway, below]{50 cm};
+      \draw[|<->|] (right.south) ++ (-90:0.5) --++ (180:3) node[midway, below]{50 cm};
     \end{tikzpicture}
   \end{figure}
 \end{example}
 
 \begin{solution}
-  First, we must understand that the location along the beam where maximum stress occurs is the location of maximum bending moment. According to Error: Reference source not found, we know that the maximum bending moment occurs in the middle of the beam length. Using the method of sections and equilibrium equation, we have
+  First, we must understand that the location along the beam where maximum stress occurs is the location of maximum bending. Using the method of sections and equilibrium equation, we find that the maximum bending moment $M_{\max}$ occurs at the middle of the beam between the two supports.
 
   \begin{align*}
     M_{\max} &= 250 \text{ N} \times 0.5 \text{ m} \\
@@ -2339,7 +2615,7 @@ Occasionally in engineering practice, members are built up from several composit
 \begin{figure}[h]
   \centering
   \begin{tikzpicture}[>=latex]
-    \node [draw, rectangle, fill=LightGrey!80, minimum height=0.7cm, minimum width=3.5cm](top){};
+    \node [draw, rectangle, fill=LightSkyBlue, minimum height=0.7cm, minimum width=3.5cm](top){};
     \node at (top.north west)[anchor=north east, draw, rectangle, fill=white, minimum height=2.5cm, minimum width=0.4cm](left){};
     \node at (top.north east)[anchor=north west, draw, rectangle, fill=white, minimum height=2.5cm, minimum width=0.4cm](right){};
     \node at (top.center) [draw, fill=black, circle, minimum height=0.1cm, inner sep=0](centroid){};
@@ -2494,7 +2770,7 @@ Find the shear center of a channel section. Given a channel section has thicknes
 If there is force $V$ applied on the section, the resultant shear flow in the horizontal sections at distance $x$ from the right end is
 
 \[\begin{gathered}
-  q = \frac{VQ}{I} = \frac{V\left( \frac{d}{2} \right)(b - x)t}{I} \\ 
+  q = \frac{VQ}{I} = \frac{V\left( \dfrac{d}{2} \right)(b - x)t}{I} \\ 
    = \frac{Vtd}{2I}(b - x) \\ 
 \end{gathered} \]	
 
@@ -2556,7 +2832,7 @@ First, we must assume that the cross-sectional area is constant and that the axi
      % horizontal lines
      \draw [very thin] (centroid) ++ (0:0.2) --++ (0:6.7);
      \draw [very thin] (NA) ++ (0:0.2) --++ (0:6.7);
-     \draw [very thin] (dA) ++ (0:0.6) --++ (0:5.9) node[anchor=west, xshift=0.1cm, rectangle, fill=Blue!30!LightBlue, minimum height=0.2cm, minimum width=0.2cm, inner sep=0]{};
+     \draw [very thin] (dA) ++ (0:0.6) --++ (0:5.9) node[anchor=west, xshift=0.1cm, rectangle, fill=LightSkyBlue!50!Blue, minimum height=0.2cm, minimum width=0.2cm, inner sep=0]{};
 
      % vertical distances
      \draw [<->] (C) ++ (180:1) --++ (-90:0.36) node[midway, left]{$e$};
@@ -2688,7 +2964,19 @@ We then consider the cases where the applied bending moment is not perpendicular
 
 \begin{exercises}
 
-  \exercise A steel wire ($E = 3 \times 106$ psi) of diameter $d$ = 1/32 in is bent around a pulley of radius $r$ = 9.75 inch
+  \item A steel wire ($E$ = 210 GPa) of diameter $d$ = 5 mm in is bent around a pulley of radius $r$ = 5 cm inch
+
+  \begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+      \node[circle, draw, minimum height=4cm](pulley){};
+      \draw [line width=10pt, LightSkyBlue] (pulley.south east) ++ (-45:0.18) --++ (-135:2);
+      \draw [line width=10pt, LightSkyBlue] (pulley.south east) ++ (-45:0.18) arc (-45:90:2.18) --++ (180:2);
+      \draw [->] (pulley.center) -- (pulley.south west) node[midway, above left]{5 cm};
+      \draw [<->] (pulley.east) --++ (0:10pt) node[right]{5 mm};
+    \end{tikzpicture}
+  \end{figure}
+  
   \begin{enumerate}
 
   \item What is the maximum stress in the wire?
@@ -2697,15 +2985,15 @@ We then consider the cases where the applied bending moment is not perpendicular
 
   \end{enumerate}
 
-  \exercise A board weighing 3 lb/ft of length is loaded by two weights 90 lb each. Each weight is 8 ft away from the fulcrum. The board is 19 ft long, 8 in wide, and 1.5 in thick. What is the maximum bending stress in the board?
+  \item A board weighing 3 lb/ft of length is loaded by two weights 90 lb each. Each weight is 8 ft away from the fulcrum. The board is 19 ft long, 8 in wide, and 1.5 in thick. What is the maximum bending stress in the board?
 
-  \exercise The shear stresses in a rectangular beam are given by
+  \item The shear stresses in a rectangular beam are given by
   \[ \tau = \frac{V}{Ib} \left( \frac{h^2}{4} - y^2 \right) \]	
   in which $V$ is the shear force, $I$ is the moment of inertia of the cross-sectional area, $h$ is the height of the beam, and $y$ is the distance from the neutral axis to the point where the shear stress is being determined. By integrating over the cross-sectional area, show that the resultant of the shear stress is equal to the shear force $V$
   
-  \exercise A composite beam is constructed of a wood beam 6 in wide and 8 in thick reinforced on the lower side by a 0.5 in by 6 in steel plate. The modulus of elasticity for the wood is 1.2 x 106 psi and for the steel is 30 x 106 psi. Find the allowable bending moment if the allowable stress in the wood is 1500 psi and in the steel is 15,000 psi (Hint: find the lower bending moment of the two cases)
+  \item A composite beam is constructed of a wood beam 6 in wide and 8 in thick reinforced on the lower side by a 0.5 in by 6 in steel plate. The modulus of elasticity for the wood is 1.2 x 106 psi and for the steel is 30 x 106 psi. Find the allowable bending moment if the allowable stress in the wood is 1500 psi and in the steel is 15,000 psi (Hint: find the lower bending moment of the two cases)
 
-  \exercise A beam of rectangular cross section supports an inclined load P having its line of action along a diagonal of the cross section.
+  \item A beam of rectangular cross section supports an inclined load $P$ having its line of action along a diagonal of the cross section.
   \begin{enumerate}
     
   \item Show that the neutral axis lies along the other diagonal.
@@ -2713,13 +3001,13 @@ We then consider the cases where the applied bending moment is not perpendicular
 
   \end{enumerate}
   
-  \exercise Determine the shape factor $f$ for a cross section in the section in the shape of a double trapezoid having the dimensions shown in the figure.
+  \item Determine the shape factor $f$ for a cross section in the section in the shape of a double trapezoid having the dimensions shown in the figure.
 
   \begin{figure}[H]
     \centering
     \begin{tikzpicture}[>=latex]
-      \node [fill=LightBlue, trapezium, trapezium left angle=50, trapezium right angle=50, minimum height=2cm, minimum width=2cm](top){};
-      \node at (top.south) [anchor=north, yshift=1pt, fill=LightBlue, trapezium, trapezium left angle=130, trapezium right angle=130, minimum height=2cm, minimum width=2cm](bottom){};
+      \node [fill=LightSkyBlue, trapezium, trapezium left angle=50, trapezium right angle=50, minimum height=2cm, minimum width=2cm](top){};
+      \node at (top.south) [anchor=north, yshift=1pt, fill=LightSkyBlue, trapezium, trapezium left angle=130, trapezium right angle=130, minimum height=2cm, minimum width=2cm](bottom){};
       % dimensions
       \draw [|<->|] (top.north west) ++ (90:0.3) --++ (0:2) node[midway, above]{$b$};
       \draw [|<->|] (top.south east) ++ (0:2) --++ (90:2) node[midway, right]{$h$};
@@ -2727,7 +3015,7 @@ We then consider the cases where the applied bending moment is not perpendicular
     \end{tikzpicture}
   \end{figure}
   
-  \exercise A badminton racket designer attempts to employ the latest material technology to reduce the weight of a racket. Old models of racket shafts are made of aluminum alloy, and the designer wants to replace it with carbon-fiber reinforced polymer (CFRP). Material properties of both are listed below. The old shaft has a solid circular cross section with radius of 3 mm, and the new shaft should remain circular cross-sectioned. The new shaft should be able to take the same downward load $P$ that the old one can. Assume that the hand holding the racket behaves like a fixed support, what is the percentage weight reduction the designer can achieve?
+  \item A badminton racket designer attempts to employ the latest material technology to reduce the weight of a racket. Old models of racket shafts are made of aluminum alloy, and the designer wants to replace it with carbon-fiber reinforced polymer (CFRP). Material properties of both are listed below. The old shaft has a solid circular cross section with radius of 3 mm, and the new shaft should remain circular cross-sectioned. The new shaft should be able to take the same downward load $P$ that the old one can. Assume that the hand holding the racket behaves like a fixed support, what is the percentage weight reduction the designer can achieve?
 	
   \begin{table}[H]
     \centering
@@ -2845,7 +3133,8 @@ Each time we integrate produces one constant of integration. These constants can
   \begin{figure}[H]
     \centering
     \begin{tikzpicture}[>=latex]
-      \draw[fill=LightGrey] (0,-0.5) rectangle (1,2.5);
+      \draw (0,-0.5) rectangle (1,2.5);
+      \fill[pattern=north west lines] (0,-0.5) rectangle (1,2.5);
       \draw[fill=SkyBlue] (1,0.75) rectangle (7,1.25);
       \draw[<-, ultra thick] (7,1.25) -- ++(90:1) node[above]{$P$};
       \draw[|<->|] (1, 0.25) -- (4,0.25) node[below]{$L$} --  (7, 0.25);
@@ -2941,7 +3230,7 @@ The strain energy is then simply the integration of the strain energy of the ele
 
 We can use the first equation to find the strain energy in the beam when we know the bending moment as a function of the beam, or we can use the second equation when we know the deflection curve.
 
-\subsection{Castigliano’s theorem}
+\subsection{Castigliano’s Theorem}
 
 This theorem provides a method for finding the deflections of a structure from its strain energy. The theorem simply states that the derivative of the strain energy with respect the load is equal to the deflection corresponding to the load. The derivation of Castigliano’s theorem will show what the theorem physically represents.
 
@@ -2996,9 +3285,9 @@ According to Castigliano’s theorem, the only displacement that can be found ar
       \node [pattern=north east lines, rectangle, minimum height=3cm, minimum width=1cm](wall){};
       \node at (wall.east) [anchor=west, draw, fill=LightBlue, rectangle, minimum height=0.5cm, minimum width=6cm](beam){};
       \draw[<-, ultra thick] (beam.north east) -- ++(90:1) node[above]{$P$};
-      \draw[|<->|] (beam.south west) ++ (-90:0.3) --++ (0:6) node[midway, fill=SkyBlue]{$L$};
+      \draw[|<->|] (beam.south west) ++ (-90:0.3) --++ (0:6) node[midway, fill=titlepagecolor!50]{$L$};
       \node at (beam.north) [above] {$EI$};
-      \draw[->] (beam.north west) ++ (90:0.3) --++ (0:1) node[midway, fill=SkyBlue]{$x$};
+      \draw[->] (beam.north west) ++ (90:0.3) --++ (0:1) node[midway, fill=titlepagecolor!50]{$x$};
     \end{tikzpicture}
   \end{figure}
 
@@ -3013,7 +3302,7 @@ According to Castigliano’s theorem, the only displacement that can be found ar
       \node at (wall.east) [anchor=west, draw, fill=LightBlue, rectangle, minimum height=0.5cm, minimum width=6cm](beam){};
       \draw[<-, ultra thick] (beam.north east) -- ++(90:1) node[above]{$P$};
       \draw[<-, dashed, ultra thick] (beam.north) -- ++(90:1) node[above]{$Q$};
-      \draw[|<->|] (beam.south west) ++ (-90:0.6) --++ (0:3) node[midway, fill=SkyBlue]{$\dfrac{L}{2}$};
+      \draw[|<->|] (beam.south west) ++ (-90:0.6) --++ (0:3) node[midway, fill=titlepagecolor!50]{$\dfrac{L}{2}$};
     \end{tikzpicture}
   \end{figure}
 
@@ -3046,7 +3335,7 @@ According to Castigliano’s theorem, the only displacement that can be found ar
       \left. \frac{\partial U_i}{\partial Q} \right|_{Q=0} = 0
     \end{equation*}
 
-    Therefore, we can eliminate terms that fall into either of the conditions, which left us with only
+    Therefore, we can eliminate terms that fall into either of the conditions, which leave us with only
 
     \begin{align*}
       U^* &= \frac{1}{2EI} \int_0^{L/2} 2PQ(x-L)(x-\dfrac{L}{2}) dx \\
@@ -3108,30 +3397,38 @@ This chapter presents two methods that can be used to determine lateral deflecti
 
 \begin{exercises}
   
-  \exercise \label{exercise: beam-deflection-midpoint} A beam of rectangular cross section with second area moment of inertia $I$ and modulus of elasticity $E$ is fixed at the left end. A load $P$ is applied downward at the middle of the beam. The cross section of the beam has height $h$.
+  \item \label{exercise: beam-deflection-midpoint} A beam of rectangular cross section with second area moment of inertia $I$ and modulus of elasticity $E$ is fixed at the left end. A load $P$ is applied downward at the middle of the beam. The cross section of the beam has height $h$.
   \begin{enumerate}
   \item What is the bending moment function $M(x)$ along the length of the beam?
   \item What is the maximum normal bending stress in the beam? Where does it occur?
   \item What is the maximum deflection of the beam?
   \end{enumerate}
 
-  \begin{figure}[h]
+  \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.7]{pictures/Static-body-load-analysis/beam-def-midpoint-exercise}
+    \includegraphics[scale=0.8]{pictures/Static-body-load-analysis/beam-def-midpoint-exercise}
     \caption[]{Exercise \ref{exercise: beam-deflection-midpoint}}
   \end{figure}
   
-  \exercise Derive the equation of the deflection curve for a simple beam AB loaded by a moment $M_0$ at the left hand support. Also, determine the maximum deflection  (note: use the second order differential equation to determine the deflection $v(x)$, a simple beam is a constant cross sectional beam with Young’s Modulus $E$ and area moment of inertia $I$.)
+  \item Derive the equation of the deflection curve for a simple beam AB loaded by a moment $M_0$ at the left hand support. Also, determine the maximum deflection  (note: use the second order differential equation to determine the deflection $v(x)$, a simple beam is a constant cross sectional beam with Young’s Modulus $E$ and area moment of inertia $I$.)
 
-  \exercise \label{exercise: beam-deflection-moving-force} What must be the equation $y = f(x)$ of the axis of the slightly curved beam AB before the load is applied in order that the load $P$, moving along the bar, always stays at the same level?
+  \item \label{exercise: beam-deflection-moving-force} What must be the equation $y = f(x)$ of the axis of the slightly curved beam AB before the load is applied in order that the load $P$, moving along the bar, always stays at the same level?
 
-  \begin{figure}[h]
+  \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.95]{pictures/Static-body-load-analysis/beam-def-moving-force-exercise}
+    % \includegraphics[scale=1]{pictures/Static-body-load-analysis/beam-def-moving-force-exercise}
+    \begin{tikzpicture}
+      \draw[<->] (0,3) node[left]{$y$} --++ (-90:3) --++ (0:8) node[below]{$x$};
+      \draw [line width=6pt, LightSkyBlue] (0,0) node(A){} arc (120:60:7) node[near start](C){} node(B){};
+      \draw [<-, ultra thick] (C.center) --++ (90:1) node[above]{$P$};
+      \node at (A.center) [anchor=north, regular polygon, regular polygon sides=3, minimum height=4mm, draw, fill=LightGrey, inner sep=0]{};
+      \node at (B.center) [anchor=north, circle, minimum height=4mm, draw, fill=LightGrey, inner sep=0]{};
+      \draw [|<->|] (A.center) ++ (-90:0.7) --++ (0:7) node[midway, fill=White]{$L$};
+    \end{tikzpicture}
     \caption[]{Exercise \ref{exercise: beam-deflection-moving-force}}
   \end{figure}
   
-  \exercise The cantilever beam shown in the figure supports a triangularly distributed load of maximum intensity $q_0$, determine the deflectionat the free end B. (Obtain the solution by determining the strain energy of the beam and using Castigliano’s theorem)
+  \item The cantilever beam shown in the figure supports a triangularly distributed load of maximum intensity $q_0$, determine the deflectionat the free end B. (Obtain the solution by determining the strain energy of the beam and using Castigliano’s theorem)
 
     \begin{figure}[H]
     \centering
@@ -3146,6 +3443,46 @@ This chapter presents two methods that can be used to determine lateral deflecti
       \draw[->] (1,0.5) -- (1.5,0.5) node[right]{$x$};
     \end{tikzpicture}
   \end{figure}
+
+\item A cat, a mouse, and a tree branch
+
+A 10-N mouse is chased by a 50-N cat onto a \emph{circular} cross-sectioned tree branch ($r$ = 5 mm) which is 10 m long and is 5 cm above ground. The cat is always 5 m behind the mouse. When the mouse gets to the end of the branch, it immediately jumps down to the ground and keeps running away. The branch material properties are $E$ = 10 GPa and $\sigma_{allow}$ = 3 MPa.
+
+\begin{figure}[h]
+  \centering
+  \begin{tikzpicture}[>=latex]
+    \draw (0,0) --++ (-90:0.5) arc (180:270:0.1) node(A){} --++ (0:10) node[midway](B){} node(C){} --++ (-90:0.4) --++ (180:10) arc (90:180:0.1) --++ (-90:1) node(D){};
+    \node at (D.center) [anchor=north west, pattern=north west lines, minimum height=5mm, minimum width=10cm](ground1){};
+    \draw [|<->|] (D.center) ++ (90:0.8) --++ (0:10) node[midway, fill=White]{10 m};
+    \draw [|<->|] (ground1.north east) ++ (0:0.3) --++ (90:1.1) node[midway, right, fill=White]{5 cm};
+    \draw (ground1.north west) -- (ground1.north east);
+    \node at (A.center) [anchor=south west, draw, minimum height=3mm, minimum width=5mm, fill=DarkGrey](cat1){};
+    \draw [<-] (cat1) --++ (90:0.5) node[above]{cat};
+    \node at (B.center) [anchor=south, draw, minimum height=3mm, minimum width=2mm, fill=DarkGrey](mouse1){};
+    \draw [<-] (mouse1) --++ (90:0.5) node[above]{mouse};
+    \node at (D.center) [yshift=-1cm, anchor=west]{Beginning of chase};
+    
+    \draw (D.center) ++ (-90:2) --++ (-90:0.5) arc (180:270:0.1) node(E){} --++ (0:10) node[midway](F){} node(G){} --++ (-90:0.4) --++ (180:10) arc (90:180:0.1) --++ (-90:1) node(H){};
+    \node at (H.center) [anchor=north west, pattern=north west lines, minimum height=3mm, minimum width=10cm](ground2){};
+    \draw (ground2.north west) -- (ground2.north east);
+    \node at (F.center) [anchor=south west, draw, minimum height=3mm, minimum width=5mm, fill=DarkGrey]{};
+    \node at (G.center) [anchor=south, draw, minimum height=3mm, minimum width=2mm, fill=DarkGrey]{};
+    \node at (H.center) [yshift=-1cm, anchor=west]{Middle of chase. Mouse about to jump away from branch.};
+
+    \draw (H.center) ++ (-90:2) --++ (-90:0.5) arc (180:270:0.1) node(I){} --++ (0:10) node[midway](J){} node(K){} --++ (-90:0.4) --++ (180:10) arc (90:180:0.1) --++ (-90:1) node(L){};
+    \node at (L.center) [anchor=north west, pattern=north west lines, minimum height=3mm, minimum width=10cm](ground3){};
+    \draw (ground3.north west) -- (ground3.north east);
+    \node at (K.center) [anchor=south, draw, minimum height=3mm, minimum width=5mm, fill=DarkGrey]{};
+    \node at (L.center) [yshift=-1cm, anchor=west]{End of chase. Mouse got away. Cat stands at end of branch.};
+  \end{tikzpicture}
+\end{figure}
+
+Questions:
+
+\begin{enumerate}
+\item Does the branch ever touch the ground at any time during the chase? (Show your work.)
+\item Does the branch break during the chase? (Again, show your work.)
+\end{enumerate}
   
 \end{exercises}
 
@@ -3161,7 +3498,23 @@ Normally, the state of stress at a point in a body is defined by six independent
 
 \begin{figure}[h]
   \centering
-  \includegraphics[scale=0.7]{pictures/Multiaxial/plane-stress}
+  \begin{tikzpicture}[>=latex]
+    \node [draw, fill=LightBlue, regular polygon, regular polygon sides=4, minimum width=3cm](A){};
+    \draw [->,very thick] (A.north) --++ (90:1) node[above]{$\sigma_y$};
+    \draw [->,very thick] (A.east) --++ (0:1) node[right]{$\sigma_x$};
+    \draw [->,very thick] (A.west) --++ (180:1);
+    \draw [->,very thick] (A.south) --++ (-90:1);
+    \node at (A.north west) [yshift=3mm] (B){};
+    \draw [-left to, very thick] (B) --++ (0:2);
+    \node at (A.south east) [xshift=3mm] (C){};
+    \draw [-right to, very thick] (C) --++ (90:2) node[above right]{$\tau_{xy}$};
+    \node at (A.north west) [xshift=-3mm] (D){};
+    \draw [-right to, very thick] (D) --++ (-90:2);
+    \node at (A.south east) [yshift=-3mm] (E){};
+    \draw [-left to, very thick] (E) --++ (180:2);
+    \node at (A.south) [yshift=-1.2cm] {$\sigma_z = 0$, $\tau_{xz} = 0$, $\tau_{yz}  = 0$.};
+  \end{tikzpicture}
+  % \includegraphics[scale=0.7]{pictures/Multiaxial/plane-stress}
   \caption{A plane stress element.}
   \label{fig: plane stress element}
 \end{figure}
@@ -3176,7 +3529,32 @@ Given the state of plane stress, the orientation of the inclined plane on which 
 
 \begin{figure}[h]
   \centering
-  \includegraphics[scale=0.7]{pictures/Static-body-load-analysis/stress-transformation}
+  \begin{tikzpicture}[>=latex]
+    \node [draw, fill=LightBlue, regular polygon, regular polygon sides=4, minimum width=4cm](A){};
+    \draw [->,very thick] (A.north) --++ (90:1) node[above]{$\sigma_y$};
+    \draw [->,very thick] (A.east) --++ (0:1) node[right]{$\sigma_x$};
+    \draw [->,very thick] (A.west) --++ (180:1);
+    \draw [->,very thick] (A.south) --++ (-90:1);
+    \node at (A.north west) [yshift=3mm] (B){};
+    \draw [-left to, very thick] (B) --++ (0:2.6);
+    \node at (A.south east) [xshift=3mm] (C){};
+    \draw [-right to, very thick] (C) --++ (90:2.6) node[above right]{$\tau_{xy}$};
+    \node at (A.north west) [xshift=-3mm] (D){};
+    \draw [-right to, very thick] (D) --++ (-90:2.6);
+    \node at (A.south east) [yshift=-3mm] (E){};
+    \draw [-left to, very thick] (E) --++ (180:2.6);
+    \draw [dashed] (A.north west) ++ (-90:0.5) node(F){} ++ (135:1) --++ (-45:6);
+    \node at (A.west) [above right]{$\theta$};
+    %%%% cut section %%%%
+    \draw [fill=LightBlue] (F) ++ (0:8) node(G){} --++ (-90:2.3) node(H){} --++ (0:2.3) node(I){} -- cycle node[midway](J){};
+    \draw [->, very thick] (G.center) ++ (-90:1) --++ (180:1) node[above]{$\sigma_x$};
+    \draw [->, very thick] (H.center) ++ (0:1.3) --++ (-90:1) node[right]{$\sigma_y$};
+    \draw [-left to, very thick] (I.center) ++ (-135:0.5) --++ (180:1.8);
+    \draw [-right to, very thick] (G.center) ++ (-135:0.5) --++ (-90:1.8) node[below]{$\tau_{xy}$};
+    \draw [->, very thick] (J.center) --++ (45:1) node[above right]{$\sigma_{x'}$};
+    \draw [-right to, very thick] (I.center) ++ (90:0.5) --++ (135:2.6) node[above right]{$\tau_{x'y'}$};
+  \end{tikzpicture}
+  % \includegraphics[scale=0.7]{pictures/Static-body-load-analysis/stress-transformation}
   \caption{Derivation of stress transformation equation by cutting element at an angle.}
   \label{fig: stress transformation}
 \end{figure}
@@ -3298,7 +3676,7 @@ Since the angle between the principal stresses and maximum shear stress on Mohr�
   
   \begin{align*}
     \tau_{xy} &= \sqrt {\left( \frac{\sigma_x - \sigma_y}{2} \right)^2 + \tau _{xy}^2}  \\ 
-                 &= \sqrt {\left( \frac{20 - ( - 30)}{2} \right)^2 + 25^2}  \\ 
+                 &= \sqrt {\left( \frac{-30 - 20)}{2} \right)^2 + 25^2}  \\ 
                  &= 35.4 \text{ MPa} 
   \end{align*}
   
@@ -3306,7 +3684,7 @@ Since the angle between the principal stresses and maximum shear stress on Mohr�
 
   \begin{align*}
     \sigma_{1,2} &= \frac{\sigma_x + \sigma _y}{2} \pm \sqrt {\frac{\sigma _x - \sigma_y}{2}^2 + \tau _{xy}^2}  \\ 
-                    &= \frac{20 - 30}{2} \pm 35.4 \\ 
+                    &= \frac{-30 + 20}{2} \pm 35.4 \\ 
                     &= 30.4 \text{ MPa}, - 40.4 \text{ MPa} 
   \end{align*}
   
@@ -3314,9 +3692,9 @@ Since the angle between the principal stresses and maximum shear stress on Mohr�
 
   \begin{align*}
     2\theta  &= \tan^{-1}\frac{2\tau_{xy}}{\sigma_x - \sigma_y} \\ 
-             &= 0.785 \\ 
-    \theta  &= 0.393 \text{ rad} \\ 
-             &= 22.5\degree
+             &= -0.785 \\ 
+             &= -45\degree \\
+    \theta  &= -22.5\degree
   \end{align*}
 \end{solution}
 
@@ -3504,14 +3882,14 @@ Hydrostatic pressure situation represents the state where the pressure is equal 
 
 \begin{align*}
   e &= \frac{3\sigma_o}{E}(1 - 2\nu ) \\ 
-    &= \frac{3(30 \times 10^6 \text{ Pa})(1 - 2(0.3))}{(3 \times 10^9 \text{ Pa})} \\ 
-    &= 0.012 
+    &= \frac{3(-30 \times 10^6 \text{ Pa})(1 - 2(0.3))}{(3 \times 10^9 \text{ Pa})} \\ 
+    &= -0.012 
 \end{align*}	
 
 This means that the volume reduced by 1.2\% (since hydrostatic pressure in this case is compressive), and thus the final volume is
 
 \begin{align*}
-  V_f &= (1 - e)V \\ 
+  V_f &= (1 + e)V \\ 
       &= 0.988(0.25 \text{ m}^3) \\ 
       &= 0.247 \text{ m}^3
 \end{align*}
@@ -3847,7 +4225,7 @@ When performing a tensile test on a specimen, it is often the case that the norm
     \node at (gage.north west) [xshift=0.2cm, yshift=-1.7cm, circle, fill=black, minimum height=2mm, inner sep=0](B){};
     \draw (A) --++ (180:1);
     \draw (B) --++ (180:1);
-    \draw [<->] (gage.north west) ++ (90:0.3) --++ (0:3) node[midway, fill=white]{Tension};
+    \draw [<->] (gage.north west) ++ (90:0.3) --++ (0:3) node[midway, fill=white]{Direction of Measurement};
   \end{tikzpicture}
   \caption{A schematic representation of a linear strain gage. As the strain gage stretches, so does the conductor within, thus increasing the gage's electrical resistance.}
 \end{figure}
@@ -3939,10 +4317,10 @@ The values of $\varepsilon_x$, $\varepsilon_y$, $\gamma_{xy}$ are determined by 
       \node at (mohr.west) [below left]{$-83(10^{-6})$};
       \node at (mohr.east) [below right]{$243(10^{-6})$};
       \draw (mohr.center) -- (mohr.north) node[above]{$163(10^{-6})$};
-      \draw (mohr.center) --++ (76:3.26) node(epsilonx){} to [out=30, in=-180] ++(0.5, 1) node[right]{$\epsilon_x = 120(10^{-6})$};
+      \draw [->] (mohr.center) --++ (76:3.26) node(epsilonx){} to [out=30, in=-180] ++(0.5, 1) node[right]{$\epsilon_x = 120(10^{-6})$};
       \draw [dashed] (epsilonx.center) --++ (-90:3.26*sin(78);
       \draw [dashed] (epsilonx.center) --++ (180:2.4) node[left]{$\dfrac{323}{2}(10^{-6})$};
-      \draw (mohr.center) --++ (-104:3.26) node(epsilony){} to [out=-150, in=150] ++(0,-1) node[right]{$\epsilon_y = 120(10^{-6})$};
+      \draw [->] (mohr.center) --++ (-104:3.26) node(epsilony){} to [out=-150, in=150] ++(0,-1) node[right]{$\epsilon_y = 120(10^{-6})$};
       \draw [dashed] (epsilony.center) --++ (90:3.26*sin(104);
       \draw [->] (mohr.center) ++ (0:1) arc (0:76:1) node[midway, below left, xshift=1mm]{76$\degree$};
     \end{tikzpicture}
@@ -3961,17 +4339,17 @@ Finally, interesting cases in analysis of multiaxial stress are presented includ
 
 \begin{exercises}
   
-  \exercise \label{exercise: stress transformation} Determine the principal stresses, maximum shear stresses, and principal direction in each of these elements using stress transformation equations.
+  \item \label{exercise: stress transformation} Determine the principal stresses, maximum shear stresses, and principal direction in each of these elements using stress transformation equations.
   
   \includegraphics[scale=0.65]{pictures/Static-body-load-analysis/plane-stress-exercise1}
   \includegraphics[scale=0.65]{pictures/Static-body-load-analysis/plane-stress-exercise2} \\
   \includegraphics[scale=0.65]{pictures/Static-body-load-analysis/plane-stress-exercise3}
 
-  \exercise With Mohr's circle, determine the principal stresses, maximum shear stresses, and principal direction for the elements in exercise \ref{exercise: stress transformation}.
+  \item With Mohr's circle, determine the principal stresses, maximum shear stresses, and principal direction for the elements in exercise \ref{exercise: stress transformation}.
 
-  \exercise A set of strain rosette consisting of strain gages along the $0\degree$, $45\degree$, and 90$\degree$ are attached onto a specimen that undergoes tensile test. The results from the strain gages are $2 \times 10^{-4}$, $1 \times 10^{-4}$, and $ -2 \times 10^{-4}$. Determine the principal strains, the absolute maximum shear strain, and the principal direction.
+  \item A set of strain rosette consisting of strain gages along the $0\degree$, $45\degree$, and 90$\degree$ are attached onto a specimen that undergoes tensile test. The results from the strain gages are $2 \times 10^{-4}$, $1 \times 10^{-4}$, and $ -2 \times 10^{-4}$. Determine the principal strains, the absolute maximum shear strain, and the principal direction.
 
-  \exercise A $4 \times  4 \times 4$ cm$^3$ cube with $E$ = 200 GPa is put under the
+  \item A $4 \times  4 \times 4$ cm$^3$ cube with $E$ = 200 GPa is put under the
   following state of stress: $\sigma_x$ = 100 MPa, $\sigma_y$ = -50
   MPa, $\sigma_z$ = 80 MPa. After the stresses are applied, the cube's
   volume is increased by 0.05\% compared to its original
@@ -4004,12 +4382,24 @@ Consider the vessel having a wall thickness $t$ and inner radius $r$. A gauge pr
 
 \begin{figure}[h]
   \centering
-  \includegraphics[scale=0.7]{pictures/Combined-loadings/cylindrical-vessel-circ}
+  \begin{tikzpicture}[scale=2, view angle=15, >=latex]
+    % Back of sphere
+    \draw[left color=brown!50, right color=brown, horizontal] (0,0) --++ (-120:2) arc (-120:-300:1);
+    % Front of sphere
+    \draw[left color=brown, right color=brown, middle color=brown!50, horizontal] (0,0) --++ (-90:4.5) node(B){} --++ (-120:2) node(A){} --++ (90:4.5);
+    \draw[left color=brown!50, right color=brown, horizontal] (A.center) arc (-120:-180:1) --++ (90:4.5) arc (-180:-120:1);
+    % arrows
+    \foreach \x in {0,1.1,2.2,...,4.4} {
+      \draw [horizontal, ->, thick] (A.center) ++ (90:\x) --++ (-30:0.5);
+      \draw [horizontal, ->, thick] (B.center) ++ (90:\x) --++ (-30:0.5);
+    }
+  \end{tikzpicture}
+  % \includegraphics[scale=0.7]{pictures/Combined-loadings/cylindrical-vessel-circ}
   \caption{Force balance between the circumferential stress in vessel's wall and internal pressure.}
   \label{fig: cylindrical vessel circumferential}
 \end{figure}
 
-Considering only the loading in $x$ direction, the pressure on the wall surface must be balanced by the hoop stress throughout the thickness of both walls. The total force from pressure on the wall surface is the same as the force on the vertical face of the sectioned gas. Therefore, we have
+Considering only the loading in $x$ direction, the pressure on the wall surface must be balanced by the hoop stress throughout the thickness of both walls. The total force from pressure on the wall surface is the same as the force on the vertical face of the sectioned vessel content. Therefore, we have
 
 \begin{equation}
   \begin{gathered}
@@ -4022,7 +4412,19 @@ In order to obtain the longitudinal stress $\sigma_l$, we will consider the left
 
 \begin{figure}[h]
   \centering
-  \includegraphics[scale=0.7]{pictures/Combined-loadings/cylindrical-vessel-long}
+  \begin{tikzpicture}[>=latex]
+    \node [draw, cylinder, left color=brown, right color=brown, middle color=brown!50, minimum height=3cm, minimum width=3cm, inner sep=10, rotate=90](cyl){};
+    \node at (cyl.east) [anchor=north, fill=brown!50, ellipse, minimum width=3cm, minimum height=0.7cm](top){};
+    \draw [->, very thick](top.north) --++ (90:1);
+    \draw [->, very thick](top.north east) --++ (90:1);
+    \draw [->, very thick](top.east) --++ (90:1);
+    \draw [->, very thick](top.south east) --++ (90:1);
+    \draw [->, very thick](top.south) --++ (90:1);
+    \draw [->, very thick](top.north west) --++ (90:1);
+    \draw [->, very thick](top.west) --++ (90:1);
+    \draw [->, very thick](top.south west) --++ (90:1);
+  \end{tikzpicture}
+  % \includegraphics[scale=0.7]{pictures/Combined-loadings/cylindrical-vessel-long}
   \caption{Force balance between longitudinal stress and internal pressure.}
   \label{fig: cylindrical vessel circumferential}
 \end{figure}
@@ -4044,10 +4446,70 @@ We can analyze a spherical vessel in a similar manner. Consider the vessel that 
 
 \begin{figure}[h]
   \centering
-  \includegraphics[scale=0.6]{pictures/Combined-loadings/spherical-vessel}
+  \begin{tikzpicture}[scale=2, view angle=15, >=stealth]
+    % Back of sphere
+    \draw[fill=brown!50, fill opacity=.75, horizontal] (0,0) circle (1);
+    % Front of sphere
+    \draw[left color=brown, right color=brown, middle color=brown!50, fill opacity=.75] (0:1) arc (0:-180:1) [horizontal] node[at start](A){} node[near start](B){} node[midway](C){} node[near end](D){} node[at end](E){} arc (-180:0:1) ;
+    % Other stuff
+    \foreach \n in {1,...,8} {
+      \draw [vertical at=45*\n+10,->, very thick] (0:1) --++ (90:0.4);
+    }
+    \draw [->, very thick] (A.center) --++ (0:0.4);
+    \draw [->, very thick] (B.center) --++ (-45:0.4);
+    \draw [->, very thick] (C.center) --++ (-90:0.4);
+    \draw [->, very thick] (D.center) --++ (-130:0.4);
+    \draw [->, very thick] (E.center) --++ (-180:0.4);
+  \end{tikzpicture}
+  % \includegraphics[scale=0.6]{pictures/Combined-loadings/spherical-vessel}
   \caption{Force balance between the circumferential stress in spherical vessel's wall and internal pressure.}
   \label{fig: spherical vessel}
 \end{figure}
+
+% \tdplotsetmaincoords{70}{120}
+% \tdplotsetrotatedcoords{90}{90}{90}
+% \begin{figure}[h]
+%   \centering
+%   \begin{tikzpicture}[tdplot_main_coords,scale=0.5]
+%     \tdplotsetrotatedcoords{90}{90}{90}%
+    
+%     \draw (0,0,0)--++(0,-2.3,0)node[above left]{$-$};
+
+%     % draw condensore plate
+%     \draw[fill=lightgray] (-1.5,0,-1.5)--(-1.5,0,1.5)--(1.5,0,1.5)--(1.5,0,-1.5)--cycle;
+%     \draw[fill=lightgray] (1.5,0,-1.5)--(1.5,-0.2,-1.5)--(1.5,-0.2,1.5)--(1.5,0,1.5)--cycle;
+%     \draw[fill=lightgray] (1.5,-0.2,1.5)--(-1.5,-0.2,1.5)--(-1.5,0,1.5)--(1.5,0,1.5)--cycle;
+
+%     % draw surface
+%     \def\q{-2.3}
+%     \def\R{3}
+%     \draw (0,-0.5*\q,0) coordinate(R);
+%     \tdplotdrawarc[tdplot_rotated_coords,fill=lightgray,fill opacity=0.5,draw=black]{(R)}{\R}{0}{360}{}{}
+%     \draw[tdplot_rotated_coords](R)++(-110:\R) node[below left]{$S_1$};
+%     \draw[tdplot_rotated_coords](R)++(70:\R) node[above right]{$C$};
+%     \tdplotsetrotatedcoords{0}{70}{90}
+%     \draw[tdplot_rotated_coords](R)++(90:\R) coordinate (A) circle(0.5pt);
+%     \draw[tdplot_rotated_coords,fill opacity=0.5,fill=lightgray!30](A)arc(90:270:\R);
+%     \tdplotsetrotatedcoords{90}{90}{90}
+%     \tdplotdrawarc[tdplot_rotated_coords,fill=lightgray!10,draw=black]{(R)}{\R}{0}{360}{}{}
+%     \begin{scope}
+
+%     % draw condensor plate again, inside (clip outside)
+%     \clip[tdplot_rotated_coords] (R)++(0:\R) arc (0:360:\R);
+%     \draw[fill=lightgray] (-1.5,0,-1.5)--(-1.5,0,1.5)--(1.5,0,1.5)--(1.5,0,-1.5)--cycle;
+%     \draw[fill=lightgray] (1.5,0,-1.5)--(1.5,-0.2,-1.5)--(1.5,-0.2,1.5)--(1.5,0,1.5)--cycle;
+%     \draw[fill=lightgray] (1.5,-0.2,1.5)--(-1.5,-0.2,1.5)--(-1.5,0,1.5)--(1.5,0,1.5)--cycle;
+%     \end{scope}
+%     \draw[tdplot_rotated_coords] (R)++(0:\R) arc (0:360:\R);
+
+%     % draw second condensor plate
+%     \draw[fill=lightgray] (-1.5,0-\q,-1.5)--(-1.5,0-\q,1.5)--(1.5,0-\q,1.5)--(1.5,0-\q,-1.5)--cycle;
+%     \draw[fill=lightgray] (1.5,0-\q,-1.5)--(1.5,-0.2-\q,-1.5)--(1.5,-0.2-\q,1.5)--(1.5,0-\q,1.5)--cycle;
+%     \draw[fill=lightgray] (1.5,-0.2-\q,1.5)--(-1.5,-0.2-\q,1.5)--(-1.5,0-\q,1.5)--(1.5,0-\q,1.5)--cycle;
+%     \draw (0,-\q,0)--++(0,2,0)node[above right]{$+$};
+%   \end{tikzpicture}
+% \end{figure}
+
 \begin{equation}
   \begin{gathered}
     {\sigma }(2\pi rt) - p(\pi {r^2}) = 0 \\ 
@@ -4066,7 +4528,7 @@ The stresses on cylindrical pressure vessels due to internal pressure are always
 \begin{align*}
   {\sigma _c} &= \frac{{Pr}}{t} \\ 
   P &= \frac{{{\sigma _{\max }}t}}{r} \\ 
-              &= \frac{{100 \times {{10}^6} \times 3 \times {{10}^{ - 3}}}}{{30 \times {{10}^{ - 2}}}} \\ 
+              &= \frac{100 \times 10^6 \times 3 \times 10^{ - 3}}{30 \times 10^{ - 2}} \\ 
               &= {10^6} \text{ Pa} = 1\text{ MPa} \\ 
 \end{align*}
 
@@ -4118,6 +4580,7 @@ Analysis of these problems involves first identify the critical point on the mem
 
   This equation can be solved numerically to obtain $r = 2.38$ cm.
 \end{solution}
+ 
 \section*{Summary}
 
 In this chapter, the concept in Chapter 6 is utilized. In the first part, one of the simplest and most used applications of multiaxial stress analysis is introduced: pressure vessels. We analyzed the principal stresses and maximum shear stresses depending on the internal pressure and vessel dimensions. In the second part, we open up to all types of possible problems which lead to multiaxial stress state: combined loadings. The key is to determine the types of loads on the cross section--whether forces or moments, determine the resulting stresses, and use the multiaxial stress analysis to determine the principal stresses and maximum shear stress.
@@ -4126,14 +4589,14 @@ In this chapter, the concept in Chapter 6 is utilized. In the first part, one of
 
 \begin{exercises}
 
-  \exercise \label{exercise: cantilever beam} A cantilever beam of rectangular cross section is subjected to a concentrated load $P$ = 75000 N acting at the free end. The beam has width $b$ = 10 cm and height $h$ = 25 cm. Point A is located at distance $c$ = 60 cm from the free end and distance $d$ = 8 cm from the bottom of the beam. Calculate the principal stresses 1 and 2 and the maximum shear stress max at point A.
+  \item \label{exercise: cantilever beam} A cantilever beam of rectangular cross section is subjected to a concentrated load $P$ = 75000 N acting at the free end. The beam has width $b$ = 10 cm and height $h$ = 25 cm. Point A is located at distance $c$ = 60 cm from the free end and distance $d$ = 8 cm from the bottom of the beam. Calculate the principal stresses 1 and 2 and the maximum shear stress max at point A.
   \begin{figure}[h]
     \centering
     \includegraphics[scale=0.7]{pictures/Static-body-load-analysis/multiaxial-cantilever-beam-exercise}
     \caption[]{Exercise \ref{exercise: cantilever beam}}
   \end{figure}
   
-  \exercise \label{exercise: generator shaft}A generator shaft of hollow circular cross section is subjected to a torque T = 25 kN-m. The outer and inner diameters of the shaft are 200 mm and 160 mm, respectively. What is the maximum permissible compressive load $P$ that can be applied to the shaft if the allowable in-plane shear stress is allow = 45 MPa?
+  \item \label{exercise: generator shaft}A generator shaft of hollow circular cross section is subjected to a torque T = 25 kN-m. The outer and inner diameters of the shaft are 200 mm and 160 mm, respectively. What is the maximum permissible compressive load $P$ that can be applied to the shaft if the allowable in-plane shear stress is allow = 45 MPa?
   
   \begin{figure}[h]
     \centering
@@ -4141,21 +4604,21 @@ In this chapter, the concept in Chapter 6 is utilized. In the first part, one of
     \caption[]{Exercise \ref{exercise: generator shaft}}
   \end{figure}
   
-  \exercise A machine shaft of solid circular cross section is being designed for a tensile load $P$ = 80 kN and a torque $T$ = 1.1 kN-m. The allowable stresses are 60 MPa in tension and 30 MPa in shear. What is the required diameter of the shaft?
+  \item A machine shaft of solid circular cross section is being designed for a tensile load $P$ = 80 kN and a torque $T$ = 1.1 kN-m. The allowable stresses are 60 MPa in tension and 30 MPa in shear. What is the required diameter of the shaft?
 
-  \exercise A segment of a cylindrical pressure vessel is subjected to a torque T and bending moment M as shown. The outer radius is 12 in and the wall thickness is 1 in. The loads are as follows: T = 8x105 lb-in, M = 106 lb-in, and the internal pressure p = 900 psi. Determine the maximum tensile stress, maximum compressive stress, and maximum shear stress in the wall of the cylinder.
+  \item A segment of a cylindrical pressure vessel is subjected to a torque T and bending moment M as shown. The outer radius is 12 in and the wall thickness is 1 in. The loads are as follows: T = 8x105 lb-in, M = 106 lb-in, and the internal pressure p = 900 psi. Determine the maximum tensile stress, maximum compressive stress, and maximum shear stress in the wall of the cylinder.
 
-  \exercise A thin-walled cylindrical pressure vessel of 10 cm radius and 0.25 cm thickness is working with the inside pressure $p$. The vessel is also loaded by an axial force of $F$. The vessel is made of steel, which has yield stress
+  \item A thin-walled cylindrical pressure vessel of 10 cm radius and 0.25 cm thickness is working with the inside pressure $p$. The vessel is also loaded by an axial force of $F$. The vessel is made of steel, which has yield stress
   \begin{enumerate}
   \item If F = 40 kN, what is the pressure p so that the vessel is beginning to yield under the maximum distortional energy criterion?
   \item If p = 2 MPa, what is the axial load F so that the vessel is beginning to yield under the maximum normal stress criterion?
   \end{enumerate}
 
-  \exercise You made a bet with your friend that you can apply a large enough bending moment to break an unopened coke can. The can is assumed to be a cylindrical thin-walled vessel whose radius $r$ is 2.5 cm and wall thickness $t$ is 0.3 mm. The internal gage pressure of the can is 100 kPa. The can is made of aluminum whose $\sigma_{allow}$ = 100 MPa. Determine how much bending moment you must apply in order to win this bet.
+  \item You made a bet with your friend that you can apply a large enough bending moment to break an unopened coke can. The can is assumed to be a cylindrical thin-walled vessel whose radius $r$ is 2.5 cm and wall thickness $t$ is 0.3 mm. The internal gage pressure of the can is 100 kPa. The can is made of aluminum whose $\sigma_{allow}$ = 100 MPa. Determine how much bending moment you must apply in order to win this bet.
   
   Note: the moment of inertia of a cylindrical thin-walled vessel is $I = 3 \pi r^3 t$.
 
-  \exercise You are chewing a bubblegum that has a volume of 2 cm$^3$ and
+  \item You are chewing a bubblegum that has a volume of 2 cm$^3$ and
   blowing a bubble. Assume that the bubble forms a thin-walled sphere
   with a constant internal pressure of 3 kPa, regardless of the size
   of the bubble. What is the maximum radius, $r$, of the bubble that
@@ -4165,7 +4628,7 @@ In this chapter, the concept in Chapter 6 is utilized. In the first part, one of
   bubble of radius $r$ and thickness $t$ is $4\pi r^2 t$ and that the
   volume of the gum always remains 2 cm$^3$.
 
-  \exercise A 500-N highway sign is attached to the end of an L-shaped,
+  \item A 500-N highway sign is attached to the end of an L-shaped,
   massless pole. The AISI-1023 steel pole (a ducile material with $E$
   = 200 GPa and $S_y$ = 360 MPa) is a constant cross-sectioned tube
   whose outer radius of the pole $r_o$ is 10 cm. Determine
@@ -4176,6 +4639,28 @@ In this chapter, the concept in Chapter 6 is utilized. In the first part, one of
   \item maximum possible inner diameter $r_i$.
   \end{enumerate}
   
+\item An L-shaped bar is fixed on one end at the wall. The bar has a constant circular cross section with the radius of 1 cm. The bar is made of a \emph{ductile} steel whose Young's modulus $E$ = 210 GPa, yield strength $S_{yield}$ = 300 MPa, and ultimate tensile strength $S_{ut}$ = 450 MPa.
+
+  \begin{center}
+    \begin{tikzpicture}[>=latex]
+      \node [trapezium, trapezium left angle=115, trapezium right angle=65, pattern=north west lines, minimum height=1cm, rotate=90]{};
+      \draw [thin, Black, double=LightGrey, double distance=12pt, rounded corners=5mm, line cap=round] (0,0) node(A){} --++ (-25:6) node(B){} --++ (-155:4) node(C){};
+      \draw [->, thick] (B.center) ++ (0:2) node(D){} --++ (-25:1) node[right]{$y$};
+      \draw [->, thick] (D.center) --++ (90:1) node[above]{$z$};
+      \draw [->, thick] (D.center) --++ (-155:1) node[below left]{$x$};
+      \draw [<->] (A.center) ++ (25:0.7) --++ (-25:6) node[midway, fill=white, rotate=-25]{80 cm};
+      \draw [<->] (C.center) ++ (-25:0.7) --++ (25:4) node[midway, fill=white, rotate=25]{50 cm};
+      \node at (C.center) [draw, very thin, fill=LightGrey!50, circle, minimum height=12pt](E){};
+      \draw [<-, very thick] (E.north) --++ (90:1) node[above]{$P$};
+    \end{tikzpicture}
+  \end{center}
+
+  \begin{enumerate}
+  \item (5 points) Determine the location of a critical point. (Be specific.)
+  \item (5 points) Draw a Mohr's circle representing the state of stress (prinical and maximum shear stresses) at the critical point.
+  \item (5 points) Determine the maximum static (constant) load $P$ that can be exerted on the bar.
+  \item (5 points) Determine the maximum repeated and fully reversed load that varies back and forth between $-P$ and $P$ that can be exerted on the bar.
+  \end{enumerate}
 \end{exercises}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -4632,7 +5117,7 @@ When the deformation of interest is not at the location that the actual load app
 \section*{Exercises}
 
 \begin{exercises}
-  \exercise A network of truss are connected as shown in the figure. A load of 500 N is applied at node A. Determine the \emph{horizontal} displacement at node C. Note that each truss is made of the same material whose $E$ = 1 GPa and $A$ = 20 mm$^2$. The trusses and the wall are joined by pins.
+  \item A network of truss are connected as shown in the figure. A load of 500 N is applied at node A. Determine the \emph{horizontal} displacement at node C. Note that each truss is made of the same material whose $E$ = 1 GPa and $A$ = 20 mm$^2$. The trusses and the wall are joined by pins.
 
   \begin{center}
     \begin{tikzpicture}
@@ -4649,7 +5134,7 @@ When the deformation of interest is not at the location that the actual load app
     \end{tikzpicture}
   \end{center}
   
-  \exercise Determine the deflection at the end of a cantilever beam with a midpoint downward load $P$ using the virtual work method. Is this identical to the solution obtained by the direct integration method?
+  \item Determine the deflection at the end of a cantilever beam with a midpoint downward load $P$ using the virtual work method. Is this identical to the solution obtained by the direct integration method?
 
   \begin{center}
     \begin{tikzpicture}
@@ -5097,9 +5582,22 @@ where $\sigma_a$ is the stress amplitude, $S_e$ is the endurance limit, $S_y$ is
 
   \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.9]{pictures/Failure-theories/fatigue-example}
-    % \caption{'Safe-zone' diagram for material under modified Coulomb-Mohr criterion.}
-    % \label{fig: MCM safe zone}
+    % \includegraphics[scale=0.9]{pictures/Failure-theories/fatigue-example}
+    \begin{tikzpicture}
+      \node[draw, cylinder, minimum height=6cm, minimum width=5mm, inner sep=4](beam){};
+      \draw [->, very thick] (beam.east) ++ (180:0.15) --++ (0:1) node[below]{$F$};
+      \draw [->, very thick] (beam.west) --++ (180:1) node[below]{$F$};
+    \end{tikzpicture} \\[10pt]
+    \begin{tikzpicture}
+      \begin{axis} [
+        ymin=0,ymax=8000,
+        ylabel={$F$},
+        xlabel={time (s)},
+        xmin=0,
+        ]
+        \addplot [semithick, samples=100,domain=0:10.8] {abs(8000*sin(50*\x))};
+      \end{axis}
+    \end{tikzpicture}
   \end{figure}
 \end{example}
 \begin{solution}
@@ -5306,7 +5804,19 @@ Since this equation is nonhomogeneous, the solution consists of both a complemen
 
 \[v = C_1\sin \left( \sqrt {\frac{P}{EI}} x \right) + C_2\cos \left( \sqrt {\frac{P}{EI}} x \right) + \delta \]
 
-Solving for constants of integration using $v(x = 0) = 0$ and $v(x = L) = \delta$, we have that
+Solving for constants of integration using $v(x = 0) = 0$ we have that 
+
+\begin{equation*}
+  C_2 = -\delta
+\end{equation*}
+
+At the fixed end $v'(x=0) = 0$
+
+\begin{equation*}
+  C_1 = 0
+\end{equation*}
+
+Finally, at the free end, the deflection is $\delta$, giving us
 
 \[\delta \cos \left( \sqrt {\frac{P}{EI}} L \right) = 0\]
 
@@ -5414,7 +5924,7 @@ Buckling occurs because the internal bending moment in the beam is not enough to
 
 \begin{exercises}
   
-  \exercise A plane stress element is under the following state of stress.  $\sigma_x = 150$ MPa, $\sigma_y = -200$ MPa , and $\tau_{xy} = 100$ MPa. The material has $S_y$ = 200 MPa, $S_{ut}$ = 250 MPa, and $S_{uc}$ = 300 MPa. Determine the safety factor under the following criteria.
+  \item A plane stress element is under the following state of stress.  $\sigma_x = 150$ MPa, $\sigma_y = -200$ MPa , and $\tau_{xy} = 100$ MPa. The material has $S_y$ = 200 MPa, $S_{ut}$ = 250 MPa, and $S_{uc}$ = 300 MPa. Determine the safety factor under the following criteria.
   \begin{enumerate}
   \item MNST
   \item MSST
@@ -5441,7 +5951,7 @@ Buckling occurs because the internal bending moment in the beam is not enough to
     \end{tikzpicture}
   \end{figure}
   
-  \exercise A 2-m long, pinned-support prismatic steel ($E$ = 210 GPa) column is restrained in the middle. Its cross-sectional area is a circle with radius of 5 cm. Determine the safety factor of the column if it is compressed by the load of 700 N.
+  \item A 2-m long, pinned-support prismatic steel ($E$ = 210 GPa) column is restrained in the middle. Its cross-sectional area is a circle with radius of 5 cm. Determine the safety factor of the column if it is compressed by the load of 700 N.
 
   \begin{figure}[H]
     \centering
@@ -5463,7 +5973,7 @@ Buckling occurs because the internal bending moment in the beam is not enough to
     \end{tikzpicture}
   \end{figure}
   
-  \exercise A shaft made of AISI 1020 ($E$ = 210 GPa, $S_y$ = 400 MPa, and $S_{ut}$ = 600 MPa) is twisted back and forth by the torque of $T$ = [-200, 200] Nm. Size the proper shaft so that its safety factor is 3.
+  \item A shaft made of AISI 1020 ($E$ = 210 GPa, $S_y$ = 400 MPa, and $S_{ut}$ = 600 MPa) is twisted back and forth by the torque of $T$ = [-200, 200] Nm. Size the proper shaft so that its safety factor is 3.
 
   \begin{figure}[H]
     \centering
@@ -5474,7 +5984,7 @@ Buckling occurs because the internal bending moment in the beam is not enough to
     \end{tikzpicture}
   \end{figure}
 
-  \exercise You want to design a cylindrical beer can with 3 cm radius that contains a nice cold beer under 20 kPa pressure using the smallest possible thickness $t_1$. After you submitted the design to your manager, however, he told you to revise the design because when beer is shaken, it releases $\text{CO}_2$ that pressurizes the can to 60 kPa, using the smallest possible thickness $t_2$ but keeping the same 3 cm radius. If the aluminum used to manufacture the cans has a yield stress of 100 MPa, what is the difference in thickness between your second design and your first design $t_2 - t_1$? Note: use maximum distortion energy theory to determine failure.
+  \item You want to design a cylindrical beer can with 3 cm radius that contains a nice cold beer under 20 kPa pressure using the smallest possible thickness $t_1$. After you submitted the design to your manager, however, he told you to revise the design because when beer is shaken, it releases $\text{CO}_2$ that pressurizes the can to 60 kPa, using the smallest possible thickness $t_2$ but keeping the same 3 cm radius. If the aluminum used to manufacture the cans has a yield stress of 100 MPa, what is the difference in thickness between your second design and your first design $t_2 - t_1$? Note: use maximum distortion energy theory to determine failure.
 
     \begin{figure}[H]
     \centering
@@ -5491,9 +6001,9 @@ Buckling occurs because the internal bending moment in the beam is not enough to
     \end{tikzpicture}
   \end{figure}
   
-  \exercise Assume that a state of triaxial principal stresses develops on an element as shown in the figure below. These stresses are directly proportional to a parameter a. If the yield stress in uniaxial stress is 250 MPa. What should a be in order for the element to start to yield based on the maximum distortional energy theory?
+  \item Assume that a state of triaxial principal stresses develops on an element as shown in the figure below. These stresses are directly proportional to a parameter a. If the yield stress in uniaxial stress is 250 MPa. What should a be in order for the element to start to yield based on the maximum distortional energy theory?
 
-  \exercise A bar with a 20-mm diameter is being loaded axially by a periodic force of range $[3P, -P]$ until it is broken after $10^5$ cycles. The bar material has $S_y$ = 400 MPa, $S_{ut}$ = 550 MPa, and follows stress-fatigue life response curve.
+  \item A bar with a 20-mm diameter is being loaded axially by a periodic force of range $[3P, -P]$ until it is broken after $10^5$ cycles. The bar material has $S_y$ = 400 MPa, $S_{ut}$ = 550 MPa, and follows stress-fatigue life response curve.
   \[ \sigma_a = 10^{7.5}N^{-0.06} \]
   and its nonzero mean stress follows Gerber relation.
   \begin{enumerate}
@@ -5501,9 +6011,9 @@ Buckling occurs because the internal bending moment in the beam is not enough to
   \item How many cycles does it take to break the same bar if the load if the load is changed to $[5P, 0]$
   \end{enumerate}
   
-  \exercise A slender bar AB with pinned ends (simple supports) and length $L$ is held between immovable supports. What increase $\Delta T$ in the temperature of the bar will produce buckling at the Euler load?
+  \item A slender bar AB with pinned ends (simple supports) and length $L$ is held between immovable supports. What increase $\Delta T$ in the temperature of the bar will produce buckling at the Euler load?
 
-  \exercise A circular bar of radius 1 cm and length 50 cm is fixed between two walls 50 cm apart. The bar is made of a material that has thermal coefficient of expansion $\alpha$ = 1.1x10$^{-6}$ / C and modulus of elasticity $E$ = 210 GPa and ultimate tensile stress $S_{ut}$ = 240 MPa. The material follows stress-fatigue life curve with zero mean stress of
+  \item A circular bar of radius 1 cm and length 50 cm is fixed between two walls 50 cm apart. The bar is made of a material that has thermal coefficient of expansion $\alpha$ = 1.1x10$^{-6}$ / C and modulus of elasticity $E$ = 210 GPa and ultimate tensile stress $S_{ut}$ = 240 MPa. The material follows stress-fatigue life curve with zero mean stress of
   \[ \sigma_a = 10^{6.5}N^{-0.07} \]
   and the effect of nonzero mean stress follows Goodman relation so that
   \[ \frac{\sigma_a}{S_e} + \frac{\sigma_m}{S_{ut}} = 1 \]
@@ -5512,7 +6022,7 @@ Buckling occurs because the internal bending moment in the beam is not enough to
   \item What is the change in temperature that will cause the bar to buckle?
   \end{enumerate}
 
-  \exercise A 3-m long springboard at a water park is used repeatedly
+  \item A 3-m long springboard at a water park is used repeatedly
   everyday by thousands of people. Assume that the average weight of
   of a person using the board is 700 N, which keeps getting
   on and jumping off repeatedly. The board is made of AISI 1040 steel
