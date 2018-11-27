@@ -45,8 +45,8 @@ svgnames,
   colorlinks,
   citecolor=black,
   filecolor=black,
-  linkcolor=black,
-  urlcolor=black
+  linkcolor=blue,
+  urlcolor=blue
 }
 \let\openbox\relax
 \usepackage{amsmath}
@@ -126,11 +126,6 @@ svgnames,
 
 \titlespacing*{\chapter}{0pt}{50pt}{-10pt}
 
-%%% New column type
-\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-
 %Example environment
 \usepackage{thmtools}
 \usepackage{mdframed}
@@ -209,10 +204,10 @@ numbered=no
   %\includegraphics[scale=0.23]{pictures/tube-connection}
   \vfill
   \noindent
-  \raggedleft{\huge \textsf{ME 210: Mechanics of Materials}}
+  \raggedleft{\Huge\textsf{ME 210: Mechanics of Materials}}
   \vskip\baselineskip
   \noindent
-  {\large \textsf{Sappinandana Akamphon}}
+  {\LARGE\textsf{Sappinandana Akamphon}}
 \end{titlepage}
 \restoregeometry % restores the geometry
 \nopagecolor% Use this to restore the color pages to white
@@ -482,7 +477,7 @@ While the actual stress-strain diagrams of different materials can be vastly dif
   % \includegraphics[scale=1]{pictures/Basic-material-behavior/stress-strain-diagram} \\
   \begin{tikzpicture}[>=latex]
     % axes
-    \draw [<->] (0,8) node[left]{$\sigma$} --++ (-90:8) node(O){} --++ (0:11) node[below]{$\varepsilon$};
+    \draw [<->] (0,7) node[left]{$\sigma$} --++ (-90:7) node(O){} --++ (0:11) node[below]{$\varepsilon$};
     % braces
     \draw [decorate, decoration={brace, mirror, amplitude=2mm}] (O.center) ++ (-90:0.2) --++ (0:2.5) node(B){} node[midway, below, yshift=-3mm]{elastic region};
     \draw [decorate, decoration={brace, mirror, amplitude=2mm}] (B.center) --++ (0:2) node(C){} node[midway, below, yshift=-3mm]{yielding};
@@ -623,24 +618,24 @@ Poisson's ratios for various common materials are tabulated in \cref{table: pois
   {\renewcommand\arraystretch{1.2}
     \begin{tabular}{ll}
       \toprule
-      Material & Poisson's ratio\\
+      Material        & Poisson's ratio \\
       \midrule
-      rubber & 0.4999\\
-      gold & 0.42–0.44\\
-      saturated clay & 0.40–0.49\\
-      magnesium & 0.252-0.289\\
-      titanium & 0.265-0.34\\
-      copper & 0.33\\
-      aluminium-alloy & 0.32\\
-      clay & 0.30–0.45\\
-      stainless steel & 0.30–0.31\\
-      steel & 0.27–0.30\\
-      cast iron & 0.21–0.26\\
-      sand & 0.20–0.45\\
-      concrete & 0.1-0.2\\
-      glass & 0.18–0.3\\
-      foam & 0.10–0.50\\
-      cork & 0\\
+      rubber          & 0.4999          \\
+      gold            & 0.42–0.44       \\
+      saturated clay  & 0.40–0.49       \\
+      magnesium       & 0.252-0.289     \\
+      titanium        & 0.265-0.34      \\
+      copper          & 0.33            \\
+      aluminium-alloy & 0.32            \\
+      clay            & 0.30–0.45       \\
+      stainless steel & 0.30–0.31       \\
+      steel           & 0.27–0.30       \\
+      cast iron       & 0.21–0.26       \\
+      sand            & 0.20–0.45       \\
+      concrete        & 0.1-0.2         \\
+      glass           & 0.18–0.3        \\
+      foam            & 0.10–0.50       \\
+      cork            & 0               \\
       \bottomrule
     \end{tabular}}
 \end{table}
@@ -710,13 +705,13 @@ Without any constraint, the change in length of the part can be computed using t
   \begin{figure}[H]
     \centering
     \begin{tikzpicture}
-      \path[fill=white] (-5,-2) rectangle (5,2);
+      % \path[fill=white] (-5,-2) rectangle (5,2);
       % \draw (-5,-2) grid (5,2);
-      \draw[fill=SkyBlue] (-4,-0.2) rectangle (4,0.2);
-      \draw[fill=Grey] (-4.5,-1) rectangle (-4,1);
-      \draw[fill=Grey] (4,-1) rectangle (4.5,1);
-      \draw[|<->|] (-4,-1.5) -- (0,-1.5) node[above]{$L$} -- (4,-1.5);
-      \draw (0,0.5) node{$T_0 \rightarrow T$};
+      \node [draw, fill=SkyBlue, minimum height=4mm, minimum width=8cm](beam){};
+      \node at (beam.west) [anchor=east, pattern=north west lines, minimum height=2cm, minimum width=5mm](lwall){};
+      \node at (beam.east) [anchor=west, pattern=north west lines, minimum height=2cm, minimum width=5mm](rwall){};
+      \draw[|<->|] (lwall.south east) ++ (-90:0.3) --++ (0:8) node[midway, above]{$L$};
+      \node at (beam.north) [yshift=3mm] {$T_0 \rightarrow T$};
     \end{tikzpicture}
   \end{figure}
   
@@ -824,12 +819,11 @@ Similarly, in the case of axially loaded members, they elongate or shorten depen
   \caption{Deformation of a axially loaded constant cross-sectioned member.}
 \end{figure}
 
-\[\arraycolsep=1.4pt\def\arraystretch{2.2}
-  \begin{array}{l}
-    \sigma  = \dfrac{P}{A}\\
-    \varepsilon  = \dfrac{\delta }{L}\\
-    \sigma  = E\varepsilon 
-  \end{array}\]
+\begin{gather}
+ \sigma      = \dfrac{P}{A} \\
+ \varepsilon = \dfrac{\delta}{L} \\
+ \sigma      = E\varepsilon 
+\end{gather}
 
 And therefore we can derive for these relationships that
 
@@ -1233,7 +1227,7 @@ In this type of material, the stress-strain behavior is linear throughout its el
   \begin{tikzpicture}[scale=0.7, >=latex]
     \draw[<->](-5,0)--(5,0) node[right]{$\varepsilon$};
     \draw[<->](0,-5)--(0,-4) node[right]{$-S_y$} -- (0,4) node[left]{$S_y$} -- (0,5) node[right]{$\sigma$};
-    \draw[thick, Blue](-5,-4) -- (-2,-4) -- (2,4) -- (5,4);
+    \draw[very thick, Blue](-5,-4) -- (-2,-4) -- (2,4) -- (5,4);
   \end{tikzpicture}
   %\includegraphics[scale=0.7]{pictures/Axial-load/elastic-perfectly-plastic}
   \caption{Typical behavior of an elastic-perfectly plastic material.}
@@ -1381,9 +1375,27 @@ Comparison between static and impact responses can be done using the \emph{impac
 
 Impact factors can then be used to apply to determine proper design parameters for components under impact loading.
 
+\begin{example} A battering ram on a castle gate.
+  
+  On the final days of Balon Greyjoy's rebellion, the combined armies of Robert Baratheon and Eddard Stark have laid siege on castle on the final Iron Island stronghold of Pyke. Robert ordered his van to ram down the front gate to the castle to commence the final attack. The 500-kg battering ram is a 10-m long solid cylindrical bar made of weirwood with $E$ = 20 GPa and cross sectional radius of 1 m. If the soldiers were able to accelerate the ram up to 20 m/s right before impact, what are the maximum deformation and stress on the ram?
+  
+  \begin{center}
+    \begin{tikzpicture}
+      \node [cylinder, draw, minimum height=5cm, minimum width=1cm, inner sep=4](ram){};
+      \node at (ram.east) [anchor=west, xshift=1cm, fill=LightSkyBlue, minimum height=2cm, minimum width=1cm, draw](gate){};
+      \draw [->, ultra thick] (ram.north) ++ (-0.5,0.2) --++ (0:1) node[midway, above]{20 m/s};
+    \end{tikzpicture}
+  \end{center}
+  
+\end{example}
+\begin{solution}
+
+  This problem
+\end{solution}
+
 \section*{Summary}
 
-When the deformation of a body is negligible, its longitudinal deformation can be considered using axially loaded member methodology. First, we consider statically determinate cases, where the use of equilibrium equation is sufficient to determine the deformation of the body. Second, we consider statically indeterminate cases, where, in addition to equilibrium equation, we also need compatibility equation to determine the deformation. From this, we assumed that materials are allowed to deform well into their plastic regimes. After which the removal of the force will lead to permanent deformation and, in certain cases, residual stresses. We then proceeded to relax the assumption that the external force is static, which leads us to impact loading and repeated loading.
+When the deformation of a body in the lateral directions is negligible, its longitudinal deformation can be considered using axially loaded member methodology. First, we consider statically determinate cases, where the use of equilibrium equation is sufficient to determine the deformation of the body. Second, we consider statically indeterminate cases, where, in addition to equilibrium equation, we also need compatibility equation to determine the deformation. From this, we assumed that materials are allowed to deform well into their plastic regimes. After which the removal of the force will lead to permanent deformation and, in certain cases, residual stresses. We then proceeded to relax the assumption that the external force is static, which leads us to impact loading and repeated loading.
 
 \section*{Exercises}
 
@@ -1685,8 +1697,8 @@ where $k_T = GJ/L$ is called the torsional stiffness of the bar.
     \draw [->>, ultra thick] (cyl.west) --++ (180:1) node[above]{275 N-m};
     \draw [->>, ultra thick] (cyl.east) ++ (180:0.2) --++ (180:1) node[above]{175 N-m};
     \draw [->>, ultra thick] (cyl.east) ++ (180:4.5) --++ (0:1) node[above]{450 N-m};
-    \draw [|<->|] (cyl.west) ++ (-90:1) --++ (0:5.5) node[midway, fill=white]{0.5 m};
-    \draw [|<->|] (cyl.west) ++ (-90:1) ++ (0:5.5) --++ (0:4.5) node[midway, fill=white]{0.4 m};
+    \draw [|<->|] (cyl.west) ++ (-90:1) --++ (0:5.5) node[midway, fill=titlepagecolor!50]{0.5 m};
+    \draw [|<->|] (cyl.west) ++ (-90:1) ++ (0:5.5) --++ (0:4.5) node[midway, fill=titlepagecolor!50]{0.4 m};
   \end{tikzpicture}
 \end{figure}
   
@@ -1707,18 +1719,18 @@ The maximum shear stress in each segment is at the outer diameter. We have
 
 \[\begin{gathered}
   {\tau _{\max }} = \frac{{Tr}}{{{J}}} = \frac{{2T}}{{\pi {r^3}}} \hfill \\
-  {({\tau _{\max }})_{BC}} = \frac{{2(275\text{ Nm})}}{{\pi {{(1.5 \times {{10}^{ - 2}}\text{ m})}^3}}} = 51.9\text{ MPa} \hfill \\
+  {({\tau_{\max }})_{BC}} = \frac{{2(275\text{ Nm})}}{{\pi {{(1.5 \times {{10}^{ - 2}}\text{ m})}^3}}} = 51.9\text{ MPa} \hfill \\
   {({\tau _{\max }})_{CD}} = \frac{{2(175\text{ Nm})}}{{\pi {{(1.5 \times {{10}^{ - 2}}\text{ m})}^3}}} = 33\text{ MPa} \hfill \\ 
 \end{gathered} \]
 
 Angle of twist between B and D is the sum of the angles of twist in BC and CD.
 
 \[\begin{gathered}
-  {\phi _{BD}} = {\phi _{BC}} + {\phi _{CD}} \hfill \\
-  {J} = \frac{{\pi {r^4}}}{2} = \frac{{\pi {{(1.5 \times {{10}^{ - 2}}\;{\text{m}})}^4}}}{2} = 7.95 \times {10^{ - 8}}\;{{\text{m}}^{\text{4}}} \hfill \\
-  {\phi _{BC}} = \frac{{{T_{BC}}{L_1}}}{{G{J}}} = \frac{{( - 275\;{\text{Nm}})(0.5\;{\text{m}})}}{{(80\;{\text{GPa}})(7.95 \times {{10}^{ - 8}}\;{{\text{m}}^{\text{4}}})}} =  - 0.0216\;{\text{rad}} \hfill \\
-  {\phi _{CD}} = \frac{{{T_{CD}}{L_2}}}{{G{J}}} = \frac{{(175\;{\text{Nm}})(0.4\;{\text{m}})}}{{(80\;{\text{GPa}})(7.95 \times {{10}^{ - 8}}\;{{\text{m}}^{\text{4}}})}} = 0.0110\;{\text{rad}} \hfill \\
-  {\phi _{BD}} =  - 0.0216 + 0.0110 =  - 0.0106\;{\text{rad}} \hfill \\ 
+  \phi_{BD} = \phi_{BC} + \phi_{CD} \hfill \\
+  J = \frac{\pi r^4}{2} = \frac{\pi (1.5 \times 10^{-2}\text{ m})^4}{2} = 7.95 \times 10^{-8}\text{ m}^4 \hfill \\
+  \phi_{BC} = \frac{T_{BC}L_1}{GJ} = \frac{( - 275\text{ Nm})(0.5\;{\text{m}})}{(80\text{ GPa})(7.95 \times 10^{-8}\text{ m}^4)} =  - 0.0216\text{ rad} \hfill \\
+  \phi_{CD} = \frac{T_{CD}L_2}{GJ} = \frac{(175\text{ Nm})(0.4\text{ m})}{(80\text{ GPa})(7.95 \times 10^{-8}\text{ m}^4)} = 0.0110\text{ rad} \hfill \\
+  \phi_{BD} =  - 0.0216 + 0.0110 =  - 0.0106\text{ rad} \hfill \\ 
 \end{gathered} \]
 
 Therefore, the bar twisted in the same direction as $T_2$ by 0.0106 rad.
@@ -1739,7 +1751,7 @@ To illustrate the procedure, we will divide nonuniform torsion problems into 3 c
 
   \begin{figure}[h]
     \centering
-    \begin{tikzpicture}[>=stealth]
+    \begin{tikzpicture}
       % members
       \draw[fill=SkyBlue] (0,0) rectangle (3,1) ;
       \draw[fill=SkyBlue] (3,-0.5) rectangle (5,1.5);
@@ -1772,7 +1784,7 @@ To illustrate the procedure, we will divide nonuniform torsion problems into 3 c
   
   \begin{figure}[h]
     \centering
-    \begin{tikzpicture}[>=stealth]
+    \begin{tikzpicture}
       \draw[fill=SkyBlue] (0,-0.5) -- (5,0) -- (5,1) -- (0,1.5) -- (0,-0.5);
       \draw[->>,ultra thick] (5,0.5) -- (6,0.5) node[right]{$T$};
       \draw[->>,ultra thick] (0,0.5) --++ (180:1) node[left]{$T$};
@@ -2411,7 +2423,7 @@ A composite beam made of two types of woods is subjected to bending under pure b
     \draw[|<->|] (0,3) to (1.25,3) node[above]{5 cm}to (2.5, 3);
     % beam with load
     \draw[fill=LightGrey] (5,0.7) rectangle (11,1);
-    \draw (5,1) rectangle (11,1.5);
+    \draw[fill=SkyBlue](5,1) rectangle (11,1.5);
     \draw[->, thick]  (5,2) node[above]{200 N-m} arc (120:240:1cm);
     \draw[->, thick]  (11,2) node[above]{200 N-m} arc (60:-60:1cm);
     \end{tikzpicture}
@@ -2892,7 +2904,7 @@ where $R$ is the location of the neutral axis, measured as a distance from the c
   \centering
   \caption{Properties of various cross-sectional shapes for curved beams.}
   \label{table: curved beam radius of neutral axis}
-  \begin{tabular}{ L{3cm} C{5cm} }
+  \begin{tabular}{lc}
     \toprule
     Cross section & Radius of neutral surface \\
     \midrule
@@ -3019,7 +3031,7 @@ We then consider the cases where the applied bending moment is not perpendicular
 	
   \begin{table}[H]
     \centering
-    \begin{tabular}{C{3cm}  C{3cm} C{3cm} }
+    \begin{tabular}{lrr}
       \toprule
       Material	&		Aluminum Alloy		&		CFRP \\
       \midrule
@@ -3283,6 +3295,7 @@ According to Castigliano’s theorem, the only displacement that can be found ar
     \centering
     \begin{tikzpicture}[>=latex]
       \node [pattern=north east lines, rectangle, minimum height=3cm, minimum width=1cm](wall){};
+      \draw (wall.south east) -- (wall.north east);
       \node at (wall.east) [anchor=west, draw, fill=LightBlue, rectangle, minimum height=0.5cm, minimum width=6cm](beam){};
       \draw[<-, ultra thick] (beam.north east) -- ++(90:1) node[above]{$P$};
       \draw[|<->|] (beam.south west) ++ (-90:0.3) --++ (0:6) node[midway, fill=titlepagecolor!50]{$L$};
@@ -3299,6 +3312,7 @@ According to Castigliano’s theorem, the only displacement that can be found ar
     \centering
     \begin{tikzpicture}[>=latex]
       \node [pattern=north east lines, rectangle, minimum height=3cm, minimum width=1cm](wall){};
+      \draw (wall.south east) -- (wall.north east);
       \node at (wall.east) [anchor=west, draw, fill=LightBlue, rectangle, minimum height=0.5cm, minimum width=6cm](beam){};
       \draw[<-, ultra thick] (beam.north east) -- ++(90:1) node[above]{$P$};
       \draw[<-, dashed, ultra thick] (beam.north) -- ++(90:1) node[above]{$Q$};
@@ -3569,7 +3583,7 @@ Given the state of plane stress, the orientation of the inclined plane on which 
   \end{split} \nonumber \\[0.5em]
   \sigma_{x'} = \sigma_x\cos ^2\theta  + \sigma_y\sin^2\theta  + 2\tau_{xy} \sin \theta \cos \theta  \\[1em]
   \sum F_{y'}  = 0; \hfill \\ 
-  \tau_{x'y'} = (\sigma_x - \sigma_y)\sin \theta \cos \theta  + \tau_{xy}(\cos ^2\theta  - \sin^2\theta ) \\ 
+  \tau_{x'y'} = -(\sigma_x - \sigma_y)\sin \theta \cos \theta  + \tau_{xy}(\cos ^2\theta  - \sin^2\theta ) \\ 
 \end{gather*}
 
 Once we know $\sigma_{x’}, \sigma_{y’}$ can be obtained simply by substituting $\theta$ with 90 + $\theta$
@@ -3627,7 +3641,6 @@ Note that this equation represents a circle having radius $R$ and center on the 
     \draw [dashed] (A.center) --++ (180:2.75) node[left]{$\tau_{xy}$};
     \draw (absolute.south) [out=-90, in=150] to ++(0.5,-0.5) node[right]{Maximum in-plane shear stress};
   \end{tikzpicture}
-  % \includegraphics[scale=0.8]{pictures/Static-body-load-analysis/mohrs-circle}
   \caption{Mohr's circle and its representation of state of stress.}
   \label{fig: mohr's circle}
 \end{figure}
@@ -3692,10 +3705,52 @@ Since the angle between the principal stresses and maximum shear stress on Mohr�
 
   \begin{align*}
     2\theta  &= \tan^{-1}\frac{2\tau_{xy}}{\sigma_x - \sigma_y} \\ 
-             &= -0.785 \\ 
+             &= \tan^{-1} -1 \\ 
              &= -45\degree \\
     \theta  &= -22.5\degree
   \end{align*}
+
+  We can also plot the expression for transformed normal stress $\sigma_x'$ and transformed shear stress $\tau_{x'y'}$ as
+
+  \begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+      \begin{axis} [
+        width=0.8\textwidth,
+        height=0.5\textwidth,
+        samples=50,
+        xlabel={$\theta$},
+        ylabel={Stress (MPa)},
+        domain=0:360,
+        xtick distance=45,
+        xmin=0,
+        ]
+        \addplot+[mark=none]{-30*(cos(x))^2 + 20*(sin(x))^2 + 50*sin(x)*cos(x)} node[right]{$\sigma_x'$};
+        \addplot+[mark=none]{-(-30 - 20)*sin(x)*cos(x) + 25*((cos(x))^2 - (sin(x))^2)} node[right]{$\tau_{x'y'}$};
+      \end{axis}
+    \end{tikzpicture}
+  \end{figure}
+
+  where we can observe that the principal direction and max shear stress direction are always 45$^{\circ}$ apart.
+
+  Finally, to bring things full circle (literally), let us draw a Mohr's circle to represent the state of stress.
+
+  \begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+      \node at (-3,0) [anchor=west, draw, fill=SkyBlue, circle, minimum height=5cm](large){};
+      \draw [<->] (-5,0) --++ (0:8) node[right]{$\sigma$};
+      \draw [<->] (0,-3) --++ (90:6) node[above]{$\tau$};
+      \node at (large.east) [below right] {30.4};
+      \node at (large.west) [below left] {-40.4};
+      \draw (0,0) node[above right]{0};
+      \draw (large.center) --++ (-45:2.5) node(A){};
+      \draw [dashed] (A.center) --++ (90:1.75) node[above]{20};
+      \draw (large.center) --++ (135:2.5) node(B){};
+      \draw [dashed] (B.center) --++ (0:2.2) node[right]{25};
+      \draw [dashed] (B.center) --++ (-90:1.7) node[below]{-30};
+    \end{tikzpicture}
+  \end{figure}
 \end{solution}
 
 \section{Hooke’s Law for Plane Stress}
@@ -4404,7 +4459,7 @@ Considering only the loading in $x$ direction, the pressure on the wall surface 
 \begin{equation}
   \begin{gathered}
     2\sigma _ctdy - p(2r)(dy) = 0 \\ 
-    {\sigma _c} = \frac{{pr}}{t} \\ 
+    {\sigma _c} = \frac{pr}{t} \\ 
   \end{gathered}
 \end{equation}
 
@@ -4434,7 +4489,7 @@ Consider the force in the $y$ direction, we have
 \begin{equation}
   \begin{gathered}
     {\sigma _l}(2\pi rt) - p(\pi {r^2}) = 0 \\ 
-    {\sigma _l} = \frac{{pr}}{{2t}} \\ 
+    {\sigma _l} = \frac{pr}{2t} \\ 
   \end{gathered}
 \end{equation}
 
@@ -4446,7 +4501,7 @@ We can analyze a spherical vessel in a similar manner. Consider the vessel that 
 
 \begin{figure}[h]
   \centering
-  \begin{tikzpicture}[scale=2, view angle=15, >=stealth]
+  \begin{tikzpicture}[scale=2, view angle=15]
     % Back of sphere
     \draw[fill=brown!50, fill opacity=.75, horizontal] (0,0) circle (1);
     % Front of sphere
@@ -4618,24 +4673,14 @@ In this chapter, the concept in Chapter 6 is utilized. In the first part, one of
   
   Note: the moment of inertia of a cylindrical thin-walled vessel is $I = 3 \pi r^3 t$.
 
-  \item You are chewing a bubblegum that has a volume of 2 cm$^3$ and
-  blowing a bubble. Assume that the bubble forms a thin-walled sphere
-  with a constant internal pressure of 3 kPa, regardless of the size
-  of the bubble. What is the maximum radius, $r$, of the bubble that
-  you can blow given that the maximum allowable normal stress of the
-  gum is 50 kPa? \\
-  Note: You may assume that the volume of gum used to blow a spherical
-  bubble of radius $r$ and thickness $t$ is $4\pi r^2 t$ and that the
-  volume of the gum always remains 2 cm$^3$.
+  \item You are chewing a bubblegum that has a volume of 2 cm$^3$ and blowing a bubble. Assume that the bubble forms a thin-walled sphere with a constant internal pressure of 3 kPa, regardless of the size of the bubble. What is the maximum radius, $r$, of the bubble that you can blow given that the maximum allowable normal stress of the gum is 50 kPa?
+    
+    Note: You may assume that the volume of gum used to blow a spherical bubble of radius $r$ and thickness $t$ is $4\pi r^2 t$ and that the volume of the gum always remains 2 cm$^3$.
 
-  \item A 500-N highway sign is attached to the end of an L-shaped,
-  massless pole. The AISI-1023 steel pole (a ducile material with $E$
-  = 200 GPa and $S_y$ = 360 MPa) is a constant cross-sectioned tube
-  whose outer radius of the pole $r_o$ is 10 cm. Determine
+  \item A 500-N highway sign is attached to the end of an L-shaped, massless pole. The AISI-1023 steel pole (a ducile material with $E$ = 200 GPa and $S_y$ = 360 MPa) is a constant cross-sectioned tube whose outer radius of the pole $r_o$ is 10 cm. Determine
+
   \begin{enumerate}
-  \item the critical point of the pole. (Hint: be specific. Don't just
-    say `the end of the pole.' Point to the exact location of the critical
-    point.) Explain your reasoning.
+  \item the critical point of the pole. (Hint: be specific. Don't just say `the end of the pole.' Point to the exact location of the critical point.) Explain your reasoning.
   \item maximum possible inner diameter $r_i$.
   \end{enumerate}
   
@@ -4657,7 +4702,7 @@ In this chapter, the concept in Chapter 6 is utilized. In the first part, one of
 
   \begin{enumerate}
   \item (5 points) Determine the location of a critical point. (Be specific.)
-  \item (5 points) Draw a Mohr's circle representing the state of stress (prinical and maximum shear stresses) at the critical point.
+  \item (5 points) Draw a Mohr's circle representing the state of stress (principal and maximum shear stresses) at the critical point.
   \item (5 points) Determine the maximum static (constant) load $P$ that can be exerted on the bar.
   \item (5 points) Determine the maximum repeated and fully reversed load that varies back and forth between $-P$ and $P$ that can be exerted on the bar.
   \end{enumerate}
@@ -5018,7 +5063,7 @@ Since this topic is rather different from the load-deformation approach we typic
     \draw [->, ultra thick] (bottom.east) node[below left]{A} --++ (-90:1) node[below]{20 kN};
 
     % dimensions
-    \draw [|<->|] (diag.north) ++ (90:0.5) --++ (0:4) node[midway, fill=LightSkyBlue]{50 cm};
+    \draw [|<->|] (diag.north) ++ (90:0.5) --++ (0:4) node[midway, fill=titlepagecolor!50]{50 cm};
     \node at (diag.east) [above right]{$A = 2 \text{ cm}^2$};
   \end{tikzpicture}
 \end{example}
@@ -5431,10 +5476,10 @@ Over the years, various empirical theories have been proposed to modify the basi
 The modified Coulomb-Mohr theory failure condition can be expressed as
 
 \begin{equation}
-  \begin{array}{cc}
+  \begin{array}{ll}
     \sigma_1 < \dfrac{S_{ut}}{N_s} &
       \begin{gathered}
-        \sigma_1 > \sigma_2 > 0 \\ 
+        \sigma_1 > \sigma_2 > 0 \hfill \\ 
         \sigma_1 > 0 \left| \dfrac{\sigma_2}{\sigma_1} \right| > 1 
       \end{gathered} \\[20pt]
     \dfrac{\sigma_1(S_{uc} - S_{ut})}{S_{uc}S_{ut}} - \dfrac{\sigma_2}{S_{uc}} > \dfrac{1}{N_s} & \sigma_1 > 0 > \sigma_2\text{ and }\left| \dfrac{\sigma_2}{\sigma_1} \right| < 1 \\[10pt]
@@ -5572,6 +5617,37 @@ Nonzero mean stresses have a significant effect on the fatigue strength of a mat
 
 where $\sigma_a$ is the stress amplitude, $S_e$ is the endurance limit, $S_y$ is the yield stress, $\sigma_m$ is the mean stress, and $S_{ut}$ is the ultimate tensile strength. For most metals, the Soderberg relation yields conservative estimates of critical stress amplitude. The Goodman relation gives reasonably good results for brittle materials, whereas it is conservative for ductile materials. The Gerber relation yields fairly good estimates for stress amplitude for ductile materials.
 
+Each relation can be expressed as a line on which all combinations of stress amplitude and average stress result in the same number of cycle to failure, also called \emph{constant life line}.
+
+\begin{figure}[h]
+  \centering
+  \begin{tikzpicture}[>=latex]
+    \begin{axis} [
+      height=0.4\textwidth,
+      width=0.7\textwidth,
+      xlabel={Average Stress $\sigma_m$},
+      ylabel={Stress Amplitude $\sigma_a$},
+      xmin=0, xmax=500,
+      xtick={300, 450},
+      xticklabels={$S_y$, $S_{ut}$},
+      ymin=0, ymax=250,
+      ytick={225},
+      yticklabels={$S_e$},
+      domain=0:450,
+      axis x line=bottom,
+      axis y line=left,
+      ]
+      % N_s = 1, S_e = 225, S_y = 300, S_ut = 450
+      \addplot+[mark=none, domain=0:300]{-225/300*x + 225} node[midway, below, rotate=-37]{Soderberg};
+      \addplot+[mark=none, dashdotted]{-225/450*x + 225} node[midway, below, rotate=-25]{Goodman};
+      \addplot+[mark=none, dashed]{-225*(x/450)^2 + 225} node[midway, below, rotate=-30]{Gerber};
+    \end{axis}
+  \end{tikzpicture}
+  \caption{Constant life lines for various nonzero mean stress relations with
+    $N_s$ = 1}
+  \label{fig: nonzero mean stress relations}
+\end{figure}
+
 \begin{example} Fatigue failure of a rod under a periodic tensile load
 
   A cylindrical rod shall operate under a periodic tensile load as shown in the graph. Material of the rod is AISI1050 which has the following properties.
@@ -5594,8 +5670,9 @@ where $\sigma_a$ is the stress amplitude, $S_e$ is the endurance limit, $S_y$ is
         ylabel={$F$},
         xlabel={time (s)},
         xmin=0,
+        height=0.4\textwidth,
         ]
-        \addplot [semithick, samples=100,domain=0:10.8] {abs(8000*sin(50*\x))};
+        \addplot [semithick, samples=100, domain=0:10.8] {abs(8000*sin(50*\x))};
       \end{axis}
     \end{tikzpicture}
   \end{figure}
@@ -5622,7 +5699,7 @@ where $\sigma_a$ is the stress amplitude, $S_e$ is the endurance limit, $S_y$ is
 
 \section{Buckling} \label{section: buckling}
 
-Whenever a member is designed, it is necessary that it satisfy specific strength, deflection, and stability requirements. The previous chapters we have discussed some of the methods used to determine the member’s strength and deflection, while assuming that the member was always in stable equilibrium. Some members, however, may be subjected to compressive loads, which, if sufficiently large, can cause the member to deflect laterally. To be more specific, long slender members subjected to an axial compressive force are called columns, and the lateral deflection that occurs is called buckling. Buckling of a column can lead to a sudden and often disastrous failure of a structure or mechanism, and therefore special attention must be given to the design of columns to prevent such problems.
+Whenever a member is designed, it is necessary that it satisfy specific strength, deflection, and stability requirements. In the previous chapters we have discussed some of the methods used to determine the member’s strength and deflection, while assuming that the member was always in stable equilibrium. Some members, however, may be subjected to compressive loads, which, if sufficiently large, can cause the member to deflect laterally. To be more specific, long slender members subjected to an axial compressive force are called columns, and the lateral deflection that occurs is called buckling. Buckling of a column can lead to a sudden and often disastrous failure of a structure or mechanism, and therefore special attention must be given to the design of columns to prevent such problems.
 
 The maximum axial load that a column can support is called the critical load, $P_{cr}$. Any additional loading will cause the column to buckle and therefore deflect laterally. Depending on the supports of a column, the critical load can vary.
 
@@ -5760,10 +5837,10 @@ $$ v = C_2 \sin \frac{2 \pi x}{L} $$
 
 For purposes of design, the critical load equation can also be written in a more useful form by expressing $I = Ar_g^2$, where $A$ is the cross-sectional area and $r_g$ is the \emph{radius of gyration} of the cross-sectional area. Thus,
 
-\begin{gather*}
-  P_{cr} = \frac{\pi^2EAr_g^2)}{L^2} \\ 
-  \left( \frac{P}{A} \right)_{cr} = \frac{\pi ^2E}{(L/r_g)^2}
-\end{gather*}
+\begin{align*}
+  P_{cr} &= \frac{\pi^2EAr_g^2}{L^2} \\ 
+  \frac{P_{cr}}{A} &= \frac{\pi ^2E}{(L/r_g)^2}
+\end{align*}
 
 or
 
@@ -5824,10 +5901,10 @@ The nontrivial solution indicates that
 
 \begin{gather*}
   \cos \left( \sqrt {\frac{P}{EI}} L \right) = 0 \\
-  \sqrt {\frac{P}{EI}} L = \frac{n\pi }{2}
+  \sqrt {\frac{P}{EI}} L = \frac{(2n - 1)\pi }{2} \hspace{1cm} n = 1, 2, 3, \ldots
 \end{gather*}
 
-The smallest critical load ($n = 1$) is
+The smallest critical load ($n = 0$) is
 
 \begin{equation}
   P_{cr} = \frac{\pi^2EI}{4L^2}
@@ -5871,7 +5948,7 @@ where $L_e = KL$ in which $K$ is the \emph{effective-length factor} and $KL/r_g$
 \end{example}
 \begin{solution}
 
-  Buckling due to thermal load is a combination between two problems: buckling and thermal load. Assuming that rail buckling happens on a first mode ($n = 1$), we have that
+  Buckling due to thermal load is a combination between two problems: buckling and thermal loading. Assuming that rail buckling happens on a first mode ($n = 1$), we have that
 
   \begin{align*}
     P_{cr} &= \frac{ \pi^2 EI }{ L^2 } 
@@ -5907,7 +5984,7 @@ where $L_e = KL$ in which $K$ is the \emph{effective-length factor} and $KL/r_g$
        &= 4.51\degree \text{ C}
   \end{align*}
 
-  As we can see it requires very slight temperature change to cause buckling. However, with a proper installation technique called \emph{rail stressing}, the rail is pre-stretched before installation. This technique preloads the rail in tension and thus it will be much less likely to buckle.
+  As we can see it requires very slight temperature change to cause buckling. However, with a proper installation technique called \emph{rail stressing}, the rail is pre-stretched before installation. This technique preloads the rail in tension and thus it will be much considerably less likely to buckle.
 \end{solution}
 
 \section*{Summary}
@@ -5955,7 +6032,7 @@ Buckling occurs because the internal bending moment in the beam is not enough to
 
   \begin{figure}[H]
     \centering
-    \begin{tikzpicture}[>=stealth]
+    \begin{tikzpicture}
       \node at (0,0) [anchor=south, draw, rectangle, minimum height=0.4cm, minimum width=8cm,fill=LightBlue!90](A){};
       \node at (A.west) [anchor=east, draw, regular polygon, regular polygon sides=3, minimum height=4mm, inner sep=0, fill=LightGrey, shape border rotate=30](C){};
       \node at (A.west) [draw, circle, inner sep=1.5, fill=LightGrey]{};
@@ -5977,7 +6054,7 @@ Buckling occurs because the internal bending moment in the beam is not enough to
 
   \begin{figure}[H]
     \centering
-    \begin{tikzpicture}[>=stealth]
+    \begin{tikzpicture}
       \node at (0,0) [draw, cylinder, inner sep=5, minimum height=8cm, minimum width=1cm, fill=LightBlue!90](A){};
       \draw [->>, ultra thick] (A.east) ++ (180:5pt) --++(0:1) node[right]{$T$};
       \draw [->>, ultra thick] (A.west) --++(180:1) node[left]{$T$};
@@ -6049,3 +6126,7 @@ Buckling occurs because the internal bending moment in the beam is not enough to
 \printbibliography[heading=bibintoc]
 
 \end{document}
+%%% Local Variables: 
+%%% coding: utf-8
+%%% TeX-engine: luatex
+%%% End: 
