@@ -4613,8 +4613,8 @@ The values of $\varepsilon_x$, $\varepsilon_y$, $\gamma_{xy}$ are determined by 
       \draw (mohr.center) -- (mohr.north) node[above]{$163(10^{-6})$};
       \draw [->] (mohr.center) --++ (-76:3.26) node(epsilonx){} to [out=-30, in=-180] ++(0.5, -1) node[right]{$\epsilon_x = 120(10^{-6})$};
       \draw [dashed] (epsilonx.center) --++ (90:3.26*sin(76);
-      \draw [dashed] (epsilonx.center) --++ (180:2.4) node[left]{$\dfrac{323}{2}(10^{-6})$};
-      \draw [->] (mohr.center) --++ (104:3.26) node(epsilony){} to [out=-150, in=150] ++(0,-1) node[right]{$\epsilon_y = 120(10^{-6})$};
+      \draw [->] (mohr.center) --++ (104:3.26) node(epsilony){} to [out=150, in=-150] ++(0,1) node[right]{$\epsilon_y = 40(10^{-6})$};
+      \draw [dashed] (epsilony.center) --++ (180:0.8) node[left]{$\dfrac{323}{2}(10^{-6})$};
       \draw [dashed] (epsilony.center) --++ (-90:3.26*sin(104);
       \draw [->] (mohr.center) ++ (-76:1) arc (-76:0:1) node[midway, above left, xshift=1mm]{76$\degree$};
     \end{tikzpicture}
