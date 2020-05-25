@@ -23,10 +23,7 @@ svgnames,
 
 %%% PACKAGES
 \usepackage{booktabs} % for much better looking tables
-\usepackage{array} % for better arrays (eg matrices) in maths
 \usepackage{enumitem}
-\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
-\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
 
 %%% HEADERS & FOOTERS
 \usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
@@ -36,7 +33,7 @@ svgnames,
 \lhead{\rightmark}\chead{}\rhead{\thepage}
 \lfoot{ME 210: Mechanical of Materials}\cfoot{}\rfoot{S. Akamphon}
 
-\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
+%\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
 
 \usepackage{newtxtext}
 \usepackage{newtxmath}
@@ -51,7 +48,7 @@ svgnames,
 \let\openbox\relax
 \usepackage{amsmath}
 \usepackage{amsthm}
-\usepackage{amssymb}
+%\usepackage{amssymb}
 \usepackage{multirow}
 \usepackage{gensymb}
 \usepackage{array}
@@ -65,10 +62,10 @@ svgnames,
 %% Drawing pics with tikz %%%
 \usepackage{tikz,calc}
 \tikzset{>=latex}
-\usetikzlibrary{arrows,calc,decorations,decorations.pathreplacing,shapes,decorations.pathmorphing,patterns,snakes,decorations.fractals,shadings,lindenmayersystems,shadows}
+\usetikzlibrary{arrows,calc,decorations,decorations.pathreplacing,shapes,decorations.pathmorphing,patterns,decorations.fractals,shadings,lindenmayersystems,shadows}
 \usepackage{pgfplots}
 \usepackage{tikz-3dplot}
-\usepackage[inline]{asymptote}
+\pgfplotsset{compat=1.12}
 
 %% For drawing spherical vessels
 \pgfkeys{/tikz/.cd, view angle/.initial=0, view angle/.store in=\picangle}
@@ -92,12 +89,12 @@ svgnames,
 {\begin{tikzpicture}[remember picture,overlay]
     \node[yshift=-3cm] at (current page.north west)
     {\begin{tikzpicture}[remember picture,overlay]
-        \draw[fill=LightSkyBlue] (0,0) rectangle
+        \draw[fill=titlepagecolor] (0,0) rectangle
         (\paperwidth,3cm) ;
         \node[anchor=east,xshift=.9\paperwidth,rectangle,
-        rounded corners=5pt,inner sep=11pt,
-        fill=DarkBlue]
-        {\color{white}#1};
+        rounded corners=5pt,inner sep=11pt, draw,
+        fill=SkyBlue]
+        {\color{black}#1};
         \ifnum\value{chapter}>0
         \node[right, xshift=1cm, yshift=1.5cm]{\scalebox{4}{\Huge\thechapter}};
         \fi
@@ -113,12 +110,12 @@ svgnames,
 {\begin{tikzpicture}[remember picture,overlay]
     \node[yshift=-3cm] at (current page.north west)
     {\begin{tikzpicture}[remember picture,overlay]
-        \draw[fill=LightSkyBlue] (0,0) rectangle
+        \draw[fill=titlepagecolor] (0,0) rectangle
         (\paperwidth,3cm) ;
         \node[anchor=east,xshift=.9\paperwidth,rectangle,
-        rounded corners=5pt,inner sep=11pt,
-        fill=DarkBlue]
-        {\color{white}#1};
+        rounded corners=5pt,inner sep=11pt, draw,
+        fill=SkyBlue]
+        {\color{black}#1};
       \end{tikzpicture}   
     };
   \end{tikzpicture}
@@ -130,9 +127,8 @@ svgnames,
 \usepackage{thmtools}
 \usepackage{mdframed}
 \usepackage{float}
-\definecolor{example}{RGB}{204,255,204}
-\definecolor{titlepagecolor}{cmyk}{0.3,.50,0.50,.40}
-\definecolor{namecolor}{cmyk}{0.3,.50,0.5,.10}
+\definecolor{titlepagecolor}{cmyk}{0.3,.50,0.50,.20}
+\definecolor{namecolor}{cmyk}{0.3,.30,0.3,0}
 \declaretheoremstyle[
 spaceabove=6pt, spacebelow=0pt,
 headfont=\normalfont\bfseries,
@@ -245,7 +241,15 @@ Add sections on curved beam bending, shear flow, and shear center.
 
 \paragraph{March 2016}
 
+Migrated from Microsoft Word to \LaTeX\
+
+\paragraph{April 2017}
+
 Additional graphics for stress transformation, Mohr's circle, combined loadings.
+
+\paragraph{July 2018}
+
+Add more figures to facilitate visualization of examples. 
 
 \tableofcontents
 
@@ -356,12 +360,12 @@ If we apply the equation of force equilibrium in the $x$ direction, then
 \begin{equation}
   \arraycolsep=1.4pt\def\arraystretch{1.5}
   \begin{array}{c}
-    \sigma_x(\Delta y\Delta z) + \sigma_x'(\Delta y\Delta z) = 0\\
-    \sigma_x =  - \sigma_x'
+    \sigma_x(\Delta y\Delta z) + \sigma_x^\prime(\Delta y\Delta z) = 0\\
+    \sigma_x =  - \sigma_x^\prime
   \end{array}
 \end{equation}
 
-We can similarly prove that $\sigma_y = \sigma_{y’}$ and $\sigma_z = \sigma_z’$. Therefore, for a constant state of stress, each of the three normal stress components must be equal in magnitude but opposite in direction.
+We can similarly prove that $\sigma_y = \sigma_{y ^\prime}$ and $\sigma_z = \sigma_z ^\prime$. Therefore, for a constant state of stress, each of the three normal stress components must be equal in magnitude but opposite in direction.
 
 \paragraph{Shear Stress Components}
 
@@ -371,8 +375,8 @@ The force equilibrium in the $x$ direction gives
 \begin{equation}
   \arraycolsep=1.4pt\def\arraystretch{1.5}
   \begin{array}{c}
-    {\tau _{yx}}(\Delta y\Delta z) + {\tau_{yx}'}(\Delta y\Delta z) = 0\\
-    {\tau _{yx}} =  - {\tau_{yx}'}
+    {\tau _{yx}}(\Delta y\Delta z) + {\tau_{yx}^\prime}(\Delta y\Delta z) = 0\\
+    {\tau _{yx}} =  - {\tau_{yx}^\prime}
   \end{array}
 \end{equation}
 
@@ -393,26 +397,26 @@ In order to describe deformation by changes in the length or by the changes in a
 \begin{figure}[h]
   \centering
   \begin{tikzpicture}
-    \draw[fill=Grey] (-1,-1) rectangle (0,2);
+    \draw[pattern=north west lines] (-1,-1) rectangle (0,2);
     \draw[fill=SkyBlue] (0,0) rectangle (5,1);
     \draw[fill=SkyBlue, fill opacity=0.5, dashed] (0,0.1) rectangle (5.5,0.9);
     \draw[->,ultra thick] (5.5,0.5) -- (6.5,0.5) node[right]{$F$};
     \draw[<->] (0,-0.5) -- (2.5,-0.5) node[above]{$s$} -- (5,-0.5);
-    \draw[<->] (0,-1) -- (3,-1) node[above]{$s'$} -- (5.5,-1);
+    \draw[<->] (0,-1) -- (3,-1) node[above]{$s^\prime$} -- (5.5,-1);
   \end{tikzpicture}
   \caption{Element elongation under tensile normal strain.}
 \end{figure}
 
-\paragraph{Normal strain} The change in the length of a line segment per unit length, whether elongation or contraction, is called normal strain. For example, consider the line AB which is contained within an undeformed body with length $s$. During its deformation, points A and B move to point A’ and B’ and the line becomes a curve having the length $s’$. The average normal strain becomes
+\paragraph{Normal strain} The change in the length of a line segment per unit length, whether elongation or contraction, is called normal strain. For example, consider the line AB which is contained within an undeformed body with length $s$. During its deformation, points A and B move to point A’ and B’ and the line becomes a curve having the length $s^\prime$. The average normal strain becomes
 
 \begin{equation}
-  \varepsilon _{avg} = \frac{s' - s}{s}
+  \varepsilon_{avg} = \frac{s^\prime - s}{s}
 \end{equation}
 
 If the normal strain is known, we can use this equation to find the final length of the line segment after it is deformed. We have
 
 \begin{equation}
-  s' = (1 + \varepsilon _{avg})s
+  s^\prime = (1 + \varepsilon_{avg})s
 \end{equation}
 
 Therefore, strain is positive when the line elongates and is negative when the line contracts.
@@ -556,6 +560,60 @@ Brittle materials in general shows much higher resistance to compressive loading
 
 In general it can be said that most materials can exhibit both ductile and brittle behavior. At high carbon content or very low temperature, steel tends to become more brittle. At higher temperature, most brittle materials become more ductile.
 
+\subsection{Strain Energy}
+
+When a material is deformed, it stores energy internally under its deformed state. Since this energy is related to the strains in the material, it is called \emph{strain energy}. To determine this energy, consider a volume under a tensile test for which force $F = \sigma A = \sigma xy$. The force increases linearly from when there is no deformation to its final magnitude $F$, hence the average force over the range of deformation is $F/2$. The work done by this force then is $F/2*\varepsilon z$. Assuming that there is no loss from the externally applied force to the internal strain energy in the form of heat, the strain energy is equal to the external work, which is $U = \sigma\varepsilon xyz/2$. Since $V = xyz$ is the original volume, we can write that $U = \frac{1}{2}\sigma\varepsilon V$. In another word, the strain energy density $u$, the strain energy per volume is
+
+\begin{align}
+  \label{eq: strain energy density}
+  u = \frac{1}{2}\sigma\varepsilon
+\end{align}
+
+For most engineering materials of interest, their behaviors are usually \emph{linear elastic}, and thus we can express the strain energy density in terms of uniaxial stress as
+
+\begin{align}
+  \label{eq: strain energy density - linear elastic}
+  u = \frac{1}{2}\frac{\sigma^2}{E}
+\end{align}
+
+\paragraph{Modulus of Resilience} When the stress reaches the propoortional limit, the corresponding strain energy is referred to as the \emph{modulus of resilience}, expressed as
+
+\begin{align}
+  \label{eq: modulus of resilience}
+  u_r = \frac{1}{2}\sigma_{pl}\varepsilon_{pl} = \frac{1}{2}\frac{\sigma_{pl}^2}{E}
+\end{align}
+
+This represents the amount of energy the material can absorb without any permanent deformation.
+
+\begin{figure}[H]
+  \centering
+  \begin{tikzpicture}
+    \draw [thick] (0,4.5) node[above]{$\sigma$} --++ (-90:4.5) --++ (0:6) node[right]{$\varepsilon$};
+    \draw [ultra thick, LightSkyBlue] (0,0) --++ (65:4) node(pl){} to[out=60, in=185] +(2,0.8);
+    \path [fill=LightSkyBlue, fill opacity=0.5] (0,0) -- (pl.center) --++ (-90:3.6) -- cycle;
+    \draw [|-] (pl) ++ (-0.5,-2) to[out=30,in=180] +(1,0.3) node[right]{$u_r$};
+    \draw (pl.center) --++ (-90:3.6) node[below]{$\varepsilon_{pl}$};
+    \draw (pl.center) --++ (180:1.7) node[left]{$\sigma_{pl}$};
+  \end{tikzpicture}
+  \caption{Modulus of resilience, $u_r$}
+  \label{fig: modulus of toughness}
+\end{figure}
+
+\paragraph{Modulus of Toughness} Another important property of a material the modulus of toughness $u_t$. This quantity represents the entire area under the stress-strain diagram, indicating the strain energy density required for the maeterial to fracture. This property is important when designing members that may be overloaded.
+
+\begin{figure}[H]
+  \centering
+  \begin{tikzpicture}
+    \draw [thick] (0,4.5) node[above]{$\sigma$} --++ (-90:4.5) --++ (0:6) node[right]{$\varepsilon$};
+    \draw [ultra thick, LightSkyBlue] (0,0) --++ (85:3) node(pl){} to[out=60, in=210] +(2,0.8) to[out=30,in=120] +(3,-0.5);
+    \path [fill=LightSkyBlue, fill opacity=0.5] (0,0) -- (pl.center) to[out=60, in=210] +(2,0.8) to[out=30,in=120] +(3,-0.5) node(ut){} --++ (-90:3.30) -- cycle;
+    \draw (ut.center) --++ (-90:3.30);
+    \draw [|-] (ut) ++ (-0.5,-1.5) to[out=30,in=180] +(1,0.3) node[right]{$u_t$};
+  \end{tikzpicture}
+  \caption{Modulus of toughness, $u_t$}
+  \label{fig: modulus of resilience}
+\end{figure}
+
 \subsection{Hooke’s Law in One Dimension}
 
 Since the stress-strain relationship for most engineering materials exhibit a linear relationship between stress and strain within the elastic regime, an increase in stress causes a proportional increase in strain. This fact was discovered by Robert Hooke in 1676 and is known as Hooke’s law. It can be expressed mathematically as
@@ -621,20 +679,20 @@ Poisson's ratios for various common materials are tabulated in \cref{table: pois
       Material        & Poisson's ratio \\
       \midrule
       rubber          & 0.4999          \\
-      gold            & 0.42–0.44       \\
-      saturated clay  & 0.40–0.49       \\
-      magnesium       & 0.252-0.289     \\
-      titanium        & 0.265-0.34      \\
+      gold            & 0.42 - 0.44       \\
+      saturated clay  & 0.40 - 0.49       \\
+      magnesium       & 0.252 - 0.289     \\
+      titanium        & 0.265 - 0.34      \\
       copper          & 0.33            \\
       aluminium-alloy & 0.32            \\
-      clay            & 0.30–0.45       \\
-      stainless steel & 0.30–0.31       \\
-      steel           & 0.27–0.30       \\
-      cast iron       & 0.21–0.26       \\
-      sand            & 0.20–0.45       \\
-      concrete        & 0.1-0.2         \\
-      glass           & 0.18–0.3        \\
-      foam            & 0.10–0.50       \\
+      clay            & 0.30 - 0.45       \\
+      stainless steel & 0.30 - 0.31       \\
+      steel           & 0.27 - 0.30       \\
+      cast iron       & 0.21 - 0.26       \\
+      sand            & 0.20 - 0.45       \\
+      concrete        & 0.1 - 0.2         \\
+      glass           & 0.18 - 0.3        \\
+      foam            & 0.10 - 0.50       \\
       cork            & 0               \\
       \bottomrule
     \end{tabular}}
@@ -1093,12 +1151,12 @@ So the magnitude of the reaction is inversely proportional to the distance away 
 
  Now, substitute this into the first equilibrium equation.
 
- $$ F_1 + F_2 + F_3 = P - 5F_3 + {P \over 2} - 2F_3 + F_3 = P $$
- $$ 6F_3 = {P \over 2} $$
- $$ F_3 = {P \over 12} $$
+ $$ F_1 + F_2 + F_3 = P - 5F_3 + \frac{P}{2} - 2F_3 + F_3 = P $$
+ $$ 6F_3 = \frac{P}{2} $$
+ $$ F_3 = \frac{P}{12} $$
 
- $$ F_1 = P - 5 {P \over 12} = {7P \over 12} $$
- $$ F_2 = {P \over 2} - {2P \over 12} = {P \over 3} $$
+ $$ F_1 = P - 5 \frac{P}{12} = \frac{7P}{12} $$
+ $$ F_2 = \frac{P}{2} - \frac{2P}{12} = \frac{P}{3} $$
 \end{solution}
 
 
@@ -1214,6 +1272,82 @@ In statically indeterminate structures, the total change in length when consider
   When the members are heated the left and right members will try to expand more than the middle one due to their higher coefficients of thermal expansion $\alpha_1$. However, because of the rigid beam restriction, the left and right members are squeezed down, while the middle part is pulled. Other situations can be analyzed with similar logic.
 \end{solution}
 
+\section{Compound Bars}
+
+Increasing uses of composite materials dictates the need for us to understand their mechanical behavior. For an axially loaded component made of composite materials, the simplest of these are compound bars. A compound bar is defined by an axially loaded member whose various materials that make up its cross section undergo the exact elongation/contraction as all the other materials.
+
+\begin{figure}[h]
+  \centering
+  \begin{tikzpicture}[>=latex]
+    \node [minimum height=1cm, pattern=north west lines, minimum width=1cm](wall1){};
+    \node at (wall1.north east)[anchor=north west, minimum height=0.5cm, pattern=north west lines, minimum width=1cm](wall2){};
+    \node at (wall2.north east)[anchor=north west, minimum height=1.5cm, pattern=north west lines, minimum width=1cm](wall3){};
+    \node at (wall3.north east)[anchor=north west, minimum height=0.75cm, pattern=north west lines, minimum width=1cm](wall4){};
+
+    \draw (wall1.south west) -- (wall1.south east) -- (wall2.south west) -- (wall2.south east) -- (wall3.south west) -- (wall3.south east) -- (wall4.south west) -- (wall4.south east);
+
+    \node at (wall1.south) [anchor=north, draw, minimum height=3cm, minimum width=5mm, fill=Grey](bar1){};
+    \node at (wall2.south) [anchor=north, draw, minimum height=3.5cm, minimum width=3mm, fill=LightGrey](bar2){};
+    \node at (wall3.south) [anchor=north, draw, minimum height=2.5cm, minimum width=7mm, fill=DarkGrey](bar3){};
+    \node at (wall4.south) [anchor=north, draw, minimum height=3.25cm, minimum width=2mm, fill=Silver](bar4){};
+    
+    \node at (wall1.south) [anchor=north, dashed, draw, minimum height=3.2cm, minimum width=5mm, fill=Grey, opacity=0.5](bar1e){};
+    \node at (wall2.south) [anchor=north, dashed, draw, minimum height=3.7cm, minimum width=3mm, fill=LightGrey, opacity=0.5](bar2e){};
+    \node at (wall3.south) [anchor=north, dashed, draw, minimum height=2.7cm, minimum width=7mm, fill=DarkGrey, opacity=0.5](bar3e){};
+    \node at (wall4.south) [anchor=north, dashed, draw, minimum height=3.45cm, minimum width=2mm, fill=Silver, opacity=0.5](bar4e){};
+
+    \node at (bar1e.south west) [anchor=north west, draw, minimum height=5mm, minimum width=3.4cm, fill=Grey](bar){};
+
+    \draw [line width=3pt, ->] (bar.south) --++ (-90:1) node[below]{$F$};
+    \draw [|<-] (bar4.south east) ++ (0:0.3) --++ (90:0.2) node[at start, right, yshift=-1mm]{$\delta$};
+    \draw [|<-] (bar4e.south east) ++ (0:0.3) --++ (-90:0.2);
+  \end{tikzpicture}
+  \caption{An axially loaded compound bar}
+  \label{fig: compound bar}
+\end{figure}
+
+\subsection{Internal Force}
+
+The governing equation of deformation in member $i$ of the compound bar can be expressed as
+
+\begin{align*}
+  \delta_i = \frac{F_i L_i}{A_i E_i}
+\end{align*}
+
+By definition, all members in a compound bar share identical deformation
+
+\begin{align*}
+  \delta_1 = \delta_2 = \ldots = \delta
+\end{align*}
+
+Also, due to equilibrium on the horizontal bar, sum of the internal forces must be equal to $F$, which allows us to write that
+
+\begin{align}
+  \label{eq: compound bar}
+  F = \sum F_i &= \sum \frac{\delta A_i E_i}{L_i} \nonumber \\
+  \frac{F_i}{F} &= \frac{\dfrac{A_iE_i}{L_i}}{\sum \dfrac{A_iE_i}{L_i}}
+\end{align}
+
+\subsection{Compound Modulus}
+
+To evaluate the modulus of the compound bar as a single material, the members must have identical lengths (the reason for which will be discussed soon). We can derive the relationship of the modulus of the compound bar, aka \emph{compound modulus}, as follows.
+
+\begin{align*}
+  F &= F_1 + F_2 + \ldots + F_n \\
+  \sigma A &= \sigma_1 A_1 + \sigma_2 A_2 + \ldots + \sigma_n A_n 
+\end{align*}
+
+At this point, we are going to divide through both sides by a commond strain $\epsilon$. We can do this because members of a compound bar share the same elongations/contractions and, as we introduced earlier in this section, they now share the same lengths. Therefore, when the members have the same length and the same elongations/contractions, they definitely have the same strains. Now, we can proceeed.
+
+\begin{align}
+  \label{eq: compound modulus}
+  \frac{\sigma}{\epsilon} A &= \frac{\sigma_1}{\epsilon} A_1 + \frac{\sigma_2}{\epsilon} A_2 + \ldots + \frac{\sigma_n}{\epsilon} A_n \nonumber \\
+  E_cA &= E_1 A_1 + E_2A_2 + \ldots + E_nA_n \nonumber \\
+  E_c &= \dfrac{\sum E_iA_i}{\sum A_i}
+\end{align}
+
+It is worth noting in the end that the compound modulus is simply the area-weighted average of the moduli of the members.
+
 \section{Inelastic Deformation}
 
 In the previous sections, we have discussed the analysis of structures when the material stress never exceeds yield strength. However, in some engineering applications, especially in designing steel members, the design must take into account the behavior after the stress has reached yield strength. To meaningfully analyze the behavior into the plastic regime of deformation, we must first introduce the concept of elastic perfectly plastic materials.
@@ -1307,7 +1441,7 @@ In previous sections, we have discussed the response of the structure where the 
 
 \subsection{Impact loading}
 
-Impact loading is when the application and the removal of the load are sudden. Impact loads are produced when two objects collide or when a falling object strikes a structure. As an example of how structures respond to impact loads, we will now discuss the impact of an object falling on a prismatic bar, illustrated in \cref{fig: impact loading}. A collar of mass $m$, initially at rest, falls from a height $h$ onto a flange at the lower end of bar AB. When the collar strikes the flange, the bar begins to elongate, creating axial stress and strains within the bar. In a very short interval of time, the flange will move downward and reach its position maximum displacement. Afterwards, the bar shortens, then lengthens, then shortens again as the bar vibrates longitudinally and the end of the bar moves up and down. The vibrations are analogous to those that occur when a spring is stretched and then released, or when a person makes a bungee jump. The vibrations soon cease and the bar comes to rest with the mass $m$ supported on the flange. The response of the bar to the falling collar is very complicated. However, we can make an approximate analysis by suing the concept of strain energy and make several simplifying assumptions.
+Impact loading is when the application and the removal of the load are sudden. Impact loads are produced when two objects collide or when a falling object strikes a structure. As an example of how structures respond to impact loads, we will now discuss the impact of an object falling on a prismatic bar, illustrated in \cref{fig: impact loading}. A collar of mass $m$, initially at rest, falls from a height $h$ on top of bar AB whose Young's modulus is $E$, cross-sectional area is $A$, and original length is $L$. When the collar strikes the top of the bar, it begins to shorten, creating axial stress and strains within the bar. In a very short interval of time, the top of the bar will move downward and reach its maximum displacement position. Afterwards, the bar will lengthen, then shorten, then lengthen again as the bar vibrates longitudinally and the end of the bar moves up and down. The vibrations are analogous to those that occur when a spring is stretched and then released, or when a person makes a bungee jump. The vibrations soon cease and the bar comes to rest with the mass $m$ supported on the top. The response of the bar to the falling collar is in fact very complicated. However, we can make an approximate analysis by suing the concept of strain energy and make several simplifying assumptions.
 
 \begin{figure}[h]
   \centering
@@ -1326,7 +1460,7 @@ Impact loading is when the application and the removal of the load are sudden. I
   \label{fig: impact loading}
   \end{figure}
 
-  Consider the energy of the system just before the collar is released. The potential energy of the collar with respect to the elevation of the flange is $mgh$, when $g$ is the acceleration of gravity. This potential energy is converted into kinetic energy as the collar falls. At the instant the collar strikes the flange, its potential energy with respect to the elevation is zero and its kinetic energy is $mv^2/2$, where $v = (2gh)^{1/2}$ is its velocity. Following the impact, the kinetic energy is transformed into other forms of energy such as plastic deformation, heat, and sound. However, we will assume that the kinetic energy is transformed into other forms of energy such as plastic deformation, heat, and sound. However, we will assume that the kinetic energy is wholly transferred to the elastic strain energy in the flange, and that after the collision, the collar ‘sticks’ to the flange as it deforms.
+  Consider the energy of the system just before the collar is released. The potential energy of the collar with respect to the elevation of the flange is $mgh$, when $g$ is the acceleration of gravity. This potential energy is converted into kinetic energy as the collar falls. At the instant the collar strikes the flange, its potential energy with respect to the elevation is zero and its kinetic energy is $mv^2/2$, where $v = (2gh)^{1/2}$ is its velocity. Following the impact, the kinetic energy is transformed into other forms of energy such as plastic deformation, heat, and sound. However, we will assume that the kinetic energy is wholly transferred to the elastic strain energy in the flange, and that after the collision, the collar `sticks' to the flange as it deforms.
 
 Using these assumptions, we can now calculate the maximum deformation and the stresses produced by the impact load.
 
@@ -1375,23 +1509,23 @@ Comparison between static and impact responses can be done using the \emph{impac
 
 Impact factors can then be used to apply to determine proper design parameters for components under impact loading.
 
-\begin{example} A battering ram on a castle gate.
+% \begin{example} A battering ram on a castle gate.
   
-  On the final days of Balon Greyjoy's rebellion, the combined armies of Robert Baratheon and Eddard Stark have laid siege on castle on the final Iron Island stronghold of Pyke. Robert ordered his van to ram down the front gate to the castle to commence the final attack. The 500-kg battering ram is a 10-m long solid cylindrical bar made of weirwood with $E$ = 20 GPa and cross sectional radius of 1 m. If the soldiers were able to accelerate the ram up to 20 m/s right before impact, what are the maximum deformation and stress on the ram?
+%   On the final days of Balon Greyjoy's rebellion, the combined armies of Robert Baratheon and Eddard Stark have laid siege on castle on the final Iron Island stronghold of Pyke. Robert ordered his van to ram down the front gate to the castle to commence the final attack. The 500-kg battering ram is a 10-m long solid cylindrical bar made of weirwood with $E$ = 20 GPa and cross sectional radius of 1 m. If the soldiers were able to accelerate the ram up to 20 m/s right before impact, what are the maximum deformation and stress on the ram?
   
-  \begin{center}
-    \begin{tikzpicture}
-      \node [cylinder, draw, minimum height=5cm, minimum width=1cm, inner sep=4](ram){};
-      \node at (ram.east) [anchor=west, xshift=1cm, fill=LightSkyBlue, minimum height=2cm, minimum width=1cm, draw](gate){};
-      \draw [->, ultra thick] (ram.north) ++ (-0.5,0.2) --++ (0:1) node[midway, above]{20 m/s};
-    \end{tikzpicture}
-  \end{center}
+%   \begin{center}
+%     \begin{tikzpicture}
+%       \node [cylinder, draw, minimum height=5cm, minimum width=1cm, inner sep=4](ram){};
+%       \node at (ram.east) [anchor=west, xshift=1cm, fill=LightSkyBlue, minimum height=2cm, minimum width=1cm, draw](gate){};
+%       \draw [->, ultra thick] (ram.north) ++ (-0.5,0.2) --++ (0:1) node[midway, above]{20 m/s};
+%     \end{tikzpicture}
+%   \end{center}
   
-\end{example}
-\begin{solution}
+% \end{example}
+% \begin{solution}
 
-  This problem
-\end{solution}
+%   We can apply the principle of conservation of energy in this problem. Before the impact, the energy of the system is simply the kinetic energy of the ram. At the maximum deformation (and maximum stress) moment, the energy is transferred entirely from the ram to the gate. The gate is 
+% \end{solution}
 
 \section*{Summary}
 
@@ -1505,8 +1639,8 @@ When the deformation of a body in the lateral directions is negligible, its long
   
   \begin{enumerate}
   \item The load $P$ in which both segments will start to yield.
-  \item The residual stress in both segments after load P is removed.
-  \item The elongation of beam AB after the walls and load P are removed.
+  \item The residual stress in both segments after load $P$ is removed.
+  \item The elongation of beam AB after the walls and load $P$ are removed.
   \end{enumerate}
 
   \item A 2-m long compound cable is used to hoist a weight $W$ up onto a platform. It consists of one steel section and one aluminum section, both with circular cross sections. Steel and aluminum have the following properties: 
@@ -1546,17 +1680,17 @@ When the deformation of a body in the lateral directions is negligible, its long
   \begin{figure}[H]
     \centering
     \begin{tikzpicture}
-      \node at (0,0) [rectangle, minimum height=0.5cm, minimum width=7cm, top color=Grey, bottom color=Grey, middle color=Grey!50](A){};
-      \node at (A.west) [anchor=east, rectangle, minimum height=2cm, minimum width=1cm, pattern=north east lines](C){};
+      \node at (0,0) [rectangle, draw, minimum height=0.5cm, minimum width=7cm, top color=Grey, bottom color=Grey, middle color=Grey!50](A){};
+      \node at (A.west) [anchor=east, rectangle, minimum height=2cm, minimum width=0.5cm, pattern=north east lines](C){};
       \draw (C.south east) -- (C.north east);
-      \node at (A.east) [anchor=west, rectangle, minimum height=2cm, minimum width=1cm, pattern=north east lines](B){};
+      \node at (A.east) [anchor=west, rectangle, minimum height=2cm, minimum width=0.5cm, pattern=north east lines](B){};
       \draw (B.south west) -- (B.north west);
     \end{tikzpicture}
   \end{figure}
   
   Determine the maximum temperature change $\Delta T$ allowed on the track.
 	
-  \item A 2-m compound bar made of steel and copper is undergoing a heat treatment process for which the materials are heated from 25 C to 300 C. Afterwards, the bar is compressed back by force $P$ until it is back to its original 2-m length while its temperature remains at 300 C. The section properties are as follows:
+\item A 2-m compound bar made of steel and copper is undergoing a heat treatment process for which the materials are heated from 25 C to 300 C. Afterwards, the bar is compressed back by force $P$ until it is back to its original 2-m length while its temperature remains at 300 C. The section properties are as follows:
   
   \begin{table}
     \centering
@@ -1575,6 +1709,21 @@ When the deformation of a body in the lateral directions is negligible, its long
   \item What is the required force $P$?
   \item What are the stresses in the steel and copper sections?
   \end{enumerate}
+  
+\item A \textbf{1-m} long railroad track is fixed at both ends to the ground. However, when it is fixed, the engineers made a mistake and the fixed ends were only 0.999 m apart. The track is made of steel whose Young's modulus $E$ = 210 GPa and coefficient of thermal expansion $\alpha$ = 13 $\times$ 10$^{-6}$. According to installation standard, the track should  not have more than 300 MPa compressive stress or it will start buckling. How much temperature change can the track take without buckling?
+
+  \begin{figure}[H]
+    \centering
+    \centering
+    \begin{tikzpicture}[>=latex]
+      \node [draw, fill=LightGrey, minimum height=5mm, minimum width=8cm](track){};
+      \node at (track.south west) [anchor=north, fill=Grey, draw, regular polygon, regular polygon sides=3, minimum height=5mm, inner sep=0]{};
+      \node at (track.south east) [anchor=north, fill=Grey, draw, regular polygon, regular polygon sides=3, minimum height=5mm, inner sep=0]{};
+
+      \draw [|<->|] (track.north west) ++ (90:0.3) --++ (0:8) node[midway, fill=White]{0.999 m};
+      \node at (track.south) [below] {track original length = 1 m};
+    \end{tikzpicture}
+  \end{figure}
 
 \end{exercises}
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
@@ -1608,6 +1757,51 @@ When a circular bar is twisted by torques $T$ at the ends, every cross section o
 \end{figure}
 
 Consider a circular bar under torsion in \cref{fig: 3d torsional deformation}. Under the action of torque $T$, if the left-hand end is fixed, the right-hand end will rotate through a small angle $\phi$, known as the angle of twist. The angle of twist changes along the axis of the bar, and at intermediate cross sections it will have a value $\phi(x)$, which we can prove varies linearly between the ends.
+
+\begin{figure}[h]
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+      scale=2,
+      axis equal image, 
+      z buffer=sort,
+      hide axis, 
+      domain=0:1, y domain = 0:10, samples y = 25,
+      ylabel =y, xlabel=x,
+      clip=false,
+      ]
+
+      \addplot3 [
+      z buffer=none, domain=0:330, samples y=1,
+      ultra thick, black, -latex] (
+      -0.5,
+      {sin(x)*1.5},
+      {cos(x)*1.5}
+      );
+
+      \addplot3 [surf, shader=flat corner, fill=LightSkyBlue!50, draw=black] (
+      y,
+      {cos(360*x) * cos(y*9) - sin(360*x) * sin(y*9)},
+      {cos(360*x) * sin(y*9) + sin(360*x) * cos(y*9)}
+      );
+
+      \addplot3 [z buffer=none, fill=LightSkyBlue!60, draw=black] (
+      10,
+      {cos(360*x) * cos(90) - sin(360*x) * sin(90)},
+      {cos(360*x) * sin(90) + sin(360*x) * cos(90)}
+      );
+
+      \addplot3 [
+      z buffer=auto, domain=-60:270, samples y=1,
+      ultra thick, black, latex-] (
+      10.5,
+      {sin(x)*1.5},
+      {cos(x)*1.5}
+      );
+    \end{axis}
+  \end{tikzpicture}
+  \caption{Surface of a cylindrical shaft under torsion}
+\end{figure}
 
 The shear strain in an element of length $dx$ is simply the change in the orientation of the originally straight longitudinal line. The change in the orientation can be defined by the angle of change along the length, which is
 
@@ -2048,6 +2242,30 @@ Torque applied in the direction of the longitudinal axis a body leads to torsion
   
   Is it safe the use the old shaft? Show your work. If not, what should the radius of the new shaft be? Assume that the old and new shafts are manufactured from the same material (AISI 1023), whose $\tau_{allow}$ = 200 MPa.
         
+\item  A shaft is fitted with a gear as shown in the picture. The gear is connected to an engine whose maximum torque is provided when it is running at 1000 rpm, giving the power output of 150 kW.
+
+%   $$ P = -2 \cdot 10^{-6} \omega^3 + 1.5 \cdot 10^{-4} \omega^2 $$
+% where $0 \leqslant \omega \leqslant 600 $ rad/s
+
+  The shaft is connected with one wheel at each end which can be considered as a fixed end in this problem. The shaft is made of steel whose $\sigma_{\text{allow}}$ = 200 MPa. Determine the minimum required radius of the shaft.
+
+  \begin{figure}[H]
+    \centering
+    \centering
+    \begin{tikzpicture}[>=latex]
+      \node [draw, fill=LightGrey, minimum height=5mm, minimum width=6cm](shaft){};
+      \node [draw, fill=Grey, minimum width=3mm, minimum height=2cm, xshift=-1cm](gear){};
+      % \draw [->>, ultra thick] (gear.center) --++ (0:1) node[below, yshift=-2mm]{$T(\omega)$};
+      \draw [<-] (gear.south) --++ (-90:0.5) --++ (0:1) node[right]{gear connected to engine output};
+      \node at (shaft.west) [anchor=east, pattern=north west lines, minimum height=2cm, minimum width=0.7cm](wwall){};
+      \node at (shaft.east) [anchor=west, pattern=north west lines, minimum height=2cm, minimum width=0.7cm](ewall){};
+      \draw (wwall.north east) -- (wwall.south east);
+      \draw (ewall.north west) -- (ewall.south west);
+      \draw [|<->|] (wwall.north east) ++ (90:0.3) --++ (0:2) node[midway, fill=White]{0.6 m};
+      \draw [|<->|] (wwall.north east) ++ (90:0.3) --++ (0:2) node(A){} node[midway, fill=White]{0.6 m};
+      \draw [|<->|] (A.center) --++ (0:4) node[midway, fill=White]{1.2 m};
+    \end{tikzpicture}
+  \end{figure}
 \end{exercises}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -2491,7 +2709,7 @@ In this case, we can determine the bending stress in the beam by applying the pr
     \draw[<-, very thick] (0.85,0) -- ++ (30:1.2) node[right]{$P_z$};
     % moments
     \draw [->, thick] (-0.866,-1)node[left]{$M_z = P_y L$} -- ++ (30:1) node[near start]{\AxisRotator[rotate=30]};
-    \draw [<-, thick] (0.45,-1.74)node[below]{$M_y = P_y L$} -- ++ (90:1) node[near start]{\AxisRotator[rotate=90]};
+    \draw [<-, thick] (0.45,-1.74)node[below]{$M_y = P_z L$} -- ++ (90:1) node[near start]{\AxisRotator[rotate=90]};
   \end{tikzpicture}
   \caption{Diagonally-loaded beam.}
 \end{figure}
@@ -2578,12 +2796,12 @@ This equation, known as the \emph{shear formula}, can be used to determine shear
     \centering
     \begin{tikzpicture}[>=latex]
       \node [draw, fill=LightGrey, rectangle, minimum height=1cm, minimum width=2cm] (bottomcross) {};
-      \node at (bottomcross.north) [anchor=south, draw, fill=LightGrey, rectangle, minimum height=1.5cm, minimum width=2cm] (topcross) {};
+      \node at (bottomcross.north) [anchor=south, draw, fill=LightSkyBlue, rectangle, minimum height=1.5cm, minimum width=2cm] (topcross) {};
       \draw[|<->|] (bottomcross.south east) ++ (0:0.5) --++ (90:1) node[midway, right]{2 cm};
       \draw[|<->|] (bottomcross.north east) ++ (0:0.5) --++ (90:1.5) node[midway, right]{3cm};
       \draw[|<->|] (topcross.north west) ++ (90:0.5) --++ (0:2) node[midway, above]{5 cm};
       % beam with load
-      \node at (topcross.east) [anchor=west, xshift=4cm, draw, fill=LightGrey, rectangle, minimum height=0.6cm, minimum width=7cm](top){};
+      \node at (topcross.east) [anchor=west, xshift=4cm, draw, fill=LightSkyBlue, rectangle, minimum height=0.6cm, minimum width=7cm](top){};
       \node at (top.south) [anchor=north, draw, fill=LightGrey, rectangle, minimum height=0.4cm, minimum width=7cm](bottom){};
       \draw [<-, ultra thick] (top.north) --++ (90:1) node[above]{1500 N};
       \node at (bottom.south west) [anchor=north, draw, regular polygon, regular polygon sides=3, minimum height=0.5cm, fill=white, inner sep=0]{};
@@ -2708,7 +2926,7 @@ The directions of these forces from all flanges show that the horizontal force e
 A similar analysis can be performed for the web. Here, we have
 
 \begin{align*}
-  Q = \sum \bar y'A'  &= \left( \frac{d}{2} \right)(bt) + \left[ y + \left( \frac{1}{2} \right)\left( \frac{d}{2} - y \right) \right]t\left( \frac{d}{2} - y \right) \\ 
+  Q = \sum \bar y^\prime A^\prime  &= \left( \frac{d}{2} \right)(bt) + \left[ y + \left( \frac{1}{2} \right)\left( \frac{d}{2} - y \right) \right]t\left( \frac{d}{2} - y \right) \\ 
                         &= \left( \frac{btd}{2} \right) + \left( \frac{t}{2} \right)\left( \frac{d^2}{4} - y^2 \right)
 \end{align*}	
 
@@ -3041,6 +3259,26 @@ We then consider the cases where the applied bending moment is not perpendicular
       \bottomrule
     \end{tabular}
   \end{table}
+
+\item A composite beam made of laminated layers of bamboo and oak woods. The oak layer has $E$ = 2 GPa and $\sigma_{allow}$ = 20 MPa, while the bamboo layer has $E$ = 1 GPa and $\sigma_{allow}$ = 30 MPa. The cross-section of the beam is a section of 5 cm $\times$ 3 cm layer of oak glued on top of a section of 5 cm $\times$ 4 cm layer of bamboo. If the beam is fixed on the left end, determine the maximum load $P$ that can be exerted downward at the free end.
+
+  \begin{figure}[h]
+    \centering
+    \begin{tikzpicture}[>=latex]
+       \node [pattern=north west lines, minimum height=1.5cm, minimum width=5mm](wall){};
+       \draw (wall.north east) -- (wall.south east);
+       \node at (wall.east) [anchor=south west, draw, fill=LightGrey, minimum width=6cm, minimum height=4mm](topbeam){Oak};
+       \node at (wall.east) [anchor=north west, draw, fill=Grey, minimum width=6cm, minimum height=3mm](bottombeam){Bamboo};
+       \draw [<-, ultra thick] (topbeam.north east) --++ (90:1) node[above]{$P$};
+
+       \node at (wall.east) [draw, xshift=8cm, anchor=south west, minimum height=1.6cm, minimum width=2cm, fill=LightGrey](topsect){Oak};
+       \node at (topsect.south) [draw, anchor=north, minimum height=1.2cm, minimum width=2cm, fill=Grey](bottomsect){Bamboo};
+
+       \draw [|<->|] (bottomsect.south west) ++ (-90:0.3) --++ (0:2) node[midway, fill=White]{5 cm};
+       \draw [|<->|] (bottomsect.south east) ++ (0:0.5) --++ (90:1.2) node[midway, fill=White]{3 cm};
+       \draw [|<->|] (topsect.south east) ++ (0:0.5) --++ (90:1.6) node[midway, fill=White]{4 cm};
+    \end{tikzpicture}
+  \end{figure}
   
 \end{exercises}
 
@@ -3246,7 +3484,7 @@ We can use the first equation to find the strain energy in the beam when we know
 
 This theorem provides a method for finding the deflections of a structure from its strain energy. The theorem simply states that the derivative of the strain energy with respect the load is equal to the deflection corresponding to the load. The derivation of Castigliano’s theorem will show what the theorem physically represents.
 
-Consider a beam subjected to $n$ number of loads $P_1, P_2, …, P_n$. The deflections of the beam corresponding to the various loads are denoted $\delta_1, \delta_2, ..., \delta_n$. We will assume that the principle of superposition is applicable to the beam and its loads.
+Consider a beam subjected to $n$ number of loads $P_1, P_2, \ldots, P_n$. The deflections of the beam corresponding to the various loads are denoted $\delta_1, \delta_2, \ldots, \delta_n$. We will assume that the principle of superposition is applicable to the beam and its loads.
 
 Now we will determine the strain energy of this beam. When the loads are applied to the beam, they gradually increase in magnitude from zero to their maximum values. Simultaneously, as the load is applied, it moves through the corresponding displacement and does work. The total work done by the loads is equal to the strain energy $U$ stored in the beam, $W = U$. Note that $W$ is a function of the loads acting on the beam.
 
@@ -3535,11 +3773,11 @@ Normally, the state of stress at a point in a body is defined by six independent
 
 \section{Stress Transformation for Plane Stress}
 
-The method of transforming the normal and shear stress components from the $x$, $y$ to $x’$, $y’$ coordinate axes will now be developed in a general manner and expressed as a set of stress transformation equations.
+The method of transforming the normal and shear stress components from the $x$, $y$ to $x^\prime$, $y^\prime$ coordinate axes will now be developed in a general manner and expressed as a set of stress transformation equations.
 
 \paragraph{Sign Convention:} Before the transformation equations are derived, we must first establish a sign convention for the stress components. A normal or shear stress component is positive when it acts in a positive direction on a positive face, or it acts in a negative direction on a negative face. The stress component is negative otherwise.
 
-Given the state of plane stress, the orientation of the inclined plane on which the normal and shear stress components are to be determined will be defined using $\theta$. Note that both coordinate systems $x$-$y$ and $x’$-$y’$ must form right-handed coordinate systems, meaning the cross product $x \times y$ must give the direction of $z$.
+Given the state of plane stress, the orientation of the inclined plane on which the normal and shear stress components are to be determined will be defined using $\theta$. Note that both coordinate systems $x$-$y$ and $x^\prime$-$y^\prime$ must form right-handed coordinate systems, meaning the cross product $x \times y$ must give the direction of $z$.
 
 \begin{figure}[h]
   \centering
@@ -3565,8 +3803,8 @@ Given the state of plane stress, the orientation of the inclined plane on which 
     \draw [->, very thick] (H.center) ++ (0:1.3) --++ (-90:1) node[right]{$\sigma_y$};
     \draw [-left to, very thick] (I.center) ++ (-135:0.5) --++ (180:1.8);
     \draw [-right to, very thick] (G.center) ++ (-135:0.5) --++ (-90:1.8) node[below]{$\tau_{xy}$};
-    \draw [->, very thick] (J.center) --++ (45:1) node[above right]{$\sigma_{x'}$};
-    \draw [-right to, very thick] (I.center) ++ (90:0.5) --++ (135:2.6) node[above right]{$\tau_{x'y'}$};
+    \draw [->, very thick] (J.center) --++ (45:1) node[above right]{$\sigma_{x^\prime }$};
+    \draw [-right to, very thick] (I.center) ++ (90:0.5) --++ (135:2.6) node[above right]{$\tau_{x^\prime y^\prime}$};
   \end{tikzpicture}
   % \includegraphics[scale=0.7]{pictures/Static-body-load-analysis/stress-transformation}
   \caption{Derivation of stress transformation equation by cutting element at an angle.}
@@ -3576,19 +3814,19 @@ Given the state of plane stress, the orientation of the inclined plane on which 
 \paragraph{Normal and Shear Stress Components:} The element is sectioned into a right-angle triangle with an angle of $\theta$ on the top as in the figure below. The resulting normal and shear stress on the newly sectioned side can be determined using equation of force equilibrium as
 
 \begin{gather*}
-  \sum F_{x'}  = 0; \hfill \\[1em]
+  \sum F_{x^\prime }  = 0; \hfill \\[1em]
   \begin{split}
-    \sigma_{x'}\Delta A - (\tau_{xy}\Delta A\sin \theta )\cos \theta  &- (\sigma _y\Delta A\sin \theta )\sin \theta  \\
+    \sigma_{x^\prime }\Delta A - (\tau_{xy}\Delta A\sin \theta )\cos \theta  &- (\sigma _y\Delta A\sin \theta )\sin \theta  \\
     &- (\tau_{xy}\Delta A\cos \theta )\sin \theta  - (\sigma_x\Delta A\sin \theta )\cos \theta  = 0
   \end{split} \nonumber \\[0.5em]
-  \sigma_{x'} = \sigma_x\cos ^2\theta  + \sigma_y\sin^2\theta  + 2\tau_{xy} \sin \theta \cos \theta  \\[1em]
-  \sum F_{y'}  = 0; \hfill \\ 
-  \tau_{x'y'} = -(\sigma_x - \sigma_y)\sin \theta \cos \theta  + \tau_{xy}(\cos ^2\theta  - \sin^2\theta ) \\ 
+  \sigma_{x^\prime } = \sigma_x\cos ^2\theta  + \sigma_y\sin^2\theta  + 2\tau_{xy} \sin \theta \cos \theta  \\[1em]
+  \sum F_{y^\prime}  = 0; \hfill \\ 
+  \tau_{x^\prime y^\prime} = -(\sigma_x - \sigma_y)\sin \theta \cos \theta  + \tau_{xy}(\cos ^2\theta  - \sin^2\theta ) \\ 
 \end{gather*}
 
-Once we know $\sigma_{x’}, \sigma_{y’}$ can be obtained simply by substituting $\theta$ with 90 + $\theta$
+Once we know $\sigma_{x^\prime}, \sigma_{y^\prime}$ can be obtained simply by substituting $\theta$ with 90 + $\theta$
 
-\[\sigma_{y'} = \sigma_x\sin^2\theta  + \sigma_y\cos^2\theta  - 2\tau_{xy}\sin \theta \cos \theta \]
+\[\sigma_{y^\prime} = \sigma_x\sin^2\theta  + \sigma_y\cos^2\theta  - 2\tau_{xy}\sin \theta \cos \theta \]
 
 If we know the stress components for all possible orientations of faces through a point, we say that we know the \emph{state of stress} at a point.
 
@@ -3597,31 +3835,31 @@ If we know the stress components for all possible orientations of faces through 
 The stress transformation can be made easier to understand through the use of a graphical representation. However, first we have to rewrite stress transformation using double angle formulas.
 
 \begin{align*}
-  &\sigma_{x'} = \sigma_x\cos^2\theta  + \sigma_y\sin^2\theta  + 2\tau_{xy}\sin \theta \cos \theta \\
-  &\sigma_{x'} = \frac{\sigma_x}{2}(1 + \cos 2\theta ) + \frac{\sigma_y}{2}(1 - \cos 2\theta ) + \tau_{xy}\sin 2\theta \\
-  &\sigma_{x'} - \left( \frac{\sigma_x + \sigma_y}{2} \right) = \left( \frac{\sigma_x + \sigma_y}{2} \right)\cos 2\theta  + \tau_{xy}\sin 2\theta 
+  &\sigma_{x^\prime } = \sigma_x\cos^2\theta  + \sigma_y\sin^2\theta  + 2\tau_{xy}\sin \theta \cos \theta \\
+  &\sigma_{x^\prime } = \frac{\sigma_x}{2}(1 + \cos 2\theta ) + \frac{\sigma_y}{2}(1 - \cos 2\theta ) + \tau_{xy}\sin 2\theta \\
+  &\sigma_{x^\prime } - \left( \frac{\sigma_x + \sigma_y}{2} \right) = \left( \frac{\sigma_x + \sigma_y}{2} \right)\cos 2\theta  + \tau_{xy}\sin 2\theta 
 \end{align*}
 
 \begin{align*}
-  &\tau_{x'y'} = (\sigma_y - \sigma_x)\sin \theta \cos \theta  + \tau_{xy}(\cos ^2\theta  - \sin^2\theta ) \\
-  &\tau_{x'y'} = \left( \frac{\sigma_y - \sigma_x}{2} \right)\sin 2\theta  + \tau_{xy}\cos 2\theta 
+  &\tau_{x^\prime y^\prime} = (\sigma_y - \sigma_x)\sin \theta \cos \theta  + \tau_{xy}(\cos ^2\theta  - \sin^2\theta ) \\
+  &\tau_{x^\prime y^\prime} = \left( \frac{\sigma_y - \sigma_x}{2} \right)\sin 2\theta  + \tau_{xy}\cos 2\theta 
 \end{align*}
 
 Square both expressions and add them together, we have
 
 \begin{align*}
-  \left[ \sigma_{x'} - \left( \frac{\sigma_x + \sigma_y}{2} \right) \right]^2 + \tau_{x'y'}^2 = &\left( \frac{\sigma_x - \sigma_y}{2} \right)^2\cos^22\theta  + 2\left( \frac{\sigma_x - \sigma_y}{2} \right)\tau_{xy}\cos 2\theta \sin 2\theta  + \tau_{xy}^2{\sin^2}2\theta \\
+  \left[ \sigma_{x^\prime } - \left( \frac{\sigma_x + \sigma_y}{2} \right) \right]^2 + \tau_{x^\prime y^\prime}^2 = &\left( \frac{\sigma_x - \sigma_y}{2} \right)^2\cos^22\theta  + 2\left( \frac{\sigma_x - \sigma_y}{2} \right)\tau_{xy}\cos 2\theta \sin 2\theta  + \tau_{xy}^2{\sin^2}2\theta \\
   + &\left( \frac{\sigma_x - \sigma_y}{2} \right)^2\sin^22\theta  + 2\left( \frac{\sigma_y - \sigma_x}{2} \right)\tau_{xy}\cos 2\theta \sin 2\theta  + \tau_{xy}^2\cos^22\theta
 \end{align*}
 
 Simplifying the expression using trigonometry identities, we have
 
-\[\left[ \sigma_{x'} - \left( \frac{\sigma_x + \sigma_y}{2} \right) \right]^2 + \tau_{x'y'}^2 = \left( \frac{\sigma_x - \sigma_y}{2} \right)^2 + \tau _{xy}^2\]
+\[\left[ \sigma_{x^\prime } - \left( \frac{\sigma_x + \sigma_y}{2} \right) \right]^2 + \tau_{x^\prime y^\prime}^2 = \left( \frac{\sigma_x - \sigma_y}{2} \right)^2 + \tau _{xy}^2\]
 
 Since $\sigma_x$, $\sigma_y$, and $\tau_{xy}$ are known quantities for the problem, we can rewrite the expression as
 
 \begin{equation}
-  (\sigma_{x'} - \sigma_{avg})^2 + \tau_{x'y'}^2 = R^2
+  (\sigma_{x^\prime } - \sigma_{avg})^2 + \tau_{x^\prime y^\prime}^2 = R^2
 \end{equation}
 
 Note that this equation represents a circle having radius $R$ and center on the $\sigma$ axis at point ($\sigma_{avg}$, 0).
@@ -3635,7 +3873,7 @@ Note that this equation represents a circle having radius $R$ and center on the 
     \node at (large.east) [below right] {$\sigma_1$};
     \node at (large.west) [below left] {$\sigma_2$};
     \draw (0,0) node[below left]{0};
-    \draw [dashed](large.center) -- (large.south) node[below right](absolute){$(\tau_{x'y'})_{\max}$};
+    \draw [dashed](large.center) -- (large.south) node[below right](absolute){$(\tau_{x^\prime y^\prime})_{\max}$};
     \draw (large.center) --++ (50:3.5) node[above right]{$\sigma_x$} node(A){};
     \draw (large.center) --++ (-130:3.5) node[below left]{$\sigma_y$};
     \draw [dashed] (A.center) --++ (180:2.75) node[left]{$\tau_{xy}$};
@@ -3710,7 +3948,7 @@ Since the angle between the principal stresses and maximum shear stress on Mohr�
     \theta  &= -22.5\degree
   \end{align*}
 
-  We can also plot the expression for transformed normal stress $\sigma_x'$ and transformed shear stress $\tau_{x'y'}$ as
+  We can also plot the expression for transformed normal stress $\sigma_x^\prime $ and transformed shear stress $\tau_{x^\prime y^\prime}$ as
 
   \begin{figure}[H]
     \centering
@@ -3725,8 +3963,8 @@ Since the angle between the principal stresses and maximum shear stress on Mohr�
         xtick distance=45,
         xmin=0,
         ]
-        \addplot+[mark=none]{-30*(cos(x))^2 + 20*(sin(x))^2 + 50*sin(x)*cos(x)} node[right]{$\sigma_x'$};
-        \addplot+[mark=none]{-(-30 - 20)*sin(x)*cos(x) + 25*((cos(x))^2 - (sin(x))^2)} node[right]{$\tau_{x'y'}$};
+        \addplot+[mark=none]{-30*(cos(x))^2 + 20*(sin(x))^2 + 50*sin(x)*cos(x)} node[right]{$\sigma_x^\prime $};
+        \addplot+[mark=none]{-(-30 - 20)*sin(x)*cos(x) + 25*((cos(x))^2 - (sin(x))^2)} node[right]{$\tau_{x^\prime y^\prime}$};
       \end{axis}
     \end{tikzpicture}
   \end{figure}
@@ -3738,17 +3976,18 @@ Since the angle between the principal stresses and maximum shear stress on Mohr�
   \begin{figure}[H]
     \centering
     \begin{tikzpicture}
-      \node at (-3,0) [anchor=west, draw, fill=SkyBlue, circle, minimum height=5cm](large){};
-      \draw [<->] (-5,0) --++ (0:8) node[right]{$\sigma$};
-      \draw [<->] (0,-3) --++ (90:6) node[above]{$\tau$};
+      \node at (-4,0) [anchor=west, draw, fill=SkyBlue, circle, minimum height=7cm](large){};
+      \draw [<->] (-5,0) --++ (0:9) node[right]{$\sigma$};
+      \draw [<->] (0,-4.5) --++ (90:9) node[above]{$\tau$};
       \node at (large.east) [below right] {30.4};
       \node at (large.west) [below left] {-40.4};
-      \draw (0,0) node[above right]{0};
-      \draw (large.center) --++ (-45:2.5) node(A){};
-      \draw [dashed] (A.center) --++ (90:1.75) node[above]{20};
-      \draw (large.center) --++ (135:2.5) node(B){};
-      \draw [dashed] (B.center) --++ (0:2.2) node[right]{25};
-      \draw [dashed] (B.center) --++ (-90:1.7) node[below]{-30};
+      \draw (0,0) node[below right]{0};
+      \draw (large.south west) -- (large.north east);
+      \draw [dashed] (large.north east) --++ (-90:2.5) node[below]{20};
+      \draw [dashed] (large.south west) --++ (0:3) node[right]{25};
+      \draw [dashed] (large.south west) --++ (90:2.45) node[above]{-30};
+      \node at (0,0) [above right]{-45$^{\circ}$};
+      \draw [-latex] (large.center) ++ (45:1.5) arc (45:0:1.5);
     \end{tikzpicture}
   \end{figure}
 \end{solution}
@@ -3968,10 +4207,10 @@ Consider a material subjected to in-plane principal stresses $\sigma_1$ and $\si
     \node at (large.east) [below right] {$\sigma_1$};
     \node at (large.west) [below left] {0};
     \draw (right.west) [out=70, in=180] to ++(0.5,0.5) node[right]{$\sigma_2$};
-    \draw (left.center) -- (left.south) node[below]{$(\tau_{y'z'})_{\max}$};
-    \draw (right.center) -- (right.south) node[below](inplane){$(\tau_{x'y'})_{\max}$};
+    \draw (left.center) -- (left.south) node[below]{$(\tau_{y^\prime z^\prime})_{\max}$};
+    \draw (right.center) -- (right.south) node[below](inplane){$(\tau_{x^\prime y^\prime})_{\max}$};
     \draw (inplane.south) [out=-80, in=150] to ++(0.5,-0.5) node[right]{Maximum in-plane shear stress};
-    \draw (large.center) -- (large.south) node[below](absolute){$(\tau_{x'z'})_{\max}$};
+    \draw (large.center) -- (large.south) node[below](absolute){$(\tau_{x^\prime z'})_{\max}$};
     \draw (absolute.south) [out=-90, in=90] to ++(-0.5,-0.5) node[below]{Absolute maximum shear stress};
   \end{tikzpicture}
   \caption{Mohr's circles of a plane stress element in each of the planes $x$-$y$, $x$-$z$, and $y$-$z$ when the stresses are positive.}
@@ -3988,10 +4227,10 @@ Consider a material subjected to in-plane principal stresses $\sigma_1$ and $\si
     \node at (large.east) [below right] {$\sigma_1$};
     \node at (large.west) [below left] {$\sigma_2$};
     \draw (right.west) [out=70, in=180] to ++(0.5,0.5) node[right]{0};
-    \draw (left.center) -- (left.south) node[below]{$(\tau_{y'z'})_{\max}$};
-    \draw (right.center) -- (right.south) node[below](inplane){$(\tau_{x'y'})_{\max}$};
+    \draw (left.center) -- (left.south) node[below]{$(\tau_{y^\prime z^\prime})_{\max}$};
+    \draw (right.center) -- (right.south) node[below](inplane){$(\tau_{x^\prime y^\prime})_{\max}$};
     \draw (inplane.south) [out=-80, in=150] to ++(0.5,-0.5) node[right]{Maximum in-plane shear stress};
-    \draw (large.center) -- (large.south) node[below](absolute){$(\tau_{x'z'})_{\max}$};
+    \draw (large.center) -- (large.south) node[below](absolute){$(\tau_{x^\prime z^\prime})_{\max}$};
     \draw (absolute.south) [out=-90, in=150] to ++(0.5,-0.5) node[right]{Absolute maximum shear stress};
   \end{tikzpicture}
   \caption{Mohr's circles of a plane stress element in each of the planes $x$-$y$, $x$-$z$, and $y$-$z$ when the stresses are of different signs.}
@@ -4047,21 +4286,21 @@ It is important to realize that plane stress does not cause plane strain or vice
 
 \section{Plane-Strain Transformation}
 
-It is important in plane-strain analysis to establish equations to determine the $x'$, $y'$, and shear strain in the $x'y'$ plane at a point when the $x$, $y$ components of strain are known. Unlike plane-stress transformation that can be solved by equilibrium, this is a geometry-based problem, requiring us to show how the changes in lengths of the element vary according to its orientation.
+It is important in plane-strain analysis to establish equations to determine the $x^\prime $, $y^\prime$, and shear strain in the $x^\prime y^\prime$ plane at a point when the $x$, $y$ components of strain are known. Unlike plane-stress transformation that can be solved by equilibrium, this is a geometry-based problem, requiring us to show how the changes in lengths of the element vary according to its orientation.
 
-To develop the strain transformation equation for $\varepsilon_{x'}$, we must determine the elongation of a line segment $dx'$ that lies aong th e$x'$ axis and is subjected to strain components $\varepsilon_x$, $\varepsilon_y$, and $\gamma_{xy}$. As illustrated in figure \cref{fig: plane strain before deformation}, the components of the line $dx'$ along the $x$ and $y$ axes are
+To develop the strain transformation equation for $\varepsilon_{x^\prime }$, we must determine the elongation of a line segment $dx^\prime $ that lies aong th e$x^\prime $ axis and is subjected to strain components $\varepsilon_x$, $\varepsilon_y$, and $\gamma_{xy}$. As illustrated in figure \cref{fig: plane strain before deformation}, the components of the line $dx^\prime $ along the $x$ and $y$ axes are
 
 \begin{figure}[h]
   \centering
   \begin{tikzpicture}[>=latex]
     \draw [thick, DeepSkyBlue] (0,0) node(O){} --++ (0:4) node[midway, below, black]{$dx$} node(A){};
     \draw [thick, DeepSkyBlue] (O.center) --++ (90:2) node[midway, right, black]{$dy$} node(B){};
-    \draw [thick, DeepSkyBlue] (O.center) -- (4,2) node[midway, below, black]{$dx'$} node(C){};
+    \draw [thick, DeepSkyBlue] (O.center) -- (4,2) node[midway, below, black]{$dx^\prime $} node(C){};
     \draw [dashed] (B.center) -- (C.center) -- (A.center);
     \draw (A) --++ (0:1) node[right]{$x$};
     \draw (B) --++ (90:1) node[above]{$y$};
-    \draw (O.center) --++ (110:3) node[above]{$y'$};
-    \draw (C) --++ (1,0.5) node[above right]{$x'$};
+    \draw (O.center) --++ (110:3) node[above]{$y^\prime$};
+    \draw (C) --++ (1,0.5) node[above right]{$x^\prime $};
     \draw [->] (4.7,0) arc (0:26.8:4.7) node[midway, right]{$\theta$};
   \end{tikzpicture}
   \caption{Dimensions of plane strain element before deformation.}
@@ -4069,18 +4308,18 @@ To develop the strain transformation equation for $\varepsilon_{x'}$, we must de
 \end{figure}
 
 \begin{align*}
-  dx &= dx' \cos \theta \\
-  dy &= dx' \sin \theta
+  dx &= dx^\prime  \cos \theta \\
+  dy &= dx^\prime  \sin \theta
 \end{align*}
 
-When there is a positive normal strain $\varepsilon_x$ on the material, the line $dx$ is elongated by $\varepsilon_x dx$, which causes $dx'$ to elongate by $\varepsilon_x dx \cos \theta$. Similarly, when $\varepsilon_y$ occurs, line $dy$ elongates by $\varepsilon_y dy$, causing $dy'$ to elongates by $\varepsilon_y dy \sin \theta$. Finally, if we assume that $dx$ is fied, the shear strain $\gamma_{xy}$, which is the change in angle between $dx$ and $dy$, causes the top of line $dy$ to move by $\gamma_{xy} dy$ to the right. This causes $dx'$ to elongate by $\gamma_{xy} dy \cos \theta$. If all three of these elongations are added togather, the resultant elongation of $dx'$, which we will call $\delta x'$, is
+When there is a positive normal strain $\varepsilon_x$ on the material, the line $dx$ is elongated by $\varepsilon_x dx$, which causes $dx^\prime $ to elongate by $\varepsilon_x dx \cos \theta$. Similarly, when $\varepsilon_y$ occurs, line $dy$ elongates by $\varepsilon_y dy$, causing $dy^\prime$ to elongates by $\varepsilon_y dy \sin \theta$. Finally, if we assume that $dx$ is fied, the shear strain $\gamma_{xy}$, which is the change in angle between $dx$ and $dy$, causes the top of line $dy$ to move by $\gamma_{xy} dy$ to the right. This causes $dx^\prime $ to elongate by $\gamma_{xy} dy \cos \theta$. If all three of these elongations are added togather, the resultant elongation of $dx^\prime $, which we will call $\delta x^\prime $, is
 
 \begin{figure}[h]
   \centering
   \begin{tikzpicture}[>=latex]
     \draw [thick, DeepSkyBlue] (0,0) node(O){} --++ (0:4) node[midway, below, black]{$dx$} node(A){};
     \draw [thick, DeepSkyBlue] (O.center) --++ (90:2) node[midway, right, black]{$dy$} node(B){};
-    \draw [thick, DeepSkyBlue] (O.center) -- (4,2) node[midway, below, black]{$dx'$} node(C){};
+    \draw [thick, DeepSkyBlue] (O.center) -- (4,2) node[midway, below, black]{$dx^\prime $} node(C){};
     \draw [->, thick, DeepSkyBlue] (A) --++ (0:1.68) node[midway, below, black]{$\varepsilon_x dx$} node(E){};
     \draw (E) --++ (0:1) node[right]{$x$};
     \draw [->, thick, DeepSkyBlue] (A.east) --++ (26.5:1.5) node[midway](G){} node(F){}; 
@@ -4090,9 +4329,9 @@ When there is a positive normal strain $\varepsilon_x$ on the material, the line
     \draw (F) --++ (26.5:1);
     \draw [->] (E) ++ (0:0.5) arc (0:26.6:2) node[midway, right]{$\theta$};
     \draw (B) --++ (90:1) node[above]{$y$};
-    \draw (O.center) --++ (110:3) node[above]{$y'$};
+    \draw (O.center) --++ (110:3) node[above]{$y^\prime$};
     \draw [->, thick, DeepSkyBlue] (C) --++ (1.5,0.75) node(D){};
-    \draw (D) --++ (1,0.5) node[above right]{$x'$};
+    \draw (D) --++ (1,0.5) node[above right]{$x^\prime $};
     \draw [dashed] (A.east) --++ (90:2);
     \draw [dashed] (D.center) --++ (-90:2.8);
   \end{tikzpicture}
@@ -4104,16 +4343,16 @@ When there is a positive normal strain $\varepsilon_x$ on the material, the line
   \begin{tikzpicture}[>=latex]
     \draw [thick] (0,0) node(O){} --++ (0:4) node[midway, below, black]{$dx$} node(A){} node[right]{$x$};
     \draw [thick, DeepSkyBlue] (O.center) --++ (90:2) node[midway, right, black]{$dy$} node(B){};
-    \draw [thick, DeepSkyBlue] (O.center) -- (4,2) node[midway, below, black]{$dx'$} node(C){};
+    \draw [thick, DeepSkyBlue] (O.center) -- (4,2) node[midway, below, black]{$dx^\prime $} node(C){};
     \draw [->, thick, DeepSkyBlue] (B) --++ (90:3.2) node[at start](F){} node(G){} node[midway, left, black]{$\varepsilon_y dy$};
     \draw (G) --++ (90:1) node[above]{$y$};
     \draw [->, thick, DeepSkyBlue](F.center) --++ (26.5:1.35) node(H){} node[midway, right, black]{$\varepsilon_y dy \sin \theta$};
     \draw [->, thick, DeepSkyBlue] (H.center) --++ (116.5:2.75) node[midway, right, black]{$\varepsilon_y dy \cos \theta$};
     \draw (H) --++ (26.5:1.5) node[near end](I){};
     \draw [<->] (I.center) arc (26.5:0:1.2) node[midway, right]{$\theta$};
-    \draw (O.center) --++ (110:3) node[above]{$y'$};
+    \draw (O.center) --++ (110:3) node[above]{$y^\prime$};
     \draw [->, thick, DeepSkyBlue] (C) --++ (1.5,0.75) node(D){};
-    \draw (D) --++ (1,0.5) node[above right]{$x'$};
+    \draw (D) --++ (1,0.5) node[above right]{$x^\prime $};
     \draw [dashed] (C.east) ++ (90:0.1) --++ (180:4.2);
     \draw [dashed] (D.center) --++ (180:5.5);
     \draw [<->] (G) ++ (-90:1) arc (-90:-63.5:1) node[midway, above, xshift=-0.7mm]{$\theta$};
@@ -4131,14 +4370,14 @@ When there is a positive normal strain $\varepsilon_x$ on the material, the line
     \node at (E.south west)[left, xshift=-5mm, yshift=-1.5mm]{$\theta$};
     \draw [dashed] (E) --++ (0:3.5) node(F){};
     \draw [<->] (O) ++ (90:1) arc (90:53:1) node[midway, above]{$\gamma_{xy}$};
-    \draw (O.center) --++ (116.5:3) node[above]{$y'$} node[midway, left]{$dy'$};
+    \draw (O.center) --++ (116.5:3) node[above]{$y^\prime$} node[midway, left]{$dy^\prime$};
     \draw (B) --++ (90:1) node[above]{$y$};
     \draw [->, thick, DeepSkyBlue] (B.center) --++ (-63.5:0.9) node[midway](left){};
     \draw [<-, thick, DeepSkyBlue] (E.center) --++ (-153.5:1.8) node[midway](right){} node(low){};
     \draw [dashed] (low) --++ (0:3.5) node(C){};
-    \draw [thick, DeepSkyBlue] (O.center) -- (C) node[midway, below, black]{$dx'$};
+    \draw [thick, DeepSkyBlue] (O.center) -- (C) node[midway, below, black]{$dx^\prime $};
     \draw [->, thick, DeepSkyBlue] (C.center) -- (F.center);
-    \draw (F) --++ (26.6:1) node[above right]{$x'$};
+    \draw (F) --++ (26.6:1) node[above right]{$x^\prime $};
     \draw (right.center) to [out=-20, in=-130] ++ (1.5,0.5) node[above right]{$\gamma_{xy} dy \cos \theta$};
     \draw (left.center) to [out=-160, in=-75] ++ (-0.5,1) node[left]{$\gamma_{xy} dy \sin \theta$};
   \end{tikzpicture}
@@ -4146,52 +4385,52 @@ When there is a positive normal strain $\varepsilon_x$ on the material, the line
 \end{figure}
 
 \begin{equation*}
-  \delta x' = \varepsilon_x dx \cos \theta + \varepsilon_y dy \sin \theta + \gamma_{xy} dy \cos \theta
+  \delta x^\prime  = \varepsilon_x dx \cos \theta + \varepsilon_y dy \sin \theta + \gamma_{xy} dy \cos \theta
 \end{equation*}
 
-The normal strain along the $x'$ axis is simply
+The normal strain along the $x^\prime $ axis is simply
 
 \begin{equation} \label{eqn: strain transformation in x unmod}
-  \varepsilon_{x'} = \frac{\delta x'}{dx'} = \varepsilon_x \cos^2 \theta + \varepsilon_y \sin^2 \theta + \gamma_{xy} \sin \theta \cos \theta
+  \varepsilon_{x^\prime } = \frac{\delta x^\prime }{dx^\prime } = \varepsilon_x \cos^2 \theta + \varepsilon_y \sin^2 \theta + \gamma_{xy} \sin \theta \cos \theta
 \end{equation}
 
-The strain transformation equation for $\varepsilon_{y'}$ can be proven similarly. The resulting equation can also be obtained by substituting $(\theta + 90\degree)$ for $\theta$ in \cref{eqn: strain transformation in x unmod}, which gives
+The strain transformation equation for $\varepsilon_{y^\prime}$ can be proven similarly. The resulting equation can also be obtained by substituting $(\theta + 90\degree)$ for $\theta$ in \cref{eqn: strain transformation in x unmod}, which gives
 
 \begin{equation} \label{eqn: strain transformation in y unmod}
-  \varepsilon_{y'} = \varepsilon_x \sin^2 \theta + \varepsilon_y \cos^2 \theta - \gamma_{xy} \sin \theta \cos \theta
+  \varepsilon_{y^\prime} = \varepsilon_x \sin^2 \theta + \varepsilon_y \cos^2 \theta - \gamma_{xy} \sin \theta \cos \theta
 \end{equation}
 
-Now, the strain transformation equation for $\gamma_{x'y'}$ can be derived considering the amount of rotation $dx'$ and $dy'$ undergo when subjected to the three plane strain components. First, let us consider the rotation of $dx'$, which is defined by a counterclockwise angle $\alpha$ shown in fig. ... It can be determined by the displacement caused by $\delta y'$ using $
-\alpha = \delta y' / dx'$. To calculate $\delta y'$, consider the three displacement components acting in the $y'$ direction: $\varepsilon_x$ giving $-\varepsilon_x dy \cos \theta$; $\varepsilon_y$ giving $\varepsilon_y dy \cos \theta$; and $\gamma_{xy}$ giving $-\gamma_{xy} dy \sin \theta$. So $\delta y'$ caused by all three strain components is
+Now, the strain transformation equation for $\gamma_{x^\prime y^\prime}$ can be derived considering the amount of rotation $dx^\prime $ and $dy^\prime$ undergo when subjected to the three plane strain components. First, let us consider the rotation of $dx^\prime $, which is defined by a counterclockwise angle $\alpha$ shown in fig. ... It can be determined by the displacement caused by $\delta y^\prime$ using $
+\alpha = \delta y^\prime / dx^\prime $. To calculate $\delta y^\prime$, consider the three displacement components acting in the $y^\prime$ direction: $\varepsilon_x$ giving $-\varepsilon_x dy \cos \theta$; $\varepsilon_y$ giving $\varepsilon_y dy \cos \theta$; and $\gamma_{xy}$ giving $-\gamma_{xy} dy \sin \theta$. So $\delta y^\prime$ caused by all three strain components is
 
 \begin{equation*}
-  \delta y' = - \varepsilon_x dx \sin \theta + \varepsilon_y dy \cos \theta - \gamma_{xy} dy \sin \theta
+  \delta y^\prime = - \varepsilon_x dx \sin \theta + \varepsilon_y dy \cos \theta - \gamma_{xy} dy \sin \theta
 \end{equation*}
 
-We can then obtain $\alpha = \delta y' / dx'$ by dividing though with $dx'$, giving
+We can then obtain $\alpha = \delta y^\prime / dx^\prime $ by dividing though with $dx^\prime $, giving
 
 \begin{equation}
   \alpha = \left(-\varepsilon_x + \varepsilon_y \right) \sin \theta \cos \theta - \gamma_{xy}dy \sin \theta
 \end{equation}
 
-The line $dy'$ rotates by a counterclockwise angle $\beta$. Using a similar analysis, we obtain
+The line $dy^\prime$ rotates by a counterclockwise angle $\beta$. Using a similar analysis, we obtain
 
 \begin{equation*}
   \beta = - \left( - \varepsilon_x + \varepsilon_y \right) \cos \theta \sin \theta - \gamma_{xy} \cos^2 \theta
 \end{equation*}
 
-The shear strain $\gamma_{x'y'}$ is defined as the angle of change between $dx'$ and $dy'$, which can be expressed by
+The shear strain $\gamma_{x^\prime y^\prime}$ is defined as the angle of change between $dx^\prime $ and $dy^\prime$, which can be expressed by
 
 \begin{equation}
-  \gamma_{x'y'} = \alpha - \beta = -2 \left( \varepsilon_x - \varepsilon_y \right) \sin \theta \cos \theta + \gamma_{xy} ( \cos^2 \theta - \sin^2 \theta )
+  \gamma_{x^\prime y^\prime} = \alpha - \beta = -2 \left( \varepsilon_x - \varepsilon_y \right) \sin \theta \cos \theta + \gamma_{xy} ( \cos^2 \theta - \sin^2 \theta )
 \end{equation}
 
 Using trigonometric identities for double angles, we can rewrite the strain transformation equations in their final forms.
 
 \begin{align}
-  &\varepsilon_{x'} = \frac{\varepsilon_x + \varepsilon_y}{2} + \frac{\varepsilon_x - \varepsilon_y}{2}\cos 2\theta + \frac{\gamma_{xy}}{2}\sin 2\theta \\[10pt]
-  &\varepsilon_{y'} = \frac{\varepsilon_x + \varepsilon_y}{2} - \frac{\varepsilon_x - \varepsilon_y}{2}\cos 2\theta - \frac{\gamma_{xy}}{2}\sin 2\theta \\[10pt]
-  &\frac{\gamma_{x'y'}}{2} = -\left( \frac{\varepsilon_x - \varepsilon_y}{2} \right) \sin 2\theta + \frac{\gamma_{xy}}{2} \cos 2\theta
+  &\varepsilon_{x^\prime } = \frac{\varepsilon_x + \varepsilon_y}{2} + \frac{\varepsilon_x - \varepsilon_y}{2}\cos 2\theta + \frac{\gamma_{xy}}{2}\sin 2\theta \\[10pt]
+  &\varepsilon_{y^\prime} = \frac{\varepsilon_x + \varepsilon_y}{2} - \frac{\varepsilon_x - \varepsilon_y}{2}\cos 2\theta - \frac{\gamma_{xy}}{2}\sin 2\theta \\[10pt]
+  &\frac{\gamma_{x^\prime y^\prime}}{2} = -\left( \frac{\varepsilon_x - \varepsilon_y}{2} \right) \sin 2\theta + \frac{\gamma_{xy}}{2} \cos 2\theta
 \end{align}
 
 The similarity between these three equations and those of plane-stress transformation should be noted
@@ -4221,7 +4460,7 @@ Using the equations for the maximum in-plane shear stress and the analogy betwee
 As to be expected, since the plane-stress and plane-strain transformation equations are analogous, we can use Mohr's circle as a graphical tool to represent the state of strain and eliminate the angle $\theta$. The Mohr's circle for plane strain can be written in the form
 
 \begin{equation}
-  (\varepsilon_{x'} - \varepsilon_{avg})^2 + \left( \frac{\gamma_{x'y'}}{2} \right)^2 = R^2
+  (\varepsilon_{x^\prime } - \varepsilon_{avg})^2 + \left( \frac{\gamma_{x^\prime y^\prime}}{2} \right)^2 = R^2
 \end{equation}
 where
 \begin{align*}
@@ -4372,12 +4611,12 @@ The values of $\varepsilon_x$, $\varepsilon_y$, $\gamma_{xy}$ are determined by 
       \node at (mohr.west) [below left]{$-83(10^{-6})$};
       \node at (mohr.east) [below right]{$243(10^{-6})$};
       \draw (mohr.center) -- (mohr.north) node[above]{$163(10^{-6})$};
-      \draw [->] (mohr.center) --++ (76:3.26) node(epsilonx){} to [out=30, in=-180] ++(0.5, 1) node[right]{$\epsilon_x = 120(10^{-6})$};
-      \draw [dashed] (epsilonx.center) --++ (-90:3.26*sin(78);
+      \draw [->] (mohr.center) --++ (-76:3.26) node(epsilonx){} to [out=-30, in=-180] ++(0.5, -1) node[right]{$\epsilon_x = 120(10^{-6})$};
+      \draw [dashed] (epsilonx.center) --++ (90:3.26*sin(76);
       \draw [dashed] (epsilonx.center) --++ (180:2.4) node[left]{$\dfrac{323}{2}(10^{-6})$};
-      \draw [->] (mohr.center) --++ (-104:3.26) node(epsilony){} to [out=-150, in=150] ++(0,-1) node[right]{$\epsilon_y = 120(10^{-6})$};
-      \draw [dashed] (epsilony.center) --++ (90:3.26*sin(104);
-      \draw [->] (mohr.center) ++ (0:1) arc (0:76:1) node[midway, below left, xshift=1mm]{76$\degree$};
+      \draw [->] (mohr.center) --++ (104:3.26) node(epsilony){} to [out=-150, in=150] ++(0,-1) node[right]{$\epsilon_y = 120(10^{-6})$};
+      \draw [dashed] (epsilony.center) --++ (-90:3.26*sin(104);
+      \draw [->] (mohr.center) ++ (-76:1) arc (-76:0:1) node[midway, above left, xshift=1mm]{76$\degree$};
     \end{tikzpicture}
   \end{figure}
 \end{solution}
@@ -4481,7 +4720,7 @@ In order to obtain the longitudinal stress $\sigma_l$, we will consider the left
   \end{tikzpicture}
   % \includegraphics[scale=0.7]{pictures/Combined-loadings/cylindrical-vessel-long}
   \caption{Force balance between longitudinal stress and internal pressure.}
-  \label{fig: cylindrical vessel circumferential}
+  \label{fig: cylindrical vessel longitudinal}
 \end{figure}
 
 Consider the force in the $y$ direction, we have
@@ -5357,29 +5596,29 @@ The safety factor according to the criterion can be written as
 
   First, the uniaxial test indicates the material’s yield stress, which is 70 MPa. In either case, to determine the maximum a, we have to determine the element’s principal stresses
 
-  \[\begin{gathered}
-      \sigma_{1,2} = \frac{\sigma_x + \sigma_y}{2} \pm \sqrt {\left( \frac{\sigma_x - \sigma_y}{2} \right)^2 - \tau _{xy}^2}  \\ 
-      = \frac{50a + 30a}{2} \pm \sqrt {\left( \frac{50a - 30a}{2} \right)^2 + (25a)^2}  \\ 
-      = a\left[ 10 \pm \sqrt {10^2 + 25^2} \right] \\ 
-      = 37a \text{, } - 17a \\ 
-    \end{gathered} \]
+  \begin{align*}
+      \sigma_{1,2} &= \frac{\sigma_x + \sigma_y}{2} \pm \sqrt {\left( \frac{\sigma_x - \sigma_y}{2} \right)^2 - \tau _{xy}^2}  \\ 
+                   &= \frac{50a + 30a}{2} \pm \sqrt {\left( \frac{50a - 30a}{2} \right)^2 + (25a)^2}  \\ 
+                   &= a\left[ 40 \pm \sqrt {10^2 + 25^2} \right] \\ 
+                   &= 67a \text{, } 13a \\ 
+  \end{align*}
   
   \begin{enumerate}
-  \item For maximum shear stress criterion, since the two principal stresses are of opposite signs, we know that the maximum stress is in-plane. We can apply equation so that
+  \item For maximum shear stress criterion, since the two principal stresses are of the same signs, we know that the absolute maximum stress is out-of-plane equal to $\sigma_1/2$. We can apply equation so that
     
     \[\begin{gathered}
-        \sigma_1 - \sigma_2 = S_y \hfill \\
-        (37 - ( - 17))a = 70 \hfill \\
-        a = 1.3 \hfill \\ 
+        \frac{\sigma_1}{2} = \frac{S_y}{2} \hfill \\
+        67a = 70 \hfill \\
+        a = 1.04 \hfill \\ 
       \end{gathered} \]
     
   \item For maximum distortion energy theory, we have that
     
     \[\begin{gathered}
-        (\sigma_1 - \sigma_2)^2 + (\sigma_2 - \sigma_3)^2 + (\sigma_3 - \sigma_1)^2 = 2S_y^2 \\ 
-        (37a - ( - 17a))^2 + ( - 17a)^2 + ( - 37a)^2 = 2(70)^2 \\ 
-        4574a^2 = 9800 \\ 
-        a = 1.46 \\ 
+        \sigma_1^2 -\sigma_1\sigma_2 + \sigma_2^2 = S_y^2 \\ 
+        a^2 \left( 67^2 - (67)(13) + 13^2 \right) = (70)^2 \\ 
+        3787a^2 = 4900 \\ 
+        a = 1.14 \\ 
       \end{gathered} \]
     \end{enumerate}
 \end{solution}
@@ -5925,7 +6164,7 @@ where $L_e = KL$ in which $K$ is the \emph{effective-length factor} and $KL/r_g$
   \centering
   \caption{Effective length factor ($K$) value for beam under various support conditions}
   {\renewcommand{\arraystretch}{1.2}
-  \begin{tabular}{ L{4.5cm} C{3cm} }
+  \begin{tabular}{ lc }
     \toprule
     End Support & $K$ value \\
     \midrule
@@ -6126,7 +6365,3 @@ Buckling occurs because the internal bending moment in the beam is not enough to
 \printbibliography[heading=bibintoc]
 
 \end{document}
-%%% Local Variables: 
-%%% coding: utf-8
-%%% TeX-engine: luatex
-%%% End: 
