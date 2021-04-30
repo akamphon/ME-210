@@ -4,13 +4,13 @@
    (TeX-add-to-alist 'LaTeX-provided-class-options
                      '(("book" "10pt" "a4paper" "openany" "svgnames" "")))
    (TeX-add-to-alist 'LaTeX-provided-package-options
-                     '(("inputenc" "utf8") ("parskip" "parfill") ("tocloft" "titles" "subfigure") ("titlesec" "explicit") ("asymptote" "inline") ("biblatex" "style=numeric" "backend=biber")))
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperref")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperimage")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperbaseurl")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "nolinkurl")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "url")
+                     '(("inputenc" "utf8") ("parskip" "parfill") ("tocloft" "titles" "subfigure") ("titlesec" "explicit") ("biblatex" "style=numeric" "backend=biber")))
    (add-to-list 'LaTeX-verbatim-macros-with-braces-local "path")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "url")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "nolinkurl")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperbaseurl")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperimage")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperref")
    (add-to-list 'LaTeX-verbatim-macros-with-delims-local "path")
    (TeX-run-style-hooks
     "latex2e"
@@ -42,7 +42,6 @@
     "calc"
     "pgfplots"
     "tikz-3dplot"
-    "asymptote"
     "thmtools"
     "mdframed"
     "float"
@@ -59,6 +58,8 @@
     "fig: stress-strain diagram"
     "fig: poisson's ratio"
     "table: poisson's of materials"
+    "fig: compound bar"
+    "eq: compound bar"
     "fig: impact loading"
     "fig: 3d torsional deformation"
     "eqn: strain and angle of twist"
@@ -124,6 +125,12 @@
     "eqn: mode shape sub"
     "eqn: Euler's formula")
    (LaTeX-add-bibliographies)
+   (LaTeX-add-thmtools-declaretheoremstyles
+    "exstyle"
+    "solstyle")
+   (LaTeX-add-thmtools-declaretheorems
+    "example"
+    "solution")
    (LaTeX-add-enumitem-newlists
     '("exercises" "enumerate")))
  :latex)

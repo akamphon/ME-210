@@ -1,15 +1,15 @@
-[0] Config.pm:302> INFO - This is Biber 2.11
-[0] Config.pm:305> INFO - Logfile is 'me210.blg'
-[19] biber:313> INFO - === Mon Jul  2, 2018, 15:40:46
-[33] Biber.pm:371> INFO - Reading 'me210.bcf'
-[79] Biber.pm:854> INFO - Using all citekeys in bib section 0
-[88] Biber.pm:3976> INFO - Processing section 0
-[96] Biber.pm:4136> INFO - Looking for bibtex format file 'me210.bib' for section 0
-[108] bibtex.pm:1500> INFO - LaTeX decoding ...
-[116] bibtex.pm:1316> INFO - Found BibTeX data source 'me210.bib'
-[149] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[149] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[149] Biber.pm:3804> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[149] Biber.pm:3810> INFO - No sort tailoring available for locale 'en-US'
-[154] bbl.pm:617> INFO - Writing 'me210.bbl' with encoding 'UTF-8'
-[156] bbl.pm:720> INFO - Output to me210.bbl
+[0] Config.pm:312> INFO - This is Biber 2.15
+[0] Config.pm:315> INFO - Logfile is 'me210.blg'
+[82] biber:330> INFO - === Thu Apr 22, 2021, 14:21:57
+[98] Biber.pm:415> INFO - Reading 'me210.bcf'
+[170] Biber.pm:949> INFO - Using all citekeys in bib section 0
+[187] Biber.pm:4334> INFO - Processing section 0
+[201] Biber.pm:4523> INFO - Looking for bibtex format file 'me210.bib' for section 0
+[202] bibtex.pm:1682> INFO - LaTeX decoding ...
+[213] bibtex.pm:1494> INFO - Found BibTeX data source 'me210.bib'
+[289] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[290] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[290] Biber.pm:4162> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[290] Biber.pm:4168> INFO - No sort tailoring available for locale 'en-US'
+[301] bbl.pm:651> INFO - Writing 'me210.bbl' with encoding 'UTF-8'
+[305] bbl.pm:754> INFO - Output to me210.bbl

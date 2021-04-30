@@ -67,6 +67,12 @@ svgnames,
 \usepackage{tikz-3dplot}
 \pgfplotsset{compat=1.12}
 
+\usepackage[gobble=auto]{pythontex}
+\begin{pycode}
+from math import *
+import random
+\end{pycode}
+
 %% For drawing spherical vessels
 \pgfkeys{/tikz/.cd, view angle/.initial=0, view angle/.store in=\picangle}
 \tikzset{
@@ -590,7 +596,7 @@ This represents the amount of energy the material can absorb without any permane
   \begin{tikzpicture}
     \draw [thick] (0,4.5) node[above]{$\sigma$} --++ (-90:4.5) --++ (0:6) node[right]{$\varepsilon$};
     \draw [ultra thick, LightSkyBlue] (0,0) --++ (65:4) node(pl){} to[out=60, in=185] +(2,0.8);
-    \path [fill=LightSkyBlue, fill opacity=0.5] (0,0) -- (pl.center) --++ (-90:3.6) -- cycle;
+    \path[fill=LightSkyBlue, fill opacity=0.5] (0,0) -- (pl.center) --++ (-90:3.6) -- cycle;
     \draw [|-] (pl) ++ (-0.5,-2) to[out=30,in=180] +(1,0.3) node[right]{$u_r$};
     \draw (pl.center) --++ (-90:3.6) node[below]{$\varepsilon_{pl}$};
     \draw (pl.center) --++ (180:1.7) node[left]{$\sigma_{pl}$};
@@ -606,7 +612,7 @@ This represents the amount of energy the material can absorb without any permane
   \begin{tikzpicture}
     \draw [thick] (0,4.5) node[above]{$\sigma$} --++ (-90:4.5) --++ (0:6) node[right]{$\varepsilon$};
     \draw [ultra thick, LightSkyBlue] (0,0) --++ (85:3) node(pl){} to[out=60, in=210] +(2,0.8) to[out=30,in=120] +(3,-0.5);
-    \path [fill=LightSkyBlue, fill opacity=0.5] (0,0) -- (pl.center) to[out=60, in=210] +(2,0.8) to[out=30,in=120] +(3,-0.5) node(ut){} --++ (-90:3.30) -- cycle;
+    \path[fill=LightSkyBlue, fill opacity=0.5] (0,0) -- (pl.center) to[out=60, in=210] +(2,0.8) to[out=30,in=120] +(3,-0.5) node(ut){} --++ (-90:3.30) -- cycle;
     \draw (ut.center) --++ (-90:3.30);
     \draw [|-] (ut) ++ (-0.5,-1.5) to[out=30,in=180] +(1,0.3) node[right]{$u_t$};
   \end{tikzpicture}
@@ -844,6 +850,43 @@ In this chapter, we have learned that bodies are deformable, the degree of which
       \draw [->, ultra thick] (right.east) --++ (0:1) node[right]{50 kN};
     \end{tikzpicture}
   \end{figure}
+
+\begin{pycode}
+L = random.randint(2,6) # in m
+W = L - random.randint(0,L-1) # in m
+stress = random.randint(1,10)*1e6 # in Pa
+E = random.randint(5,15)*1e10 # in Pa
+poisson = random.randint(25,35)/100
+\end{pycode}
+
+  \item A thin \py{L} m $\times$ \py{W} m sheet is being stretched along its length by a normal stress of \py{stress/1e6} MPa. The material has $E$ = \py{E/1e9} GPa and $\nu$ = \py{poisson}. Determine the the percentage increase in the area of the sheet.
+
+\begin{pycode}
+sigma_allow = random.randint(10,35)*10*1e6 # in Pa
+tau_allow = random.randint(5,20)*10*1e6 # in Pa
+h = random.randint(4,8)*1e-2 # in m
+b = random.randint(2,5)*1e-2 # in m
+w = h - 2e-2 # in m
+t = random.randint(10,20)/10*1e-2 # 1.0 - 2.0 mm
+\end{pycode}
+
+  \item An I-shaped specimen made of a material with $\sigma_{\text{allow}}$ = \py{sigma_allow/1e6} MPa and $\tau_{\text{allow}}$ = \py{tau_allow/1e6} MPa is held with a fixture at each end, determine that maximum tensile load $F$ that can be applied without breaking the specimen. The specimen dimensions are as follows: $w$ = \py{round(w*1e2,1)} cm, $b$ = \py{round(b*1e2,1)} cm, $h$ = \py{round(h*1e2,1)} cm, and the specimen thickness (normal to this page) $t$ = \py{round(t*1e2,1)} cm.
+        \begin{figure}[h]
+          \centering
+          \begin{tikzpicture}[>=latex, rotate=90]
+            \draw [fill=LightGrey] (0,0) ++ (0:0.5) --++ (90:2) --++ (0:0.3) --++ (90:0.5) --++ (180:1.6) --++ (-90:0.5) --++ (0:0.3) --++ (-90:4) --++ (180:0.3) --++ (-90:0.5) --++ (0:1.6) --++ (90:0.5) --++ (180:0.3) --++ (90:2);
+            \draw [fill=DarkGrey] (0,0) ++ (0:0.5) ++ (90:1.3) ++ (0:0.1) --++ (90:0.6) --++ (0:0.3) --++ (90:0.7) --++ (180:1.8) --++ (-90:0.7) --++ (0:0.3) --++ (-90:0.6) --++ (180:1) --++ (90:2) --++ (0:3.2) --++ (-90:2) -- cycle;
+            \begin{scope}[yscale=-1, xscale=1]
+              \draw [fill=DarkGrey] (0,0) ++ (0:0.5) ++ (90:1.3) ++ (0:0.1) --++ (90:0.6) --++ (0:0.3) --++ (90:0.7) --++ (180:1.8) --++ (-90:0.7) --++ (0:0.3) --++ (-90:0.6) --++ (180:1) --++ (90:2) --++ (0:3.2) --++ (-90:2) -- cycle;
+              \draw [->, line width=5pt, DarkGrey] (0,3.3) --++ (90:2) node[right, Black]{$F$};
+            \end{scope}
+            \draw [->, line width=5pt, DarkGrey] (0,3.3) --++ (90:2) node[left, Black]{$F$};
+            \draw [|<->|] (-2,2) --++ (90:0.5) node[below, midway]{$b$};
+            \draw [|<->|] (-0.5,0) --++ (0:1) node[right, midway]{$w$};
+            \draw [|<->|] (-0.8,-2.8) --++ (0:1.6) node[right, midway]{$h$};
+          \end{tikzpicture}
+        \end{figure}
+
 \end{exercises}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1348,7 +1391,7 @@ At this point, we are going to divide through both sides by a commond strain $\e
 
 It is worth noting in the end that the compound modulus is simply the area-weighted average of the moduli of the members.
 
-\section{Inelastic Deformation}
+\section{** Inelastic Deformation **}
 
 In the previous sections, we have discussed the analysis of structures when the material stress never exceeds yield strength. However, in some engineering applications, especially in designing steel members, the design must take into account the behavior after the stress has reached yield strength. To meaningfully analyze the behavior into the plastic regime of deformation, we must first introduce the concept of elastic perfectly plastic materials.
 
@@ -1674,6 +1717,41 @@ When the deformation of a body in the lateral directions is negligible, its long
   \item What is the maximum weight $W$ that can be hoisted by the compound cable?
   \item What are the final volumes of both sections when $W$ found in (a) is hoisted?
   \end{enumerate}
+
+\begin{pycode}
+E_st = random.randint(15,25)*10*1e9 # 150 - 250 GPa
+E_al = random.randint(10,20)*5*1e9 # 50 - 100 GPa
+E_cu = random.randint(3,8)*10*1e9 # 30 - 80 GPa
+
+L_st = random.randint(20,30)/10 # 2 - 3 m
+L_al = random.randint(15,40)/10 # 1.5 - 4 m
+L_cu = random.randint(10,30)/10 # 1 - 3 m
+
+A_st = random.randint(2,5)*1e-4 # 2 - 5 cm2
+A_al = random.randint(4,8)*1e-4 # 4 - 8 cm2
+A_cu = random.randint(6,10)*1e-4 # 6 - 10 cm2
+
+sigma_st = random.randint(20,45)*10*1e6 # 200 - 450 MPa
+sigma_al = random.randint(10,25)*10*1e6 # 100 - 250 MPa
+sigma_cu = random.randint(6,15)*10*1e6 # 60 - 150 MPa
+\end{pycode}
+
+  \item A compound bar is made up of three materials whose properties and dimensions are as follows
+
+        \begin{table}[htbp]
+          \centering
+          \begin{tabular}{lcccc}
+            \toprule
+            Material & $E$ [GPa] & $\sigma_{\text{allow}}$ [MPa] & $L$ [m] & $A$ [cm$^{2}$] \\
+            \midrule
+            Steel & \py{E_st/1e9} & \py{sigma_st/1e6} & \py{L_st} & \py{A_st/1e-4} \\
+            Aluminum & \py{E_al/1e9} & \py{sigma_al/1e6} & \py{L_al} & \py{A_al/1e-4} \\
+            Copper & \py{E_cu/1e9} & \py{sigma_cu/1e6} & \py{L_cu} & \py{A_cu/1e-4} \\
+            \bottomrule
+          \end{tabular}
+        \end{table}
+
+        The three materials are mounted side-by-side on a ceiling so that they form a compound bar and would undergo identical deformation. Determine the maximum force $P$ that can be applied to the compound bar.
 
   \item A 2-m long $6 \times 10$ cm$^2$  railroad track, fixed on both ends, is sitting in the sun. Solar radiation causes the track to heat up by $\Delta T$. The track is made of AISI1023 steel, with the following properties: $\alpha = 12 \times 10^{-6}$ /C, $E = 200$ GPa, and maximum allowable stress $\sigma_{allow} = 50$ MPa.
 
@@ -2221,6 +2299,43 @@ Torque applied in the direction of the longitudinal axis a body leads to torsion
     \end{tikzpicture}
   \end{figure}
 
+\begin{pycode}
+L1 = random.randint(3,10)/10 # 0.3 - 1.0 m
+L2 = random.randint(5,15)/10 # 0.5 - 1.5 m
+x = L1 + L2/random.randint(2,4)
+d1 = random.randint(20,40)/10*1e-2 # 2.0 - 4.0 cm
+d2 = d1 + random.randint(5,15)/10*1e-2
+G = random.randint(5,10)*10*1e9 # 50 - 100 GPa
+tau_allow = random.randint(6,12)*10*1e6 # 60 - 120 MPa
+phi_allow = random.randint(1,5)/10 # 0.1 - 0.5 rad
+\end{pycode}
+
+  \item A two-segment circular cross-sectioned shaft is fitted with a gear at length $x$ = \py{round(x,3)} m. The smaller segment to the left has $L_{1}$ = \py{L1} m and $d_{1}$ = \py{round(d1/1e-2,1)} cm, while the larger segment to the right has $L_{2}$ = \py{L2} m and $d_{2}$ = \py{round(d2/1e-2,1)} cm. Both segments are made of a single material whose $G$ = \py{G/1e9} GPa. For this mechanism to work, the designed allowable shear stress $\tau_{\text{allow}}$ = \py{tau_allow/1e6} MPa and allowable angle of twist $\phi_{\text{allow}}$ = \py{phi_allow} rad. Determine the maximum torque $T$ that the gear can transmit without exceeding $\tau_{\text{allow}}$ or $\phi_{\text{allow}}$.
+
+        \begin{figure}[htbp]
+          \centering
+          \begin{tikzpicture}[>=latex]
+            \node[minimum height=1cm, minimum width=5mm, pattern=north west lines](lwall){};
+            \draw (lwall.north east) -- (lwall.south east);
+            \node at (lwall.east) [draw, fill=LightGrey, anchor=west, minimum height=3mm, minimum width=3cm](lbeam){};
+            \node at (lbeam.east) [draw, fill=LightGrey, anchor=west, minimum height=5mm, minimum width=4cm](rbeam){};
+            \node at (rbeam.east) [anchor=west, minimum height=1cm, minimum width=5mm, pattern=north west lines](rwall){};
+            \draw (rwall.north west) -- (rwall.south west);
+            \node at (rbeam.center) [xshift=-1cm, draw, minimum height=1.5cm, minimum width=4mm, fill=Grey](gear){};
+            \node at (rbeam.center) [xshift=-1cm, draw, minimum height=1.5cm, minimum width=4mm, pattern=horizontal lines]{};
+
+            %%%%% Dimensions %%%%%
+            \draw [|<->|] (lwall.south east) ++ (-90:0.5) --++ (0:4) node[midway, fill=White]{$x$};
+            \draw [|<->|] (lwall.south east) ++ (-90:0.8) --++ (0:3) node[midway, fill=White]{$L_{1}$};
+            \draw [|<->|] (rwall.south west) ++ (-90:0.8) --++ (180:4) node[midway, fill=White]{$L_{2}$};
+            \draw [<->] (lbeam.south) -- (lbeam.north) node[above]{$d_{1}$};
+            \draw [<->] (rbeam.south) -- (rbeam.north) node[above]{$d_{2}$};
+
+            %%%% Torque %%%%%
+            \draw [->>, ultra thick] (gear.center) --++ (180:0.8) node[above, yshift=2mm]{$T$};
+          \end{tikzpicture}
+        \end{figure}
+
   \item An engineer is working on designing a new electric car model. He planned to reuse the shaft from an old model which uses a gasoline (benzene) engine. The old shaft radius was the minimum that can still operate with the engine, whose power output (in Watt) follows the function
 	$$ P_{engine} = -2\times10^{-6} (rpm)^3 + 1.5 \times 10^{-2} (rpm)^2; 1000 < rpm < 6000 $$ 
   where $rpm$ is the engine speed in revolutions per minute. The new electric car uses a motor for which its power output in Watt varies with its angular velocity as
@@ -2656,32 +2771,35 @@ We know that the top part of the beam will be in tension while the bottom will b
   0 = 200 \times {10^6}(3 \times 5)(3.5 - h) + 400 \times {10^6}(2 \times 5)(1 - h) \hfill \\
   0 = 21 - 6h + 8 - 8h \hfill \\
   h = 2.07 \text{ cm} \hfill \\ 
-\end{gathered} \]	
+\end{gathered} \]
 
-Calculating the area moment of inertia of each cross section, we have
+  Calculating the area moment of inertia of each cross section, we have
 
-\[\begin{gathered}
-  I_1 = \frac{1}{12}(5 \times 10^{ - 2})(3 \times 10^{-2})^3 = 1.125 \times 10^{-7} \text{ m}^4 \hfill \\
-  I_2 = \frac{1}{12}(5 \times {10^{ - 2}})(2 \times 10^{-2})^3 = 3.33 \times 10^{ - 8} \text{ m}^4 \hfill \\ 
-\end{gathered} \]	
+  \begin{align*}
+    I_1 &= \frac{1}{12}(0.05)(0.03)^3 + (0.05)(0.03)(0.035 - 0.0207)^{2} \\
+        &= 4.19 \times 10^{-7} \text{ m}^4 \\
+    I_2 &= \frac{1}{12}(0.05)(0.02)^3 + (0.05)(0.02)(0.0207 - 0.01)^{2} \\
+        &= 1.48 \times 10^{ -7} \text{ m}^4
+    \end{align*}
 
 The maximum tensile stress, occurring on the top surface of the beam, is
 
 \begin{align*}
-  \sigma_{\max \text{ tensile}} &= \frac{MyE_1}{E_1I_1 + E_2I_2} \\ 
-                             &= \frac{-200[(2.07 - 5) \times 10^{ - 2}](200 \times 10^6)}{200 \times 10^6(1.125 \times 10^{-7}) + 400 \times 10^6(3.33 \times 10^{ - 8})} \\ 
-                             &= 32.8 \text{ MPa} 
+  \sigma_{\max,tensile} &= \frac{MyE_1}{E_1I_1 + E_2I_2} \\
+                             &= \frac{200(0.05 - 0.0207)(200 \times 10^6)}{200 \times 10^6(4.19 \times 10^{-7}) + 400 \times 10^6(1.48 \times 10^{ -7})} \\
+                             &= 8.19 \text{ MPa}
 \end{align*}
 
 Similarly for the maximum compressive stress at the bottom surface is
 
 \begin{align*}
-  \sigma_{\max \text{ compressive}} &= \frac{MyE_2}{E_1I_1 + E_2I_2} \\ 
-                                 &= \frac{-200(2.07 \times 10^{ - 2})(400 \times 10^6)}{200 \times 10^6(1.125 \times 10^{-7}) + 400 \times 10^6(3.33 \times 10^{-8})} \\ 
-                                 &= 46.2 \text{ MPa} 
+  \sigma_{\max \text{ compressive}} &= \frac{MyE_2}{E_1I_1 + E_2I_2} \\
+                                 &= \frac{200(2.07 \times 10^{ - 2})(400 \times 10^6)}{200 \times 10^6(4.19 \times 10^{-7}) + 400 \times 10^6(1.48 \times 10^{-7})} \\
+                                 &= 11.6 \text{ MPa}
 \end{align*}
+
 \end{solution}
-	
+
 \section{Doubly Symmetric Beams with Inclined Loads}
 
 In previous sections, we discussed stresses and strains in beam bending under a load that is in the same plane of symmetry. However, many engineering structures require that the designed beam be subjected to inclined loads, or loads that are not in the plane of symmetry of the beam. In this case, we will limit our discussion to beams that are doubly symmetric; both the $xy$ and $xz$ planes are planes of symmetry. Also, the inclined loads must act through the centroid of the cross section to avoid twisting the beam.
@@ -2836,7 +2954,7 @@ This equation, known as the \emph{shear formula}, can be used to determine shear
   \end{align*}
 \end{solution}
 	
-\section{Shear Flow}
+\section{** Shear Flow **}
 
 Occasionally in engineering practice, members are built up from several composite parts in order to achieve a greater resistance to loads. If the loads cause the members to bend, fasteners such as nails, bolts, or glue may be needed to keep the component parts from sliding relative to one another. In order to design these fasteners, it is necessary to know the shear force that must be resisted along the member’s length. This loading, when measured as a force per unit length, is referred to as the \emph{shear flow}, $q$.
 
@@ -2948,7 +3066,7 @@ In order to determine the force in the web, $F_w$, we must integrate $q$, giving
    &= \frac{Vtd^2}{4I}\left( 2b + \frac{d}{3} \right)
 \end{align}
 
-\section{Shear Center}
+\section{** Shear Center **}
 
 In previous section, it was assumed that the internal shear $V$ was applied along a principal centroidal axis of inertia that also represents an axis of symmetry for the cross section. In this section, we will consider the effect of applying the shear along a principal centroidal axis that is \emph{not} an axis of symmetry. For the scope of this course, only thin-walled members will be analyzed using simply the centerline of the walls of the members.
 
@@ -3033,7 +3151,7 @@ We can ignore term(s) with $t^3$ since it becomes very small, the distance e bec
 Note that $e$ is independent of $t$ and ranges from 0 to $b/2$ depending on the ratio $d/3b$.
 \end{solution}
 
-\section{Bending in Curved Beams}
+\section{** Bending in Curved Beams **}
                 
 The flexure formula applies to a prismatic member that is straight, since it was shown that for a straight member the normal strain varies linearly from the neutral axis. If the member is curved, however, this assumption becomes inaccurate, and so we must develop another equation that describes the stress distribution. In this section, we will consider the analysis of a curved beam--a beam that has a curved axis and is subjected to bending. In another word, these curved beams have relatively large thickness compared to their radii of curvature.
 
@@ -3279,6 +3397,44 @@ We then consider the cases where the applied bending moment is not perpendicular
        \draw [|<->|] (topsect.south east) ++ (0:0.5) --++ (90:1.6) node[midway, fill=White]{4 cm};
     \end{tikzpicture}
   \end{figure}
+
+\begin{pycode}
+  frac = random.randint(1,4)/5 # 0.2 - 0.8
+  L = random.randint(1,3) # 1 - 3 m
+  x = round(frac*L,2)
+  E_cfrp = random.randint(10,18)*10*1e9 # 100 - 180 GPa
+  E_steel = random.randint(15,25)*10*1e9 # 150 - 250 GPa
+  sigma_cfrp = random.randint(10,20)*10*1e6 # 200 - 400 MPa
+  sigma_steel = random.randint(30,45)*10*1e6 # 300 - 450 MPa
+  tau_glue = random.randint(4,8)*10*1e6 # 40 - 80 MPa
+  b = random.randint(3,6)*1e-2 # 3 - 6 cm
+  h_cfrp =  random.randint(12,25)/10*1e-2 # 1.2 - 2.5 cm
+  h_steel =  random.randint(8,15)/10*1e-2 # 0.8 - 1.5 cm
+\end{pycode}
+
+  \item A \py{L}-m long compound rectangular cross-sectioned beam is simply supported on both ends with load $P$ applied downward at \py{x} m from the left support. The top layer of the beam is made of carbon-fiber-reinforced polymer (CFRP) whose Young's modulus is $E_{\text{CFRP}}$ = \py{round(E_cfrp/1e9)} GPa and allowable compressive stress is $\sigma_{\text{CFRP}}$ = \py{round(sigma_cfrp/1e6)}. The bottom layer is made of steel whose is $E_{\text{steel}}$ = \py{round(E_steel/1e9)} and allowable tensile stress is $\sigma_{\text{steel}}$ = \py{round(sigma_steel/1e6)}. The CFRP layer is \py{round(h_cfrp/1e-2,1)} cm thick, while the steel layer is \py{round(h_steel/1e-2,1)} thick. The two layers are assembled with a very thin layer of glue whose maximum allowable shear stress $\tau_{\text{glue}}$ = \py{round(tau_glue/1e6)} MPa. The beam cross-section is \py{round(b/1e-2)} wide. Determine the maximum force $P$ that can be applied.
+
+        \begin{figure}[htbp]
+          \centering
+          \begin{tikzpicture}[>=latex]
+            \node [draw, fill=LightGrey, rectangle, minimum height=1cm, minimum width=2cm] (bottomcross) {};
+            \node at (bottomcross.north) [anchor=south, draw, fill=LightSkyBlue, rectangle, minimum height=1.5cm, minimum width=2cm] (topcross) {};
+            %%% bottom layer thickness %%%%%
+            \draw[|<->|] (bottomcross.south east) ++ (0:0.5) --++ (90:1) node[midway, right]{\py{round(h_steel/1e-2,1)} cm};
+            %%% top layer thickness %%%%%
+            \draw[|<->|] (bottomcross.north east) ++ (0:0.5) --++ (90:1.5) node[midway, right]{\py{round(h_cfrp/1e-2,1)} cm};
+            \draw[|<->|] (topcross.north west) ++ (90:0.5) --++ (0:2) node[midway, above]{\py{round(b/1e-2)} cm};
+            % beam with load
+            \node at (topcross.east) [anchor=west, xshift=4cm, draw, fill=LightSkyBlue, rectangle, minimum height=0.6cm, minimum width=7cm](top){};
+            \node at (top.south) [anchor=north, draw, fill=LightGrey, rectangle, minimum height=0.4cm, minimum width=7cm](bottom){};
+            \begin{pycode}
+              print(r'\draw [<-, ultra thick] (top.north west) ++ (0:'+str(7*frac)+r') --++ (90:1) node[above]{$P$};')
+              print(r'\draw [|<->|] (top.north west) ++ (90:0.3) --++ (0:'+str(7*frac)+r') node[midway,  above]{'+str(round(x,1))+r' m};')
+            \end{pycode}
+            \node at (bottom.south west) [anchor=north, draw, regular polygon, regular polygon sides=3, minimum height=0.5cm, fill=white, inner sep=0]{};
+            \node at (bottom.south east) [anchor=north, draw, circle, minimum height=0.4cm, fill=white, inner sep=0]{};
+          \end{tikzpicture}
+        \end{figure}
   
 \end{exercises}
 
@@ -3659,7 +3815,7 @@ This chapter presents two methods that can be used to determine lateral deflecti
   \begin{figure}[H]
     \centering
     \includegraphics[scale=0.8]{pictures/Static-body-load-analysis/beam-def-midpoint-exercise}
-    \caption[]{Exercise \ref{exercise: beam-deflection-midpoint}}
+    \caption{Exercise \ref{exercise: beam-deflection-midpoint}}
   \end{figure}
   
   \item Derive the equation of the deflection curve for a simple beam AB loaded by a moment $M_0$ at the left hand support. Also, determine the maximum deflection  (note: use the second order differential equation to determine the deflection $v(x)$, a simple beam is a constant cross sectional beam with Young’s Modulus $E$ and area moment of inertia $I$.)
@@ -3677,7 +3833,7 @@ This chapter presents two methods that can be used to determine lateral deflecti
       \node at (B.center) [anchor=north, circle, minimum height=4mm, draw, fill=LightGrey, inner sep=0]{};
       \draw [|<->|] (A.center) ++ (-90:0.7) --++ (0:7) node[midway, fill=White]{$L$};
     \end{tikzpicture}
-    \caption[]{Exercise \ref{exercise: beam-deflection-moving-force}}
+    \caption{Exercise \ref{exercise: beam-deflection-moving-force}}
   \end{figure}
   
   \item The cantilever beam shown in the figure supports a triangularly distributed load of maximum intensity $q_0$, determine the deflectionat the free end B. (Obtain the solution by determining the strain energy of the beam and using Castigliano’s theorem)
@@ -3735,6 +3891,32 @@ Questions:
 \item Does the branch ever touch the ground at any time during the chase? (Show your work.)
 \item Does the branch break during the chase? (Again, show your work.)
 \end{enumerate}
+
+\begin{pycode}
+  L = random.randint(5,12)/10 # 0.5 - 1.2 m
+  E = random.randint(5,9)*10*1e9 # 50 - 90 GPa
+  sigma_allow = random.randint(10,20)*10*1e6 # 100 - 200 MPa
+  frac = random.randint(6,9)/10 # 5/8 - 7/8
+  x = frac*L
+  delta = random.randint(3,8)*1e-2 # 3 - 8 cm
+\end{pycode}
+
+  \item A \py{L}-m long circular cross-sectioned cantilever beam with radius $r$ made of aluminum with $E$ = \py{E/1e9} GPa and $\sigma_{\text{allow}}$ = \py{sigma_allow/1e6} MPa. An upward load $F$ is applied at length \py{round(x,3)} m from the fixed end. Determine the radius $r$ so that the free end of the beam can bend upward at least \py{round(delta/1e-2,2)} cm without failing.
+
+        \begin{figure}[htbp]
+          \centering
+          \begin{tikzpicture}[>=latex]
+            \node[minimum height=1cm, minimum width=5mm, pattern=north west lines](wall){};
+            \draw (wall.south east) -- (wall.north east);
+            \node at (wall.east) [anchor=west, draw, fill=LightGrey, minimum height=5mm, minimum width=6cm, top color=LightGrey, bottom color=LightGrey, middle color=LightGrey!30](beam){};
+            \begin{pycode}
+              print(r'\draw [|<->|] (wall.south east) --++ (0:'+str(frac*6)+r') node[midway, below]{'+str(round(x,3))+r' m};')
+              print(r'\draw [<-,ultra thick] (beam.south west) ++ (0:'+str(frac*6)+r') --++ (-90:1) node[below]{$P$};')
+            \end{pycode}
+            \draw [dashed] (beam.east) --++ (0:0.5);
+            \draw [->|] (beam.east) ++ (0:0.2) --++ (90:0.5) node[midway, right]{\py{round(delta/1e-2,2)} cm};
+          \end{tikzpicture}
+        \end{figure}
   
 \end{exercises}
 
@@ -3919,7 +4101,7 @@ Since the angle between the principal stresses and maximum shear stress on Mohr�
   \begin{figure}[H]
     \centering
     \includegraphics[scale=0.5]{pictures/Static-body-load-analysis/plane-stress-example}
-    \caption[]{\Cref{example: plane stress}}
+    \caption{\Cref{example: plane stress}}
   \end{figure}
 \end{example}
 \begin{solution}
@@ -4247,7 +4429,7 @@ Consider a material subjected to in-plane principal stresses $\sigma_1$ and $\si
 
 Calculating this absolute maximum shear stress as shown here will be crucial when designing components from a ductile material, since its strength mainly depends on its ability to resist shear stress. A more detailed discussion of ductile material strength and failure takes place in \cref{section: yield and fracture}.
 
-\section{Plane Strain}
+\section{** Plane Strain **}
 
 A general state of strain can, just like a state of stress, be represented by a combination of three component of normal strains and three shear strains, $\varepsilon_x$, $\varepsilon_y$, $\varepsilon_z$, $\gamma_{xy}$, $\gamma_{xz}$, and $\gamma_{yz}$. Also strains, like stresses, vary according to the orientation of the element. Strains at a point are often determined using strain gages, which measure strain in specified directions. However, we sometimes need to obtain strain in other directions. That is where \emph{strain transformation} comes in.
 
@@ -4284,7 +4466,7 @@ Three dimensional strain transformation is beyond the scope of this material. In
 
 It is important to realize that plane stress does not cause plane strain or vice versa.
 
-\section{Plane-Strain Transformation}
+\subsection{Plane-Strain Transformation}
 
 It is important in plane-strain analysis to establish equations to determine the $x^\prime $, $y^\prime$, and shear strain in the $x^\prime y^\prime$ plane at a point when the $x$, $y$ components of strain are known. Unlike plane-stress transformation that can be solved by equilibrium, this is a geometry-based problem, requiring us to show how the changes in lengths of the element vary according to its orientation.
 
@@ -4487,7 +4669,7 @@ where
 \end{figure}
 
 
-\section{Absolute Maximum Shear Strain}
+\subsection{Absolute Maximum Shear Strain}
 
 Similar equations apply for absolute maximum shear strain as they do for its stress counterpart. For an element whose principal strains are $\varepsilon_1 > \varepsilon_2$, we have that
 
@@ -4501,7 +4683,7 @@ Similar equations apply for absolute maximum shear strain as they do for its str
 
 When the principal strains have the same sign, the absolute maximum shear strain is simply the maximum principal strain. If the principal strains have opposite signs, the absolute maximum shear strain is the difference between the two principal strains.
 
-\section{Strain Rosette}
+\section{** Strain Rosette **}
 
 When performing a tensile test on a specimen, it is often the case that the normal strain is measured using a strain gage, which relies on the change in electrical resistance when it elongates or contracts. For the general state of strain on a body, the strains are determined using a network of three strain gages arranged in a pattern, also called a \emph{strain rossette}. Once the normal strains on the gages are measured, the results can be transformed to provide the state of stress at the point.
 
@@ -4656,6 +4838,81 @@ Finally, interesting cases in analysis of multiaxial stress are presented includ
     spherical stress)
   \end{enumerate}
 
+\begin{pycode}
+sigma_x = random.randint(-15,15)*10 # -150 - 150 MPa
+sigma_y = random.randint(-15,15)*10 # -150 - 150 MPa
+tau_xy = random.randint(-15,15)*10 # -150 - 150 MPa
+if sigma_x == 0: sigma_x = 80
+if sigma_y == 0: sigma_y = -80
+if sigma_x == sigma_y: sigma_x = sigma_y + 50
+if tau_xy == 0: tau_xy = 60
+\end{pycode}
+
+  \item Given a combination of stresses on an element shown in the figure,
+
+        \begin{enumerate}
+          \item draw a Mohr's circle representing the complete state of stress of the element, i.e. show prinicpal stresses ($\sigma_{1}, \sigma_{2}$), maximum shear stresses ($\tau_{\max}$), principal direction ($\theta_{p}$), original orientation, and original stresses ($\sigma_{x}, \sigma_{y}, \tau_{xy}$).
+          \item draw three-dimensional Mohr's circles showing the three principal stresses and absolute maximum shear stress.
+        \end{enumerate}
+
+        \begin{figure}[H]
+          \centering
+          \begin{tikzpicture}[>=latex]
+            \node [draw, minimum height=2cm, minimum width=2cm, fill=LightGrey](element){};
+            \begin{pycode}
+            if sigma_y > 0:
+              print(r'\draw [->, thick] (element.north) --++ (90:1) node[left]{$\sigma_{y}$ = \py{sigma_y} MPa};')
+              print(r'\draw [->, thick] (element.south) --++ (-90:1);')
+            else:
+              print(r'\draw [<-, thick] (element.north) --++ (90:1) node[left]{$\sigma_{y}$ = \py{sigma_y} MPa};')
+              print(r'\draw [<-, thick] (element.south) --++ (-90:1);')
+            if sigma_x > 0:
+              print(r'\draw [->, thick] (element.east) --++ (0:1) node[above right]{$\sigma_{x}$ = \py{sigma_x} MPa};')
+              print(r'\draw [->, thick] (element.west) --++ (180:1);')
+            else:
+              print(r'\draw [<-, thick] (element.east) --++ (0:1) node[above right]{$\sigma_{x}$ = \py{sigma_x} MPa};')
+              print(r'\draw [<-, thick] (element.west) --++ (180:1);')
+            if tau_xy > 0:
+              print(r'\draw [-left to, thick] (element.north west) ++ (45:0.3) --++ (0:1.5) node[above right]{$\tau_{xy}$ = \py{tau_xy} MPa};')
+              print(r'\draw [-left to, thick] (element.south east) ++ (-135:0.3) --++ (180:1.5);')
+              print(r'\draw [-right to, thick] (element.north west) ++ (-135:0.3) --++ (-90:1.5);')
+              print(r'\draw [-right to, thick] (element.south east) ++ (45:0.3) --++ (90:1.5);')
+            else:
+              print(r'\draw [right to-, thick] (element.north west) ++ (45:0.3) --++ (0:1.5) node[above right]{$\tau_{xy}$ = \py{tau_xy} MPa};')
+              print(r'\draw [right to-, thick] (element.south east) ++ (-135:0.3) --++ (180:1.5);')
+              print(r'\draw [left to-, thick] (element.north west) ++ (-135:0.3) --++ (-90:1.5);')
+              print(r'\draw [left to-, thick] (element.south east) ++ (45:0.3) --++ (90:1.5);')
+            \end{pycode}
+          \end{tikzpicture}
+        \end{figure}
+
+        \begin{pycode}
+          t = random.randint(2,7)*1e-3 # in mm
+          W = random.randint(5,15)/10
+          L = random.randint(2,5)
+          poisson = random.randint(20,45)/100
+          alpha = random.randint(5,15)*1e-6
+          T_0 = random.randint(10,45)*10
+          T_1 = random.randint(10,45)*10
+          T_1 = T_0 + 120 if T_1 == T_0 else T_1
+          F = random.randint(20,40)*10000
+          E = random.randint(5,25)*10*1e9 # 50 - 250 GPa
+        \end{pycode}
+  \item A sheet metal whose Poisson's ratio is \py{poisson}, coefficient of thermal expansion is \py{round(alpha/1e-6)} $\times 10^{-6}$ /$^{\circ}$C, $E$ = \py{round(E/1e9)} GPa, with the thickness of \py{round(t/1e-3)} mm, width \py{W} m and length \py{L} m is being stretched uniformly by a force of \py{F} N along its width. Its initial temperature is \py{T_0}$^{\circ}$C and after the process is finished, the temperature is cooled down to \py{T_1}$^{\circ}$C, determine the percentage volume change of the sheet from the initial, unstressed state.
+
+        \begin{figure}[htbp]
+          \centering
+          \begin{tikzpicture}[>=latex]
+            \node[minimum height=3cm,minimum width=4cm, draw, fill=LightGrey](sheet){};
+            \foreach \x in {0,1,...,6} {
+              \draw [->, thick] (sheet.south east) ++ (90:0.5*\x) --++ (0:1);
+              \draw [->, thick] (sheet.south west) ++ (90:0.5*\x) --++ (180:1);
+            }
+            \node at (sheet.east) [xshift=1.7cm]{\py{F} N};
+            \draw [|<->|] (sheet.north west) ++ (90:0.3) --++ (0:4) node[midway, fill=White]{\py{L} m};
+            \draw [|<->|] (sheet.north west) ++ (180:1.5) --++ (-90:3) node[midway, fill=White]{\py{W} m};
+          \end{tikzpicture}
+        \end{figure}
 \end{exercises}
     
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -4887,7 +5144,7 @@ In this chapter, the concept in Chapter 6 is utilized. In the first part, one of
   \begin{figure}[h]
     \centering
     \includegraphics[scale=0.7]{pictures/Static-body-load-analysis/multiaxial-cantilever-beam-exercise}
-    \caption[]{Exercise \ref{exercise: cantilever beam}}
+    \caption{Exercise \ref{exercise: cantilever beam}}
   \end{figure}
   
   \item \label{exercise: generator shaft}A generator shaft of hollow circular cross section is subjected to a torque T = 25 kN-m. The outer and inner diameters of the shaft are 200 mm and 160 mm, respectively. What is the maximum permissible compressive load $P$ that can be applied to the shaft if the allowable in-plane shear stress is allow = 45 MPa?
@@ -4895,7 +5152,7 @@ In this chapter, the concept in Chapter 6 is utilized. In the first part, one of
   \begin{figure}[h]
     \centering
     \includegraphics[scale=0.8]{pictures/Static-body-load-analysis/multiaxial-generator-shaft-exercise}
-    \caption[]{Exercise \ref{exercise: generator shaft}}
+    \caption{Exercise \ref{exercise: generator shaft}}
   \end{figure}
   
   \item A machine shaft of solid circular cross section is being designed for a tensile load $P$ = 80 kN and a torque $T$ = 1.1 kN-m. The allowable stresses are 60 MPa in tension and 30 MPa in shear. What is the required diameter of the shaft?
@@ -4945,6 +5202,72 @@ In this chapter, the concept in Chapter 6 is utilized. In the first part, one of
   \item (5 points) Determine the maximum static (constant) load $P$ that can be exerted on the bar.
   \item (5 points) Determine the maximum repeated and fully reversed load that varies back and forth between $-P$ and $P$ that can be exerted on the bar.
   \end{enumerate}
+
+\begin{pycode}
+sigma_allow = random.randint(3,15)*10*1e6 # 30 - 150 MPa
+tau_allow = random.randint(2,10)*10*1e6 # 20 - 100 MPa
+r = random.randint(15,25)/10*1e-2 # 1.5 - 2.5 cm
+t = random.randint(3,10)/10*1e-3 # 0.3 - 1 mm
+h = random.randint(4,7)*1e-2 # 4 - 7 cm
+p0 = round(random.randint(1,5)*1e3) # 1 - 5 kPa
+\end{pycode}
+
+  \item You want to play a prank on your friend by shaking a can of coke and let him open it so that the can would spray all over him. You want to make sure, however, that the can would not explode before said prank is complete. The can is made of aluminum whose allowable normal stress is $\sigma_{\text{allow}}$ = \py{round(sigma_allow/1e6)} MPa and allowable shear stress is $\tau_{\text{allow}}$ = \py{round(tau_allow/1e6)} MPa. The can dimensions are $r$ = \py{round(r/1e-2,1)} cm, $h$ = \py{round(h/1e-2)} cm, and wall thickness $t$ = \py{round(t/1e-3,1)} mm. Each time you shake, the pressure build up following a function:
+
+        \begin{align*}
+          p = (\py{p0})1.2^{n}
+        \end{align*}
+        where $p$ is the pressure in Pa and $n$ is the number of times you shake the soda can. Determine how many times you can shake the can without ruining your own prank.
+
+\begin{pycode}
+F = random.randint(10,30)*100 # 1000 - 3000
+L1 = random.randint(15,30)/10 # 1.5 - 3 m
+x = L1 - random.randint(5,10)/10 # 0.5 - 1 m
+frac = x/L1
+d = round(random.randint(2,4)/5*L1,3)
+frac_d = d/L1
+L2 = random.randint(5,10)/10 # 0.5 - 1 m
+b = random.randint(3,8)*1e-2 # 3 - 8 cm
+h = random.randint(2,7)*1e-2 # 2 - 7 cm
+frac_bh = b/h
+\end{pycode}
+
+  \item A structure shown in the figure below is loaded with a downward force. Determine the state of stress of point C by drawing a Mohr's circle.
+
+        \begin{figure}[htbp]
+          \centering
+          \begin{tikzpicture}[>=latex]
+            \node[minimum height=1cm, minimum width=5mm, pattern=north west lines](wall){};
+            \draw (wall.north east) -- (wall.south east);
+            \node at (wall.east) [anchor=south, rotate=-90, draw, regular polygon, regular polygon sides=3,minimum height=5mm, inner sep=0](support){};
+            \draw [Black, line cap=rect, double=LightSkyBlue, double distance=10pt] (support.north) --++ (0:4) node(elbow){} --++ (30:2) node [draw, circle, inner sep=0, minimum height=2mm, yshift=-2mm, xshift=2.5mm](rsupport){};
+            \node at (support.north) [draw,circle, inner sep=0, minimum height=1mm]{};
+            \node at (rsupport.south east) [anchor=north, pattern=north east lines, minimum height=5mm, minimum width=1cm, rotate=30](rwall){};
+            \draw (rwall.north east) -- (rwall.north west);
+            \begin{pycode}
+            print(r'\draw [<-, ultra thick] (support.north) ++ (0:'+str(frac*4)+r') ++ (90:0.2) --++ (90:1) node[above]{\py{F} N};')
+            print(r'\draw [|<->|] (support.north) ++ (90:0.5) --++ (0:'+str(frac*4)+r') node[midway, fill=White]{\py{round(x,1)} m};')
+            print(r'\node at (support.north) [draw, fill=Black, circle, inner sep=0, minimum height=1mm,yshift=-2mm,xshift='+str(4*frac_d)+r'cm](C){};')
+            print(r'\draw [|<->|] (support.north) ++ (-90:0.5) --++ (0:'+str(frac_d*4)+r') node[midway, fill=White]{'+str(d)+r' m};')
+            \end{pycode}
+
+            %%% sectional arrow %%%%
+            \draw [<->] (support.north) ++ (0:3.8) ++ (-90:0.5) ++ (180:0.3) node[left]{A} --++ (0:0.3) --++ (90:1) --++ (180:0.3) node[left]{A};
+
+            %%%%% sectional view %%%%%
+            \begin{pycode}
+              print(r'\node at (wall.west) [draw, xshift=-2cm, minimum height='+str(1.5/frac_bh)+r'cm, minimum width=1.5cm, fill=LightSkyBlue](section){};')
+              print(r'\draw [|<->|] (section.south west) ++ (180:0.3) --++ (90:'+str(1.5/frac_bh)+r') node[midway, left, fill=White]{'+str(round(h/1e-2))+r' cm};')
+            \end{pycode}
+            \draw [|<->|] (section.south west) ++ (-90:0.3) --++ (0:1.5) node[midway, fill=White]{\py{round(b/1e-2)} cm};
+            \node at (section.south) [below,yshift=-5mm] {section A-A};
+            \node at (C.center) [above right]{C};
+            \draw [|<->|] (support.north) ++ (-90:1) --++ (0:4) node[midway, fill=White]{\py{L1} m};
+            \draw [dashed] (elbow.center) ++ (-90:5pt) --++ (0:2) node[midway,above]{30$^{\circ}$};
+            \draw [|<->|] (elbow.center) ++ (100:15pt) --++ (30:2) node[midway, fill=White, rotate=30]{\py{L2} m};
+          \end{tikzpicture}
+        \end{figure}
+
 \end{exercises}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -4955,7 +5278,7 @@ In this chapter, a different approach of solving deflection and deformation prob
 
 To understand the application of energy method to solving mechanics of materials problems, we will discuss external work and corresponding strain energy in solid members, which are related by the principle of conservation of energy. Using this, deflection resulted from impact loadings can be determined. Afterwards, we will develop the method of virtual work and Castigliano's theorem, which can be used to determine the displacement and slope on structural members and mechanical components.
 
-\section{Mechanical Work}
+\section{** Mechanical Work **}
 
 We can determine deflections of any point on a truss, beam, or shaft using the energy methods. To derive that relationship, we must first understand the process of how energy is stored in a deformable body and its relation to external work caused by exerted loads. We will formulate the equation which will be used as a basis for work and strain energy throughout this chapter.
 
@@ -5195,7 +5518,7 @@ The area integral represents the polar moment of inertial $J$ for the shaft, and
   U = \int_0^L \frac{T^2}{2GJ} dx
 \end{equation}
 
-\section{Principle of Virtual Work}
+\section{** Principle of Virtual Work **}
 
 Energy methods applied in mechanics rely on conservation of energy. In other words, it is implicitly assumed that work done by external load $W$ is converted and stored purely as strain energy $U$, and that there is no loss to heat, chemical reactions, etc. This is simply expressed as
 
@@ -5248,7 +5571,7 @@ Finally, we can write an expression for a member undergoing multiple types of de
   1 \cdot \delta = \int_0^L \frac{fF}{EA} dx + \int_0^L \frac{f_s vV}{GA} dx + \int_0^L \frac{mM}{EI} dx + \int_0^L \frac{tT}{GJ} dx
 \end{equation}
 
-\section{Application of Energy Methods}
+\section{** Application of Energy Methods **}
 
 \subsection{Trusses}
 
@@ -6338,23 +6661,83 @@ Buckling occurs because the internal bending moment in the beam is not enough to
   \item What is the change in temperature that will cause the bar to buckle?
   \end{enumerate}
 
-  \item A 3-m long springboard at a water park is used repeatedly
-  everyday by thousands of people. Assume that the average weight of
-  of a person using the board is 700 N, which keeps getting
-  on and jumping off repeatedly. The board is made of AISI 1040 steel
-  (a ductile material with $E$ = 210 GPa, $S_y$ = 415 MPa, and
-  $S_{ut}$ = 620 MPa) and has a constant rectangular cross section
-  with base width of 50 cm. Determine
+  \item A 3-m long springboard at a water park is used repeatedly everyday by thousands of people. Assume that the average weight of a person using the board is 700 N, which keeps getting on and jumping off repeatedly. The board is made of AISI 1040 steel (a ductile material with $E$ = 210 GPa, $S_y$ = 415 MPa, and
+  $S_{ut}$ = 620 MPa) and has a constant rectangular cross section with base width of 50 cm. Determine
   \begin{enumerate}
-  \item the critical point of the springboard. (Hint: again, be
-    specific.) Explain your reasoning.
-  \item the required thickness $h$ of the board so it is safe under
-    static loading. (A maximum constant load of 700 N.)
-  \item the required thickness $h$ of the board so that it is safe
-    under repeated loading. (Range of load between 0 and 700 N.) Use
-    Soderberg relation to predict fatigue behavior with safety factor
+  \item the critical point of the springboard. (Hint: again, be specific.) Explain your reasoning.
+  \item the required thickness $h$ of the board so it is safe under static loading. (A maximum constant load of 700 N.)
+  \item the required thickness $h$ of the board so that it is safe under repeated loading. (Range of load between 0 and 700 N.) Use Soderberg relation to predict fatigue behavior with safety factor
     $N_s$ = 1.
   \end{enumerate}
+
+\begin{pycode}
+hp = random.randint(4,11)*5 # 20 - 55 hp
+rpm = random.randint(3,8)*5*100 # 1500 - 4000 rpm
+S_y = random.randint(2,8)*10*1e6 # 20 - 80 MPa
+\end{pycode}
+
+  \item An aluminum alloy ($S_{y}$ = \py{round(S_y/1e6)} MPa) is to be used for a drive shaft such that it transmits \py{hp} hp at \py{rpm} rpm. Determine the smallest diameter shaft that can be selected based on:
+        \begin{enumerate}
+          \item MDET
+          \item MSST
+        \end{enumerate}
+
+\begin{pycode}
+S_y = random.randint(2,5)*10*1e6 # 20-50 MPa
+S_ut = S_y*1.5
+E = random.randint(10,20)*10*1e9 # 100 - 200 GPa
+dim = random.choice(['length','thickness'])
+dim_num = round(random.randint(15,30)/10,1) if dim == 'length' else round(random.randint(5,15)*1e-3,3)
+dim_design = 'minimum thickness' if dim == 'length' else 'maximum length'
+w = random.randint(5,8)/10 # 0.5 - 0.8 m
+F = random.randint(12,20)*100 # 1200 - 2000 N
+L = dim_num if dim == 'length' else '??'
+h = dim_num if dim == 'thickness' else '??'
+\end{pycode}
+
+  \item You have been asked to design a springboard, which can be considered as a cantilever beam with one fixed and and one free end. The board is to be made from a material whose $E$ = \py{round(E/1e9)} GPa, $S_{ut}$ = \py{round(S_ut/1e6)} MPa, $S_{y}$ = \py{round(S_y/1e6)} MPa. You are to design the board so that it has a \py{dim} of \py{dim_num} m. The width of the board (normal to this page) is \py{w} m. People who use the springboard like to jump up and down on the free end, generating a repeated downward load of \py{F} N. Determine the \py{dim_design} of the springboard so that it is safe under the repeated loading.
+
+        \begin{figure}[htbp]
+          \centering
+          \begin{tikzpicture}[>=latex]
+            \node[minimum height=1cm, minimum width=6mm, pattern=north west lines](wall){};
+            \draw (wall.north east) -- (wall.south east);
+            \node at (wall.east) [anchor=west, draw, minimum height=5mm, minimum width=6cm](board){};
+            \draw [<-, ultra thick] (board.north east) --++ (90:01) node[above]{\py{F} N};
+            \draw [|<->|] (board.north west) ++ (90:0.3) --++ (0:6) node[midway, fill=White]{\py{L} m};
+            \draw [|<->|] (board.north east) ++ (0:0.3) --++ (-90:0.5) node[midway, right]{\py{h} m};
+          \end{tikzpicture}
+        \end{figure}
+
+\begin{pycode}
+L1 = random.randint(5,15)/10 # 0.5 - 1.5 m
+theta = random.choice([30,35,40,45,50,55,60])
+r = round(random.randint(2,7)*1e-3,3) # 2 - 7 mm
+E = random.randint(12,22)*10*1e9 # 120 - 220 GPa
+S_y = random.randint(5,20)*10*1e6 # 50 - 200 MPa
+\end{pycode}
+
+  \item The assembly shown below consists of two circular cross-sectioned rods pinned connect to the wall and to each other. The rods have a cross-sectional radius of \py{r} m, $E$ = \py{round(E/1e9)} GPa, and $S_{y}$ = \py{round(S_y/1e6)} MPa. Determine the maximum loads $P$ that the structure can take. (Hint: consider both buckling of the bottom rod and yielding on the top rod.)
+
+        \begin{figure}[H]
+          \centering
+          \begin{tikzpicture}[>=latex]
+            \begin{pycode}
+              print(r'\node[minimum height='+str(1+4*tan(radians(theta)))+r'cm, minimum width=6mm, pattern=north west lines](wall){};')
+            \end{pycode}
+            \draw (wall.north east) -- (wall.south east);
+            \node at (wall.south east) [anchor=west, fill=LightGrey, draw, yshift=5mm, minimum height=2mm, minimum width=4cm, rounded corners=1mm](brod){};
+            \node at (brod.west) [circle, inner sep=0, fill=Black, xshift=1mm, minimum height=1mm]{};
+            \begin{pycode}
+              print(r'\node at (brod.east) [anchor=east, fill=LightGrey, draw, minimum height=2mm, minimum width='+str(4/cos(radians(theta)))+r'cm, rounded corners=1mm,rotate='+str(-theta)+r'](trod){};')
+              print(r'\node at (trod.east) [circle, draw, fill=Black, minimum height=1mm, inner sep=0, rotate='+str(-theta)+r', xshift=-1mm]{};')
+              print(r'\node at (trod.west) [circle, draw, fill=Black, minimum height=1mm, inner sep=0, rotate='+str(-theta)+r', xshift=1mm]{};')
+              print(r'\draw [|<->|] (brod.west) ++ (-90:0.5) --++ (0:4) node[midway, fill=White]{'+str(L1)+r' m};')
+              print(r'\draw [|<->|] (brod.east) ++ (180:2) arc (180:'+str(180-theta)+r':2) node[midway,fill=White]{'+str(theta)+'$^{\circ}$};')
+            \end{pycode}
+            \draw [->, ultra thick](brod.east) --++ (-90:1) node[below]{$P$};
+          \end{tikzpicture}
+        \end{figure}
 \end{exercises}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
