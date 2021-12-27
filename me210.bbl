@@ -47,7 +47,7 @@
       \strng{authornamehash}{1e108a3b1e2f0fcc81108b697ae7056d}
       \strng{authorfullhash}{1e108a3b1e2f0fcc81108b697ae7056d}
       \field{sortinit}{B}
-      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Advanced Mechanics of Materials}
@@ -73,13 +73,12 @@
       \strng{authornamehash}{8436125e94d9877a58200cf47abf76f0}
       \strng{authorfullhash}{8436125e94d9877a58200cf47abf76f0}
       \field{sortinit}{H}
-      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{8}
       \field{title}{Mechanics of Materials}
       \field{year}{2013}
-      \true{nocite}
     \endentry
     \entry{lai2009introduction}{book}{}
       \name{author}{4}{}{%
@@ -114,7 +113,7 @@
       \strng{authornamehash}{a3aecd0213852614f3555ebd350231bf}
       \strng{authorfullhash}{b3a5dedcb51883b7aad552e1c210bdb3}
       \field{sortinit}{L}
-      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Introduction to Continuum Mechanics}
@@ -149,7 +148,7 @@
       \strng{authornamehash}{3f0987cf107e297a7cd3a534e1796d59}
       \strng{authorfullhash}{3f0987cf107e297a7cd3a534e1796d59}
       \field{sortinit}{S}
-      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Mechanical Engineering Design}
@@ -179,7 +178,7 @@
       \strng{authornamehash}{da8fde998960f47497869648cee85508}
       \strng{authorfullhash}{da8fde998960f47497869648cee85508}
       \field{sortinit}{T}
-      \field{sortinithash}{51f9faf24c60c62ca764a77f78cf5666}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{3}
@@ -213,7 +212,7 @@
       \strng{authornamehash}{8a5290154d333b0e63e87fd15393af9b}
       \strng{authorfullhash}{8a5290154d333b0e63e87fd15393af9b}
       \field{sortinit}{T}
-      \field{sortinithash}{51f9faf24c60c62ca764a77f78cf5666}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{2}

@@ -1,0 +1,8 @@
+\draw [<-, thick] (element.north) --++ (90:1) node[left]{$\sigma_{y}$ = \py{sigma_y} MPa};
+\draw [<-, thick] (element.south) --++ (-90:1);
+\draw [<-, thick] (element.east) --++ (0:1) node[above right]{$\sigma_{x}$ = \py{sigma_x} MPa};
+\draw [<-, thick] (element.west) --++ (180:1);
+\draw [-left to, thick] (element.north west) ++ (45:0.3) --++ (0:1.5) node[above right]{$\tau_{xy}$ = \py{tau_xy} MPa};
+\draw [-left to, thick] (element.south east) ++ (-135:0.3) --++ (180:1.5);
+\draw [-right to, thick] (element.north west) ++ (-135:0.3) --++ (-90:1.5);
+\draw [-right to, thick] (element.south east) ++ (45:0.3) --++ (90:1.5);

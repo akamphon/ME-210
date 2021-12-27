@@ -1,0 +1,2 @@
+\draw [|<->|] (wall.south east) --++ (0:4.199999999999999) node[midway, below]{0.7 m};
+\draw [<-,ultra thick] (beam.south west) ++ (0:4.199999999999999) --++ (-90:1) node[below]{$P$};

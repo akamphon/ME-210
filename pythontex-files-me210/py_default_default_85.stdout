@@ -1,0 +1,4 @@
+\draw [<-, ultra thick] (support.north) ++ (0:2.588235294117647) ++ (90:0.2) --++ (90:1) node[above]{\py{F} N};
+\draw [|<->|] (support.north) ++ (90:0.5) --++ (0:2.588235294117647) node[midway, fill=White]{\py{round(x,1)} m};
+\node at (support.north) [draw, fill=Black, circle, inner sep=0, minimum height=1mm,yshift=-2mm,xshift=1.6cm](C){};
+\draw [|<->|] (support.north) ++ (-90:0.5) --++ (0:1.6) node[midway, fill=White]{0.68 m};

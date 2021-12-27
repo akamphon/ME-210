@@ -2,9 +2,9 @@
  "me210"
  (lambda ()
    (TeX-add-to-alist 'LaTeX-provided-class-options
-                     '(("book" "10pt" "a4paper" "openany" "svgnames" "")))
+                     '(("kaobook" "10pt" "a4paper" "open=any" "svgnames" "")))
    (TeX-add-to-alist 'LaTeX-provided-package-options
-                     '(("inputenc" "utf8") ("parskip" "parfill") ("titlesec" "explicit") ("pythontex" "gobble=auto") ("biblatex" "style=numeric" "backend=biber")))
+                     '(("inputenc" "utf8") ("pythontex" "gobble=auto") ("biblatex" "style=numeric" "backend=biber")))
    (add-to-list 'LaTeX-verbatim-environments-local "pygments")
    (add-to-list 'LaTeX-verbatim-environments-local "pythontexcustomcode")
    (add-to-list 'LaTeX-verbatim-environments-local "VerbatimOut")
@@ -77,17 +77,12 @@
    (add-to-list 'LaTeX-verbatim-macros-with-delims-local "path")
    (TeX-run-style-hooks
     "latex2e"
-    "book"
-    "bk10"
+    "kaobook"
+    "kaobook10"
     "inputenc"
-    "geometry"
     "graphicx"
-    "parskip"
     "booktabs"
     "enumitem"
-    "fancyhdr"
-    "newtxtext"
-    "newtxmath"
     "hyperref"
     "amsmath"
     "amsthm"
@@ -96,7 +91,6 @@
     "array"
     "cleveref"
     "siunitx"
-    "titlesec"
     "tikz"
     "calc"
     "pgfplots"
@@ -123,6 +117,8 @@
     "fig: modulus of resilience"
     "fig: poisson's ratio"
     "table: poisson's of materials"
+    "fig: shear stress-strain diagram"
+    "eq: young and shear"
     "fig: compound bar"
     "eq: compound bar"
     "eq: compound modulus"
@@ -177,6 +173,7 @@
     "exercise: generator shaft"
     "eqn: force-work equation"
     "fig:force-deformation diagram"
+    "chap: intro theories of failure"
     "section: yield and fracture"
     "fig: MSST safe zone"
     "eqn: distortion energy density"
@@ -191,14 +188,6 @@
     "eqn: gen solution"
     "eqn: mode shape sub"
     "eqn: Euler's formula")
-   (LaTeX-add-bibliographies)
-   (LaTeX-add-enumitem-newlists
-    '("exercises" "enumerate"))
-   (LaTeX-add-thmtools-declaretheoremstyles
-    "exstyle"
-    "solstyle")
-   (LaTeX-add-thmtools-declaretheorems
-    "example"
-    "solution"))
+   (LaTeX-add-bibliographies))
  :latex)
 

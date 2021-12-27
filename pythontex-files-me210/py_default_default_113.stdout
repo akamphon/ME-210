@@ -1,0 +1,5 @@
+\node at (brod.east) [anchor=east, fill=LightGrey, draw, minimum height=2mm, minimum width=4.618802153517006cm, rounded corners=1mm,rotate=-30](trod){};
+\node at (trod.east) [circle, draw, fill=Black, minimum height=1mm, inner sep=0, rotate=-30, xshift=-1mm]{};
+\node at (trod.west) [circle, draw, fill=Black, minimum height=1mm, inner sep=0, rotate=-30, xshift=1mm]{};
+\draw [|<->|] (brod.west) ++ (-90:0.5) --++ (0:4) node[midway, fill=White]{1.5 m};
+\draw [|<->|] (brod.east) ++ (180:2) arc (180:150:2) node[midway,fill=White]{30$^{\circ}$};

@@ -1,9 +1,9 @@
 \documentclass[
 10pt,
 a4paper,
-openany,
+open=any,
 svgnames,
-]{book} % use larger type; default would be 10pt
+]{kaobook} % use larger type; default would be 10pt
 
 %%%% stylin %%%%
 \setcounter{secnumdepth}{1}
@@ -12,31 +12,24 @@ svgnames,
 \usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
 
 %%% PAGE DIMENSIONS
-\usepackage{geometry} % to change the page dimensions
-\geometry{a4paper} % or letterpaper (US) or a5paper or....
-\geometry{margin=1in} % for example, change the margins to 2 inches all round
-% \geometry{landscape} % set up the page for landscape
-
 \usepackage{graphicx} % support the \includegraphics command and options
-
-\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
 
 %%% PACKAGES
 \usepackage{booktabs} % for much better looking tables
 \usepackage{enumitem}
 
 %%% HEADERS & FOOTERS
-\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
-\pagestyle{fancy} % options: empty , plain , fancy
-\renewcommand{\headrulewidth}{1pt} % customise the layout...
-\renewcommand{\footrulewidth}{1pt}
-\lhead{\rightmark}\chead{}\rhead{\thepage}
-\lfoot{ME 210: Mechanical of Materials}\cfoot{}\rfoot{S. Akamphon}
+%\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+%\pagestyle{fancy} % options: empty , plain , fancy
+%\renewcommand{\headrulewidth}{1pt} % customise the layout...
+%\renewcommand{\footrulewidth}{1pt}
+%\lhead{\rightmark}\chead{}\rhead{\thepage}
+%\lfoot{ME 210: Mechanical of Materials}\cfoot{}\rfoot{S. Akamphon}
 
 %\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
 
-\usepackage{newtxtext}
-\usepackage{newtxmath}
+%\usepackage{newtxtext}
+%\usepackage{newtxmath}
 \usepackage{hyperref}
 \hypersetup{
   colorlinks,
@@ -56,7 +49,7 @@ svgnames,
 \usepackage{siunitx}
 
 %% Chapter Heading %%%%%
-\usepackage[explicit]{titlesec}
+% \usepackage[explicit]{titlesec}
 \newcommand*\chapterlabel{}
 %\usepackage{kpfonts}
 %% Drawing pics with tikz %%%
@@ -88,46 +81,46 @@ import random
     \tikz[x=0.25cm,y=0.60cm,line width=.2ex,-stealth,#1] \draw(0,0) arc (150:-150:1 and 1);%
 }
 
-\titleformat{\chapter}
-{\gdef\chapterlabel{}
-  \normalfont\huge\bfseries}
-{\gdef\chapterlabel{\thechapter}}{0pt}
-{\begin{tikzpicture}[remember picture,overlay]
-    \node[yshift=-3cm] at (current page.north west)
-    {\begin{tikzpicture}[remember picture,overlay]
-        \draw[fill=titlepagecolor] (0,0) rectangle
-        (\paperwidth,3cm) ;
-        \node[anchor=east,xshift=.9\paperwidth,rectangle,
-        rounded corners=5pt,inner sep=11pt, draw,
-        fill=SkyBlue]
-        {\color{black}#1};
-        \ifnum\value{chapter}>0
-        \node[right, xshift=1cm, yshift=1.5cm]{\scalebox{4}{\Huge\thechapter}};
-        \fi
-      \end{tikzpicture}   
-    };
-  \end{tikzpicture}
-}
-
-\titleformat{name=\chapter, numberless}
-{\gdef\chapterlabel{}
-  \normalfont\huge\bfseries}
-{\gdef\chapterlabel{\thechapter}}{0pt}
-{\begin{tikzpicture}[remember picture,overlay]
-    \node[yshift=-3cm] at (current page.north west)
-    {\begin{tikzpicture}[remember picture,overlay]
-        \draw[fill=titlepagecolor] (0,0) rectangle
-        (\paperwidth,3cm) ;
-        \node[anchor=east,xshift=.9\paperwidth,rectangle,
-        rounded corners=5pt,inner sep=11pt, draw,
-        fill=SkyBlue]
-        {\color{black}#1};
-      \end{tikzpicture}   
-    };
-  \end{tikzpicture}
-}
-
-\titlespacing*{\chapter}{0pt}{50pt}{-10pt}
+%\titleformat{\chapter}
+%{\gdef\chapterlabel{}
+%  \normalfont\huge\bfseries}
+%{\gdef\chapterlabel{\thechapter}}{0pt}
+%{\begin{tikzpicture}[remember picture,overlay]
+%    \node[yshift=-3cm] at (current page.north west)
+%    {\begin{tikzpicture}[remember picture,overlay]
+%        \draw[fill=titlepagecolor] (0,0) rectangle
+%        (\paperwidth,3cm) ;
+%        \node[anchor=east,xshift=.9\paperwidth,rectangle,
+%        rounded corners=5pt,inner sep=11pt, draw,
+%        fill=SkyBlue]
+%        {\color{black}#1};
+%        \ifnum\value{chapter}>0
+%        \node[right, xshift=1cm, yshift=1.5cm]{\scalebox{4}{\Huge\thechapter}};
+%        \fi
+%      \end{tikzpicture}
+%    };
+%  \end{tikzpicture}
+%}
+%
+%\titleformat{name=\chapter, numberless}
+%{\gdef\chapterlabel{}
+%  \normalfont\huge\bfseries}
+%{\gdef\chapterlabel{\thechapter}}{0pt}
+%{\begin{tikzpicture}[remember picture,overlay]
+%    \node[yshift=-3cm] at (current page.north west)
+%    {\begin{tikzpicture}[remember picture,overlay]
+%        \draw[fill=titlepagecolor] (0,0) rectangle
+%        (\paperwidth,3cm) ;
+%        \node[anchor=east,xshift=.9\paperwidth,rectangle,
+%        rounded corners=5pt,inner sep=11pt, draw,
+%        fill=SkyBlue]
+%        {\color{black}#1};
+%      \end{tikzpicture}
+%    };
+%  \end{tikzpicture}
+%}
+%
+%\titlespacing*{\chapter}{0pt}{50pt}{-10pt}
 
 %Example environment
 \usepackage{thmtools}
@@ -185,6 +178,8 @@ numbered=no
 \addbibresource{me210.bib}
 
 %%% END Article customizations
+\author{Sappinandana Akamphon}
+\title{ME 210: Mechanics of Materials}
 
 %%% The "real" document content comes below...
 \begin{document}
@@ -194,10 +189,10 @@ numbered=no
 \begin{titlepage}
   \newgeometry{top=1cm,left=1cm} %defines the geometry for the titlepage
   \pagecolor{titlepagecolor}
-  \raggedright \includegraphics[scale=0.2]{pictures/logo-tu} \\
+  \raggedright \includegraphics[width=0.2\textwidth]{pictures/logo-tu} \\
   \noindent
   \color{white}
-  \makebox[0pt][l]{\rule{1.3\textwidth}{1pt}}
+  \makebox[0pt][l]{\rule{1.05\textwidth}{1pt}}
   \par
   \noindent
   \textbf{\textsf{Thammasat University}} \textcolor{namecolor}{\textsf{Faculty of Engineering}}
@@ -255,7 +250,11 @@ Additional graphics for stress transformation, Mohr's circle, combined loadings.
 
 \paragraph{July 2018}
 
-Add more figures to facilitate visualization of examples. 
+Add more figures to facilitate visualization of examples.
+
+\paragraph{December 2021}
+
+Add shear stress-strain relationship. Add creep and fatigue behaviors.
 
 \tableofcontents
 
@@ -279,10 +278,10 @@ $$ \sum M = 0 $$
 Considering a surface cutting through the body, there can be 2 types of forces and 2 types of moments acting on the surface
 
 \begin{itemize}
-\item Normal force ($F$) acts perpendicular to the surface. This force is developed when there is an external loads pushing or pulling on the surface of the body.
-\item Shear force ($V$) acts in the plane of the surface. It developed when the external forces tends to cause the surface to slide sideways.
-\item Torsional moment or torque ($T$) is developed when the loads tend to twist the segment with respect to another.
-\item Bending moment ($M$) is developed when the loads tend to bend the body about an axis lying within the plane of the surface.
+  \item Normal force ($F$) acts perpendicular to the surface. This force is developed when there is an external loads pushing or pulling on the surface of the body.
+  \item Shear force ($V$) acts in the plane of the surface. It developed when the external forces tends to cause the surface to slide sideways.
+  \item Torsional moment or torque ($T$) is developed when the loads tend to twist the segment with respect to another.
+  \item Bending moment ($M$) is developed when the loads tend to bend the body about an axis lying within the plane of the surface.
 \end{itemize}
 
 \section{Stress}
@@ -386,7 +385,7 @@ The force equilibrium in the $x$ direction gives
   \end{array}
 \end{equation}
 
-If we consider a pair of shear stresses loading on the element, the moment equilibrium about the z direction gives
+If we consider a pair of shear stresses loading on the element, the moment equilibrium about the $z$ direction gives
 
 \begin{equation}
   \arraycolsep=1.4pt\def\arraystretch{1.5}
@@ -496,15 +495,15 @@ While the actual stress-strain diagrams of different materials can be vastly dif
     % area under curve
     \draw [ultra thin, fill=ForestGreen] (B.center) ++ (90:0.2) node(F){} -- (O.center) --++ (60:4.5) node(pl){} arc (150:90:0.3) node(G){} -- cycle;
     \draw [ultra thin, fill=Khaki] (C.center) ++ (90:0.2) node(H){} -- (F.center) -- (G.center) --++ (0:2) node(I){} -- cycle;
-    \draw [ultra thin, fill=Chocolate] (D.center) ++ (90:0.2) node(J){} -- (H.center) -- (I.center) to [out=0, in=-140] +(1.5,1) to [out=40,in=180] +(1.5,0.5) node(K){} -- cycle;
-    \draw [ultra thin, fill=SaddleBrown] (E.center) ++ (90:0.2) node(L){} -- (J.center) -- (K.center) to [out=0, in=155] +(2.5,-0.7) node(M){} -- cycle;
+    \draw [ultra thin, fill=Chocolate] (D.center) ++ (90:0.2) node(J){} -- (H.center) -- (I.center) to [out=0, in=-140] ++(1.5,1) to [out=40,in=180] ++(1.5,0.5) node(K){} -- cycle;
+    \draw [ultra thin, fill=SaddleBrown] (E.center) ++ (90:0.2) node(L){} -- (J.center) -- (K.center) to [out=0, in=155] ++(2.5,-0.7) node(M){} -- cycle;
     % stress indicators
     \draw [dashed] (pl.center) -- +(180:2.3) node[below left]{$S_{pl}$};
     \draw [dashed] (G.center) -- +(180:2.5) node[above left]{$S_{y}$};
     \draw [dashed] (K.center) -- +(180:7.5) node[left]{$S_{ut}$};
     \draw [dashed] (M.center) -- +(180:10) node[left]{$S_{f}$};
     % actual curve
-    \draw [very thick, Blue!80](O.center) -- (pl.center) arc (150:90:0.3) -- (I.center) to [out=0, in=-140] +(1.5,1) to [out=40,in=180] +(1.5,0.5) to [out=0, in=155] +(2.5,-0.7);
+    \draw [very thick, Blue!80](O.center) -- (pl.center) arc (150:90:0.3) -- (I.center) to [out=0, in=-140] ++(1.5,1) to [out=40,in=180] ++(1.5,0.5) to [out=0, in=155] ++(2.5,-0.7);
   \end{tikzpicture}
   \caption{A general stress-strain diagram obtained from a tensile test.}
   \label{fig: stress-strain diagram}
@@ -522,6 +521,19 @@ While the actual stress-strain diagrams of different materials can be vastly dif
 
 Materials can be categorized as either ductile or brittle, depending on their stress-strain characteristics.
 
+\begin{marginfigure}
+  \begin{tikzpicture}[scale=0.3]
+    %\draw (-6,-5) grid (6,5);
+    \draw[<->] (0,-6) -- (0,6) node[left]{$\sigma$};
+    \draw[<->] (-8,0) -- (8,0) node[right]{$\varepsilon$};
+    \draw[thick, Blue, rounded corners] (0,0) to (2,3) to [out=30,in=-180] (5,4) node[above]{ductile} to [out=0,in=160] (7,3.5);
+    \draw[thick, DarkRed] (0,0) --++ (70:5.5) node[above]{brittle};
+    \draw[thick, Blue, rounded corners] (0,0) to (-2,-3) to [out=210,in=0] (-5,-4) to [out=180,in=-40] (-7,-3);
+    \draw[thick, DarkRed] (0,0) to (-1.5,-3.5) to [out=-120,in=45] (-4,-6);
+  \end{tikzpicture}
+  \caption{Typical stress-strain curves for ductile and brittle materials.}
+\end{marginfigure}
+
 \subsubsection{Ductile Materials}
 
 Materials that can withstand large amount of strains before fracture are called \emph{ductile materials}. Ductile materials are typically the materials of choice for component design because they are capable of absorbing shock and energy. Even if they are loaded excessively, they will undergo large deformation before failure.
@@ -532,7 +544,7 @@ One method of defining the ductility of a material is by reporting its elongatio
   \text{\% elongation} = \frac{L_f - L_0}{L_0} \times 100\%
 \end{equation}
 
-For typical mild steel specimen, this value is around 38\%.
+For a typical mild steel specimen, this value is around 38\%.
 
 Another indicator of material ductility is its cross-sectional area reduction percentage at failure, for which the formula is
 
@@ -544,19 +556,6 @@ Mild steel typically has a typical reduction of area at 60\%.
 
 It is important to note that, beside steel, most ductile materials do not yield at constant loads. This makes defining an actual yield stress difficult. In this case, the yield stress can be obtained by the \emph{offset method} in which a line parallel to the elastic region of the stress-strain curve of a material is drawn from where strain is equal to 0.2\%. The point where this line intersects with the curve is defined as the yield stress.
 
-\begin{figure}[h]
-  \centering
-  \begin{tikzpicture}[scale=0.5]
-    %\draw (-6,-5) grid (6,5);
-    \draw[<->] (0,-6) -- (0,6) node[left]{$\sigma$};
-    \draw[<->] (-8,0) -- (8,0) node[right]{$\varepsilon$};
-    \draw[thick, Blue, rounded corners] (0,0) to (2,3) to [out=30,in=-180] (5,4) node[above]{ductile} to [out=0,in=160] (7,3.5);
-    \draw[thick, DarkRed] (0,0) --++ (70:5.5) node[above]{brittle};
-    \draw[thick, Blue, rounded corners] (0,0) to (-2,-3) to [out=210,in=0] (-5,-4) to [out=180,in=-40] (-7,-3);
-    \draw[thick, DarkRed] (0,0) to (-1.5,-3.5) to [out=-120,in=45] (-4,-6);
-  \end{tikzpicture}
-  \caption{Typical stress-strain curves for ductile and brittle materials.}
-\end{figure}
 
 \subsubsection{Brittle Materials}
 
@@ -611,10 +610,10 @@ This represents the amount of energy the material can absorb without any permane
   \centering
   \begin{tikzpicture}
     \draw [thick] (0,4.5) node[above]{$\sigma$} --++ (-90:4.5) --++ (0:6) node[right]{$\varepsilon$};
-    \draw [ultra thick, LightSkyBlue] (0,0) --++ (85:3) node(pl){} to[out=60, in=210] +(2,0.8) to[out=30,in=120] +(3,-0.5);
-    \path[fill=LightSkyBlue, fill opacity=0.5] (0,0) -- (pl.center) to[out=60, in=210] +(2,0.8) to[out=30,in=120] +(3,-0.5) node(ut){} --++ (-90:3.30) -- cycle;
+    \draw [ultra thick, LightSkyBlue] (0,0) --++ (85:3) node(pl){} to[out=60, in=210] ++(2,0.8) to[out=30,in=120] ++(3,-0.5);
+    \path[fill=LightSkyBlue, fill opacity=0.5] (0,0) -- (pl.center) to[out=60, in=210] ++(2,0.8) to[out=30,in=120] ++(3,-0.5) node(ut){} --++ (-90:3.30) -- cycle;
     \draw (ut.center) --++ (-90:3.30);
-    \draw [|-] (ut) ++ (-0.5,-1.5) to[out=30,in=180] +(1,0.3) node[right]{$u_t$};
+    \draw [|-] (ut) ++ (-0.5,-1.5) to[out=30,in=180] ++(1,0.3) node[right]{$u_t$};
   \end{tikzpicture}
   \caption{Modulus of toughness, $u_t$}
   \label{fig: modulus of resilience}
@@ -675,7 +674,7 @@ Notice the negative sign here since longitudinal elongation causes lateral contr
 
 Poisson's ratios for various common materials are tabulated in \cref{table: poisson's of materials}. Note that the ratios are listed in descending order, and that they stay between 0 and 0.5. Why is that? Can you have $\nu > 0.5$? What about $\nu < 0$?
 
-\begin{table}[h]
+\begin{margintable}
   \centering
   \caption{Poisson's ratio of various engineering materials.}
   \label{table: poisson's of materials}
@@ -702,7 +701,7 @@ Poisson's ratios for various common materials are tabulated in \cref{table: pois
       cork            & 0               \\
       \bottomrule
     \end{tabular}}
-\end{table}
+\end{margintable}
 
 \begin{example}
 A thin rubber sheet of material with dimension 2 m x 4 m ($W \times L$) has $E$ = 200 MPa. A normal stress of 20 MPa is applied along the width of the sheet. What is the change in area of the material once the stress is applied. Assume the material has $\nu$ = 0.25
@@ -738,13 +737,34 @@ Therefore, the total area change is
 	
 \subsection{Shear stress-shear strain relationship}
 
-Much like the way there is a relationship between normal stress and normal strain in most engineering materials, shear stress and shear strain are also related linearly by the equation
+Much like the way there is a relationship between normal stress and normal strain in most engineering materials, shear stress and shear strain also exhibit relationship which can be illustrated in \cref{fig: shear stress-strain diagram}
+
+\begin{marginfigure}
+  \begin{tikzpicture}[>=latex, scale=0.8]
+    % axes
+    \draw [<->] (0,5) node[left]{$\sigma$} --++ (-90:5) node(O){} --++ (0:5) node[below]{$\varepsilon$};
+    % curve
+    \draw [very thick, Blue!80](O.center) --++ (1,2.5) node(pl){} to[out=60, in=180] ++ (2,1) node(u){} to[out=0, in=145] ++ (1.5,-0.4) node(f){};
+    \draw [dashed] (pl.center) --++ (180:1) node[left]{$\tau_{pl}$};
+    \draw [dashed] (u.center) --++ (180:3) node[left]{$\tau_{u}$};
+    \draw [dashed] (f.center) --++ (180:4.5) node[left]{$\tau_{f}$};
+  \end{tikzpicture}
+  \caption{A general shear stress-shear strain diagram from a torsion test}
+  \label{fig: shear stress-strain diagram}
+\end{marginfigure}
+
+This relationship can be studied using specimens of thin tubes under torsion. At first, the material with exhibit linear-elastic behavior up until its \emph{proportionality limit}, $\tau_{pl}$. Afterwards, strain hardening occurs until the material reaches its maximum shear stress limit, aka its \emph{ultimate shear stress}, $\tau_{u}$. Finally, the material will lose its shear strength until it reaches the point of fracture at $\tau_{f}$.
 
 \begin{equation}
   \tau  = G\gamma
 \end{equation}
 
-$G$ is called the shear modulus of elasticity and has the same unit as Young’s modulus
+$G$ is called the shear modulus of elasticity and has the same unit as Young’s modulus. It can also be shown, later in ..., hat $G$, $E$, and $\nu$ are related by the equation
+
+\begin{equation}
+  \label{eq: young and shear}
+  G = \frac{E}{2(1 + \nu)}
+\end{equation}
 
 \section{Thermal effect}
 
@@ -795,6 +815,32 @@ Without any constraint, the change in length of the part can be computed using t
 Both thermal and mechanical strains represent the ratio of deformation to its original size. However, there are fundamental differences between the two in multidimensional (>1D) problems.
 
 Thermal strains, for most engineering materials, tend to be uniform in all dimensions: materials contracts in all three dimensions when cooled, and vice versa. Mechanical strains, on the other hand, follow Poisson's ratio, meaning that for most engineering materials, longitudinal and lateral strains have opposite signs. We will revisit this topic when we tackle multiaxial stress analysis in \cref{chapter: multiaxial stress}.
+
+\section{Failure of Materials Due to Creep and Fatigue}
+
+The material behaviors we have discussed so far involve constant loads that are statically applied at normal temperature. Hwoever, in many cases a member may be used in conditions which required sustained loads over long duration at high temperatures, or repeated loadings. In this section, we will consider the basic behavior of this special cases, and will be giving them more thorough treatment in \Cref{chap: intro theories of failure}
+
+\subsection{Creep}
+
+When a material has to support a sustained load for a very long time, it may continue to deform after its initial exertion of the load--until it is fracture or is no longer functional. This permanent deformation is known as \emph{creep}. Creep is typically considered when metals and ceramics are subjected to loads under high temperatures.
+
+For polymers, woods, and composites, creep can occur regardless of temperatures. In that way, both stress and temperature can play a role in the rate of creep.
+
+Engineers typically use \emph{creep strength} when designing members that specifically requires creep consideration. This value represents the highest stress the material can take over a specified time without exceeding a given creep strain. For a material, a given temperature, loading duration, and allowable creep strain are specified. For example, a creep strain of 0.1\% per year is suggested for steel in bolts and piping. \cite{hibbeler2013}
+
+There are many methods to determine an allowable creep strengt of a material. One of the simplest requires applying different axial stresses and measure the length of time needed to produce an allowable strain or the fracture strain. A curve of stress versus time can then be established. Generally, the creep strength of decrease with higher temperatures or higher stresses.
+
+%%%% TODO add creep plot
+
+\subsection{Fatigue}
+
+When a metal is subjected to repeated cycles of stress or strain, it causes its internal structure to break down. This is called \emph{fatigue}. This behavior is responsible for a large percentage of failure in rotational machinery and their components such as crankshafts, wheels, axles, and turbine blades. In fatigue failure, fracture will occur at a stress that is lower than the material's yield stress.
+
+This failure results from microscopic imperfections, usually on the surface of the member, where the localized stress becomes much larger than the average stress over the cross section. As the stress is repeated, it causes the formation of small but growing cracks. These cracks leads to even higher stress at the crack tips and further growing cracks. Eventually the cross-sectional area of the member is reduced until the load can no longer be supported, at which point a sudden fracture occurs. The material will then behave as if it were brittle.
+
+To determine the safe strength for a metallic material under repeated loading, we need to determine a limit below which no failure can be detected. This limit is called the \emph{endurance} or \emph{fatigue limit}. A series of tests are performed to determine the number of cycles to failure for a given stress, resulting in an \emph{S-N diagram} or \emph{stress-cycle diagram}.
+
+For steels, the \emph{S-N} diagrams become horizontal or asymptotic, at which point that stress is defined as the endurance limit. For aluminums, however, the endurance limit is not always well defined, and so it is normally specified as the stress having a limit of 500 million cycles. \cite{hibbeler2013}
 
 \section*{Summary}
 
@@ -5758,7 +5804,7 @@ When the deformation of interest is not at the location that the actual load app
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
-\chapter{Introduction to Theories of Failure} 
+\chapter{Introduction to Theories of Failure} \label{chap: intro theories of failure}
 
 Material failures occur when solid materials lose their strength due to external loads. In this section, we will discuss theories that predict the failure of materials due to multiple types of loadings—multiaxial, repeated, or compressive. These theories are used to determine the allowable stresses reported in design codes. Keep in mind that no single theory can apply to all materials under all situations, and therefore we must also be able to apply the appropriate theory to the appropriate situation.
 
@@ -6719,25 +6765,25 @@ S_y = random.randint(5,20)*10*1e6 # 50 - 200 MPa
 
   \item The assembly shown below consists of two circular cross-sectioned rods pinned connect to the wall and to each other. The rods have a cross-sectional radius of \py{r} m, $E$ = \py{round(E/1e9)} GPa, and $S_{y}$ = \py{round(S_y/1e6)} MPa. Determine the maximum loads $P$ that the structure can take. (Hint: consider both buckling of the bottom rod and yielding on the top rod.)
 
-        \begin{figure}[H]
-          \centering
-          \begin{tikzpicture}[>=latex]
-            \begin{pycode}
-              print(r'\node[minimum height='+str(1+4*tan(radians(theta)))+r'cm, minimum width=6mm, pattern=north west lines](wall){};')
-            \end{pycode}
-            \draw (wall.north east) -- (wall.south east);
-            \node at (wall.south east) [anchor=west, fill=LightGrey, draw, yshift=5mm, minimum height=2mm, minimum width=4cm, rounded corners=1mm](brod){};
-            \node at (brod.west) [circle, inner sep=0, fill=Black, xshift=1mm, minimum height=1mm]{};
-            \begin{pycode}
-              print(r'\node at (brod.east) [anchor=east, fill=LightGrey, draw, minimum height=2mm, minimum width='+str(4/cos(radians(theta)))+r'cm, rounded corners=1mm,rotate='+str(-theta)+r'](trod){};')
-              print(r'\node at (trod.east) [circle, draw, fill=Black, minimum height=1mm, inner sep=0, rotate='+str(-theta)+r', xshift=-1mm]{};')
-              print(r'\node at (trod.west) [circle, draw, fill=Black, minimum height=1mm, inner sep=0, rotate='+str(-theta)+r', xshift=1mm]{};')
-              print(r'\draw [|<->|] (brod.west) ++ (-90:0.5) --++ (0:4) node[midway, fill=White]{'+str(L1)+r' m};')
-              print(r'\draw [|<->|] (brod.east) ++ (180:2) arc (180:'+str(180-theta)+r':2) node[midway,fill=White]{'+str(theta)+'$^{\circ}$};')
-            \end{pycode}
-            \draw [->, ultra thick](brod.east) --++ (-90:1) node[below]{$P$};
-          \end{tikzpicture}
-        \end{figure}
+  \begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[>=latex]
+      \begin{pycode}
+        print(r'\node[minimum height='+str(1+4*tan(radians(theta)))+r'cm, minimum width=6mm, pattern=north west lines](wall){};')
+      \end{pycode}
+      \draw (wall.north east) -- (wall.south east);
+      \node at (wall.south east) [anchor=west, fill=LightGrey, draw, yshift=5mm, minimum height=2mm, minimum width=4cm, rounded corners=1mm](brod){};
+      \node at (brod.west) [circle, inner sep=0, fill=Black, xshift=1mm, minimum height=1mm]{};
+      \begin{pycode}
+        print(r'\node at (brod.east) [anchor=east, fill=LightGrey, draw, minimum height=2mm, minimum width='+str(4/cos(radians(theta)))+r'cm, rounded corners=1mm,rotate='+str(-theta)+r'](trod){};')
+        print(r'\node at (trod.east) [circle, draw, fill=Black, minimum height=1mm, inner sep=0, rotate='+str(-theta)+r', xshift=-1mm]{};')
+        print(r'\node at (trod.west) [circle, draw, fill=Black, minimum height=1mm, inner sep=0, rotate='+str(-theta)+r', xshift=1mm]{};')
+        print(r'\draw [|<->|] (brod.west) ++ (-90:0.5) --++ (0:4) node[midway, fill=White]{'+str(L1)+r' m};')
+        print(r'\draw [|<->|] (brod.east) ++ (180:2) arc (180:'+str(180-theta)+r':2) node[midway,fill=White]{'+str(theta)+'$^{\circ}$};')
+      \end{pycode}
+      \draw [->, ultra thick](brod.east) --++ (-90:1) node[below]{$P$};
+    \end{tikzpicture}
+  \end{figure}
 \end{exercises}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
