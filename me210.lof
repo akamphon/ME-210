@@ -30,113 +30,113 @@
 \defcounter {refsection}{0}\relax
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Typical behavior of an elastic-perfectly plastic material.\relax }}{27}{figure.caption.105}%
 \defcounter {refsection}{0}\relax
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Initial, impact, and maximum deformation conditions in simplified impact loading problem\relax }}{30}{figure.caption.110}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Initial, impact, and maximum deformation conditions in simplified impact loading problem\relax }}{29}{figure.caption.110}%
 \defcounter {refsection}{0}\relax
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax
-\contentsline {figure}{\numberline {3.1}{\ignorespaces A circular bar under torsion. The figure shows the torque and deformation on the cross section.\relax }}{36}{figure.caption.126}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces A circular bar under torsion. The figure shows the torque and deformation on the cross section.\relax }}{35}{figure.caption.126}%
 \defcounter {refsection}{0}\relax
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Surface of a cylindrical shaft under torsion\relax }}{37}{figure.caption.127}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Surface of a cylindrical shaft under torsion\relax }}{36}{figure.caption.127}%
 \defcounter {refsection}{0}\relax
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Torsion formula derivation.\relax }}{38}{figure.caption.128}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Torsion formula derivation.\relax }}{37}{figure.caption.128}%
 \defcounter {refsection}{0}\relax
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Deformation of a torque-loaded variable cross-sectioned member.\relax }}{40}{figure.caption.133}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Deformation of a torque-loaded variable cross-sectioned member.\relax }}{39}{figure.caption.133}%
 \defcounter {refsection}{0}\relax
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Deformation of a torque-loaded variable cross-sectioned member.\relax }}{41}{figure.caption.134}%
-\defcounter {refsection}{0}\relax
-\addvspace {10\p@ }
-\defcounter {refsection}{0}\relax
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Deformation in pure beam bending.\relax }}{48}{figure.caption.152}%
-\defcounter {refsection}{0}\relax
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Bending stress in uniform bending.\relax }}{49}{figure.caption.155}%
-\defcounter {refsection}{0}\relax
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Infinitessimal bending moment $dM$ generated from force $\sigma dA$ with a distance $y$ from the neutral axis.\relax }}{51}{figure.caption.158}%
-\defcounter {refsection}{0}\relax
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Dimensions for determining the neutral axis in a composite beam.\relax }}{54}{figure.caption.168}%
-\defcounter {refsection}{0}\relax
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Cross section with an off-centroid neutral axis.\relax }}{55}{figure.caption.173}%
-\defcounter {refsection}{0}\relax
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Bending stress distribution in composite beam.\relax }}{56}{figure.caption.176}%
-\defcounter {refsection}{0}\relax
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Diagonally-loaded beam.\relax }}{58}{figure.caption.178}%
-\defcounter {refsection}{0}\relax
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Area of consideration for built-up members depends on joints of interest.\relax }}{61}{figure.caption.186}%
-\defcounter {refsection}{0}\relax
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Shear flow magnitude and direction along the cross section of a channel section.\relax }}{62}{figure.caption.189}%
-\defcounter {refsection}{0}\relax
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Shear centers of a channel section when loaded along different directions.\relax }}{64}{figure.caption.190}%
-\defcounter {refsection}{0}\relax
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Curved beam geometry and dimensions.\relax }}{67}{figure.caption.191}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Deformation of a torque-loaded variable cross-sectioned member.\relax }}{40}{figure.caption.134}%
 \defcounter {refsection}{0}\relax
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Exercise \ref {exercise: beam-deflection-midpoint}\relax }}{83}{figure.caption.221}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Deformation in pure beam bending.\relax }}{47}{figure.caption.152}%
 \defcounter {refsection}{0}\relax
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Exercise \ref {exercise: beam-deflection-moving-force}\relax }}{84}{figure.caption.222}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Bending stress in uniform bending.\relax }}{48}{figure.caption.155}%
 \defcounter {refsection}{0}\relax
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Infinitessimal bending moment $dM$ generated from force $\sigma dA$ with a distance $y$ from the neutral axis.\relax }}{50}{figure.caption.158}%
 \defcounter {refsection}{0}\relax
-\contentsline {figure}{\numberline {6.1}{\ignorespaces A plane stress element.\relax }}{86}{figure.caption.226}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Dimensions for determining the neutral axis in a composite beam.\relax }}{53}{figure.caption.168}%
 \defcounter {refsection}{0}\relax
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Derivation of stress transformation equation by cutting element at an angle.\relax }}{87}{figure.caption.229}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Cross section with an off-centroid neutral axis.\relax }}{54}{figure.caption.173}%
 \defcounter {refsection}{0}\relax
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Mohr's circle and its representation of state of stress.\relax }}{89}{figure.caption.232}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Bending stress distribution in composite beam.\relax }}{55}{figure.caption.176}%
 \defcounter {refsection}{0}\relax
-\contentsline {figure}{\numberline {6.4}{\ignorespaces \Cref {example: plane stress}\relax }}{90}{figure.caption.237}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Diagonally-loaded beam.\relax }}{56}{figure.caption.178}%
 \defcounter {refsection}{0}\relax
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Mohr's circles of a plane stress element in each of the planes $x$-$y$, $x$-$z$, and $y$-$z$ when the stresses are positive.\relax }}{97}{figure.caption.252}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Area of consideration for built-up members depends on joints of interest.\relax }}{60}{figure.caption.186}%
 \defcounter {refsection}{0}\relax
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Mohr's circles of a plane stress element in each of the planes $x$-$y$, $x$-$z$, and $y$-$z$ when the stresses are of different signs.\relax }}{98}{figure.caption.253}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Shear flow magnitude and direction along the cross section of a channel section.\relax }}{61}{figure.caption.189}%
 \defcounter {refsection}{0}\relax
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Three-dimensional plane strain element.\relax }}{99}{figure.caption.254}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Shear centers of a channel section when loaded along different directions.\relax }}{63}{figure.caption.190}%
 \defcounter {refsection}{0}\relax
-\contentsline {figure}{\numberline {6.8}{\ignorespaces Dimensions of plane strain element before deformation.\relax }}{99}{figure.caption.257}%
-\defcounter {refsection}{0}\relax
-\contentsline {figure}{\numberline {6.9}{\ignorespaces Plane strain element under normal strain $\varepsilon _x$\relax }}{100}{figure.caption.258}%
-\defcounter {refsection}{0}\relax
-\contentsline {figure}{\numberline {6.10}{\ignorespaces Plane strain element under normal strain $\varepsilon _y$\relax }}{100}{figure.caption.259}%
-\defcounter {refsection}{0}\relax
-\contentsline {figure}{\numberline {6.11}{\ignorespaces Plane strain element under shear strain $\gamma _{xy}$\relax }}{101}{figure.caption.260}%
-\defcounter {refsection}{0}\relax
-\contentsline {figure}{\numberline {6.12}{\ignorespaces A Mohr's circle representing a state of plane strain.\relax }}{103}{figure.caption.267}%
-\defcounter {refsection}{0}\relax
-\contentsline {figure}{\numberline {6.13}{\ignorespaces A schematic representation of a linear strain gage. As the strain gage stretches, so does the conductor within, thus increasing the gage's electrical resistance.\relax }}{103}{figure.caption.270}%
-\defcounter {refsection}{0}\relax
-\contentsline {figure}{\numberline {6.14}{\ignorespaces Strain rosettes and their orientations.\relax }}{104}{figure.caption.271}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Curved beam geometry and dimensions.\relax }}{65}{figure.caption.191}%
 \defcounter {refsection}{0}\relax
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Force balance between the circumferential stress in vessel's wall and internal pressure.\relax }}{109}{figure.caption.280}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Exercise \ref {exercise: beam-deflection-midpoint}\relax }}{82}{figure.caption.221}%
 \defcounter {refsection}{0}\relax
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Force balance between longitudinal stress and internal pressure.\relax }}{110}{figure.caption.281}%
-\defcounter {refsection}{0}\relax
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Force balance between the circumferential stress in spherical vessel's wall and internal pressure.\relax }}{110}{figure.caption.284}%
-\defcounter {refsection}{0}\relax
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Exercise \ref {exercise: cantilever beam}\relax }}{113}{figure.caption.288}%
-\defcounter {refsection}{0}\relax
-\contentsline {figure}{\numberline {7.5}{\ignorespaces Exercise \ref {exercise: generator shaft}\relax }}{116}{figure.caption.289}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Exercise \ref {exercise: beam-deflection-moving-force}\relax }}{82}{figure.caption.222}%
 \defcounter {refsection}{0}\relax
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Force-deformation diagram for a linearly elastic bar.\relax }}{119}{figure.caption.294}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces A plane stress element.\relax }}{85}{figure.caption.226}%
+\defcounter {refsection}{0}\relax
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Derivation of stress transformation equation by cutting element at an angle.\relax }}{86}{figure.caption.229}%
+\defcounter {refsection}{0}\relax
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Mohr's circle and its representation of state of stress.\relax }}{87}{figure.caption.232}%
+\defcounter {refsection}{0}\relax
+\contentsline {figure}{\numberline {6.4}{\ignorespaces \Cref {example: plane stress}\relax }}{89}{figure.caption.237}%
+\defcounter {refsection}{0}\relax
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Mohr's circles of a plane stress element in each of the planes $x$-$y$, $x$-$z$, and $y$-$z$ when the stresses are positive.\relax }}{96}{figure.caption.252}%
+\defcounter {refsection}{0}\relax
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Mohr's circles of a plane stress element in each of the planes $x$-$y$, $x$-$z$, and $y$-$z$ when the stresses are of different signs.\relax }}{96}{figure.caption.253}%
+\defcounter {refsection}{0}\relax
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Three-dimensional plane strain element.\relax }}{97}{figure.caption.254}%
+\defcounter {refsection}{0}\relax
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Dimensions of plane strain element before deformation.\relax }}{98}{figure.caption.257}%
+\defcounter {refsection}{0}\relax
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Plane strain element under normal strain $\varepsilon _x$\relax }}{98}{figure.caption.258}%
+\defcounter {refsection}{0}\relax
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Plane strain element under normal strain $\varepsilon _y$\relax }}{99}{figure.caption.259}%
+\defcounter {refsection}{0}\relax
+\contentsline {figure}{\numberline {6.11}{\ignorespaces Plane strain element under shear strain $\gamma _{xy}$\relax }}{99}{figure.caption.260}%
+\defcounter {refsection}{0}\relax
+\contentsline {figure}{\numberline {6.12}{\ignorespaces A Mohr's circle representing a state of plane strain.\relax }}{101}{figure.caption.267}%
+\defcounter {refsection}{0}\relax
+\contentsline {figure}{\numberline {6.13}{\ignorespaces A schematic representation of a linear strain gage. As the strain gage stretches, so does the conductor within, thus increasing the gage's electrical resistance.\relax }}{102}{figure.caption.270}%
+\defcounter {refsection}{0}\relax
+\contentsline {figure}{\numberline {6.14}{\ignorespaces Strain rosettes and their orientations.\relax }}{102}{figure.caption.271}%
 \defcounter {refsection}{0}\relax
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax
-\contentsline {figure}{\numberline {9.1}{\ignorespaces 'Safe-zone' diagram for material under maximum shear stress criterion.\relax }}{131}{figure.caption.323}%
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Force balance between the circumferential stress in vessel's wall and internal pressure.\relax }}{108}{figure.caption.280}%
 \defcounter {refsection}{0}\relax
-\contentsline {figure}{\numberline {9.2}{\ignorespaces 'Safe-zone' diagram for material under maximum distortion energy criterion.\relax }}{133}{figure.caption.326}%
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Force balance between longitudinal stress and internal pressure.\relax }}{108}{figure.caption.281}%
 \defcounter {refsection}{0}\relax
-\contentsline {figure}{\numberline {9.3}{\ignorespaces `Safe-zone' diagram for material under ductile Coulomb-Mohr criterion.\relax }}{135}{figure.caption.330}%
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Force balance between the circumferential stress in spherical vessel's wall and internal pressure.\relax }}{109}{figure.caption.284}%
 \defcounter {refsection}{0}\relax
-\contentsline {figure}{\numberline {9.4}{\ignorespaces 'Safe-zone' diagram for material under maximum principal stress criterion.\relax }}{136}{figure.caption.333}%
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Exercise \ref {exercise: cantilever beam}\relax }}{111}{figure.caption.288}%
 \defcounter {refsection}{0}\relax
-\contentsline {figure}{\numberline {9.5}{\ignorespaces 'Safe-zone' diagram for material under modified Coulomb-Mohr criterion.\relax }}{137}{figure.caption.336}%
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Exercise \ref {exercise: generator shaft}\relax }}{112}{figure.caption.289}%
 \defcounter {refsection}{0}\relax
-\contentsline {figure}{\numberline {9.6}{\ignorespaces A typical endurance diagram showing stress amplitude $\sigma _a$ vs number of cycles to failure $N$.\relax }}{139}{figure.caption.340}%
+\addvspace {10\p@ }
 \defcounter {refsection}{0}\relax
-\contentsline {figure}{\numberline {9.7}{\ignorespaces Constant life lines for various nonzero mean stress relations with $N_s$ = 1\relax }}{140}{figure.caption.345}%
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Force-deformation diagram for a linearly elastic bar.\relax }}{116}{figure.caption.294}%
 \defcounter {refsection}{0}\relax
-\contentsline {figure}{\numberline {9.8}{\ignorespaces Train track buckling. (US Department of Transportation)\relax }}{146}{figure.caption.356}%
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax
+\contentsline {figure}{\numberline {9.1}{\ignorespaces 'Safe-zone' diagram for material under maximum shear stress criterion.\relax }}{128}{figure.caption.323}%
+\defcounter {refsection}{0}\relax
+\contentsline {figure}{\numberline {9.2}{\ignorespaces 'Safe-zone' diagram for material under maximum distortion energy criterion.\relax }}{129}{figure.caption.326}%
+\defcounter {refsection}{0}\relax
+\contentsline {figure}{\numberline {9.3}{\ignorespaces `Safe-zone' diagram for material under ductile Coulomb-Mohr criterion.\relax }}{131}{figure.caption.330}%
+\defcounter {refsection}{0}\relax
+\contentsline {figure}{\numberline {9.4}{\ignorespaces 'Safe-zone' diagram for material under maximum principal stress criterion.\relax }}{132}{figure.caption.333}%
+\defcounter {refsection}{0}\relax
+\contentsline {figure}{\numberline {9.5}{\ignorespaces 'Safe-zone' diagram for material under modified Coulomb-Mohr criterion.\relax }}{132}{figure.caption.336}%
+\defcounter {refsection}{0}\relax
+\contentsline {figure}{\numberline {9.6}{\ignorespaces A typical endurance diagram showing stress amplitude $\sigma _a$ vs number of cycles to failure $N$.\relax }}{134}{figure.caption.340}%
+\defcounter {refsection}{0}\relax
+\contentsline {figure}{\numberline {9.7}{\ignorespaces Constant life lines for various nonzero mean stress relations with $N_s$ = 1\relax }}{135}{figure.caption.345}%
+\defcounter {refsection}{0}\relax
+\contentsline {figure}{\numberline {9.8}{\ignorespaces Train track buckling. (US Department of Transportation)\relax }}{141}{figure.caption.356}%
 \defcounter {refsection}{0}\relax
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax

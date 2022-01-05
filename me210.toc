@@ -1,5 +1,5 @@
-\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax
 \@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax
 \defcounter {refsection}{0}\relax
 \contentsline {paragraph}{\nonumberline July 2011}{iii}{paragraph*.4}%
 \defcounter {refsection}{0}\relax
@@ -25,15 +25,15 @@
 \defcounter {refsection}{0}\relax
 \contentsline {section}{\numberline {1.1}General Concepts of Load}{1}{section.1.1}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsection}{\numberline {1.1}General Concepts of Load}{1}{section.1.1}
+\contentsline {mtocsection}{\numberline {1.1}General Concepts of Load}{1}{section.1.1}%
 \defcounter {refsection}{0}\relax
 \contentsline {section}{\numberline {1.2}Stress}{1}{section.1.2}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsection}{\numberline {1.2}Stress}{1}{section.1.2}
+\contentsline {mtocsection}{\numberline {1.2}Stress}{1}{section.1.2}%
 \defcounter {refsection}{0}\relax
 \contentsline {subsection}{\nonumberline Equilibrium Requirement}{2}{subsection*.25}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Equilibrium Requirement}{2}{subsection*.25}
+\contentsline {mtocsubsection}{\nonumberline Equilibrium Requirement}{2}{subsection*.25}%
 \defcounter {refsection}{0}\relax
 \contentsline {paragraph}{\nonumberline Normal Stress Components}{2}{paragraph*.28}%
 \defcounter {refsection}{0}\relax
@@ -41,7 +41,7 @@
 \defcounter {refsection}{0}\relax
 \contentsline {section}{\numberline {1.3}Strain}{3}{section.1.3}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsection}{\numberline {1.3}Strain}{3}{section.1.3}
+\contentsline {mtocsection}{\numberline {1.3}Strain}{3}{section.1.3}%
 \defcounter {refsection}{0}\relax
 \contentsline {paragraph}{\nonumberline Normal strain}{3}{paragraph*.33}%
 \defcounter {refsection}{0}\relax
@@ -51,35 +51,35 @@
 \defcounter {refsection}{0}\relax
 \contentsline {section}{\numberline {1.4}Mechanical Properties of Materials}{4}{section.1.4}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsection}{\numberline {1.4}Mechanical Properties of Materials}{4}{section.1.4}
+\contentsline {mtocsection}{\numberline {1.4}Mechanical Properties of Materials}{4}{section.1.4}%
 \defcounter {refsection}{0}\relax
 \contentsline {subsection}{\nonumberline Tension and Compression Test}{4}{subsection*.40}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Tension and Compression Test}{4}{subsection*.40}
+\contentsline {mtocsubsection}{\nonumberline Tension and Compression Test}{4}{subsection*.40}%
 \defcounter {refsection}{0}\relax
 \contentsline {subsection}{\nonumberline Stress-Strain Diagram}{5}{subsection*.42}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Stress-Strain Diagram}{5}{subsection*.42}
+\contentsline {mtocsubsection}{\nonumberline Stress-Strain Diagram}{5}{subsection*.42}%
 \defcounter {refsection}{0}\relax
 \contentsline {paragraph}{\nonumberline Elastic Behavior:}{5}{paragraph*.45}%
 \defcounter {refsection}{0}\relax
 \contentsline {paragraph}{\nonumberline Yielding:}{5}{paragraph*.47}%
 \defcounter {refsection}{0}\relax
-\contentsline {paragraph}{\nonumberline Strain Hardening:}{6}{paragraph*.49}%
+\contentsline {paragraph}{\nonumberline Strain Hardening:}{5}{paragraph*.49}%
 \defcounter {refsection}{0}\relax
 \contentsline {paragraph}{\nonumberline Necking:}{6}{paragraph*.51}%
 \defcounter {refsection}{0}\relax
 \contentsline {subsection}{\nonumberline Ductile and Brittle Materials}{6}{subsection*.53}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Ductile and Brittle Materials}{6}{subsection*.53}
+\contentsline {mtocsubsection}{\nonumberline Ductile and Brittle Materials}{6}{subsection*.53}%
 \defcounter {refsection}{0}\relax
 \contentsline {subsubsection}{\nonumberline Ductile Materials}{6}{subsubsection*.56}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsubsection}{\nonumberline Brittle Materials}{7}{subsubsection*.58}%
+\contentsline {subsubsection}{\nonumberline Brittle Materials}{6}{subsubsection*.58}%
 \defcounter {refsection}{0}\relax
 \contentsline {subsection}{\nonumberline Strain Energy}{7}{subsection*.60}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Strain Energy}{7}{subsection*.60}
+\contentsline {mtocsubsection}{\nonumberline Strain Energy}{7}{subsection*.60}%
 \defcounter {refsection}{0}\relax
 \contentsline {paragraph}{\nonumberline Modulus of Resilience}{7}{paragraph*.62}%
 \defcounter {refsection}{0}\relax
@@ -87,458 +87,458 @@
 \defcounter {refsection}{0}\relax
 \contentsline {subsection}{\nonumberline Hooke’s Law in One Dimension}{8}{subsection*.68}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Hooke’s Law in One Dimension}{8}{subsection*.68}
+\contentsline {mtocsubsection}{\nonumberline Hooke’s Law in One Dimension}{8}{subsection*.68}%
 \defcounter {refsection}{0}\relax
 \contentsline {subsection}{\nonumberline Poisson’s Ratio}{8}{subsection*.70}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Poisson’s Ratio}{8}{subsection*.70}
+\contentsline {mtocsubsection}{\nonumberline Poisson’s Ratio}{8}{subsection*.70}%
 \defcounter {refsection}{0}\relax
 \contentsline {subsection}{\nonumberline Shear stress-shear strain relationship}{10}{subsection*.74}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Shear stress-shear strain relationship}{10}{subsection*.74}
+\contentsline {mtocsubsection}{\nonumberline Shear stress-shear strain relationship}{10}{subsection*.74}%
 \defcounter {refsection}{0}\relax
 \contentsline {section}{\numberline {1.5}Thermal effect}{10}{section.1.5}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsection}{\numberline {1.5}Thermal effect}{10}{section.1.5}
+\contentsline {mtocsection}{\numberline {1.5}Thermal effect}{10}{section.1.5}%
 \defcounter {refsection}{0}\relax
 \contentsline {subsection}{\nonumberline Thermal Strains vs Mechanical Strains}{11}{subsection*.78}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Thermal Strains vs Mechanical Strains}{11}{subsection*.78}
+\contentsline {mtocsubsection}{\nonumberline Thermal Strains vs Mechanical Strains}{11}{subsection*.78}%
 \defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {1.6}Failure of Materials Due to Creep and Fatigue}{12}{section.1.6}%
+\contentsline {section}{\numberline {1.6}Failure of Materials Due to Creep and Fatigue}{11}{section.1.6}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsection}{\numberline {1.6}Failure of Materials Due to Creep and Fatigue}{12}{section.1.6}
+\contentsline {mtocsection}{\numberline {1.6}Failure of Materials Due to Creep and Fatigue}{11}{section.1.6}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Creep}{12}{subsection*.80}%
+\contentsline {subsection}{\nonumberline Creep}{11}{subsection*.80}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Creep}{12}{subsection*.80}
+\contentsline {mtocsubsection}{\nonumberline Creep}{11}{subsection*.80}%
 \defcounter {refsection}{0}\relax
 \contentsline {subsection}{\nonumberline Fatigue}{12}{subsection*.82}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Fatigue}{12}{subsection*.82}
+\contentsline {mtocsubsection}{\nonumberline Fatigue}{12}{subsection*.82}%
 \defcounter {refsection}{0}\relax
 \contentsline {chapter}{\numberline {2}Analysis of Axially Loaded Members}{15}{chapter.2}%
 \defcounter {refsection}{0}\relax
 \contentsline {section}{\numberline {2.1}Statically Determinate Systems}{15}{section.2.1}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsection}{\numberline {2.1}Statically Determinate Systems}{15}{section.2.1}
+\contentsline {mtocsection}{\numberline {2.1}Statically Determinate Systems}{15}{section.2.1}%
 \defcounter {refsection}{0}\relax
 \contentsline {subsection}{\nonumberline Changes in Length of Axially Loaded Members}{15}{subsection*.89}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Changes in Length of Axially Loaded Members}{15}{subsection*.89}
+\contentsline {mtocsubsection}{\nonumberline Changes in Length of Axially Loaded Members}{15}{subsection*.89}%
 \defcounter {refsection}{0}\relax
 \contentsline {subsection}{\nonumberline Change in Length of Nonuniform Members}{16}{subsection*.92}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Change in Length of Nonuniform Members}{16}{subsection*.92}
+\contentsline {mtocsubsection}{\nonumberline Change in Length of Nonuniform Members}{16}{subsection*.92}%
 \defcounter {refsection}{0}\relax
 \contentsline {section}{\numberline {2.2}Statically Indeterminate Systems}{19}{section.2.2}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsection}{\numberline {2.2}Statically Indeterminate Systems}{19}{section.2.2}
+\contentsline {mtocsection}{\numberline {2.2}Statically Indeterminate Systems}{19}{section.2.2}%
 \defcounter {refsection}{0}\relax
 \contentsline {section}{\numberline {2.3}Statically Indeterminate Systems with Thermal Effects}{22}{section.2.3}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsection}{\numberline {2.3}Statically Indeterminate Systems with Thermal Effects}{22}{section.2.3}
+\contentsline {mtocsection}{\numberline {2.3}Statically Indeterminate Systems with Thermal Effects}{22}{section.2.3}%
 \defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {2.4}Compound Bars}{25}{section.2.4}%
+\contentsline {section}{\numberline {2.4}Compound Bars}{24}{section.2.4}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsection}{\numberline {2.4}Compound Bars}{25}{section.2.4}
+\contentsline {mtocsection}{\numberline {2.4}Compound Bars}{24}{section.2.4}%
 \defcounter {refsection}{0}\relax
 \contentsline {subsection}{\nonumberline Internal Force}{25}{subsection*.100}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Internal Force}{25}{subsection*.100}
+\contentsline {mtocsubsection}{\nonumberline Internal Force}{25}{subsection*.100}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Compound Modulus}{26}{subsection*.102}%
+\contentsline {subsection}{\nonumberline Compound Modulus}{25}{subsection*.102}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Compound Modulus}{26}{subsection*.102}
+\contentsline {mtocsubsection}{\nonumberline Compound Modulus}{25}{subsection*.102}%
 \defcounter {refsection}{0}\relax
 \contentsline {section}{\numberline {2.5}** Inelastic Deformation **}{26}{section.2.5}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsection}{\numberline {2.5}** Inelastic Deformation **}{26}{section.2.5}
+\contentsline {mtocsection}{\numberline {2.5}** Inelastic Deformation **}{26}{section.2.5}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Elastic perfectly plastic materials}{27}{subsection*.104}%
+\contentsline {subsection}{\nonumberline Elastic perfectly plastic materials}{26}{subsection*.104}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Elastic perfectly plastic materials}{27}{subsection*.104}
+\contentsline {mtocsubsection}{\nonumberline Elastic perfectly plastic materials}{26}{subsection*.104}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Residual Stress}{27}{subsection*.107}%
+\contentsline {subsection}{\nonumberline Residual Stress}{26}{subsection*.107}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Residual Stress}{27}{subsection*.107}
+\contentsline {mtocsubsection}{\nonumberline Residual Stress}{26}{subsection*.107}%
 \defcounter {refsection}{0}\relax
 \contentsline {section}{\numberline {2.6}Dynamic Loading and Material Response}{29}{section.2.6}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsection}{\numberline {2.6}Dynamic Loading and Material Response}{29}{section.2.6}
+\contentsline {mtocsection}{\numberline {2.6}Dynamic Loading and Material Response}{29}{section.2.6}%
 \defcounter {refsection}{0}\relax
 \contentsline {subsection}{\nonumberline Impact loading}{29}{subsection*.109}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Impact loading}{29}{subsection*.109}
+\contentsline {mtocsubsection}{\nonumberline Impact loading}{29}{subsection*.109}%
 \defcounter {refsection}{0}\relax
-\contentsline {chapter}{\numberline {3}Analysis of Members under Torsion}{36}{chapter.3}%
+\contentsline {chapter}{\numberline {3}Analysis of Members under Torsion}{35}{chapter.3}%
 \defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {3.1}Simple torsion}{36}{section.3.1}%
+\contentsline {section}{\numberline {3.1}Simple torsion}{35}{section.3.1}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsection}{\numberline {3.1}Simple torsion}{36}{section.3.1}
+\contentsline {mtocsection}{\numberline {3.1}Simple torsion}{35}{section.3.1}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Torsion of circular elastic bars}{36}{subsection*.125}%
+\contentsline {subsection}{\nonumberline Torsion of circular elastic bars}{35}{subsection*.125}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Torsion of circular elastic bars}{36}{subsection*.125}
+\contentsline {mtocsubsection}{\nonumberline Torsion of circular elastic bars}{35}{subsection*.125}%
 \defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {3.2}Nonuniform Torsion}{40}{section.3.2}%
+\contentsline {section}{\numberline {3.2}Nonuniform Torsion}{39}{section.3.2}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsection}{\numberline {3.2}Nonuniform Torsion}{40}{section.3.2}
+\contentsline {mtocsection}{\numberline {3.2}Nonuniform Torsion}{39}{section.3.2}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Nonuniform Torsion}{40}{subsection*.131}%
+\contentsline {subsection}{\nonumberline Nonuniform Torsion}{39}{subsection*.131}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Nonuniform Torsion}{40}{subsection*.131}
+\contentsline {mtocsubsection}{\nonumberline Nonuniform Torsion}{39}{subsection*.131}%
 \defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {3.3}Statically Indeterminate Members under Torsion}{41}{section.3.3}%
+\contentsline {section}{\numberline {3.3}Statically Indeterminate Members under Torsion}{40}{section.3.3}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsection}{\numberline {3.3}Statically Indeterminate Members under Torsion}{41}{section.3.3}
+\contentsline {mtocsection}{\numberline {3.3}Statically Indeterminate Members under Torsion}{40}{section.3.3}%
 \defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {3.4}Power Transmission}{41}{section.3.4}%
+\contentsline {section}{\numberline {3.4}Power Transmission}{40}{section.3.4}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsection}{\numberline {3.4}Power Transmission}{41}{section.3.4}
+\contentsline {mtocsection}{\numberline {3.4}Power Transmission}{40}{section.3.4}%
 \defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {3.5}Torsion of Thin-walled Tubular Members}{43}{section.3.5}%
+\contentsline {section}{\numberline {3.5}Torsion of Thin-walled Tubular Members}{41}{section.3.5}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsection}{\numberline {3.5}Torsion of Thin-walled Tubular Members}{43}{section.3.5}
+\contentsline {mtocsection}{\numberline {3.5}Torsion of Thin-walled Tubular Members}{41}{section.3.5}%
 \defcounter {refsection}{0}\relax
-\contentsline {paragraph}{\nonumberline Shear flow.}{43}{paragraph*.137}%
+\contentsline {paragraph}{\nonumberline Shear flow.}{42}{paragraph*.137}%
 \defcounter {refsection}{0}\relax
-\contentsline {paragraph}{\nonumberline Shear stress.}{43}{paragraph*.139}%
+\contentsline {paragraph}{\nonumberline Shear stress.}{42}{paragraph*.139}%
 \defcounter {refsection}{0}\relax
-\contentsline {paragraph}{\nonumberline Angle of twist.}{44}{paragraph*.141}%
+\contentsline {paragraph}{\nonumberline Angle of twist.}{43}{paragraph*.141}%
 \defcounter {refsection}{0}\relax
-\contentsline {chapter}{\numberline {4}Analysis of Beam Bending}{48}{chapter.4}%
+\contentsline {chapter}{\numberline {4}Analysis of Beam Bending}{47}{chapter.4}%
 \defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {4.1}Symmetric Beam Bending}{48}{section.4.1}%
+\contentsline {section}{\numberline {4.1}Symmetric Beam Bending}{47}{section.4.1}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsection}{\numberline {4.1}Symmetric Beam Bending}{48}{section.4.1}
+\contentsline {mtocsection}{\numberline {4.1}Symmetric Beam Bending}{47}{section.4.1}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Longitudinal strains in beams}{48}{subsection*.151}%
+\contentsline {subsection}{\nonumberline Longitudinal strains in beams}{47}{subsection*.151}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Longitudinal strains in beams}{48}{subsection*.151}
+\contentsline {mtocsubsection}{\nonumberline Longitudinal strains in beams}{47}{subsection*.151}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Normal stresses in beams}{49}{subsection*.154}%
+\contentsline {subsection}{\nonumberline Normal stresses in beams}{48}{subsection*.154}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Normal stresses in beams}{49}{subsection*.154}
+\contentsline {mtocsubsection}{\nonumberline Normal stresses in beams}{48}{subsection*.154}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Moment-curvature formula}{50}{subsection*.157}%
+\contentsline {subsection}{\nonumberline Moment-curvature formula}{49}{subsection*.157}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Moment-curvature formula}{50}{subsection*.157}
+\contentsline {mtocsubsection}{\nonumberline Moment-curvature formula}{49}{subsection*.157}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Elastic Flexure Formula}{51}{subsection*.160}%
+\contentsline {subsection}{\nonumberline Elastic Flexure Formula}{50}{subsection*.160}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Elastic Flexure Formula}{51}{subsection*.160}
+\contentsline {mtocsubsection}{\nonumberline Elastic Flexure Formula}{50}{subsection*.160}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Maximum stress at a cross section}{51}{subsection*.162}%
+\contentsline {subsection}{\nonumberline Maximum stress at a cross section}{50}{subsection*.162}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Maximum stress at a cross section}{51}{subsection*.162}
+\contentsline {mtocsubsection}{\nonumberline Maximum stress at a cross section}{50}{subsection*.162}%
 \defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {4.2}Beams of Composite Cross Sections}{53}{section.4.2}%
+\contentsline {section}{\numberline {4.2}Beams of Composite Cross Sections}{52}{section.4.2}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsection}{\numberline {4.2}Beams of Composite Cross Sections}{53}{section.4.2}
+\contentsline {mtocsection}{\numberline {4.2}Beams of Composite Cross Sections}{52}{section.4.2}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Strains and stresses}{53}{subsection*.165}%
+\contentsline {subsection}{\nonumberline Strains and stresses}{52}{subsection*.165}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Strains and stresses}{53}{subsection*.165}
+\contentsline {mtocsubsection}{\nonumberline Strains and stresses}{52}{subsection*.165}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Neutral axis}{53}{subsection*.167}%
+\contentsline {subsection}{\nonumberline Neutral axis}{52}{subsection*.167}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Neutral axis}{53}{subsection*.167}
+\contentsline {mtocsubsection}{\nonumberline Neutral axis}{52}{subsection*.167}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Moment-curvature relationship}{54}{subsection*.170}%
+\contentsline {subsection}{\nonumberline Moment-curvature relationship}{53}{subsection*.170}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Moment-curvature relationship}{54}{subsection*.170}
+\contentsline {mtocsubsection}{\nonumberline Moment-curvature relationship}{53}{subsection*.170}%
 \defcounter {refsection}{0}\relax
-\contentsline {paragraph}{\nonumberline Parallel Axis Theorem}{55}{paragraph*.172}%
+\contentsline {paragraph}{\nonumberline Parallel Axis Theorem}{54}{paragraph*.172}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Normal stresses}{55}{subsection*.175}%
+\contentsline {subsection}{\nonumberline Normal stresses}{54}{subsection*.175}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Normal stresses}{55}{subsection*.175}
+\contentsline {mtocsubsection}{\nonumberline Normal stresses}{54}{subsection*.175}%
 \defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {4.3}Doubly Symmetric Beams with Inclined Loads}{57}{section.4.3}%
+\contentsline {section}{\numberline {4.3}Doubly Symmetric Beams with Inclined Loads}{56}{section.4.3}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsection}{\numberline {4.3}Doubly Symmetric Beams with Inclined Loads}{57}{section.4.3}
+\contentsline {mtocsection}{\numberline {4.3}Doubly Symmetric Beams with Inclined Loads}{56}{section.4.3}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Bending stresses}{57}{subsection*.180}%
+\contentsline {subsection}{\nonumberline Bending stresses}{56}{subsection*.180}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Bending stresses}{57}{subsection*.180}
+\contentsline {mtocsubsection}{\nonumberline Bending stresses}{56}{subsection*.180}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Neutral axis}{58}{subsection*.182}%
+\contentsline {subsection}{\nonumberline Neutral axis}{57}{subsection*.182}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Neutral axis}{58}{subsection*.182}
+\contentsline {mtocsubsection}{\nonumberline Neutral axis}{57}{subsection*.182}%
 \defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {4.4}Shear stresses in beams}{58}{section.4.4}%
+\contentsline {section}{\numberline {4.4}Shear stresses in beams}{57}{section.4.4}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsection}{\numberline {4.4}Shear stresses in beams}{58}{section.4.4}
+\contentsline {mtocsection}{\numberline {4.4}Shear stresses in beams}{57}{section.4.4}%
 \defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {4.5}** Shear Flow **}{61}{section.4.5}%
+\contentsline {section}{\numberline {4.5}** Shear Flow **}{59}{section.4.5}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsection}{\numberline {4.5}** Shear Flow **}{61}{section.4.5}
+\contentsline {mtocsection}{\numberline {4.5}** Shear Flow **}{59}{section.4.5}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Shear flow in Built-Up Members}{61}{subsection*.185}%
+\contentsline {subsection}{\nonumberline Shear flow in Built-Up Members}{60}{subsection*.185}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Shear flow in Built-Up Members}{61}{subsection*.185}
+\contentsline {mtocsubsection}{\nonumberline Shear flow in Built-Up Members}{60}{subsection*.185}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Shear flow in thin-walled members}{62}{subsection*.188}%
+\contentsline {subsection}{\nonumberline Shear flow in thin-walled members}{60}{subsection*.188}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Shear flow in thin-walled members}{62}{subsection*.188}
+\contentsline {mtocsubsection}{\nonumberline Shear flow in thin-walled members}{60}{subsection*.188}%
 \defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {4.6}** Shear Center **}{64}{section.4.6}%
+\contentsline {section}{\numberline {4.6}** Shear Center **}{62}{section.4.6}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsection}{\numberline {4.6}** Shear Center **}{64}{section.4.6}
+\contentsline {mtocsection}{\numberline {4.6}** Shear Center **}{62}{section.4.6}%
 \defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {4.7}** Bending in Curved Beams **}{66}{section.4.7}%
+\contentsline {section}{\numberline {4.7}** Bending in Curved Beams **}{64}{section.4.7}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsection}{\numberline {4.7}** Bending in Curved Beams **}{66}{section.4.7}
+\contentsline {mtocsection}{\numberline {4.7}** Bending in Curved Beams **}{64}{section.4.7}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Strains and stresses}{67}{subsection*.193}%
+\contentsline {subsection}{\nonumberline Strains and stresses}{65}{subsection*.193}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Strains and stresses}{67}{subsection*.193}
+\contentsline {mtocsubsection}{\nonumberline Strains and stresses}{65}{subsection*.193}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Neutral axis}{68}{subsection*.195}%
+\contentsline {subsection}{\nonumberline Neutral axis}{66}{subsection*.195}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Neutral axis}{68}{subsection*.195}
+\contentsline {mtocsubsection}{\nonumberline Neutral axis}{66}{subsection*.195}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Moment-stress distribution relationship}{69}{subsection*.198}%
+\contentsline {subsection}{\nonumberline Moment-stress distribution relationship}{67}{subsection*.198}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Moment-stress distribution relationship}{69}{subsection*.198}
+\contentsline {mtocsubsection}{\nonumberline Moment-stress distribution relationship}{67}{subsection*.198}%
 \defcounter {refsection}{0}\relax
-\contentsline {chapter}{\numberline {5}Analysis of Beam Deflection}{73}{chapter.5}%
+\contentsline {chapter}{\numberline {5}Analysis of Beam Deflection}{72}{chapter.5}%
 \defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {5.1}Direct Integration Approach}{73}{section.5.1}%
+\contentsline {section}{\numberline {5.1}Direct Integration Approach}{72}{section.5.1}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsection}{\numberline {5.1}Direct Integration Approach}{73}{section.5.1}
+\contentsline {mtocsection}{\numberline {5.1}Direct Integration Approach}{72}{section.5.1}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Deflections by integration of the shear force and load equations}{77}{subsection*.208}%
+\contentsline {subsection}{\nonumberline Deflections by integration of the shear force and load equations}{75}{subsection*.208}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Deflections by integration of the shear force and load equations}{77}{subsection*.208}
+\contentsline {mtocsubsection}{\nonumberline Deflections by integration of the shear force and load equations}{75}{subsection*.208}%
 \defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {5.2}Energy Approach}{77}{section.5.2}%
+\contentsline {section}{\numberline {5.2}Energy Approach}{76}{section.5.2}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsection}{\numberline {5.2}Energy Approach}{77}{section.5.2}
+\contentsline {mtocsection}{\numberline {5.2}Energy Approach}{76}{section.5.2}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Strain Energy of Bending}{77}{subsection*.210}%
+\contentsline {subsection}{\nonumberline Strain Energy of Bending}{76}{subsection*.210}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Strain Energy of Bending}{77}{subsection*.210}
+\contentsline {mtocsubsection}{\nonumberline Strain Energy of Bending}{76}{subsection*.210}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Castigliano’s Theorem}{78}{subsection*.212}%
+\contentsline {subsection}{\nonumberline Castigliano’s Theorem}{77}{subsection*.212}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Castigliano’s Theorem}{78}{subsection*.212}
+\contentsline {mtocsubsection}{\nonumberline Castigliano’s Theorem}{77}{subsection*.212}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline The use of a fictitious load}{80}{subsection*.214}%
+\contentsline {subsection}{\nonumberline The use of a fictitious load}{78}{subsection*.214}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline The use of a fictitious load}{80}{subsection*.214}
+\contentsline {mtocsubsection}{\nonumberline The use of a fictitious load}{78}{subsection*.214}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Differentiation under the integral sign}{82}{subsection*.218}%
+\contentsline {subsection}{\nonumberline Differentiation under the integral sign}{80}{subsection*.218}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Differentiation under the integral sign}{82}{subsection*.218}
+\contentsline {mtocsubsection}{\nonumberline Differentiation under the integral sign}{80}{subsection*.218}%
 \defcounter {refsection}{0}\relax
-\contentsline {chapter}{\numberline {6}Analysis of Multiaxial Stress}{86}{chapter.6}%
+\contentsline {chapter}{\numberline {6}Analysis of Multiaxial Stress}{85}{chapter.6}%
 \defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {6.1}Plane Stress}{86}{section.6.1}%
+\contentsline {section}{\numberline {6.1}Plane Stress}{85}{section.6.1}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsection}{\numberline {6.1}Plane Stress}{86}{section.6.1}
+\contentsline {mtocsection}{\numberline {6.1}Plane Stress}{85}{section.6.1}%
 \defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {6.2}Stress Transformation for Plane Stress}{86}{section.6.2}%
+\contentsline {section}{\numberline {6.2}Stress Transformation for Plane Stress}{85}{section.6.2}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsection}{\numberline {6.2}Stress Transformation for Plane Stress}{86}{section.6.2}
+\contentsline {mtocsection}{\numberline {6.2}Stress Transformation for Plane Stress}{85}{section.6.2}%
 \defcounter {refsection}{0}\relax
-\contentsline {paragraph}{\nonumberline Sign Convention:}{86}{paragraph*.228}%
+\contentsline {paragraph}{\nonumberline Sign Convention:}{85}{paragraph*.228}%
 \defcounter {refsection}{0}\relax
-\contentsline {paragraph}{\nonumberline Normal and Shear Stress Components:}{87}{paragraph*.231}%
+\contentsline {paragraph}{\nonumberline Normal and Shear Stress Components:}{85}{paragraph*.231}%
 \defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {6.3}Mohr’s Circle for Stress Transformation}{87}{section.6.3}%
+\contentsline {section}{\numberline {6.3}Mohr’s Circle for Stress Transformation}{86}{section.6.3}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsection}{\numberline {6.3}Mohr’s Circle for Stress Transformation}{87}{section.6.3}
+\contentsline {mtocsection}{\numberline {6.3}Mohr’s Circle for Stress Transformation}{86}{section.6.3}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Principal Stresses for Plane Stress}{89}{subsection*.234}%
+\contentsline {subsection}{\nonumberline Principal Stresses for Plane Stress}{88}{subsection*.234}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Principal Stresses for Plane Stress}{89}{subsection*.234}
+\contentsline {mtocsubsection}{\nonumberline Principal Stresses for Plane Stress}{88}{subsection*.234}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Maximum In-Plane Shear Stresses}{89}{subsection*.236}%
+\contentsline {subsection}{\nonumberline Maximum In-Plane Shear Stresses}{88}{subsection*.236}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Maximum In-Plane Shear Stresses}{89}{subsection*.236}
+\contentsline {mtocsubsection}{\nonumberline Maximum In-Plane Shear Stresses}{88}{subsection*.236}%
 \defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {6.4}Hooke’s Law for Plane Stress}{92}{section.6.4}%
+\contentsline {section}{\numberline {6.4}Hooke’s Law for Plane Stress}{90}{section.6.4}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsection}{\numberline {6.4}Hooke’s Law for Plane Stress}{92}{section.6.4}
+\contentsline {mtocsection}{\numberline {6.4}Hooke’s Law for Plane Stress}{90}{section.6.4}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Special cases of Hooke’s law}{93}{subsection*.241}%
+\contentsline {subsection}{\nonumberline Special cases of Hooke’s law}{91}{subsection*.241}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Special cases of Hooke’s law}{93}{subsection*.241}
+\contentsline {mtocsubsection}{\nonumberline Special cases of Hooke’s law}{91}{subsection*.241}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Unit volume change}{93}{subsection*.243}%
+\contentsline {subsection}{\nonumberline Unit volume change}{92}{subsection*.243}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Unit volume change}{93}{subsection*.243}
+\contentsline {mtocsubsection}{\nonumberline Unit volume change}{92}{subsection*.243}%
 \defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {6.5}Triaxial Stress}{94}{section.6.5}%
+\contentsline {section}{\numberline {6.5}Triaxial Stress}{93}{section.6.5}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsection}{\numberline {6.5}Triaxial Stress}{94}{section.6.5}
+\contentsline {mtocsection}{\numberline {6.5}Triaxial Stress}{93}{section.6.5}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Hooke’s law for triaxial stress}{94}{subsection*.245}%
+\contentsline {subsection}{\nonumberline Hooke’s law for triaxial stress}{93}{subsection*.245}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Hooke’s law for triaxial stress}{94}{subsection*.245}
+\contentsline {mtocsubsection}{\nonumberline Hooke’s law for triaxial stress}{93}{subsection*.245}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Unit Volume Change}{95}{subsection*.247}%
+\contentsline {subsection}{\nonumberline Unit Volume Change}{94}{subsection*.247}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Unit Volume Change}{95}{subsection*.247}
+\contentsline {mtocsubsection}{\nonumberline Unit Volume Change}{94}{subsection*.247}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Spherical stress}{95}{subsection*.249}%
+\contentsline {subsection}{\nonumberline Spherical stress}{94}{subsection*.249}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Spherical stress}{95}{subsection*.249}
+\contentsline {mtocsubsection}{\nonumberline Spherical stress}{94}{subsection*.249}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Absolute Maximum Shear Stress}{96}{subsection*.251}%
+\contentsline {subsection}{\nonumberline Absolute Maximum Shear Stress}{95}{subsection*.251}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Absolute Maximum Shear Stress}{96}{subsection*.251}
+\contentsline {mtocsubsection}{\nonumberline Absolute Maximum Shear Stress}{95}{subsection*.251}%
 \defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {6.6}** Plane Strain **}{98}{section.6.6}%
+\contentsline {section}{\numberline {6.6}** Plane Strain **}{97}{section.6.6}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsection}{\numberline {6.6}** Plane Strain **}{98}{section.6.6}
+\contentsline {mtocsection}{\numberline {6.6}** Plane Strain **}{97}{section.6.6}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Plane-Strain Transformation}{98}{subsection*.256}%
+\contentsline {subsection}{\nonumberline Plane-Strain Transformation}{97}{subsection*.256}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Plane-Strain Transformation}{98}{subsection*.256}
+\contentsline {mtocsubsection}{\nonumberline Plane-Strain Transformation}{97}{subsection*.256}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Principal Strains}{101}{subsection*.262}%
+\contentsline {subsection}{\nonumberline Principal Strains}{100}{subsection*.262}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Principal Strains}{101}{subsection*.262}
+\contentsline {mtocsubsection}{\nonumberline Principal Strains}{100}{subsection*.262}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Maximum In-Plane Shear Strain}{102}{subsection*.264}%
+\contentsline {subsection}{\nonumberline Maximum In-Plane Shear Strain}{100}{subsection*.264}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Maximum In-Plane Shear Strain}{102}{subsection*.264}
+\contentsline {mtocsubsection}{\nonumberline Maximum In-Plane Shear Strain}{100}{subsection*.264}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Mohr's Circle for Plane Strain}{102}{subsection*.266}%
+\contentsline {subsection}{\nonumberline Mohr's Circle for Plane Strain}{100}{subsection*.266}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Mohr's Circle for Plane Strain}{102}{subsection*.266}
+\contentsline {mtocsubsection}{\nonumberline Mohr's Circle for Plane Strain}{100}{subsection*.266}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Absolute Maximum Shear Strain}{102}{subsection*.269}%
+\contentsline {subsection}{\nonumberline Absolute Maximum Shear Strain}{101}{subsection*.269}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Absolute Maximum Shear Strain}{102}{subsection*.269}
+\contentsline {mtocsubsection}{\nonumberline Absolute Maximum Shear Strain}{101}{subsection*.269}%
 \defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {6.7}** Strain Rosette **}{103}{section.6.7}%
+\contentsline {section}{\numberline {6.7}** Strain Rosette **}{102}{section.6.7}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsection}{\numberline {6.7}** Strain Rosette **}{103}{section.6.7}
+\contentsline {mtocsection}{\numberline {6.7}** Strain Rosette **}{102}{section.6.7}%
 \defcounter {refsection}{0}\relax
-\contentsline {chapter}{\numberline {7}Analysis of Members under Combined Loadings}{109}{chapter.7}%
+\contentsline {chapter}{\numberline {7}Analysis of Members under Combined Loadings}{108}{chapter.7}%
 \defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {7.1}Thin-Walled Pressure Vessels}{109}{section.7.1}%
+\contentsline {section}{\numberline {7.1}Thin-Walled Pressure Vessels}{108}{section.7.1}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsection}{\numberline {7.1}Thin-Walled Pressure Vessels}{109}{section.7.1}
+\contentsline {mtocsection}{\numberline {7.1}Thin-Walled Pressure Vessels}{108}{section.7.1}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Cylindrical vessels}{109}{subsection*.279}%
+\contentsline {subsection}{\nonumberline Cylindrical vessels}{108}{subsection*.279}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Cylindrical vessels}{109}{subsection*.279}
+\contentsline {mtocsubsection}{\nonumberline Cylindrical vessels}{108}{subsection*.279}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Spherical Vessels}{110}{subsection*.283}%
+\contentsline {subsection}{\nonumberline Spherical Vessels}{109}{subsection*.283}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Spherical Vessels}{110}{subsection*.283}
+\contentsline {mtocsubsection}{\nonumberline Spherical Vessels}{109}{subsection*.283}%
 \defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {7.2}State of Stress Caused by Combined Loadings}{111}{section.7.2}%
+\contentsline {section}{\numberline {7.2}State of Stress Caused by Combined Loadings}{109}{section.7.2}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsection}{\numberline {7.2}State of Stress Caused by Combined Loadings}{111}{section.7.2}
+\contentsline {mtocsection}{\numberline {7.2}State of Stress Caused by Combined Loadings}{109}{section.7.2}%
 \defcounter {refsection}{0}\relax
-\contentsline {chapter}{\numberline {8}Energy Method}{118}{chapter.8}%
+\contentsline {chapter}{\numberline {8}Energy Method}{115}{chapter.8}%
 \defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {8.1}** Mechanical Work **}{118}{section.8.1}%
+\contentsline {section}{\numberline {8.1}** Mechanical Work **}{115}{section.8.1}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsection}{\numberline {8.1}** Mechanical Work **}{118}{section.8.1}
+\contentsline {mtocsection}{\numberline {8.1}** Mechanical Work **}{115}{section.8.1}%
 \defcounter {refsection}{0}\relax
-\contentsline {paragraph}{\nonumberline Work of a force.}{118}{paragraph*.292}%
+\contentsline {paragraph}{\nonumberline Work of a force.}{115}{paragraph*.292}%
 \defcounter {refsection}{0}\relax
-\contentsline {paragraph}{\nonumberline Work of a Moment.}{119}{paragraph*.296}%
+\contentsline {paragraph}{\nonumberline Work of a Moment.}{116}{paragraph*.296}%
 \defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {8.2}Strain Energy}{120}{section.8.2}%
+\contentsline {section}{\numberline {8.2}Strain Energy}{117}{section.8.2}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsection}{\numberline {8.2}Strain Energy}{120}{section.8.2}
+\contentsline {mtocsection}{\numberline {8.2}Strain Energy}{117}{section.8.2}%
 \defcounter {refsection}{0}\relax
-\contentsline {subparagraph}{\nonumberline Normal Stress.}{120}{subparagraph*.299}%
+\contentsline {subparagraph}{\nonumberline Normal Stress.}{117}{subparagraph*.299}%
 \defcounter {refsection}{0}\relax
-\contentsline {paragraph}{\nonumberline Shear Stress.}{121}{paragraph*.301}%
+\contentsline {paragraph}{\nonumberline Shear Stress.}{117}{paragraph*.301}%
 \defcounter {refsection}{0}\relax
-\contentsline {paragraph}{\nonumberline Multiaxial Stress.}{121}{paragraph*.303}%
+\contentsline {paragraph}{\nonumberline Multiaxial Stress.}{118}{paragraph*.303}%
 \defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {8.3}Strain Energy for Different Types of Loading}{122}{section.8.3}%
+\contentsline {section}{\numberline {8.3}Strain Energy for Different Types of Loading}{118}{section.8.3}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsection}{\numberline {8.3}Strain Energy for Different Types of Loading}{122}{section.8.3}
+\contentsline {mtocsection}{\numberline {8.3}Strain Energy for Different Types of Loading}{118}{section.8.3}%
 \defcounter {refsection}{0}\relax
-\contentsline {paragraph}{\nonumberline Axial Load.}{122}{paragraph*.305}%
+\contentsline {paragraph}{\nonumberline Axial Load.}{118}{paragraph*.305}%
 \defcounter {refsection}{0}\relax
-\contentsline {paragraph}{\nonumberline Bending Moment.}{122}{paragraph*.307}%
+\contentsline {paragraph}{\nonumberline Bending Moment.}{119}{paragraph*.307}%
 \defcounter {refsection}{0}\relax
-\contentsline {paragraph}{\nonumberline Transverse Shear.}{123}{paragraph*.309}%
+\contentsline {paragraph}{\nonumberline Transverse Shear.}{119}{paragraph*.309}%
 \defcounter {refsection}{0}\relax
-\contentsline {paragraph}{\nonumberline Torsional Moment.}{123}{paragraph*.311}%
+\contentsline {paragraph}{\nonumberline Torsional Moment.}{120}{paragraph*.311}%
 \defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {8.4}** Principle of Virtual Work **}{123}{section.8.4}%
+\contentsline {section}{\numberline {8.4}** Principle of Virtual Work **}{120}{section.8.4}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsection}{\numberline {8.4}** Principle of Virtual Work **}{123}{section.8.4}
+\contentsline {mtocsection}{\numberline {8.4}** Principle of Virtual Work **}{120}{section.8.4}%
 \defcounter {refsection}{0}\relax
-\contentsline {paragraph}{\nonumberline Internal Virtual Work.}{124}{paragraph*.313}%
+\contentsline {paragraph}{\nonumberline Internal Virtual Work.}{121}{paragraph*.313}%
 \defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {8.5}** Application of Energy Methods **}{125}{section.8.5}%
+\contentsline {section}{\numberline {8.5}** Application of Energy Methods **}{121}{section.8.5}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsection}{\numberline {8.5}** Application of Energy Methods **}{125}{section.8.5}
+\contentsline {mtocsection}{\numberline {8.5}** Application of Energy Methods **}{121}{section.8.5}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Trusses}{125}{subsection*.316}%
+\contentsline {subsection}{\nonumberline Trusses}{121}{subsection*.316}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Trusses}{125}{subsection*.316}
+\contentsline {mtocsubsection}{\nonumberline Trusses}{121}{subsection*.316}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Beams}{127}{subsection*.318}%
+\contentsline {subsection}{\nonumberline Beams}{124}{subsection*.318}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Beams}{127}{subsection*.318}
+\contentsline {mtocsubsection}{\nonumberline Beams}{124}{subsection*.318}%
 \defcounter {refsection}{0}\relax
-\contentsline {chapter}{\numberline {9}Introduction to Theories of Failure}{130}{chapter.9}%
+\contentsline {chapter}{\numberline {9}Introduction to Theories of Failure}{127}{chapter.9}%
 \defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {9.1}Yield and Fracture}{130}{section.9.1}%
+\contentsline {section}{\numberline {9.1}Yield and Fracture}{127}{section.9.1}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsection}{\numberline {9.1}Yield and Fracture}{130}{section.9.1}
+\contentsline {mtocsection}{\numberline {9.1}Yield and Fracture}{127}{section.9.1}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Maximum shear stress theory (Tresca criteria)}{130}{subsection*.322}%
+\contentsline {subsection}{\nonumberline Maximum shear stress theory (Tresca criteria)}{127}{subsection*.322}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Maximum shear stress theory (Tresca criteria)}{130}{subsection*.322}
+\contentsline {mtocsubsection}{\nonumberline Maximum shear stress theory (Tresca criteria)}{127}{subsection*.322}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Maximum distortion energy theory (Von Mises criteria)}{132}{subsection*.325}%
+\contentsline {subsection}{\nonumberline Maximum distortion energy theory (Von Mises criteria)}{128}{subsection*.325}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Maximum distortion energy theory (Von Mises criteria)}{132}{subsection*.325}
+\contentsline {mtocsubsection}{\nonumberline Maximum distortion energy theory (Von Mises criteria)}{128}{subsection*.325}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Ductile Coulomb-Mohr theory}{134}{subsection*.329}%
+\contentsline {subsection}{\nonumberline Ductile Coulomb-Mohr theory}{130}{subsection*.329}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Ductile Coulomb-Mohr theory}{134}{subsection*.329}
+\contentsline {mtocsubsection}{\nonumberline Ductile Coulomb-Mohr theory}{130}{subsection*.329}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Maximum principal stress theory}{136}{subsection*.332}%
+\contentsline {subsection}{\nonumberline Maximum principal stress theory}{131}{subsection*.332}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Maximum principal stress theory}{136}{subsection*.332}
+\contentsline {mtocsubsection}{\nonumberline Maximum principal stress theory}{131}{subsection*.332}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Modified Coulomb-Mohr theory}{137}{subsection*.335}%
+\contentsline {subsection}{\nonumberline Modified Coulomb-Mohr theory}{132}{subsection*.335}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Modified Coulomb-Mohr theory}{137}{subsection*.335}
+\contentsline {mtocsubsection}{\nonumberline Modified Coulomb-Mohr theory}{132}{subsection*.335}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Criterion selection}{138}{subsection*.338}%
+\contentsline {subsection}{\nonumberline Criterion selection}{132}{subsection*.338}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Criterion selection}{138}{subsection*.338}
+\contentsline {mtocsubsection}{\nonumberline Criterion selection}{132}{subsection*.338}%
 \defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {9.2}Fatigue}{138}{section.9.2}%
+\contentsline {section}{\numberline {9.2}Fatigue}{133}{section.9.2}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsection}{\numberline {9.2}Fatigue}{138}{section.9.2}
+\contentsline {mtocsection}{\numberline {9.2}Fatigue}{133}{section.9.2}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Fatigue under zero mean stress}{139}{subsection*.342}%
+\contentsline {subsection}{\nonumberline Fatigue under zero mean stress}{133}{subsection*.342}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Fatigue under zero mean stress}{139}{subsection*.342}
+\contentsline {mtocsubsection}{\nonumberline Fatigue under zero mean stress}{133}{subsection*.342}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Fatigue under nonzero mean stress}{140}{subsection*.344}%
+\contentsline {subsection}{\nonumberline Fatigue under nonzero mean stress}{135}{subsection*.344}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Fatigue under nonzero mean stress}{140}{subsection*.344}
+\contentsline {mtocsubsection}{\nonumberline Fatigue under nonzero mean stress}{135}{subsection*.344}%
 \defcounter {refsection}{0}\relax
-\contentsline {section}{\numberline {9.3}Buckling}{141}{section.9.3}%
+\contentsline {section}{\numberline {9.3}Buckling}{136}{section.9.3}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsection}{\numberline {9.3}Buckling}{141}{section.9.3}
+\contentsline {mtocsection}{\numberline {9.3}Buckling}{136}{section.9.3}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Ideal column with pin supports}{142}{subsection*.348}%
+\contentsline {subsection}{\nonumberline Ideal column with pin supports}{137}{subsection*.348}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Ideal column with pin supports}{142}{subsection*.348}
+\contentsline {mtocsubsection}{\nonumberline Ideal column with pin supports}{137}{subsection*.348}%
 \defcounter {refsection}{0}\relax
-\contentsline {subsection}{\nonumberline Columns having various types of supports}{144}{subsection*.353}%
+\contentsline {subsection}{\nonumberline Columns having various types of supports}{139}{subsection*.353}%
 \defcounter {refsection}{0}\relax
-\contentsline {mtocsubsection}{\nonumberline Columns having various types of supports}{144}{subsection*.353}
+\contentsline {mtocsubsection}{\nonumberline Columns having various types of supports}{139}{subsection*.353}%
 \defcounter {refsection}{0}\relax
-\contentsline {chapter}{\nonumberline Bibliography}{152}{chapter*.365}%
+\contentsline {chapter}{\nonumberline Bibliography}{147}{chapter*.365}%

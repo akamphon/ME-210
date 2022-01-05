@@ -28,8 +28,6 @@ svgnames,
 
 %\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
 
-%\usepackage{newtxtext}
-%\usepackage{newtxmath}
 \usepackage{hyperref}
 \hypersetup{
   colorlinks,
@@ -41,6 +39,8 @@ svgnames,
 \let\openbox\relax
 \usepackage{amsmath}
 \usepackage{amsthm}
+\usepackage{newtxtext}
+\usepackage{newtxmath}
 %\usepackage{amssymb}
 \usepackage{multirow}
 \usepackage{gensymb}
@@ -267,6 +267,7 @@ Add shear stress-strain relationship. Add creep and fatigue behaviors.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Basic Mechanics of Materials Review}
+\label{chap: basic mechanics of materials}
 
 The main interest in engineering mechanics of solids is to study the internal resistance of a body under externally applied forces. In earlier statics or dynamics courses, we study the effect of forces on rigid bodies. We may study how they move or how the forces distribute among many members of a structure, but we never study how the force affects each member. In reality, most bodies are deformable, the degrees of which depends on their material properties. In this case, we can still use the equation of equilibrium to determine the internal force acting inside the body.
 
@@ -713,7 +714,7 @@ To determine the change in area, we need to find the dimension of the length and
 \begin{align*}
   \sigma _{long} &= E{\varepsilon _{long}} \\
   \varepsilon _{long} &= \frac{20 \times 10^6 \text{ Pa}}{200 \times 10^6 \text{ Pa}} = 0.1
-\end{align*}	
+\end{align*}
 
 From the strain, we can calculate the final length by
 
@@ -734,7 +735,7 @@ Therefore, the total area change is
    = 0.58 \text{ m}^2 \\ 
 \end{gathered} \]
 \end{solution}
-	
+
 \subsection{Shear stress-shear strain relationship}
 
 Much like the way there is a relationship between normal stress and normal strain in most engineering materials, shear stress and shear strain also exhibit relationship which can be illustrated in \cref{fig: shear stress-strain diagram}
@@ -937,8 +938,9 @@ t = random.randint(10,20)/10*1e-2 # 1.0 - 2.0 mm
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Analysis of Axially Loaded Members}
+\label{chap: axially loaded members}
 
-Structural components subjected only to tension or compression are known as axially loaded members. We can think of multiple types of such structures, for example, solid bars with straight longitudinal axes which can withstand both compression and tension, or cables, which can only withstand tension. The stress-strain behavior of such members was already discussed in Chapter 1, where we also obtained equations for the stresses acting on cross sections and the strains in longitudinal directions.
+Structural components subjected only to tension or compression are known as axially loaded members. We can think of multiple types of such structures, for example, solid bars with straight longitudinal axes which can withstand both compression and tension, or cables, which can only withstand tension. The stress-strain behavior of such members was already discussed in \Cref{chap: basic mechanics of materials}, where we also obtained equations for the stresses acting on cross sections and the strains in longitudinal directions.
 
 In this chapter we consider several other aspects of axially loaded members, beginning with the determination of changes in lengths caused by loads. The calculation for changes in lengths is also important in the analysis of structures whose stresses cannot simply be determined from the loads alone (statically indeterminate structures). We will then also discuss the effect of temperature change to the deformation of axially loaded members.
 
@@ -3949,20 +3951,20 @@ Questions:
 
   \item A \py{L}-m long circular cross-sectioned cantilever beam with radius $r$ made of aluminum with $E$ = \py{E/1e9} GPa and $\sigma_{\text{allow}}$ = \py{sigma_allow/1e6} MPa. An upward load $F$ is applied at length \py{round(x,3)} m from the fixed end. Determine the radius $r$ so that the free end of the beam can bend upward at least \py{round(delta/1e-2,2)} cm without failing.
 
-        \begin{figure}[htbp]
-          \centering
-          \begin{tikzpicture}[>=latex]
-            \node[minimum height=1cm, minimum width=5mm, pattern=north west lines](wall){};
-            \draw (wall.south east) -- (wall.north east);
-            \node at (wall.east) [anchor=west, draw, fill=LightGrey, minimum height=5mm, minimum width=6cm, top color=LightGrey, bottom color=LightGrey, middle color=LightGrey!30](beam){};
-            \begin{pycode}
-              print(r'\draw [|<->|] (wall.south east) --++ (0:'+str(frac*6)+r') node[midway, below]{'+str(round(x,3))+r' m};')
-              print(r'\draw [<-,ultra thick] (beam.south west) ++ (0:'+str(frac*6)+r') --++ (-90:1) node[below]{$P$};')
-            \end{pycode}
-            \draw [dashed] (beam.east) --++ (0:0.5);
-            \draw [->|] (beam.east) ++ (0:0.2) --++ (90:0.5) node[midway, right]{\py{round(delta/1e-2,2)} cm};
-          \end{tikzpicture}
-        \end{figure}
+  \begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}[>=latex]
+      \node[minimum height=1cm, minimum width=5mm, pattern=north west lines](wall){};
+      \draw (wall.south east) -- (wall.north east);
+      \node at (wall.east) [anchor=west, draw, fill=LightGrey, minimum height=5mm, minimum width=6cm, top color=LightGrey, bottom color=LightGrey, middle color=LightGrey!30](beam){};
+      \begin{pycode}
+        print(r'\draw [|<->|] (wall.south east) --++ (0:'+str(frac*6)+r') node[midway, below]{'+str(round(x,3))+r' m};')
+        print(r'\draw [<-,ultra thick] (beam.south west) ++ (0:'+str(frac*6)+r') --++ (-90:1) node[below]{$P$};')
+      \end{pycode}
+      \draw [dashed] (beam.east) --++ (0:0.5);
+      \draw [->|] (beam.east) ++ (0:0.2) --++ (90:0.5) node[midway, right]{\py{round(delta/1e-2,2)} cm};
+    \end{tikzpicture}
+  \end{figure}
   
 \end{exercises}
 
@@ -3974,9 +3976,7 @@ In this section, we will show how to transform the stress components that are as
 
 \section{Plane Stress}
 
-Normally, the state of stress at a point in a body is defined by six independent normal and shear stresses. However, this is rarely encountered in real life, as we usually approximate and simplify so that the stress can be analyzed in a single plane. This is called \emph{plane stress}, illustrated in \cref{fig: plane stress element}. In this case, it is assumed that there is no load on the surface of a body and the corresponding stress components (both normal and shear) in the out-of-plane direction are zero. Therefore, the only three components of stress left are $\sigma_x$, $\sigma_y$, and $\tau_{xy}$ which act on the sides of the element.
-
-\begin{figure}[h]
+\begin{marginfigure}
   \centering
   \begin{tikzpicture}[>=latex]
     \node [draw, fill=LightBlue, regular polygon, regular polygon sides=4, minimum width=3cm](A){};
@@ -3997,7 +3997,9 @@ Normally, the state of stress at a point in a body is defined by six independent
   % \includegraphics[scale=0.7]{pictures/Multiaxial/plane-stress}
   \caption{A plane stress element.}
   \label{fig: plane stress element}
-\end{figure}
+\end{marginfigure}
+
+Normally, the state of stress at a point in a body is defined by six independent normal and shear stresses. However, this is rarely encountered in real life, as we usually approximate and simplify so that the stress can be analyzed in a single plane. This is called \emph{plane stress}, illustrated in \cref{fig: plane stress element}. In this case, it is assumed that there is no load on the surface of a body and the corresponding stress components (both normal and shear) in the out-of-plane direction are zero. Therefore, the only three components of stress left are $\sigma_x$, $\sigma_y$, and $\tau_{xy}$ which act on the sides of the element.
 
 \section{Stress Transformation for Plane Stress}
 
@@ -4975,9 +4977,7 @@ When the vessel wall is thin, the stress distribution throughout its thickness w
 
 \subsection{Cylindrical vessels}
 
-Consider the vessel having a wall thickness $t$ and inner radius $r$. A gauge pressure $p$ is developed within the vessel by a contained gas or fluid, which is assumed to have negligible weight. Due to the uniformity of this loading, the wall is subjected to normal stresses $\sigma_c$ in the circumferential or hoop direction and $\sigma_l$ in the longitudinal or axial direction. Both of these stress components exert tension on the material. To determine the stress components, we will apply the method of sections and the equations of force equilibrium. For the hoop stress, consider the vessel to be sectioned perpendicular to its axis and in half as shown in \cref{fig: cylindrical vessel circumferential}.
-
-\begin{figure}[h]
+\begin{marginfigure}
   \centering
   \begin{tikzpicture}[scale=2, view angle=15, >=latex]
     % Back of sphere
@@ -4994,20 +4994,11 @@ Consider the vessel having a wall thickness $t$ and inner radius $r$. A gauge pr
   % \includegraphics[scale=0.7]{pictures/Combined-loadings/cylindrical-vessel-circ}
   \caption{Force balance between the circumferential stress in vessel's wall and internal pressure.}
   \label{fig: cylindrical vessel circumferential}
-\end{figure}
+\end{marginfigure}
 
-Considering only the loading in $x$ direction, the pressure on the wall surface must be balanced by the hoop stress throughout the thickness of both walls. The total force from pressure on the wall surface is the same as the force on the vertical face of the sectioned vessel content. Therefore, we have
+Consider the vessel having a wall thickness $t$ and inner radius $r$. A gauge pressure $p$ is developed within the vessel by a contained gas or fluid, which is assumed to have negligible weight. Due to the uniformity of this loading, the wall is subjected to normal stresses $\sigma_c$ in the circumferential or hoop direction and $\sigma_l$ in the longitudinal or axial direction. Both of these stress components exert tension on the material. To determine the stress components, we will apply the method of sections and the equations of force equilibrium. For the hoop stress, consider the vessel to be sectioned perpendicular to its axis and in half as shown in \cref{fig: cylindrical vessel circumferential}.
 
-\begin{equation}
-  \begin{gathered}
-    2\sigma _ctdy - p(2r)(dy) = 0 \\ 
-    {\sigma _c} = \frac{pr}{t} \\ 
-  \end{gathered}
-\end{equation}
-
-In order to obtain the longitudinal stress $\sigma_l$, we will consider the left portion the vessel as it is sectioned in the middle of the cylinder.
-
-\begin{figure}[h]
+\begin{marginfigure}
   \centering
   \begin{tikzpicture}[>=latex]
     \node [draw, cylinder, left color=brown, right color=brown, middle color=brown!50, minimum height=3cm, minimum width=3cm, inner sep=10, rotate=90](cyl){};
@@ -5024,7 +5015,18 @@ In order to obtain the longitudinal stress $\sigma_l$, we will consider the left
   % \includegraphics[scale=0.7]{pictures/Combined-loadings/cylindrical-vessel-long}
   \caption{Force balance between longitudinal stress and internal pressure.}
   \label{fig: cylindrical vessel longitudinal}
-\end{figure}
+\end{marginfigure}
+
+Considering only the loading in $x$ direction, the pressure on the wall surface must be balanced by the hoop stress throughout the thickness of both walls. The total force from pressure on the wall surface is the same as the force on the vertical face of the sectioned vessel content. Therefore, we have
+
+\begin{equation}
+  \begin{gathered}
+    2\sigma _ctdy - p(2r)(dy) = 0 \\ 
+    {\sigma _c} = \frac{pr}{t} \\ 
+  \end{gathered}
+\end{equation}
+
+In order to obtain the longitudinal stress $\sigma_l$, we will consider the left portion the vessel as it is sectioned in the middle of the cylinder.
 
 Consider the force in the $y$ direction, we have
 
@@ -5041,7 +5043,7 @@ It should be noted that the hoop stress is twice as large as the longitudinal st
 
 We can analyze a spherical vessel in a similar manner. Consider the vessel that has a wall thickness $t$ and inner radius $r$ and is subjected to an internal gauge pressure of $p$. If the vessel is sectioned in half, the resulting free body diagram illustrated in \cref{fig: spherical vessel} shows that the force resultant from pressure on the wall surface must be balanced by the force resultant from the circumferential or hoop stress. Thus, we have
 
-\begin{figure}[h]
+\begin{marginfigure}
   \centering
   \begin{tikzpicture}[scale=2, view angle=15]
     % Back of sphere
@@ -5061,7 +5063,7 @@ We can analyze a spherical vessel in a similar manner. Consider the vessel that 
   % \includegraphics[scale=0.6]{pictures/Combined-loadings/spherical-vessel}
   \caption{Force balance between the circumferential stress in spherical vessel's wall and internal pressure.}
   \label{fig: spherical vessel}
-\end{figure}
+\end{marginfigure}
 
 % \tdplotsetmaincoords{70}{120}
 % \tdplotsetrotatedcoords{90}{90}{90}
@@ -5197,7 +5199,7 @@ In this chapter, the concept in Chapter 6 is utilized. In the first part, one of
   
   \begin{figure}[h]
     \centering
-    \includegraphics[scale=0.8]{pictures/Static-body-load-analysis/multiaxial-generator-shaft-exercise}
+    \includegraphics[width=0.3\textwidth]{pictures/Static-body-load-analysis/multiaxial-generator-shaft-exercise}
     \caption{Exercise \ref{exercise: generator shaft}}
   \end{figure}
   
@@ -5363,7 +5365,7 @@ Now, consider the application of the equation in reality. Let us calculate the w
   U = \frac{1}{2} P \delta
 \end{equation}
 
-\begin{figure}[h]
+\begin{marginfigure}
   \centering
   \begin{tikzpicture}
     \draw [->] (0,0) --++ (0:4) node[right]{$x$};
@@ -5376,7 +5378,7 @@ Now, consider the application of the equation in reality. Let us calculate the w
   \end{tikzpicture}
   \caption{Force-deformation diagram for a linearly elastic bar.}
   \label{fig:force-deformation diagram}
-\end{figure}
+\end{marginfigure}
 
 As the force is applied to the bar, its magnitude builds from 0 to $P$, and the work done by that force is equal to the average force magnitude $P/2$ multiplied by the total displacement $\delta$. This can be represented graphically as the light-blue shaded area of the triangle in \cref{fig:force-deformation diagram}.
 
@@ -5842,9 +5844,9 @@ Using these equations, we can express the maximum shear stress theory for plane 
   \end{gathered}
 \end{equation}
 
-\begin{figure}[h]
+\begin{marginfigure}
   \centering
-  \begin{tikzpicture}
+  \begin{tikzpicture}[scale=0.5]
     \draw [fill=LightSkyBlue] (0,-3) node[right]{$-S_y$} -- (3,0) node[below right]{$S_y$} -- (3,3) -- (0,3) node[left]{$S_y$} -- (-3,0) node[above left]{$-S_y$} -- (-3,-3) -- cycle;
     \draw [<->] (-4,0) --++ (0:8) node[right]{$\sigma_1$};
     \draw [<->] (0,-4) --++ (90:8) node[above]{$\sigma_2$};
@@ -5852,7 +5854,7 @@ Using these equations, we can express the maximum shear stress theory for plane 
   % \includegraphics[scale=0.6]{pictures/Failure-theories/MSST-safe-zone}
   \caption{'Safe-zone' diagram for material under maximum shear stress criterion.}
   \label{fig: MSST safe zone}
-\end{figure}
+\end{marginfigure}
 
 \Cref{fig: MSST safe zone} illustrates safe combinations of principal stresses under maximum shear stress criterion. Note the difference in the between the ‘safe areas’ in the first and third quadrants, which are squares, and second and fourth quadrants, which are triangles. In the first and third quadrants, the principal stresses are both tensile (first) or compressive (third). The resulting maximum in-plane shear stress is small. Therefore, the material will fail under normal stress instead of shear stress. In the second and fourth quadrants, the two principal stress signs are opposite, resulting in a large in-plane shear stress. In this case, the material is limited by the shear stress and the safe areas reflect this.
 
@@ -5910,21 +5912,21 @@ Or in the case of plane or biaxial stress, we have
 This equation represents an elliptical curve. Once the state of stress of a material falls outside the ellipse, the material is said to have failed.
 In comparison the maximum distortion energy theory is slightly more aggressive in terms of yield prediction, as shown in \cref{fig: MDET safe zone}.
 
-\begin{figure}[h]
+\begin{marginfigure}
   \centering
-  \begin{tikzpicture}
-    \node [draw, ellipse, fill=LightSkyBlue, minimum width=7cm, minimum height=4.5cm, rotate=45](el){};
-    \node at (el.north east)[left, xshift=-5mm]{$S_y$};
-    \node at (el.south east)[below, yshift=-6mm]{$S_y$};
-    \node at (el.north west)[above left, yshift=5mm]{$-S_y$};
-    \node at (el.south west)[right, xshift=5mm]{$-S_y$};
+  \begin{tikzpicture}[scale=0.5]
+    \node [draw, ellipse, fill=LightSkyBlue, minimum width=3.5cm, minimum height=2.25cm, rotate=45](el){};
+    \node at (el.north east)[left, xshift=-2mm]{$S_y$};
+    \node at (el.south east)[below, yshift=-3mm]{$S_y$};
+    \node at (el.north west)[above left, yshift=2mm]{$-S_y$};
+    \node at (el.south west)[right, xshift=3mm]{$-S_y$};
     \draw [<->] (-4,0) --++ (0:8) node[right]{$\sigma_1$};
     \draw [<->] (0,-4) --++ (90:8) node[above]{$\sigma_2$};
   \end{tikzpicture}
   % \includegraphics[scale=0.6]{pictures/Failure-theories/MDET-safe-zone}
   \caption{'Safe-zone' diagram for material under maximum distortion energy criterion.}
   \label{fig: MDET safe zone}
-\end{figure}
+\end{marginfigure}
 
 The safety factor according to the criterion can be written as
 
@@ -6014,9 +6016,9 @@ When  $0 > \sigma_A > \sigma_B$, the condition becomes
 
 \[\sigma_B <  - S_{uc}\]
 
-\begin{figure}[h]
+\begin{marginfigure}
   \centering
-  \begin{tikzpicture}
+  \begin{tikzpicture}[scale=0.5]
     \draw [fill=LightSkyBlue] (1.5,1.5) -- (1.5,0) node[below right]{$S_{ut}$}-- (0,-3) node[right]{$S_{uc}$}-- (-3,-3) -- (-3,0) node[below left]{$S_{uc}$} -- (0,1.5) node[above left]{$S_{ut}$} -- cycle;
     \draw [<->] (-5,0) --++ (0:8) node[right]{$\sigma_1$};
     \draw [<->] (0,-5) --++ (90:8) node[above]{$\sigma_2$};
@@ -6024,7 +6026,7 @@ When  $0 > \sigma_A > \sigma_B$, the condition becomes
  % \includegraphics[scale=0.6]{pictures/Failure-theories/CM-ductile-safe-zone}
   \caption{`Safe-zone' diagram for material under ductile Coulomb-Mohr criterion.}
   \label{fig: Coulomb-Mohr ductile safe zone}
-\end{figure}
+\end{marginfigure}
 
 For design equations, incorporating the safety factor $N_s$, simply divide all strengths by the factor.
 
@@ -6047,21 +6049,21 @@ Also called \emph{Rankine’s criterion} or \emph{maximum normal stress criterio
 
 These equations are shown graphically in \cref{fig: MNST safe zone}. It is seen that if the stress coordinate at a point in the material falls on the boundary or outside the shaded area, the material is said to fracture.
 
-\begin{figure}[h]
+\begin{marginfigure}
   \centering
-  \begin{tikzpicture}
-    \node [draw, rectangle, xshift=-1cm, yshift=-1cm, fill=LightSkyBlue, minimum height=6cm, minimum width=6cm](sq){};
+  \begin{tikzpicture}[scale=0.5]
+    \node [draw, rectangle, xshift=-0.5cm, yshift=-0.5cm, fill=LightSkyBlue, minimum height=3cm, minimum width=3cm](sq){};
     \draw [<->] (-5,0) --++ (0:8) node[right]{$\sigma_1$};
     \node at (sq.east) [yshift=7mm, right] {$S_{ut}$};
     \node at (sq.west) [yshift=7mm, left] {$S_{uc}$};
-    \node at (sq.north) [xshift=1.3cm, above] {$S_{ut}$};
+    \node at (sq.north) [xshift=1cm, above] {$S_{ut}$};
     \node at (sq.south) [xshift=7mm, below] {$S_{uc}$};
     \draw [<->] (0,-5) --++ (90:8) node[above]{$\sigma_2$};
   \end{tikzpicture}
   % \includegraphics[scale=0.6]{pictures/Failure-theories/MNST-safe-zone}
   \caption{'Safe-zone' diagram for material under maximum principal stress criterion.}
   \label{fig: MNST safe zone}
-\end{figure}
+\end{marginfigure}
 
 Experimentally, the criterion has been found to be in close agreement with the behavior of brittle materials that have strain diagrams that are similar in both tension and compression. The safety factor according to the criterion can be expressed in design equations as
 
@@ -6097,9 +6099,9 @@ The modified Coulomb-Mohr theory failure condition can be expressed as
 
 The failure condition diagram for the theory is illustrated in \cref{fig: MCM safe zone}
 
-\begin{figure}[h]
+\begin{marginfigure}
   \centering
-  \begin{tikzpicture}
+  \begin{tikzpicture}[scale=0.5]
     \draw [fill=LightSkyBlue] (1.5,1.5) -- (-1.5,1.5) -- (-4,0) -- (-4,-4) -- (0,-4) -- (1.5,-1.5) -- cycle;
     \node at (1.5,0) [below right]{$S_{ut}$};
     \node at (0,-4) [right]{$S_{uc}$};
@@ -6112,7 +6114,7 @@ The failure condition diagram for the theory is illustrated in \cref{fig: MCM sa
   % \includegraphics[scale=0.5]{pictures/Failure-theories/MCM-brittle-safe-zone}
   \caption{'Safe-zone' diagram for material under modified Coulomb-Mohr criterion.}
   \label{fig: MCM safe zone}
-\end{figure}
+\end{marginfigure}
 
 \subsection{Criterion selection}
 

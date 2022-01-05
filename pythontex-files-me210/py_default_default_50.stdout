@@ -1,2 +1,2 @@
-\draw [<-, ultra thick] (top.north west) ++ (0:4.2) --++ (90:1) node[above]{$P$};
-\draw [|<->|] (top.north west) ++ (90:0.3) --++ (0:4.2) node[midway,  above]{0.6 m};
+\draw [<-, ultra thick] (top.north west) ++ (0:5.6000000000000005) --++ (90:1) node[above]{$P$};
+\draw [|<->|] (top.north west) ++ (90:0.3) --++ (0:5.6000000000000005) node[midway,  above]{0.8 m};

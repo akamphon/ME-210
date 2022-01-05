@@ -1,2 +1,2 @@
-\node at (wall.west) [draw, xshift=-2cm, minimum height=0.4285714285714285cm, minimum width=1.5cm, fill=LightSkyBlue](section){};
-\draw [|<->|] (section.south west) ++ (180:0.3) --++ (90:0.4285714285714285) node[midway, left, fill=White]{2 cm};
+\node at (wall.west) [draw, xshift=-2cm, minimum height=0.9375000000000001cm, minimum width=1.5cm, fill=LightSkyBlue](section){};
+\draw [|<->|] (section.south west) ++ (180:0.3) --++ (90:0.9375000000000001) node[midway, left, fill=White]{5 cm};
