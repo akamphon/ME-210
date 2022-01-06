@@ -1,7 +1,7 @@
 \documentclass[
 10pt,
 a4paper,
-open=any,
+openany,
 svgnames,
 ]{kaobook} % use larger type; default would be 10pt
 
@@ -266,7 +266,7 @@ Add shear stress-strain relationship. Add creep and fatigue behaviors.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter{Basic Mechanics of Materials Review}
+\chapter{Mechanical Behaviors of Materials}
 \label{chap: basic mechanics of materials}
 
 The main interest in engineering mechanics of solids is to study the internal resistance of a body under externally applied forces. In earlier statics or dynamics courses, we study the effect of forces on rigid bodies. We may study how they move or how the forces distribute among many members of a structure, but we never study how the force affects each member. In reality, most bodies are deformable, the degrees of which depends on their material properties. In this case, we can still use the equation of equilibrium to determine the internal force acting inside the body.
@@ -395,6 +395,40 @@ If we consider a pair of shear stresses loading on the element, the moment equil
     {\tau _{xy}} = {\tau _{yx}}
   \end{array}
 \end{equation}
+
+\subsection{Allowable Stress}
+
+In order to design a mechanical component, it is important to limit the stress in the material to a safe level. It is therefore important to choose an \emph{allowable stress} that restricts the applied load so that the member can fully support it. There are many reasons for setting an allowable stress.
+
+\begin{enumerate}
+  \item The actual loadings may be different from the designed ones, or the measurements of the designed component may be different due to fabrication or assebly errors.
+  \item There may be external vibrations, impact, or shock loadings that are unaccounted for.
+  \item Unfavorable operating conditions such as corrosion, weathering, and decay can cause materials to deteriorate during service.
+  \item Finally, there are materials such as woods, concrete, and composites that are highly nonuniform in mechanical properies.
+\end{enumerate}
+
+One method of specifying the allowable load for a member is to use a safety factor, which is a ratio of the failure load $F_{f}$ to the allowable load $F_{allow}$. The failure load is usually found from experimental testing while the safety factor is selected based on various conditions so that all the previously mentioned uncertainties are accounted for. In other words,
+
+\begin{equation}
+  \label{eq:1}
+  N_{s} = \frac{F_{f}}{F_{allow}}
+\end{equation}
+
+If the load applied to the member is linearly related to the stress in the member, then we can express the safety factor equation using stresses instead.
+
+\begin{equation}
+  \label{eq:2}
+  N_{s} = \frac{\sigma_{f}}{\sigma_{allow}}
+\end{equation}
+
+or
+
+\begin{equation}
+  \label{eq:3}
+  N_{s} = \frac{\tau_{f}}{\tau_{allow}}
+\end{equation}
+
+For a proper design, the safety factor must be greater than 1. After all, designing something with higher allowable load that the failure load would not work. The safety factors depend on the types of materials or the purpose of the component. For those that require weight reduction, the number may be close to 1, and for those that operate under many uncertain conditions, the number may be as high as 3.
 
 \section{Strain}
 
@@ -880,23 +914,25 @@ In this chapter, we have learned that bodies are deformable, the degree of which
   \item the change in the outside diameter of the bar under the limiting stress quoted in b)? ($E$ = 210 GPa and $v$ = 0.3).
   \end{enumerate} 
 
-  \item The coupling shown below is constructed from steel of rectangular cross-section and is designed to transmit a tensile force of 50 kN. If the bolt is of 15 mm diameter, calculate:
+  \item \label{exercise: 1-3} The coupling shown below is constructed from steel of rectangular cross-section and is designed to transmit a tensile force of 50 kN. If the bolt is of 15 mm diameter, calculate:
+
+  \begin{marginfigure}
+    \centering
+    \begin{tikzpicture}[rotate=90]
+      \draw [fill=LightSkyBlue] (0,0) --++ (0:1) --++ (90:0.4) --++ (0:2) --++ (-90:0.5) --++ (180:1.4) --++ (-90:0.5) --++ (0:1.4) --++ (-90:0.5) --++ (180:2) --++ (90:0.4) --++ (180:1) -- cycle;
+      \node at (1.8,-0.1) [anchor=north west, draw, fill=LightSkyBlue!40, minimum height=0.49cm, minimum width=2cm, rotate=90](right){};
+      \node at (right.center) [anchor=east, draw, fill=LightGrey, minimum height=1.8cm, minimum width=4mm, rotate=90](){};
+      \draw [->, ultra thick] (0,-0.3) --++ (180:1) node[below]{50 kN};
+      \draw [->, ultra thick] (right.east) --++ (0:1) node[above]{50 kN};
+    \end{tikzpicture}
+    \caption{Exercise \ref{exercise: 1-3}}
+  \end{marginfigure}
+
   \begin{enumerate}
   \item the shear stress in the bolt;
   \item the normal stress in the plate;
   \item the normal stress in the forked end of the coupling.
   \end{enumerate}
-
-  \begin{figure}[H]
-    \centering
-    \begin{tikzpicture}
-      \draw [fill=LightSkyBlue] (0,0) --++ (0:1) --++ (90:0.4) --++ (0:2) --++ (-90:0.5) --++ (180:1.4) --++ (-90:0.5) --++ (0:1.4) --++ (-90:0.5) --++ (180:2) --++ (90:0.4) --++ (180:1) -- cycle;
-      \node at (1.8,-0.1) [anchor=north west, draw, fill=LightSkyBlue!40, minimum height=0.49cm, minimum width=2cm](right){};
-      \node at (right.center) [anchor=east, draw, fill=LightGrey, minimum height=1.8cm, minimum width=4mm](){};
-      \draw [->, ultra thick] (0,-0.3) --++ (180:1) node[left]{50 kN};
-      \draw [->, ultra thick] (right.east) --++ (0:1) node[right]{50 kN};
-    \end{tikzpicture}
-  \end{figure}
 
 \begin{pycode}
 L = random.randint(2,6) # in m
@@ -918,21 +954,22 @@ t = random.randint(10,20)/10*1e-2 # 1.0 - 2.0 mm
 \end{pycode}
 
   \item An I-shaped specimen made of a material with $\sigma_{\text{allow}}$ = \py{sigma_allow/1e6} MPa and $\tau_{\text{allow}}$ = \py{tau_allow/1e6} MPa is held with a fixture at each end, determine that maximum tensile load $F$ that can be applied without breaking the specimen. The specimen dimensions are as follows: $w$ = \py{round(w*1e2,1)} cm, $b$ = \py{round(b*1e2,1)} cm, $h$ = \py{round(h*1e2,1)} cm, and the specimen thickness (normal to this page) $t$ = \py{round(t*1e2,1)} cm.
-        \begin{figure}[h]
-          \centering
-          \begin{tikzpicture}[>=latex, rotate=90]
-            \draw [fill=LightGrey] (0,0) ++ (0:0.5) --++ (90:2) --++ (0:0.3) --++ (90:0.5) --++ (180:1.6) --++ (-90:0.5) --++ (0:0.3) --++ (-90:4) --++ (180:0.3) --++ (-90:0.5) --++ (0:1.6) --++ (90:0.5) --++ (180:0.3) --++ (90:2);
-            \draw [fill=DarkGrey] (0,0) ++ (0:0.5) ++ (90:1.3) ++ (0:0.1) --++ (90:0.6) --++ (0:0.3) --++ (90:0.7) --++ (180:1.8) --++ (-90:0.7) --++ (0:0.3) --++ (-90:0.6) --++ (180:1) --++ (90:2) --++ (0:3.2) --++ (-90:2) -- cycle;
-            \begin{scope}[yscale=-1, xscale=1]
-              \draw [fill=DarkGrey] (0,0) ++ (0:0.5) ++ (90:1.3) ++ (0:0.1) --++ (90:0.6) --++ (0:0.3) --++ (90:0.7) --++ (180:1.8) --++ (-90:0.7) --++ (0:0.3) --++ (-90:0.6) --++ (180:1) --++ (90:2) --++ (0:3.2) --++ (-90:2) -- cycle;
-              \draw [->, line width=5pt, DarkGrey] (0,3.3) --++ (90:2) node[right, Black]{$F$};
-            \end{scope}
-            \draw [->, line width=5pt, DarkGrey] (0,3.3) --++ (90:2) node[left, Black]{$F$};
-            \draw [|<->|] (-2,2) --++ (90:0.5) node[below, midway]{$b$};
-            \draw [|<->|] (-0.5,0) --++ (0:1) node[right, midway]{$w$};
-            \draw [|<->|] (-0.8,-2.8) --++ (0:1.6) node[right, midway]{$h$};
-          \end{tikzpicture}
-        \end{figure}
+
+  \begin{figure}[h]
+    \centering
+    \begin{tikzpicture}[>=latex, rotate=90]
+      \draw [fill=LightGrey] (0,0) ++ (0:0.5) --++ (90:2) --++ (0:0.3) --++ (90:0.5) --++ (180:1.6) --++ (-90:0.5) --++ (0:0.3) --++ (-90:4) --++ (180:0.3) --++ (-90:0.5) --++ (0:1.6) --++ (90:0.5) --++ (180:0.3) --++ (90:2);
+      \draw [fill=DarkGrey] (0,0) ++ (0:0.5) ++ (90:1.3) ++ (0:0.1) --++ (90:0.6) --++ (0:0.3) --++ (90:0.7) --++ (180:1.8) --++ (-90:0.7) --++ (0:0.3) --++ (-90:0.6) --++ (180:1) --++ (90:2) --++ (0:3.2) --++ (-90:2) -- cycle;
+      \begin{scope}[yscale=-1, xscale=1]
+        \draw [fill=DarkGrey] (0,0) ++ (0:0.5) ++ (90:1.3) ++ (0:0.1) --++ (90:0.6) --++ (0:0.3) --++ (90:0.7) --++ (180:1.8) --++ (-90:0.7) --++ (0:0.3) --++ (-90:0.6) --++ (180:1) --++ (90:2) --++ (0:3.2) --++ (-90:2) -- cycle;
+        \draw [->, line width=5pt, DarkGrey] (0,3.3) --++ (90:2) node[right, Black]{$F$};
+      \end{scope}
+      \draw [->, line width=5pt, DarkGrey] (0,3.3) --++ (90:2) node[left, Black]{$F$};
+      \draw [|<->|] (-2,2) --++ (90:0.5) node[below, midway]{$b$};
+      \draw [|<->|] (-0.5,0) --++ (0:1) node[right, midway]{$w$};
+      \draw [|<->|] (-0.8,-2.8) --++ (0:1.6) node[right, midway]{$h$};
+    \end{tikzpicture}
+  \end{figure}
 
 \end{exercises}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -2197,7 +2234,6 @@ The maximum shear stress on the material is
                   &= \frac{2(712 \text{ N-m})}{\pi (20 \times 10^{ - 3})^3} \\[5pt]
                   &= 56.7 \text{ MPa}  
 \end{align*}
-
 \end{solution}
 
 \section{Torsion of Thin-walled Tubular Members}
@@ -2967,7 +3003,7 @@ This equation, known as the \emph{shear formula}, can be used to determine shear
       \draw[|<->|] (bottomcross.north east) ++ (0:0.5) --++ (90:1.5) node[midway, right]{3cm};
       \draw[|<->|] (topcross.north west) ++ (90:0.5) --++ (0:2) node[midway, above]{5 cm};
       % beam with load
-      \node at (topcross.east) [anchor=west, xshift=4cm, draw, fill=LightSkyBlue, rectangle, minimum height=0.6cm, minimum width=7cm](top){};
+      \node at (topcross.east) [anchor=west, xshift=2cm, draw, fill=LightSkyBlue, rectangle, minimum height=0.6cm, minimum width=7cm](top){};
       \node at (top.south) [anchor=north, draw, fill=LightGrey, rectangle, minimum height=0.4cm, minimum width=7cm](bottom){};
       \draw [<-, ultra thick] (top.north) --++ (90:1) node[above]{1500 N};
       \node at (bottom.south west) [anchor=north, draw, regular polygon, regular polygon sides=3, minimum height=0.5cm, fill=white, inner sep=0]{};
