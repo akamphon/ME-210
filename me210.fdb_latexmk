@@ -1,11 +1,11 @@
 # Fdb version 3
-["biber me210"] 1640595251 "me210.bcf" "me210.bbl" "me210" 1641455740
-  "me210.bcf" 1641453452 107016 588dc04237689dd5088900cc376e162c "pdflatex"
+["biber me210"] 1640595251 "me210.bcf" "me210.bbl" "me210" 1641463334
+  "me210.bcf" 1641463327 107016 588dc04237689dd5088900cc376e162c "pdflatex"
   "me210.bib" 1641440597 1124 e7fbab27b1bc8826cf5fc49111060806 ""
   (generated)
   "me210.bbl"
   "me210.blg"
-["pdflatex"] 1641455740 "me210.tex" "me210.pdf" "me210" 1641455740
+["pdflatex"] 1641463334 "me210.tex" "me210.pdf" "me210" 1641463334
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1640644967 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc" 1640645512 2914 8283dfc24eaf1964346f843d7605c2b0 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/newtx/ntx-ecth-tlf.enc" 1640645512 2996 f3810729a083d9d7261cfab13ff32737 ""
@@ -464,14 +464,14 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1640644967 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1641347909 4240670 d37bfea4523508c8fda75ea2e343796e ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1641347901 2920112 9e34430bff2c7116b5b25a6c36e57363 ""
-  "me210.aux" 1641453451 141002 8436f0b55f0055789221d75c6b9e6b3b "pdflatex"
+  "me210.aux" 1641463327 140535 7c32247dbb15a44ff9acecc817f5ede8 "pdflatex"
   "me210.bbl" 1641440597 8532 7d482f57dd25a890487e64fcee2d36d9 "biber me210"
-  "me210.lof" 1641453452 12072 d4d136ce53df191e1789ec8c7a9abc25 "pdflatex"
-  "me210.lot" 1641453452 1475 6c2f052e4b2f3d6d5f79be3f1e1945e7 "pdflatex"
-  "me210.mw" 1641453452 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "me210.run.xml" 1641453452 2307 727efa0680c1ab8cdec0eaadc39a39cf "pdflatex"
-  "me210.tex" 1641455740 413475 994d18446a08b0a062f488c60dd68a66 ""
-  "me210.toc" 1641453452 33851 19daeff27619940d89c21aa4d129af21 "pdflatex"
+  "me210.lof" 1641463327 12069 4f7ce505bebd072beb96945bfa188d7f "pdflatex"
+  "me210.lot" 1641463327 1475 3d1ca99ffb9d6dcace5c5d4e038984b2 "pdflatex"
+  "me210.mw" 1641463327 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "me210.run.xml" 1641463327 2307 727efa0680c1ab8cdec0eaadc39a39cf "pdflatex"
+  "me210.tex" 1641463310 413508 9828a8552438185d571c0d4cd4976761 ""
+  "me210.toc" 1641463327 33841 7f3b00903abf203b7553d4c2d0903452 "pdflatex"
   "pictures/Failure-theories/Rail_buckle.jpg" 1641440597 21813 771e94d59646ca076115a0f35c1b0b06 ""
   "pictures/Static-body-load-analysis/beam-def-midpoint-exercise.pdf" 1641440597 12789 82f331fa3402a0c724a8ddb2742b43a7 ""
   "pictures/Static-body-load-analysis/multiaxial-cantilever-beam-exercise.pdf" 1641440597 12993 75d3ed38e5a47d59cced26898dc694b1 ""
@@ -501,8 +501,8 @@
   "me210.pytxcode"
   "me210.run.xml"
   "me210.toc"
-["pythontex"] 1641453251 "me210.pytxcode" "pythontex-files-me210/me210.pytxmcr" "me210" 1641455740
-  "me210.pytxcode" 1641453452 15341 f02cfcf65d89d00cdc12634b71765520 "pdflatex"
+["pythontex"] 1641463334 "me210.pytxcode" "pythontex-files-me210/me210.pytxmcr" "me210" 1641463334
+  "me210.pytxcode" 1641463327 15341 c8286d998c838475cdaee0e151cc621e "pdflatex"
   (generated)
   "pythontex-files-me210/me210.pytxmcr"
   "pythontex-files-me210/me210.pytxpyg"

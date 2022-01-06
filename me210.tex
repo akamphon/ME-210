@@ -1087,6 +1087,8 @@ And the total elongation of the entire bar is
   \delta  = \int_0^L {d\delta }  = \int_0^L {\frac{{P(x)dx}}{{EA(x)}}}
 \end{equation}
 
+\pagelayout{wide}
+
 \begin{example}
   A cylinder with continuously variable cross sections of length $L$ is supported at end A and subjected to a tensile load $P$ at the free end B. The radii of the bar at ends A and B are $r_A$ and $r_B$ respectively. Determine the elongation of the bar due to the load $P$.
   \begin{figure}[H]
@@ -1402,9 +1404,7 @@ In statically indeterminate structures, the total change in length when consider
 
 \section{Compound Bars}
 
-Increasing uses of composite materials dictates the need for us to understand their mechanical behavior. For an axially loaded component made of composite materials, the simplest of these are compound bars. A compound bar is defined by an axially loaded member whose various materials that make up its cross section undergo the exact elongation/contraction as all the other materials.
-
-\begin{figure}[h]
+\begin{marginfigure}
   \centering
   \begin{tikzpicture}[>=latex]
     \node [minimum height=1cm, pattern=north west lines, minimum width=1cm](wall1){};
@@ -1418,7 +1418,7 @@ Increasing uses of composite materials dictates the need for us to understand th
     \node at (wall2.south) [anchor=north, draw, minimum height=3.5cm, minimum width=3mm, fill=LightGrey](bar2){};
     \node at (wall3.south) [anchor=north, draw, minimum height=2.5cm, minimum width=7mm, fill=DarkGrey](bar3){};
     \node at (wall4.south) [anchor=north, draw, minimum height=3.25cm, minimum width=2mm, fill=Silver](bar4){};
-    
+
     \node at (wall1.south) [anchor=north, dashed, draw, minimum height=3.2cm, minimum width=5mm, fill=Grey, opacity=0.5](bar1e){};
     \node at (wall2.south) [anchor=north, dashed, draw, minimum height=3.7cm, minimum width=3mm, fill=LightGrey, opacity=0.5](bar2e){};
     \node at (wall3.south) [anchor=north, dashed, draw, minimum height=2.7cm, minimum width=7mm, fill=DarkGrey, opacity=0.5](bar3e){};
@@ -1432,7 +1432,9 @@ Increasing uses of composite materials dictates the need for us to understand th
   \end{tikzpicture}
   \caption{An axially loaded compound bar}
   \label{fig: compound bar}
-\end{figure}
+\end{marginfigure}
+
+Increasing uses of composite materials dictates the need for us to understand their mechanical behavior. For an axially loaded component made of composite materials, the simplest of these are compound bars. A compound bar is defined by an axially loaded member whose various materials that make up its cross section undergo the exact elongation/contraction as all the other materials.
 
 \subsection{Internal Force}
 
@@ -1482,18 +1484,18 @@ In the previous sections, we have discussed the analysis of structures when the 
 
 \subsection{Elastic perfectly plastic materials}
 
-In this type of material, the stress-strain behavior is linear throughout its elastic region. However, once the stress reaches yield strength, the material can no longer support additional stress. The strain, on the other hand, will keep increasing even after the stress reaches yield point, resulting in a flat stress-strain diagram after yield point.
-
-\begin{figure}[h]
+\begin{marginfigure}
   \centering
-  \begin{tikzpicture}[scale=0.7, >=latex]
+  \begin{tikzpicture}[scale=0.4, >=latex]
     \draw[<->](-5,0)--(5,0) node[right]{$\varepsilon$};
     \draw[<->](0,-5)--(0,-4) node[right]{$-S_y$} -- (0,4) node[left]{$S_y$} -- (0,5) node[right]{$\sigma$};
     \draw[very thick, Blue](-5,-4) -- (-2,-4) -- (2,4) -- (5,4);
   \end{tikzpicture}
   %\includegraphics[scale=0.7]{pictures/Axial-load/elastic-perfectly-plastic}
   \caption{Typical behavior of an elastic-perfectly plastic material.}
-\end{figure}
+\end{marginfigure}
+
+In this type of material, the stress-strain behavior is linear throughout its elastic region. However, once the stress reaches yield strength, the material can no longer support additional stress. The strain, on the other hand, will keep increasing even after the stress reaches yield point, resulting in a flat stress-strain diagram after yield point.
 
 \subsection{Residual Stress}
 
