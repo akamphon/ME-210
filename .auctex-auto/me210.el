@@ -2,9 +2,9 @@
  "me210"
  (lambda ()
    (TeX-add-to-alist 'LaTeX-provided-class-options
-                     '(("kaobook" "10pt" "a4paper" "openany" "svgnames" "")))
+                     '(("kaobook" "fontsize=10pt" "a4paper" "twosides=false" "open=any" "svgnames" "")))
    (TeX-add-to-alist 'LaTeX-provided-package-options
-                     '(("inputenc" "utf8") ("pythontex" "gobble=auto") ("biblatex" "style=numeric" "backend=biber")))
+                     '(("inputenc" "utf8") ("pythontex" "gobble=auto") ("kaotheorems" "framed=true")))
    (add-to-list 'LaTeX-verbatim-environments-local "pygments")
    (add-to-list 'LaTeX-verbatim-environments-local "pythontexcustomcode")
    (add-to-list 'LaTeX-verbatim-environments-local "VerbatimOut")
@@ -86,8 +86,6 @@
     "hyperref"
     "amsmath"
     "amsthm"
-    "newtxtext"
-    "newtxmath"
     "multirow"
     "gensymb"
     "array"
@@ -98,10 +96,9 @@
     "pgfplots"
     "tikz-3dplot"
     "pythontex"
-    "thmtools"
-    "mdframed"
     "float"
-    "biblatex")
+    "kaotheorems"
+    "kaobiblio")
    (TeX-add-symbols
     '("AxisRotator" ["argument"] 0)
     "chapterlabel"

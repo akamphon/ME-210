@@ -163,7 +163,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>sortingtemplatename</bcf:key>
-      <bcf:value>nty</bcf:value>
+      <bcf:value>none</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>sortsets</bcf:key>
@@ -626,6 +626,7 @@
     <bcf:option datatype="boolean">eprint</bcf:option>
     <bcf:option datatype="boolean">related</bcf:option>
     <bcf:option datatype="boolean">subentry</bcf:option>
+    <bcf:option datatype="boolean">subentrycomp</bcf:option>
     <bcf:option datatype="boolean">bibtexcaseprotection</bcf:option>
     <bcf:option datatype="integer">mincrossrefs</bcf:option>
     <bcf:option datatype="integer">minxrefs</bcf:option>
@@ -708,6 +709,7 @@
     <bcf:option datatype="boolean">eprint</bcf:option>
     <bcf:option datatype="boolean">related</bcf:option>
     <bcf:option datatype="boolean">subentry</bcf:option>
+    <bcf:option datatype="boolean">subentrycomp</bcf:option>
     <bcf:option datatype="boolean">bibtexcaseprotection</bcf:option>
     <bcf:option datatype="xml">labelalphatemplate</bcf:option>
     <bcf:option datatype="xml">translit</bcf:option>
@@ -795,6 +797,7 @@
     <bcf:option datatype="boolean" backendout="1">eprint</bcf:option>
     <bcf:option datatype="boolean" backendout="1">related</bcf:option>
     <bcf:option datatype="boolean" backendout="1">subentry</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">subentrycomp</bcf:option>
     <bcf:option datatype="boolean" backendout="1">bibtexcaseprotection</bcf:option>
     <bcf:option datatype="integer" backendin="maxcitenames,maxbibnames,maxsortnames">maxnames</bcf:option>
     <bcf:option datatype="integer" backendin="mincitenames,minbibnames,minsortnames">minnames</bcf:option>
@@ -853,6 +856,22 @@
   </bcf:datafieldset>
   <!-- SOURCEMAP -->
   <bcf:sourcemap>
+    <bcf:maps datatype="bibtex" level="user">
+      <bcf:map map_overwrite="1">
+        <bcf:map_step map_field_source="month" map_match="jan" map_replace="${1}"/>
+        <bcf:map_step map_field_source="month" map_match="feb" map_replace="${2}"/>
+        <bcf:map_step map_field_source="month" map_match="mar" map_replace="${3}"/>
+        <bcf:map_step map_field_source="month" map_match="apr" map_replace="${4}"/>
+        <bcf:map_step map_field_source="month" map_match="may" map_replace="${5}"/>
+        <bcf:map_step map_field_source="month" map_match="jun" map_replace="${6}"/>
+        <bcf:map_step map_field_source="month" map_match="jul" map_replace="${7}"/>
+        <bcf:map_step map_field_source="month" map_match="aug" map_replace="${8}"/>
+        <bcf:map_step map_field_source="month" map_match="sep" map_replace="${9}"/>
+        <bcf:map_step map_field_source="month" map_match="oct" map_replace="${10}"/>
+        <bcf:map_step map_field_source="month" map_match="nov" map_replace="${11}"/>
+        <bcf:map_step map_field_source="month" map_match="dec" map_replace="${12}"/>
+      </bcf:map>
+    </bcf:maps>
     <bcf:maps datatype="bibtex" level="driver">
       <bcf:map>
         <bcf:map_step map_field_set="day" map_null="1"/>
@@ -2349,39 +2368,16 @@
     <bcf:citekey order="0" nocite="1">*</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
-  <bcf:sortingtemplate name="nty">
+  <bcf:sortingtemplate name="none">
     <bcf:sort order="1">
-      <bcf:sortitem order="1">presort</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="2" final="1">
-      <bcf:sortitem order="1">sortkey</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="3">
-      <bcf:sortitem order="1">sortname</bcf:sortitem>
-      <bcf:sortitem order="2">author</bcf:sortitem>
-      <bcf:sortitem order="3">editor</bcf:sortitem>
-      <bcf:sortitem order="4">translator</bcf:sortitem>
-      <bcf:sortitem order="5">sorttitle</bcf:sortitem>
-      <bcf:sortitem order="6">title</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="4">
-      <bcf:sortitem order="1">sorttitle</bcf:sortitem>
-      <bcf:sortitem order="2">title</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="5">
-      <bcf:sortitem order="1">sortyear</bcf:sortitem>
-      <bcf:sortitem order="2">year</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="6">
-      <bcf:sortitem order="1">volume</bcf:sortitem>
-      <bcf:sortitem literal="1" order="2">0</bcf:sortitem>
+      <bcf:sortitem order="1">citeorder</bcf:sortitem>
     </bcf:sort>
   </bcf:sortingtemplate>
   <!-- DATALISTS -->
   <bcf:datalist section="0"
-                name="nty/global//global/global"
+                name="none/global//global/global"
                 type="entry"
-                sortingtemplatename="nty"
+                sortingtemplatename="none"
                 sortingnamekeytemplatename="global"
                 labelprefix=""
                 uniquenametemplatename="global"

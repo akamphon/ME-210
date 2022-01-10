@@ -1,42 +1,42 @@
-=>PYTHONTEX#py#default#default#0#code#####64#
+=>PYTHONTEX#py#default#default#0#code#####65#
 from math import *
 import random
-=>PYTHONTEX#py#default#default#1#code#####937#
+=>PYTHONTEX#py#default#default#1#code#####935#
 L = random.randint(2,6) # in m
 W = L - random.randint(0,L-1) # in m
 stress = random.randint(1,10)*1e6 # in Pa
 E = random.randint(5,15)*1e10 # in Pa
 poisson = random.randint(25,35)/100
-=>PYTHONTEX#py#default#default#2#i#####945#
+=>PYTHONTEX#py#default#default#2#i#####943#
 L
-=>PYTHONTEX#py#default#default#3#i#####945#
+=>PYTHONTEX#py#default#default#3#i#####943#
 W
-=>PYTHONTEX#py#default#default#4#i#####945#
+=>PYTHONTEX#py#default#default#4#i#####943#
 stress/1e6
-=>PYTHONTEX#py#default#default#5#i#####945#
+=>PYTHONTEX#py#default#default#5#i#####943#
 E/1e9
-=>PYTHONTEX#py#default#default#6#i#####945#
+=>PYTHONTEX#py#default#default#6#i#####943#
 poisson
-=>PYTHONTEX#py#default#default#7#code#####947#
+=>PYTHONTEX#py#default#default#7#code#####945#
 sigma_allow = random.randint(10,35)*10*1e6 # in Pa
 tau_allow = random.randint(5,20)*10*1e6 # in Pa
 h = random.randint(4,8)*1e-2 # in m
 b = random.randint(2,5)*1e-2 # in m
 w = h - 2e-2 # in m
 t = random.randint(10,20)/10*1e-2 # 1.0 - 2.0 mm
-=>PYTHONTEX#py#default#default#8#i#####956#
+=>PYTHONTEX#py#default#default#8#i#####954#
 sigma_allow/1e6
-=>PYTHONTEX#py#default#default#9#i#####956#
+=>PYTHONTEX#py#default#default#9#i#####954#
 tau_allow/1e6
-=>PYTHONTEX#py#default#default#10#i#####956#
+=>PYTHONTEX#py#default#default#10#i#####954#
 round(w*1e2,1)
-=>PYTHONTEX#py#default#default#11#i#####956#
+=>PYTHONTEX#py#default#default#11#i#####954#
 round(b*1e2,1)
-=>PYTHONTEX#py#default#default#12#i#####956#
+=>PYTHONTEX#py#default#default#12#i#####954#
 round(h*1e2,1)
-=>PYTHONTEX#py#default#default#13#i#####956#
+=>PYTHONTEX#py#default#default#13#i#####954#
 round(t*1e2,1)
-=>PYTHONTEX#py#default#default#14#code#####1808#
+=>PYTHONTEX#py#default#default#14#code#####1791#
 E_st = random.randint(15,25)*10*1e9 # 150 - 250 GPa
 E_al = random.randint(10,20)*5*1e9 # 50 - 100 GPa
 E_cu = random.randint(3,8)*10*1e9 # 30 - 80 GPa
@@ -52,31 +52,31 @@ A_cu = random.randint(6,10)*1e-4 # 6 - 10 cm2
 sigma_st = random.randint(20,45)*10*1e6 # 200 - 450 MPa
 sigma_al = random.randint(10,25)*10*1e6 # 100 - 250 MPa
 sigma_cu = random.randint(6,15)*10*1e6 # 60 - 150 MPa
-=>PYTHONTEX#py#default#default#15#i#####1834#
+=>PYTHONTEX#py#default#default#15#i#####1817#
 E_st/1e9
-=>PYTHONTEX#py#default#default#16#i#####1834#
+=>PYTHONTEX#py#default#default#16#i#####1817#
 sigma_st/1e6
-=>PYTHONTEX#py#default#default#17#i#####1834#
+=>PYTHONTEX#py#default#default#17#i#####1817#
 L_st
-=>PYTHONTEX#py#default#default#18#i#####1834#
+=>PYTHONTEX#py#default#default#18#i#####1817#
 A_st/1e-4
-=>PYTHONTEX#py#default#default#19#i#####1835#
+=>PYTHONTEX#py#default#default#19#i#####1818#
 E_al/1e9
-=>PYTHONTEX#py#default#default#20#i#####1835#
+=>PYTHONTEX#py#default#default#20#i#####1818#
 sigma_al/1e6
-=>PYTHONTEX#py#default#default#21#i#####1835#
+=>PYTHONTEX#py#default#default#21#i#####1818#
 L_al
-=>PYTHONTEX#py#default#default#22#i#####1835#
+=>PYTHONTEX#py#default#default#22#i#####1818#
 A_al/1e-4
-=>PYTHONTEX#py#default#default#23#i#####1836#
+=>PYTHONTEX#py#default#default#23#i#####1819#
 E_cu/1e9
-=>PYTHONTEX#py#default#default#24#i#####1836#
+=>PYTHONTEX#py#default#default#24#i#####1819#
 sigma_cu/1e6
-=>PYTHONTEX#py#default#default#25#i#####1836#
+=>PYTHONTEX#py#default#default#25#i#####1819#
 L_cu
-=>PYTHONTEX#py#default#default#26#i#####1836#
+=>PYTHONTEX#py#default#default#26#i#####1819#
 A_cu/1e-4
-=>PYTHONTEX#py#default#default#27#code#####2388#
+=>PYTHONTEX#py#default#default#27#code#####2364#
 L1 = random.randint(3,10)/10 # 0.3 - 1.0 m
 L2 = random.randint(5,15)/10 # 0.5 - 1.5 m
 x = L1 + L2/random.randint(2,4)
@@ -85,23 +85,23 @@ d2 = d1 + random.randint(5,15)/10*1e-2
 G = random.randint(5,10)*10*1e9 # 50 - 100 GPa
 tau_allow = random.randint(6,12)*10*1e6 # 60 - 120 MPa
 phi_allow = random.randint(1,5)/10 # 0.1 - 0.5 rad
-=>PYTHONTEX#py#default#default#28#i#####2399#
+=>PYTHONTEX#py#default#default#28#i#####2375#
 round(x,3)
-=>PYTHONTEX#py#default#default#29#i#####2399#
+=>PYTHONTEX#py#default#default#29#i#####2375#
 L1
-=>PYTHONTEX#py#default#default#30#i#####2399#
+=>PYTHONTEX#py#default#default#30#i#####2375#
 round(d1/1e-2,1)
-=>PYTHONTEX#py#default#default#31#i#####2399#
+=>PYTHONTEX#py#default#default#31#i#####2375#
 L2
-=>PYTHONTEX#py#default#default#32#i#####2399#
+=>PYTHONTEX#py#default#default#32#i#####2375#
 round(d2/1e-2,1)
-=>PYTHONTEX#py#default#default#33#i#####2399#
+=>PYTHONTEX#py#default#default#33#i#####2375#
 G/1e9
-=>PYTHONTEX#py#default#default#34#i#####2399#
+=>PYTHONTEX#py#default#default#34#i#####2375#
 tau_allow/1e6
-=>PYTHONTEX#py#default#default#35#i#####2399#
+=>PYTHONTEX#py#default#default#35#i#####2375#
 phi_allow
-=>PYTHONTEX#py#default#default#36#code#####3487#
+=>PYTHONTEX#py#default#default#36#code#####3454#
   frac = random.randint(1,4)/5 # 0.2 - 0.8
   L = random.randint(1,3) # 1 - 3 m
   x = round(frac*L,2)
@@ -113,58 +113,58 @@ phi_allow
   b = random.randint(3,6)*1e-2 # 3 - 6 cm
   h_cfrp =  random.randint(12,25)/10*1e-2 # 1.2 - 2.5 cm
   h_steel =  random.randint(8,15)/10*1e-2 # 0.8 - 1.5 cm
-=>PYTHONTEX#py#default#default#37#i#####3501#
+=>PYTHONTEX#py#default#default#37#i#####3468#
 L
-=>PYTHONTEX#py#default#default#38#i#####3501#
+=>PYTHONTEX#py#default#default#38#i#####3468#
 x
-=>PYTHONTEX#py#default#default#39#i#####3501#
+=>PYTHONTEX#py#default#default#39#i#####3468#
 round(E_cfrp/1e9)
-=>PYTHONTEX#py#default#default#40#i#####3501#
+=>PYTHONTEX#py#default#default#40#i#####3468#
 round(sigma_cfrp/1e6)
-=>PYTHONTEX#py#default#default#41#i#####3501#
+=>PYTHONTEX#py#default#default#41#i#####3468#
 round(E_steel/1e9)
-=>PYTHONTEX#py#default#default#42#i#####3501#
+=>PYTHONTEX#py#default#default#42#i#####3468#
 round(sigma_steel/1e6)
-=>PYTHONTEX#py#default#default#43#i#####3501#
+=>PYTHONTEX#py#default#default#43#i#####3468#
 round(h_cfrp/1e-2,1)
-=>PYTHONTEX#py#default#default#44#i#####3501#
+=>PYTHONTEX#py#default#default#44#i#####3468#
 round(h_steel/1e-2,1)
-=>PYTHONTEX#py#default#default#45#i#####3501#
+=>PYTHONTEX#py#default#default#45#i#####3468#
 round(tau_glue/1e6)
-=>PYTHONTEX#py#default#default#46#i#####3501#
+=>PYTHONTEX#py#default#default#46#i#####3468#
 round(b/1e-2)
-=>PYTHONTEX#py#default#default#47#i#####3509#
+=>PYTHONTEX#py#default#default#47#i#####3476#
 round(h_steel/1e-2,1)
-=>PYTHONTEX#py#default#default#48#i#####3511#
+=>PYTHONTEX#py#default#default#48#i#####3478#
 round(h_cfrp/1e-2,1)
-=>PYTHONTEX#py#default#default#49#i#####3512#
+=>PYTHONTEX#py#default#default#49#i#####3479#
 round(b/1e-2)
-=>PYTHONTEX#py#default#default#50#code#####3516#
+=>PYTHONTEX#py#default#default#50#code#####3483#
               print(r'\draw [<-, ultra thick] (top.north west) ++ (0:'+str(7*frac)+r') --++ (90:1) node[above]{$P$};')
               print(r'\draw [|<->|] (top.north west) ++ (90:0.3) --++ (0:'+str(7*frac)+r') node[midway,  above]{'+str(round(x,1))+r' m};')
-=>PYTHONTEX#py#default#default#51#code#####3981#
+=>PYTHONTEX#py#default#default#51#code#####3943#
   L = random.randint(5,12)/10 # 0.5 - 1.2 m
   E = random.randint(5,9)*10*1e9 # 50 - 90 GPa
   sigma_allow = random.randint(10,20)*10*1e6 # 100 - 200 MPa
   frac = random.randint(6,9)/10 # 5/8 - 7/8
   x = frac*L
   delta = random.randint(3,8)*1e-2 # 3 - 8 cm
-=>PYTHONTEX#py#default#default#52#i#####3990#
+=>PYTHONTEX#py#default#default#52#i#####3952#
 L
-=>PYTHONTEX#py#default#default#53#i#####3990#
+=>PYTHONTEX#py#default#default#53#i#####3952#
 E/1e9
-=>PYTHONTEX#py#default#default#54#i#####3990#
+=>PYTHONTEX#py#default#default#54#i#####3952#
 sigma_allow/1e6
-=>PYTHONTEX#py#default#default#55#i#####3990#
+=>PYTHONTEX#py#default#default#55#i#####3952#
 round(x,3)
-=>PYTHONTEX#py#default#default#56#i#####3990#
+=>PYTHONTEX#py#default#default#56#i#####3952#
 round(delta/1e-2,2)
-=>PYTHONTEX#py#default#default#57#code#####3998#
+=>PYTHONTEX#py#default#default#57#code#####3960#
         print(r'\draw [|<->|] (wall.south east) --++ (0:'+str(frac*6)+r') node[midway, below]{'+str(round(x,3))+r' m};')
         print(r'\draw [<-,ultra thick] (beam.south west) ++ (0:'+str(frac*6)+r') --++ (-90:1) node[below]{$P$};')
-=>PYTHONTEX#py#default#default#58#i#####4003#
+=>PYTHONTEX#py#default#default#58#i#####3965#
 round(delta/1e-2,2)
-=>PYTHONTEX#py#default#default#59#code#####4927#
+=>PYTHONTEX#py#default#default#59#code#####4884#
 sigma_x = random.randint(-15,15)*10 # -150 - 150 MPa
 sigma_y = random.randint(-15,15)*10 # -150 - 150 MPa
 tau_xy = random.randint(-15,15)*10 # -150 - 150 MPa
@@ -172,7 +172,7 @@ if sigma_x == 0: sigma_x = 80
 if sigma_y == 0: sigma_y = -80
 if sigma_x == sigma_y: sigma_x = sigma_y + 50
 if tau_xy == 0: tau_xy = 60
-=>PYTHONTEX#py#default#default#60#code#####4948#
+=>PYTHONTEX#py#default#default#60#code#####4905#
             if sigma_y > 0:
               print(r'\draw [->, thick] (element.north) --++ (90:1) node[left]{$\sigma_{y}$ = \py{sigma_y} MPa};')
               print(r'\draw [->, thick] (element.south) --++ (-90:1);')
@@ -201,7 +201,7 @@ sigma_y
 sigma_x
 =>PYTHONTEX#py#default#default#63#i####py_default_default_60.stdout#5#
 tau_xy
-=>PYTHONTEX#py#default#default#64#code#####4975#
+=>PYTHONTEX#py#default#default#64#code#####4932#
           t = random.randint(2,7)*1e-3 # in mm
           W = random.randint(5,15)/10
           L = random.randint(2,5)
@@ -212,52 +212,52 @@ tau_xy
           T_1 = T_0 + 120 if T_1 == T_0 else T_1
           F = random.randint(20,40)*10000
           E = random.randint(5,25)*10*1e9 # 50 - 250 GPa
-=>PYTHONTEX#py#default#default#65#i#####4987#
+=>PYTHONTEX#py#default#default#65#i#####4944#
 poisson
-=>PYTHONTEX#py#default#default#66#i#####4987#
+=>PYTHONTEX#py#default#default#66#i#####4944#
 round(alpha/1e-6)
-=>PYTHONTEX#py#default#default#67#i#####4987#
+=>PYTHONTEX#py#default#default#67#i#####4944#
 round(E/1e9)
-=>PYTHONTEX#py#default#default#68#i#####4987#
+=>PYTHONTEX#py#default#default#68#i#####4944#
 round(t/1e-3)
-=>PYTHONTEX#py#default#default#69#i#####4987#
+=>PYTHONTEX#py#default#default#69#i#####4944#
 W
-=>PYTHONTEX#py#default#default#70#i#####4987#
+=>PYTHONTEX#py#default#default#70#i#####4944#
 L
-=>PYTHONTEX#py#default#default#71#i#####4987#
+=>PYTHONTEX#py#default#default#71#i#####4944#
 F
-=>PYTHONTEX#py#default#default#72#i#####4987#
+=>PYTHONTEX#py#default#default#72#i#####4944#
 T_0
-=>PYTHONTEX#py#default#default#73#i#####4987#
+=>PYTHONTEX#py#default#default#73#i#####4944#
 T_1
-=>PYTHONTEX#py#default#default#74#i#####4997#
+=>PYTHONTEX#py#default#default#74#i#####4954#
 F
-=>PYTHONTEX#py#default#default#75#i#####4998#
+=>PYTHONTEX#py#default#default#75#i#####4955#
 L
-=>PYTHONTEX#py#default#default#76#i#####4999#
+=>PYTHONTEX#py#default#default#76#i#####4956#
 W
-=>PYTHONTEX#py#default#default#77#code#####5292#
+=>PYTHONTEX#py#default#default#77#code#####5246#
 sigma_allow = random.randint(3,15)*10*1e6 # 30 - 150 MPa
 tau_allow = random.randint(2,10)*10*1e6 # 20 - 100 MPa
 r = random.randint(15,25)/10*1e-2 # 1.5 - 2.5 cm
 t = random.randint(3,10)/10*1e-3 # 0.3 - 1 mm
 h = random.randint(4,7)*1e-2 # 4 - 7 cm
 p0 = round(random.randint(1,5)*1e3) # 1 - 5 kPa
-=>PYTHONTEX#py#default#default#78#i#####5301#
+=>PYTHONTEX#py#default#default#78#i#####5255#
 round(sigma_allow/1e6)
-=>PYTHONTEX#py#default#default#79#i#####5301#
+=>PYTHONTEX#py#default#default#79#i#####5255#
 round(tau_allow/1e6)
-=>PYTHONTEX#py#default#default#80#i#####5301#
+=>PYTHONTEX#py#default#default#80#i#####5255#
 round(r/1e-2,1)
-=>PYTHONTEX#py#default#default#81#i#####5301#
+=>PYTHONTEX#py#default#default#81#i#####5255#
 round(h/1e-2)
-=>PYTHONTEX#py#default#default#82#i#####5301#
+=>PYTHONTEX#py#default#default#82#i#####5255#
 round(t/1e-3,1)
-=>PYTHONTEX#py#default#default#83#i#####5305#
+=>PYTHONTEX#py#default#default#83#i#####5259#
 p0
-=>PYTHONTEX#py#default#default#83#i#####5305#
+=>PYTHONTEX#py#default#default#83#i#####5259#
 p0
-=>PYTHONTEX#py#default#default#84#code#####5308#
+=>PYTHONTEX#py#default#default#84#code#####5262#
 F = random.randint(10,30)*100 # 1000 - 3000
 L1 = random.randint(15,30)/10 # 1.5 - 3 m
 x = L1 - random.randint(5,10)/10 # 0.5 - 1 m
@@ -268,7 +268,7 @@ L2 = random.randint(5,10)/10 # 0.5 - 1 m
 b = random.randint(3,8)*1e-2 # 3 - 8 cm
 h = random.randint(2,7)*1e-2 # 2 - 7 cm
 frac_bh = b/h
-=>PYTHONTEX#py#default#default#85#code#####5333#
+=>PYTHONTEX#py#default#default#85#code#####5287#
             print(r'\draw [<-, ultra thick] (support.north) ++ (0:'+str(frac*4)+r') ++ (90:0.2) --++ (90:1) node[above]{\py{F} N};')
             print(r'\draw [|<->|] (support.north) ++ (90:0.5) --++ (0:'+str(frac*4)+r') node[midway, fill=White]{\py{round(x,1)} m};')
             print(r'\node at (support.north) [draw, fill=Black, circle, inner sep=0, minimum height=1mm,yshift=-2mm,xshift='+str(4*frac_d)+r'cm](C){};')
@@ -277,26 +277,26 @@ frac_bh = b/h
 F
 =>PYTHONTEX#py#default#default#87#i####py_default_default_85.stdout#2#
 round(x,1)
-=>PYTHONTEX#py#default#default#88#code#####5344#
+=>PYTHONTEX#py#default#default#88#code#####5298#
               print(r'\node at (wall.west) [draw, xshift=-2cm, minimum height='+str(1.5/frac_bh)+r'cm, minimum width=1.5cm, fill=LightSkyBlue](section){};')
               print(r'\draw [|<->|] (section.south west) ++ (180:0.3) --++ (90:'+str(1.5/frac_bh)+r') node[midway, left, fill=White]{'+str(round(h/1e-2))+r' cm};')
-=>PYTHONTEX#py#default#default#89#i#####5348#
+=>PYTHONTEX#py#default#default#89#i#####5302#
 round(b/1e-2)
-=>PYTHONTEX#py#default#default#90#i#####5351#
+=>PYTHONTEX#py#default#default#90#i#####5305#
 L1
-=>PYTHONTEX#py#default#default#91#i#####5353#
+=>PYTHONTEX#py#default#default#91#i#####5307#
 L2
-=>PYTHONTEX#py#default#default#92#code#####6759#
+=>PYTHONTEX#py#default#default#92#code#####6704#
 hp = random.randint(4,11)*5 # 20 - 55 hp
 rpm = random.randint(3,8)*5*100 # 1500 - 4000 rpm
 S_y = random.randint(2,8)*10*1e6 # 20 - 80 MPa
-=>PYTHONTEX#py#default#default#93#i#####6765#
+=>PYTHONTEX#py#default#default#93#i#####6710#
 round(S_y/1e6)
-=>PYTHONTEX#py#default#default#94#i#####6765#
+=>PYTHONTEX#py#default#default#94#i#####6710#
 hp
-=>PYTHONTEX#py#default#default#95#i#####6765#
+=>PYTHONTEX#py#default#default#95#i#####6710#
 rpm
-=>PYTHONTEX#py#default#default#96#code#####6771#
+=>PYTHONTEX#py#default#default#96#code#####6716#
 S_y = random.randint(2,5)*10*1e6 # 20-50 MPa
 S_ut = S_y*1.5
 E = random.randint(10,20)*10*1e9 # 100 - 200 GPa
@@ -307,43 +307,43 @@ w = random.randint(5,8)/10 # 0.5 - 0.8 m
 F = random.randint(12,20)*100 # 1200 - 2000 N
 L = dim_num if dim == 'length' else '??'
 h = dim_num if dim == 'thickness' else '??'
-=>PYTHONTEX#py#default#default#97#i#####6784#
+=>PYTHONTEX#py#default#default#97#i#####6729#
 round(E/1e9)
-=>PYTHONTEX#py#default#default#98#i#####6784#
+=>PYTHONTEX#py#default#default#98#i#####6729#
 round(S_ut/1e6)
-=>PYTHONTEX#py#default#default#99#i#####6784#
+=>PYTHONTEX#py#default#default#99#i#####6729#
 round(S_y/1e6)
-=>PYTHONTEX#py#default#default#100#i#####6784#
+=>PYTHONTEX#py#default#default#100#i#####6729#
 dim
-=>PYTHONTEX#py#default#default#101#i#####6784#
+=>PYTHONTEX#py#default#default#101#i#####6729#
 dim_num
-=>PYTHONTEX#py#default#default#102#i#####6784#
+=>PYTHONTEX#py#default#default#102#i#####6729#
 w
-=>PYTHONTEX#py#default#default#103#i#####6784#
+=>PYTHONTEX#py#default#default#103#i#####6729#
 F
-=>PYTHONTEX#py#default#default#104#i#####6784#
+=>PYTHONTEX#py#default#default#104#i#####6729#
 dim_design
-=>PYTHONTEX#py#default#default#105#i#####6792#
+=>PYTHONTEX#py#default#default#105#i#####6737#
 F
-=>PYTHONTEX#py#default#default#106#i#####6793#
+=>PYTHONTEX#py#default#default#106#i#####6738#
 L
-=>PYTHONTEX#py#default#default#107#i#####6794#
+=>PYTHONTEX#py#default#default#107#i#####6739#
 h
-=>PYTHONTEX#py#default#default#108#code#####6798#
+=>PYTHONTEX#py#default#default#108#code#####6743#
 L1 = random.randint(5,15)/10 # 0.5 - 1.5 m
 theta = random.choice([30,35,40,45,50,55,60])
 r = round(random.randint(2,7)*1e-3,3) # 2 - 7 mm
 E = random.randint(12,22)*10*1e9 # 120 - 220 GPa
 S_y = random.randint(5,20)*10*1e6 # 50 - 200 MPa
-=>PYTHONTEX#py#default#default#109#i#####6806#
+=>PYTHONTEX#py#default#default#109#i#####6751#
 r
-=>PYTHONTEX#py#default#default#110#i#####6806#
+=>PYTHONTEX#py#default#default#110#i#####6751#
 round(E/1e9)
-=>PYTHONTEX#py#default#default#111#i#####6806#
+=>PYTHONTEX#py#default#default#111#i#####6751#
 round(S_y/1e6)
-=>PYTHONTEX#py#default#default#112#code#####6811#
+=>PYTHONTEX#py#default#default#112#code#####6756#
         print(r'\node[minimum height='+str(1+4*tan(radians(theta)))+r'cm, minimum width=6mm, pattern=north west lines](wall){};')
-=>PYTHONTEX#py#default#default#113#code#####6817#
+=>PYTHONTEX#py#default#default#113#code#####6762#
         print(r'\node at (brod.east) [anchor=east, fill=LightGrey, draw, minimum height=2mm, minimum width='+str(4/cos(radians(theta)))+r'cm, rounded corners=1mm,rotate='+str(-theta)+r'](trod){};')
         print(r'\node at (trod.east) [circle, draw, fill=Black, minimum height=1mm, inner sep=0, rotate='+str(-theta)+r', xshift=-1mm]{};')
         print(r'\node at (trod.west) [circle, draw, fill=Black, minimum height=1mm, inner sep=0, rotate='+str(-theta)+r', xshift=1mm]{};')

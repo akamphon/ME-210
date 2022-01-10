@@ -1,7 +1,8 @@
 \documentclass[
-10pt,
+fontsize=10pt,
 a4paper,
-openany,
+twosides=false,
+open=any,
 svgnames,
 ]{kaobook} % use larger type; default would be 10pt
 
@@ -39,8 +40,8 @@ svgnames,
 \let\openbox\relax
 \usepackage{amsmath}
 \usepackage{amsthm}
-\usepackage{newtxtext}
-\usepackage{newtxmath}
+%\usepackage{newtxtext}
+%\usepackage{newtxmath}
 %\usepackage{amssymb}
 \usepackage{multirow}
 \usepackage{gensymb}
@@ -123,41 +124,42 @@ import random
 %\titlespacing*{\chapter}{0pt}{50pt}{-10pt}
 
 %Example environment
-\usepackage{thmtools}
-\usepackage{mdframed}
+%\usepackage{thmtools}
+%\usepackage{mdframed}
 \usepackage{float}
 \definecolor{titlepagecolor}{cmyk}{0.3,.50,0.50,.20}
 \definecolor{namecolor}{cmyk}{0.3,.30,0.3,0}
-\declaretheoremstyle[
-spaceabove=6pt, spacebelow=0pt,
-headfont=\normalfont\bfseries,
-notefont=\mdseries, notebraces={(}{)},
-bodyfont=\normalfont,
-postheadspace=1em,
-numberwithin=chapter,
-preheadhook={\begin{mdframed}[backgroundcolor=titlepagecolor!50,
-    innertopmargin=6pt, splittopskip=\topskip, % 
-    skipbelow= 0pt, skipabove=6pt, %
-    topline=false,bottomline=false,leftline=false,rightline=false] \sloppy},
-  postfoothook=\end{mdframed},
-headpunct={}
-]{exstyle}
-\declaretheoremstyle[
-spaceabove=6pt, spacebelow=6pt,
-headfont=\normalfont\bfseries,
-notefont=\mdseries, notebraces={(}{)},
-bodyfont=\normalfont,
-postheadspace=1em,
-preheadhook={\begin{mdframed}[backgroundcolor=titlepagecolor!50,
-    innertopmargin=6pt, splittopskip=\topskip, % 
-    skipbelow=6pt, skipabove=0pt, %
-    topline=false,bottomline=false,leftline=false,rightline=false] \sloppy},
-  postfoothook=\end{mdframed},
-headpunct={},
-numbered=no
-]{solstyle}
-\declaretheorem[style=exstyle]{example}
-\declaretheorem[style=solstyle]{solution}
+% \declaretheoremstyle[
+% spaceabove=6pt, spacebelow=0pt,
+% headfont=\normalfont\bfseries,
+% notefont=\mdseries, notebraces={(}{)},
+% bodyfont=\normalfont,
+% postheadspace=1em,
+% numberwithin=chapter,
+% preheadhook={\begin{mdframed}[backgroundcolor=titlepagecolor!50,
+%     innertopmargin=6pt, splittopskip=\topskip, %
+%     skipbelow= 0pt, skipabove=6pt, %
+%     topline=false,bottomline=false,leftline=false,rightline=false] \sloppy},
+%   postfoothook=\end{mdframed},
+% headpunct={}
+% ]{exstyle}
+% \declaretheoremstyle[
+% spaceabove=6pt, spacebelow=6pt,
+% headfont=\normalfont\bfseries,
+% notefont=\mdseries, notebraces={(}{)},
+% bodyfont=\normalfont,
+% postheadspace=1em,
+% preheadhook={\begin{mdframed}[backgroundcolor=titlepagecolor!50,
+%     innertopmargin=6pt, splittopskip=\topskip, %
+%     skipbelow=6pt, skipabove=0pt, %
+%     topline=false,bottomline=false,leftline=false,rightline=false] \sloppy},
+%   postfoothook=\end{mdframed},
+% headpunct={},
+% numbered=no
+% ]{solstyle}
+% \declaretheorem[style=exstyle]{example}
+% \declaretheorem[style=solstyle]{solution}
+\usepackage[framed=true]{kaotheorems}
 
 % New list for exercises
 \newlist{exercises}{enumerate}{2}
@@ -174,7 +176,7 @@ numbered=no
 
 %% bibliography %%%%
 
-\usepackage[style=numeric,backend=biber]{biblatex}
+\usepackage{kaobiblio}
 \addbibresource{me210.bib}
 
 %%% END Article customizations
@@ -740,9 +742,7 @@ Poisson's ratios for various common materials are tabulated in \cref{table: pois
 
 \begin{example}
 A thin rubber sheet of material with dimension 2 m x 4 m ($W \times L$) has $E$ = 200 MPa. A normal stress of 20 MPa is applied along the width of the sheet. What is the change in area of the material once the stress is applied. Assume the material has $\nu$ = 0.25
-\end{example}
 
-\begin{solution}
 To determine the change in area, we need to find the dimension of the length and width of the sheet after the application of stress. First, we have to determine the strain in the longitudinal direction by applying Hooke’s law, from which we have
 
 \begin{align*}
@@ -768,7 +768,7 @@ Therefore, the total area change is
   \Delta A = (2.2)(3.9) - (2)(4) \\ 
    = 0.58 \text{ m}^2 \\ 
 \end{gathered} \]
-\end{solution}
+\end{example}
 
 \subsection{Shear stress-shear strain relationship}
 
@@ -834,8 +834,6 @@ Without any constraint, the change in length of the part can be computed using t
     \end{tikzpicture}
   \end{figure}
   
-\end{example}
-\begin{solution}
   Assume the distance between the two walls is $D$. Since there is no stress in the bar, which means thermal expansion has caused the bar to expand from original length $L$ to length $D$. Therefore,
   
 \[\begin{gathered}
@@ -843,7 +841,7 @@ Without any constraint, the change in length of the part can be computed using t
   D = L[1 + \alpha (T - {T_0})] \hfill \\ 
 \end{gathered}\]
 	
-\end{solution}
+\end{example}
 
 \subsection{Thermal Strains vs Mechanical Strains}
 
@@ -1087,8 +1085,6 @@ And the total elongation of the entire bar is
   \delta  = \int_0^L {d\delta }  = \int_0^L {\frac{{P(x)dx}}{{EA(x)}}}
 \end{equation}
 
-\pagelayout{wide}
-
 \begin{example}
   A cylinder with continuously variable cross sections of length $L$ is supported at end A and subjected to a tensile load $P$ at the free end B. The radii of the bar at ends A and B are $r_A$ and $r_B$ respectively. Determine the elongation of the bar due to the load $P$.
   \begin{figure}[H]
@@ -1108,9 +1104,6 @@ And the total elongation of the entire bar is
     \draw [|<->|] (left.south) ++ (-90:0.5) --++ (0:5) node[midway, above]{$L$};
     \end{tikzpicture}
   \end{figure}
-\end{example}
-
-\begin{solution}
   From the equation
   
 \[\delta  = \int_0^L d\delta  = \int_0^L \frac{P(x)dx}{EA(x)} \]
@@ -1171,7 +1164,7 @@ Finally, we know from similar triangles that $L_A/L_B = r_A/r_B$.
 
 \[\delta  = \frac{PL}{E\pi r_A^2}\left( \frac{r_A}{r_B} \right) = \frac{PL}{\pi Er_Ar_B}\]
 
-\end{solution}
+\end{example}
 
 \section{Statically Indeterminate Systems}
 
@@ -1200,8 +1193,7 @@ We shall now look at a simple example to better understand the steps in analyzin
     \draw [|<->|] (bar.south west) ++ (-90:0.5) --++ (0:4) node[midway, below]{$L_{AC}$};
     \draw [|<->|] (bar.south east) ++ (-90:0.5) --++ (180:3) node[midway, below]{$L_{CB}$};
   \end{tikzpicture}
-\end{example}
-\begin{solution}
+
 First, we know that there would be reactions at both points A and B. Using the equation of equilibrium, we know that the bar is in equilibrium, and therefore
 
 \[\sum F  = 0 = P - {F_A} - {F_B}\]
@@ -1212,11 +1204,11 @@ We also know that the bar is restrained between two walls, preventing any length
 
 Finally, we apply force-displacement relationship based on Hooke’s law. We know that the force in segment AC is $F_A$ in the compressive direction, and that the force in segment CB is $F_B$ in the tensile direction. We substitute the force-displacement relationship into the compatibility equation so that we have
 
-\[ - \frac{{{F_A}{L_{AC}}}}{{AE}} + \frac{{{F_B}{L_{CB}}}}{{AE}} = 0\]	
+\[ - \frac{{{F_A}{L_{AC}}}}{{AE}} + \frac{{{F_B}{L_{CB}}}}{{AE}} = 0\]
 
 Solving this equation, we have
 
-\[{F_B} = \frac{{{L_{AC}}}}{{{L_{CB}}}}{F_A}\]	
+\[{F_B} = \frac{{{L_{AC}}}}{{{L_{CB}}}}{F_A}\]
 
 So the magnitude of the reaction is inversely proportional to the distance away from the applied load. Substitute the solution into the equation of equilibrium, we have
 
@@ -1224,7 +1216,7 @@ So the magnitude of the reaction is inversely proportional to the distance away 
   {F_A} = \frac{{{L_{CB}}}}{L}P \hfill \\
   {F_B} = \frac{{{L_{AC}}}}{L}P \hfill \\ 
 \end{gathered} \]
-\end{solution}
+\end{example}
 
 \begin{example} Three bars attached to a rigid beam
   \begin{figure}[H]
@@ -1241,8 +1233,6 @@ So the magnitude of the reaction is inversely proportional to the distance away 
   \end{figure}
 
   Determine the internal forces in the three vertical members if they have the same $A$ and $E$?
-\end{example}
-\begin{solution}
 
   Drawing a free body diagram of each component shows that the application of equlibrium equation should be done on the rigid beam to express $P$ in terms of internal forces in the members $F_1, F_2, F_3$. Assuming all internal forces are tensile, they all point upward on the rigid beam. As such, the force equilibrium equation can be written as.
 
@@ -1287,7 +1277,7 @@ So the magnitude of the reaction is inversely proportional to the distance away 
 
  $$ F_1 = P - 5 \frac{P}{12} = \frac{7P}{12} $$
  $$ F_2 = \frac{P}{2} - \frac{2P}{12} = \frac{P}{3} $$
-\end{solution}
+\end{example}
 
 
 \section{Statically Indeterminate Systems with Thermal Effects}
@@ -1312,8 +1302,6 @@ In statically indeterminate structures, the total change in length when consider
     \draw [|<->|] (bar.south west) ++ (-90:0.5) --++ (0:4) node[midway, below]{$L_{AC}$};
     \draw [|<->|] (bar.south east) ++ (-90:0.5) --++ (180:3) node[midway, below]{$L_{CB}$};
   \end{tikzpicture}
-\end{example}
-\begin{solution}
 
   There are still support forces at A and B. The equilibrium equation in this case would remain the same
 
@@ -1342,7 +1330,7 @@ In statically indeterminate structures, the total change in length when consider
   
   \[\Delta T =  - \frac{{PAE}}{\alpha }\frac{{{L_{CB}}}}{L}\]
   
-\end{solution}
+\end{example}
 
 \begin{example} Three bars and a rigid beam under thermal change
 
@@ -1359,8 +1347,7 @@ In statically indeterminate structures, the total change in length when consider
   \end{tikzpicture}
 
   If the temperatures of the vertical bars are increased by $\Delta T$, determine the internal force in each member.
-\end{example}
-\begin{solution}
+
   First we must establish equilibrium equations for the members. For the force equilibrium in $y$-axis, we have
 
   $$ F_1 + F_2 + F_3 = 0 $$
@@ -1400,7 +1387,7 @@ In statically indeterminate structures, the total change in length when consider
   $$ F_2 > 0 \text{ and } F_1, F_3 < 0 $$
 
   When the members are heated the left and right members will try to expand more than the middle one due to their higher coefficients of thermal expansion $\alpha_1$. However, because of the rigid beam restriction, the left and right members are squeezed down, while the middle part is pulled. Other situations can be analyzed with similar logic.
-\end{solution}
+\end{example}
 
 \section{Compound Bars}
 
@@ -1513,10 +1500,6 @@ To solve a residual stress problem, where there is a cycle of loading and unload
   \item The permanent deformation of point C after the force $P$ is removed.
   \end{enumerate}
 
-\end{example}
-
-\begin{solution}
-  
   First we find the Young’s modulus of the bar material
   
   \[E = \frac{{(20 \times {{10}^3})}}{{0.001}} = 2 \times {10^7} \text{ psi}\]	
@@ -1563,7 +1546,7 @@ To solve a residual stress problem, where there is a cycle of loading and unload
   
   Since AC yielded under compression first, the material will keep deforming until BC begins to yield. Therefore, AC has become shorter due to plastic deformation, and point C moves to the left after unloading by 0.0006 ft.
   
-\end{solution}
+\end{example}
 
 \section{Dynamic Loading and Material Response}
 
@@ -1652,10 +1635,10 @@ Impact factors can then be used to apply to determine proper design parameters f
 %   \end{center}
   
 % \end{example}
-% \begin{solution}
+% \begin{example}
 
 %   We can apply the principle of conservation of energy in this problem. Before the impact, the energy of the system is simply the kinetic energy of the ram. At the maximum deformation (and maximum stress) moment, the energy is transferred entirely from the ram to the gate. The gate is 
-% \end{solution}
+% \end{example}
 
 \section*{Summary}
 
@@ -2061,9 +2044,6 @@ where $k_T = GJ/L$ is called the torsional stiffness of the bar.
   \end{tikzpicture}
 \end{figure}
   
-\end{example}
-  
-\begin{solution}
 First, we need to find the torque in each segment. We can use equation of equilibrium to calculate just that.
 
 Using the method of section, within segment BC,
@@ -2093,7 +2073,7 @@ Angle of twist between B and D is the sum of the angles of twist in BC and CD.
 \end{gathered} \]
 
 Therefore, the bar twisted in the same direction as $T_2$ by 0.0106 rad.
-\end{solution}
+\end{example}
 
 \section{Nonuniform Torsion}
 
@@ -2219,8 +2199,6 @@ where $\omega$  is the angular speed of the shaft. For machinery, the frequency 
     \end{tikzpicture}
   \end{figure}
   
-\end{example}
-\begin{solution}
 From \cref{eqn: torsion formula}, the maximum shear stress in the shaft occurs when there is maximum torque applied. Using \cref{eqn: power-torque}, we can calculate the maximum torque due to the power transmission. It is evident from the equation that the maximum torque is transferred when the angular speed of the shaft is the lowest. Therefore, the maximum torque applied on the shaft is
 
 \begin{align*}
@@ -2236,7 +2214,7 @@ The maximum shear stress on the material is
                   &= \frac{2(712 \text{ N-m})}{\pi (20 \times 10^{ - 3})^3} \\[5pt]
                   &= 56.7 \text{ MPa}  
 \end{align*}
-\end{solution}
+\end{example}
 
 \section{Torsion of Thin-walled Tubular Members}
 
@@ -2309,8 +2287,6 @@ Note that the line integral has to be performed around the entire median circumf
     \end{tikzpicture}
   \end{figure}
   
-\end{example}
-\begin{solution}
 From \cref{eqn: thin-walled torsion}, we need to first evaluate the area that the median line circumscribes. Since we are given the internal dimensions and thickness, the area circumscribed by the median line is simply the internal dimensions plus half the thickness.
 
 \[\begin{gathered}
@@ -2325,7 +2301,7 @@ After that, finding the maximum allowable torque is simply a matter of substitut
    = 2(0.002 \text{ m})(0.0605 \text{ m}^2)(150 \times 10^6 \text{ Pa}) \\ 
    = 36.3 \text{ kN-m} \\ 
 \end{gathered} \]
-\end{solution}
+\end{example}
 
 \section*{Summary}
 
@@ -2657,9 +2633,7 @@ The quantities $S_1$ and $S_2$ are known as the section moduli of the cross sect
       \draw[|<->|] (right.south) ++ (-90:0.5) --++ (180:3) node[midway, below]{50 cm};
     \end{tikzpicture}
   \end{figure}
-\end{example}
 
-\begin{solution}
   First, we must understand that the location along the beam where maximum stress occurs is the location of maximum bending. Using the method of sections and equilibrium equation, we find that the maximum bending moment $M_{\max}$ occurs at the middle of the beam between the two supports.
 
   \begin{align*}
@@ -2676,7 +2650,7 @@ The quantities $S_1$ and $S_2$ are known as the section moduli of the cross sect
   \end{align*}
   
 Since the bending moment is positive, the top surface will be in compression, while the bottom part will be in tension.
-\end{solution}
+\end{example}
 
 \section{Beams of Composite Cross Sections}
 
@@ -2849,8 +2823,6 @@ A composite beam made of two types of woods is subjected to bending under pure b
   %\caption{Dimensions for determining the neutral axis in a composite beam.}
 \end{figure}
 
-\end{example}
-\begin{solution}
 We know that the top part of the beam will be in tension while the bottom will be in compression. However, to determine the stresses, we must first determine the location of the neutral axis. We can do so by using equation 464. Assume that the neutral axis is h m away from the bottom, we have
 
 \[\begin{gathered}
@@ -2884,7 +2856,7 @@ Similarly for the maximum compressive stress at the bottom surface is
                                  &= 11.6 \text{ MPa}
 \end{align*}
 
-\end{solution}
+\end{example}
 
 \section{Doubly Symmetric Beams with Inclined Loads}
 
@@ -3013,9 +2985,6 @@ This equation, known as the \emph{shear formula}, can be used to determine shear
     \end{tikzpicture}
   \end{figure}
   
-\end{example}
-
-\begin{solution}
   First, we need to find the location for maximum shear stress in the glue layer. The shear stress is directly proportional to the shear force in the cross section. In three-point bending where the load is applied in the middle of the length, the shear force magnitude is constant throughout = $P/2$ = 750 N, positive on the left half and negative on the right half. The shear stress can be derived from the equation
 
   \begin{equation*}
@@ -3038,7 +3007,7 @@ This equation, known as the \emph{shear formula}, can be used to determine shear
     \tau &= \frac{(750)(1.5 \times 10^{-5})}{\dfrac{1}{12}(0.05)(0.05)^3(0.05)} \\ 
          &= 4.32 \times 10^5 \text{ Pa}
   \end{align*}
-\end{solution}
+\end{example}
 	
 \section{** Shear Flow **}
 
@@ -3199,8 +3168,7 @@ It should also be noted that the shear center will always lie on an axis of symm
 
 \begin{example}
 Find the shear center of a channel section. Given a channel section has thickness of $t$ throughout, the height of $d$, and the width of $b$.
-\end{example}
-\begin{solution}
+
 If there is force $V$ applied on the section, the resultant shear flow in the horizontal sections at distance $x$ from the right end is
 
 \[\begin{gathered}
@@ -3235,7 +3203,7 @@ We can ignore term(s) with $t^3$ since it becomes very small, the distance e bec
 \[e = \frac{td^2b^2}{\dfrac{1}{3}t{d^3} + 2d^2bt} = \frac{b^2}{\dfrac{d}{3} + 2b} = \frac{b}{2 + \left( \dfrac{d}{3b} \right)}\]	
 
 Note that $e$ is independent of $t$ and ranges from 0 to $b/2$ depending on the ratio $d/3b$.
-\end{solution}
+\end{example}
 
 \section{** Bending in Curved Beams **}
                 
@@ -3339,8 +3307,7 @@ where $R$ is the location of the neutral axis, measured as a distance from the c
 \begin{example} Proof of radius of neutral surface for rectangular cross-sectioned curved beam.
 
   Derive the radius of the curved beam shown in \cref{table: curved beam radius of neutral axis}
-\end{example}
-\begin{solution}
+
   The curved beam in question has an inner and outer radii of $r_i$ and $r_o$ respectively. The width of the cross section $b$ is constant, making the cross sectional area of the beam constant at $A = (r_o - r_i)b$. Now, we simply need to evaluate the integral on the denominator.
 
   Because of the constant width, we can simply cut the rectangular cross section into horizontal strips of height $dr$ and width $b$, in which case we can evaluate the integral simply as
@@ -3357,7 +3324,7 @@ where $R$ is the location of the neutral axis, measured as a distance from the c
       &= \frac{A}{\displaystyle b \ln \frac{r_o}{r_i}} \\
       &= \frac{r_o - r_i}{\displaystyle \ln \frac{r_o}{r_i}}
   \end{align*}
-\end{solution}
+\end{example}
 
 \subsection{Moment-stress distribution relationship}
 
@@ -3635,8 +3602,6 @@ Each time we integrate produces one constant of integration. These constants can
     \end{tikzpicture}
   \end{figure}
   
-\end{example}
-\begin{solution}
 First we must determine the bending moment inside the cross section along the length. Using the method of sections, we can determine that
 
 \[M(x) =  - P(L - x)\]	
@@ -3668,7 +3633,7 @@ The maximum deflection, naturally, is at the free end. Its value is
 \[v(L) =  - \frac{PL^3}{2EI} + \frac{PL^3}{6EI} =  - \frac{PL^3}{3EI}\]
 
 Note that the negative sign means the deflection is downward.
-\end{solution}
+\end{example}
 
 \subsection{Deflections by integration of the shear force and load equations}
 
@@ -3784,8 +3749,6 @@ According to Castigliano’s theorem, the only displacement that can be found ar
     \end{tikzpicture}
   \end{figure}
 
-\end{example}
-\begin{solution}
   To find the deflection at the location without a load, we must apply the fictitious load $Q$ at the point of interest, i.e. the middle.
 
    \begin{figure}[H]
@@ -3846,7 +3809,7 @@ According to Castigliano’s theorem, the only displacement that can be found ar
                    &= \left. \frac{\partial}{\partial Q} \left( \frac{5PQL^3}{48EI} \right) \right|_{Q=0} \\
                    &= \frac{5PL^3}{48EI}
     \end{align*}
-\end{solution}
+\end{example}
 \subsection{Differentiation under the integral sign}
 
 The use of Castigliano’s theorem for determining beam deflections may lead to lengthy integrations, especially when more than two loads act on the beam. Since finding the strain energy requires the integration of the square of the bending moment. After the integrations are completed and the strain energy has been determined, we differentiate the strain energy to obtain the deflections. However, we can bypass this step of finding the strain energy by differentiating before integrating. This procedure does not eliminate the integrations, but it does make them much simpler.
@@ -3865,8 +3828,7 @@ In this case, we integrate the product of the bending moment and its derivative,
 
 \begin{example}
 Assume again that we have the prismatic beam with bending modulus $EI$ with one end fixed and the other free. Load $P$ is applied downward at the free end. Use Castigliano’s theorem to determine its maximum deflection.
-\end{example}
-\begin{solution}
+
 The maximum deflection is at the free end. We know that the bending moment at any length $x$ is
 
 \[M(x) =  - P(L - x)\]
@@ -3881,7 +3843,7 @@ This allows us to compute the deflection directly by employing \cref{eqn: castig
 \end{align*}	
 
 Note that we have the same answer as that of the direct integration method. The only difference is the sign. Using Castigliano's theorem, positive deflections indicate that it is in the same direction as the force, which is downward.
-\end{solution}
+\end{example}
 
 \section*{Summary}
 
@@ -4189,8 +4151,7 @@ Since the angle between the principal stresses and maximum shear stress on Mohr�
     \includegraphics[scale=0.5]{pictures/Static-body-load-analysis/plane-stress-example}
     \caption{\Cref{example: plane stress}}
   \end{figure}
-\end{example}
-\begin{solution}
+
   To determine the maximum shear stress, simply substitute the values into \cref{eqn: max shear stress} and obtain
   
   \begin{align*}
@@ -4258,7 +4219,7 @@ Since the angle between the principal stresses and maximum shear stress on Mohr�
       \draw [-latex] (large.center) ++ (45:1.5) arc (45:0:1.5);
     \end{tikzpicture}
   \end{figure}
-\end{solution}
+\end{example}
 
 \section{Hooke’s Law for Plane Stress}
 
@@ -4438,8 +4399,7 @@ where $K$ is called the \emph{volume modulus of elasticity} or \emph{bulk modulu
 
 \begin{example}
 A 0.25-m$^3$ cube is being submerged under water where the water pressure is 30 MPa. If the material has $E$ = 3 GPa and Poisson’s ratio of 0.3, find the final volume of the element.
-\end{example}
-\begin{solution}
+
 Hydrostatic pressure situation represents the state where the pressure is equal in all direction, this means that we can assume that the element is under spherical stress. The unit volume change is
 
 \begin{align*}
@@ -4456,7 +4416,7 @@ This means that the volume reduced by 1.2\% (since hydrostatic pressure in this 
       &= 0.247 \text{ m}^3
 \end{align*}
 
-\end{solution}
+\end{example}
 
 \subsection{Absolute Maximum Shear Stress}
 
@@ -4835,9 +4795,6 @@ The values of $\varepsilon_x$, $\varepsilon_y$, $\gamma_{xy}$ are determined by 
     \draw [->] (o) ++ (0:0.6) arc (0:120:0.6) node[near end, above]{$120\degree$};
   \end{tikzpicture}
 \end{figure}
-  
-\end{example}
-\begin{solution}
 
   First we need to substitute the angles into all of the strain rosette equations
 
@@ -4887,7 +4844,7 @@ The values of $\varepsilon_x$, $\varepsilon_y$, $\gamma_{xy}$ are determined by 
       \draw [->] (mohr.center) ++ (-76:1) arc (-76:0:1) node[midway, above left, xshift=1mm]{76$\degree$};
     \end{tikzpicture}
   \end{figure}
-\end{solution}
+\end{example}
 
 \section*{Summary}
 
@@ -5158,8 +5115,7 @@ By comparison, this is the same result obtained for the longitudinal stress in t
 
 \begin{example}
 A thin-walled cylindrical pressure vessel with thickness of 3 mm and diameter of 30 cm is pressurized with natural gas. If the vessel material has the maximum allowable stress of 100 MPa, what is the maximum pressure that the vessel can withstand?
-\end{example}
-\begin{solution}
+
 The stresses on cylindrical pressure vessels due to internal pressure are always principal stresses. Therefore, we need only compare the maximum allowable stress to the maximum principal stress on the vessel, which is always the hoop/circumferential stress.
 
 \begin{align*}
@@ -5169,7 +5125,7 @@ The stresses on cylindrical pressure vessels due to internal pressure are always
               &= {10^6} \text{ Pa} = 1\text{ MPa} \\ 
 \end{align*}
 
-\end{solution}
+\end{example}
 \section{State of Stress Caused by Combined Loadings}
 
 We have discussed the methods for determining stress distributions in a member subjected to an internal axial force, a shear force, a bending moment, or a torsional moment. In reality, however, the cross section of a member is subjected to several of these types of loadings simultaneously, and as a result, the method of superposition, if it applies, can be used to determine the resultant stress distributions caused by the loads. It must be noted that the principle only applies when there is a \emph{linear relationship} between the \emph{stress} and the \emph{loads} and when the member does not undergo significant deformation due to the loads.
@@ -5198,8 +5154,6 @@ Analysis of these problems involves first identify the critical point on the mem
     \end{tikzpicture}
   \end{figure}
 
-\end{example}
-\begin{solution}
   First of all, we must determine the location of a critical point. The applied load on the shaft are the torque from the engine and the weight of the helicopter. The axial load of the weight does not give any maximum stress location, while the torsion from the engine means that the outer surface is carrying the highest shear stress. Combining the two, the outer surface of the shaft is the critical `surface.' We can the substitute the loads to determine the stress.
 
   \begin{align*}
@@ -5216,7 +5170,7 @@ Analysis of these problems involves first identify the critical point on the mem
   \end{align*}
 
   This equation can be solved numerically to obtain $r = 2.38$ cm.
-\end{solution}
+\end{example}
  
 \section*{Summary}
 
@@ -5687,15 +5641,14 @@ Since this topic is rather different from the load-deformation approach we typic
     \node at (beam.north) [above]{$E, A, L$};
     \draw [->, ultra thick](beam.east) --++ (0:1) node[right]{$F$};
   \end{tikzpicture}
-\end{example}
-\begin{solution}
+
   Since we want to determine the deformation of the entire beam length, we want to apply the unit virtual load at the point of interest (the free end of the beam). The internal virtual work done by that unit virtual load is
 
   \begin{align*}
     1 \cdot \delta &= \frac{fFL}{EA} = \frac{(1)FL}{EA} \\
     \delta &= \frac{FL}{EA} 
   \end{align*}
-\end{solution}
+\end{example}
 
 \begin{example} Virtual energy and deflection for a system of trusses.
 
@@ -5714,8 +5667,7 @@ Since this topic is rather different from the load-deformation approach we typic
     \draw [|<->|] (diag.north) ++ (90:0.5) --++ (0:4) node[midway, fill=titlepagecolor!50]{50 cm};
     \node at (diag.east) [above right]{$A = 2 \text{ cm}^2$};
   \end{tikzpicture}
-\end{example}
-\begin{solution}
+
   Let us first determine the internal virtual force resulting from the 1-N virtual force applied downward at point A.
   
   Using sum of forces in $x$ equal to zero, we have that the virtual forces in the diagonal (d) and horizontal (h) members must follow the equation.
@@ -5749,7 +5701,7 @@ Since this topic is rather different from the load-deformation approach we typic
 
   Since the answer is positive, the deflection is in the same direction as the virtual load, which is downward.
   
-\end{solution}
+\end{example}
 
 \subsection{Beams}
 
@@ -5775,8 +5727,7 @@ The equation for the slope of the beam can also be derived in the same fashion. 
     \draw (wall.north east) -- (wall.south east);
     \draw [<-, ultra thick] (beam.north east) --++ (90:1) node[right]{$P$};
   \end{tikzpicture}
-\end{example}
-\begin{solution}
+
   By applying the unit downward force at the free end, we find that the shear force along the length of the beam is constant and equal to 1, giving the resultant virtual bending moment of
 
   \begin{equation*}
@@ -5799,7 +5750,7 @@ The equation for the slope of the beam can also be derived in the same fashion. 
   \end{align*}
 
   Obviously, this is identical to the result obtained by direct integration method shown in \cref{example: cantilever beam deflection}
-\end{solution}
+\end{example}
 
 \section*{Summary}
 
@@ -5999,9 +5950,6 @@ The safety factor according to the criterion can be written as
   \item Maximum shear stress criterion
   \item Maximum distortion energy criterion
   \end{enumerate}
-\end{example}
-
-\begin{solution}
 
   First, the uniaxial test indicates the material’s yield stress, which is 70 MPa. In either case, to determine the maximum a, we have to determine the element’s principal stresses
 
@@ -6030,7 +5978,7 @@ The safety factor according to the criterion can be written as
         a = 1.14 \\ 
       \end{gathered} \]
     \end{enumerate}
-\end{solution}
+\end{example}
 
 \subsection{Ductile Coulomb-Mohr theory}
 
@@ -6324,8 +6272,7 @@ Each relation can be expressed as a line on which all combinations of stress amp
       \end{axis}
     \end{tikzpicture}
   \end{figure}
-\end{example}
-\begin{solution}
+
     The safety factor of a member under alternate loading using the Soderberg line is as follows
 
     \[\frac{\sigma_a}{S_e} + \frac{\sigma_m}{S_y} = \frac{1}{N_s}\]
@@ -6343,7 +6290,7 @@ Each relation can be expressed as a line on which all combinations of stress amp
     d = 7.9 \times 10^{-3} = 7.9 \text{ mm} \hfill \\ 
   \end{gather*}
   Therefore, the rod’s diameter must be 7.9 mm.
-\end{solution}
+\end{example}
 
 \section{Buckling} \label{section: buckling}
 
@@ -6593,8 +6540,6 @@ where $L_e = KL$ in which $K$ is the \emph{effective-length factor} and $KL/r_g$
     \includegraphics[scale=0.7]{pictures/Failure-theories/Rail_buckle}
     \caption{Train track buckling. (US Department of Transportation)}
   \end{figure}
-\end{example}
-\begin{solution}
 
   Buckling due to thermal load is a combination between two problems: buckling and thermal loading. Assuming that rail buckling happens on a first mode ($n = 1$), we have that
 
@@ -6633,7 +6578,7 @@ where $L_e = KL$ in which $K$ is the \emph{effective-length factor} and $KL/r_g$
   \end{align*}
 
   As we can see it requires very slight temperature change to cause buckling. However, with a proper installation technique called \emph{rail stressing}, the rail is pre-stretched before installation. This technique preloads the rail in tension and thus it will be much considerably less likely to buckle.
-\end{solution}
+\end{example}
 
 \section*{Summary}
 
