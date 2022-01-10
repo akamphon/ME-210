@@ -1,11 +1,11 @@
 # Fdb version 3
-["biber me210"] 1641801482 "me210.bcf" "me210.bbl" "me210" 1641802843
-  "me210.bcf" 1641802424 107435 d0fb1bc583bf6eadbdccc7a0ef827487 "pdflatex"
+["biber me210"] 1641833178 "me210.bcf" "me210.bbl" "me210" 1641833942
+  "me210.bcf" 1641833295 107435 d0fb1bc583bf6eadbdccc7a0ef827487 "pdflatex"
   "me210.bib" 1640015254 1124 e7fbab27b1bc8826cf5fc49111060806 ""
   (generated)
   "me210.bbl"
   "me210.blg"
-["pdflatex"] 1641802843 "me210.tex" "me210.pdf" "me210" 1641802843
+["pdflatex"] 1641833942 "me210.tex" "me210.pdf" "me210" 1641833942
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1640644967 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/newpx/zpl_OsF.enc" 1640645512 2666 821a621480f032a818302d90bd9b62c3 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-lf.enc" 1640645512 3010 75aaafef38b7ebdef703cffcd775ccce ""
@@ -321,7 +321,7 @@
   "/usr/share/texmf-dist/tex/latex/kaobook/kao.sty" 1640315584 51405 73d416e79774c2a6e307e934cb39aa37 ""
   "/usr/share/texmf-dist/tex/latex/kaobook/kaobiblio.sty" 1640315584 14433 9577ceca1ce742a39d418e279ecbe742 ""
   "/usr/share/texmf-dist/tex/latex/kaobook/kaobook.cls" 1640315584 10126 4a9b9292f0280ca246c01cafa948f038 ""
-  "/usr/share/texmf-dist/tex/latex/kaobook/kaotheorems.sty" 1640315584 12249 3a015248eeb6424a02f5f126a0123db4 ""
+  "/usr/share/texmf-dist/tex/latex/kaobook/kaotheorems.sty" 1641832896 12249 88368b2d8f87346b44caa7105bd75271 ""
   "/usr/share/texmf-dist/tex/latex/koma-script/floatrow.hak" 1640644967 6075 704a8c737c77c851d1565122d44caa76 ""
   "/usr/share/texmf-dist/tex/latex/koma-script/listings.hak" 1640644967 5141 f0cd6abd0aaaabf0dd6aa4b4921a678c ""
   "/usr/share/texmf-dist/tex/latex/koma-script/lscape.hak" 1640644967 3322 835bc219787efa6f7ea57b4d70336a7d ""
@@ -450,14 +450,14 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1640644967 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1640667641 4240670 d37bfea4523508c8fda75ea2e343796e ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1640667639 2920107 b14b7725b670f8f806e3d07887077f51 ""
-  "me210.aux" 1641802422 129010 35246c51669914bdcb0c791b5f3df3da "pdflatex"
-  "me210.bbl" 1641801486 8533 77fc937c03eded0ef53ffc4f64a4f4ea "biber me210"
-  "me210.lof" 1641802424 12074 7325aabd7eb4d3ed1674cb8de0dcc141 "pdflatex"
-  "me210.lot" 1641802424 1475 402541074dfe29d73e84f15cde2503c8 "pdflatex"
-  "me210.mw" 1641802424 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "me210.run.xml" 1641802424 2312 eed1c30fb9b5de52b71d59279b3751ea "pdflatex"
-  "me210.tex" 1641802383 412622 a3d6dcd716eb9538e70ceea125c10160 ""
-  "me210.toc" 1641802424 33851 ab98c677bca522133874e27711588e8f "pdflatex"
+  "me210.aux" 1641833295 128813 89fe93df56c3560b8c728ce7e797560a "pdflatex"
+  "me210.bbl" 1641833179 8533 77fc937c03eded0ef53ffc4f64a4f4ea "biber me210"
+  "me210.lof" 1641833295 12074 7325aabd7eb4d3ed1674cb8de0dcc141 "pdflatex"
+  "me210.lot" 1641833295 1475 5a2f30b673af5d0e5c74d4503563cc27 "pdflatex"
+  "me210.mw" 1641833295 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "me210.run.xml" 1641833295 2312 bc5ab493aa76909375131bd3f1cc00f4 "pdflatex"
+  "me210.tex" 1641833941 410134 83be2a4eb4a3c8be85a61cbbef289bf5 ""
+  "me210.toc" 1641833295 33851 9ea0f848edc81e5226ce3fea2064edb8 "pdflatex"
   "pictures/Failure-theories/Rail_buckle.jpg" 1640015254 21813 771e94d59646ca076115a0f35c1b0b06 ""
   "pictures/Static-body-load-analysis/beam-def-midpoint-exercise.pdf" 1640015254 12789 82f331fa3402a0c724a8ddb2742b43a7 ""
   "pictures/Static-body-load-analysis/multiaxial-cantilever-beam-exercise.pdf" 1640015254 12993 75d3ed38e5a47d59cced26898dc694b1 ""
@@ -487,8 +487,8 @@
   "me210.pytxcode"
   "me210.run.xml"
   "me210.toc"
-["pythontex"] 1641802843 "me210.pytxcode" "pythontex-files-me210/me210.pytxmcr" "me210" 1641802843
-  "me210.pytxcode" 1641802424 15341 f4032c20bb892054244f23a785a02d8a "pdflatex"
+["pythontex"] 1641833942 "me210.pytxcode" "pythontex-files-me210/me210.pytxmcr" "me210" 1641833942
+  "me210.pytxcode" 1641833295 15341 a24016d50899d8f0c70b0de81e51a227 "pdflatex"
   (generated)
   "pythontex-files-me210/me210.pytxmcr"
   "pythontex-files-me210/me210.pytxpyg"
@@ -498,6 +498,5 @@
   "pythontex-files-me210/py_default_default_57.stdout"
   "pythontex-files-me210/py_default_default_60.stdout"
   "pythontex-files-me210/py_default_default_85.stdout"
-  "pythontex-files-me210/py_default_default_86.stdout"
   "pythontex-files-me210/py_default_default_88.stdout"
   "pythontex-files-me210/pythontex_data.pkl"

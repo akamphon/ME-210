@@ -10,14 +10,12 @@ svgnames,
 \setcounter{secnumdepth}{1}
 \setcounter{tocdepth}{1}
 
-\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
-
 %%% PAGE DIMENSIONS
 \usepackage{graphicx} % support the \includegraphics command and options
 
 %%% PACKAGES
 \usepackage{booktabs} % for much better looking tables
-\usepackage{enumitem}
+%\usepackage{enumitem}
 
 %%% HEADERS & FOOTERS
 %\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
@@ -29,20 +27,14 @@ svgnames,
 
 %\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
 
-\usepackage{hyperref}
-\hypersetup{
-  colorlinks,
-  citecolor=black,
-  filecolor=black,
-  linkcolor=blue,
-  urlcolor=blue
-}
-\let\openbox\relax
-\usepackage{amsmath}
-\usepackage{amsthm}
-%\usepackage{newtxtext}
-%\usepackage{newtxmath}
-%\usepackage{amssymb}
+%\usepackage{hyperref}
+%\hypersetup{
+%  colorlinks,
+%  citecolor=black,
+%  filecolor=black,
+%  linkcolor=blue,
+%  urlcolor=blue
+%}
 \usepackage{multirow}
 \usepackage{gensymb}
 \usepackage{array}
@@ -52,7 +44,6 @@ svgnames,
 %% Chapter Heading %%%%%
 % \usepackage[explicit]{titlesec}
 \newcommand*\chapterlabel{}
-%\usepackage{kpfonts}
 %% Drawing pics with tikz %%%
 \usepackage{tikz,calc}
 \tikzset{>=latex}
@@ -82,84 +73,11 @@ import random
     \tikz[x=0.25cm,y=0.60cm,line width=.2ex,-stealth,#1] \draw(0,0) arc (150:-150:1 and 1);%
 }
 
-%\titleformat{\chapter}
-%{\gdef\chapterlabel{}
-%  \normalfont\huge\bfseries}
-%{\gdef\chapterlabel{\thechapter}}{0pt}
-%{\begin{tikzpicture}[remember picture,overlay]
-%    \node[yshift=-3cm] at (current page.north west)
-%    {\begin{tikzpicture}[remember picture,overlay]
-%        \draw[fill=titlepagecolor] (0,0) rectangle
-%        (\paperwidth,3cm) ;
-%        \node[anchor=east,xshift=.9\paperwidth,rectangle,
-%        rounded corners=5pt,inner sep=11pt, draw,
-%        fill=SkyBlue]
-%        {\color{black}#1};
-%        \ifnum\value{chapter}>0
-%        \node[right, xshift=1cm, yshift=1.5cm]{\scalebox{4}{\Huge\thechapter}};
-%        \fi
-%      \end{tikzpicture}
-%    };
-%  \end{tikzpicture}
-%}
-%
-%\titleformat{name=\chapter, numberless}
-%{\gdef\chapterlabel{}
-%  \normalfont\huge\bfseries}
-%{\gdef\chapterlabel{\thechapter}}{0pt}
-%{\begin{tikzpicture}[remember picture,overlay]
-%    \node[yshift=-3cm] at (current page.north west)
-%    {\begin{tikzpicture}[remember picture,overlay]
-%        \draw[fill=titlepagecolor] (0,0) rectangle
-%        (\paperwidth,3cm) ;
-%        \node[anchor=east,xshift=.9\paperwidth,rectangle,
-%        rounded corners=5pt,inner sep=11pt, draw,
-%        fill=SkyBlue]
-%        {\color{black}#1};
-%      \end{tikzpicture}
-%    };
-%  \end{tikzpicture}
-%}
-%
-%\titlespacing*{\chapter}{0pt}{50pt}{-10pt}
-
-%Example environment
-%\usepackage{thmtools}
-%\usepackage{mdframed}
 \usepackage{float}
 \definecolor{titlepagecolor}{cmyk}{0.3,.50,0.50,.20}
 \definecolor{namecolor}{cmyk}{0.3,.30,0.3,0}
-% \declaretheoremstyle[
-% spaceabove=6pt, spacebelow=0pt,
-% headfont=\normalfont\bfseries,
-% notefont=\mdseries, notebraces={(}{)},
-% bodyfont=\normalfont,
-% postheadspace=1em,
-% numberwithin=chapter,
-% preheadhook={\begin{mdframed}[backgroundcolor=titlepagecolor!50,
-%     innertopmargin=6pt, splittopskip=\topskip, %
-%     skipbelow= 0pt, skipabove=6pt, %
-%     topline=false,bottomline=false,leftline=false,rightline=false] \sloppy},
-%   postfoothook=\end{mdframed},
-% headpunct={}
-% ]{exstyle}
-% \declaretheoremstyle[
-% spaceabove=6pt, spacebelow=6pt,
-% headfont=\normalfont\bfseries,
-% notefont=\mdseries, notebraces={(}{)},
-% bodyfont=\normalfont,
-% postheadspace=1em,
-% preheadhook={\begin{mdframed}[backgroundcolor=titlepagecolor!50,
-%     innertopmargin=6pt, splittopskip=\topskip, %
-%     skipbelow=6pt, skipabove=0pt, %
-%     topline=false,bottomline=false,leftline=false,rightline=false] \sloppy},
-%   postfoothook=\end{mdframed},
-% headpunct={},
-% numbered=no
-% ]{solstyle}
-% \declaretheorem[style=exstyle]{example}
-% \declaretheorem[style=solstyle]{solution}
 \usepackage[framed=true]{kaotheorems}
+%\newtheorem*{example}{Example}[chapter]
 
 % New list for exercises
 \newlist{exercises}{enumerate}{2}

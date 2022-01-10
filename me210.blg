@@ -1,15 +1,15 @@
 [0] Config.pm:311> INFO - This is Biber 2.16
 [0] Config.pm:314> INFO - Logfile is 'me210.blg'
-[178] biber:340> INFO - === Mon Jan 10, 2022, 14:58:06
-[291] Biber.pm:415> INFO - Reading 'me210.bcf'
-[365] Biber.pm:949> INFO - Using all citekeys in bib section 0
-[380] Biber.pm:4340> INFO - Processing section 0
-[413] Biber.pm:4531> INFO - Looking for bibtex format file 'me210.bib' for section 0
-[431] bibtex.pm:1689> INFO - LaTeX decoding ...
-[438] bibtex.pm:1494> INFO - Found BibTeX data source 'me210.bib'
-[574] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[574] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[574] Biber.pm:4168> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[574] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
-[579] bbl.pm:654> INFO - Writing 'me210.bbl' with encoding 'UTF-8'
-[583] bbl.pm:757> INFO - Output to me210.bbl
+[77] biber:340> INFO - === Mon Jan 10, 2022, 23:46:19
+[92] Biber.pm:415> INFO - Reading 'me210.bcf'
+[163] Biber.pm:949> INFO - Using all citekeys in bib section 0
+[177] Biber.pm:4340> INFO - Processing section 0
+[187] Biber.pm:4531> INFO - Looking for bibtex format file 'me210.bib' for section 0
+[188] bibtex.pm:1689> INFO - LaTeX decoding ...
+[194] bibtex.pm:1494> INFO - Found BibTeX data source 'me210.bib'
+[258] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[258] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[259] Biber.pm:4168> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[259] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
+[262] bbl.pm:654> INFO - Writing 'me210.bbl' with encoding 'UTF-8'
+[266] bbl.pm:757> INFO - Output to me210.bbl
