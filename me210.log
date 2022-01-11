@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.12.28)  10 JAN 2022 23:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.1.5)  11 JAN 2022 14:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2418,15 +2418,15 @@ File: setspace.hak 2021/11/13 v3.35 KOMA-Script scrhack part (hacking package s
 etspace)
 ))
 LaTeX Font Info:    Trying to load font information for T1+zplLF on input line 
-112.
+105.
 
 (/usr/share/texmf-dist/tex/latex/newpx/t1zpllf.fd
 File: t1zpllf.fd 2021/05/25 v1.0 font definition file for T1/zpl/LF
 )
 LaTeX Font Info:    Font shape `T1/zplLF/m/n' will be
-(Font)              scaled to size 9.70001pt on input line 112.
+(Font)              scaled to size 9.70001pt on input line 105.
 Package translations Info: No language package found. I am going to use `englis
-h' as default language. on input line 112.
+h' as default language. on input line 105.
 \@quotelevel=\count603
 \@quotereset=\count604
 
@@ -2437,54 +2437,54 @@ LaTeX Warning: Unused global option(s):
 (./me210.aux)
 \openout1 = `me210.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/npxmi/m/it on input line 112.
+LaTeX Font Info:    Checking defaults for OML/npxmi/m/it on input line 105.
 LaTeX Font Info:    Trying to load font information for OML+npxmi on input line
- 112.
+ 105.
  (/usr/share/texmf-dist/tex/latex/newpx/omlnpxmi.fd
 File: omlnpxmi.fd 2013/03/21 Fontinst v1.933 font definitions for OML/npxmi.
 )
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for U/npxexa/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for U/npxexa/m/n on input line 105.
 LaTeX Font Info:    Trying to load font information for U+npxexa on input line 
-112.
+105.
 
 (/usr/share/texmf-dist/tex/latex/newpx/unpxexa.fd
 File: unpxexa.fd 2013/03/24 Fontinst v1.933 font definitions for U/npxexa.
 )
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for LMS/npxsy/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for LMS/npxsy/m/n on input line 105.
 LaTeX Font Info:    Trying to load font information for LMS+npxsy on input line
- 112.
+ 105.
 
 (/usr/share/texmf-dist/tex/latex/newpx/lmsnpxsy.fd
 File: lmsnpxsy.fd 2016/07/04 Fontinst v1.933 font definitions for LMS/npxsy.
 )
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for LMX/npxexx/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for LMX/npxexx/m/n on input line 105.
 LaTeX Font Info:    Trying to load font information for LMX+npxexx on input lin
-e 112.
+e 105.
 
 (/usr/share/texmf-dist/tex/latex/newpx/lmxnpxexx.fd
 File: lmxnpxexx.fd 2016/07/04 Fontinst v1.933 font definitions for LMX/npxexx.
 )
-LaTeX Font Info:    ... okay on input line 112.
-Package scrbase Info: activating english \contentsname on input line 112.
-Package scrbase Info: activating english \listfigurename on input line 112.
-Package scrbase Info: activating english \listtablename on input line 112.
+LaTeX Font Info:    ... okay on input line 105.
+Package scrbase Info: activating english \contentsname on input line 105.
+Package scrbase Info: activating english \listfigurename on input line 105.
+Package scrbase Info: activating english \listtablename on input line 105.
 
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -2543,7 +2543,7 @@ e
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    Font shape `T1/zplLF/m/sl' will be
-(Font)              scaled to size 9.70001pt on input line 112.
+(Font)              scaled to size 9.70001pt on input line 105.
 \openout4 = `me210.mw'.
 
 [1
@@ -2583,18 +2583,18 @@ LaTeX Font Info:    Font shape `T1/zplLF/m/sl' will be
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \microtypecontext on input line 112.
-Package microtype Info: Applying patch `item' on input line 112.
-Package microtype Info: Applying patch `toc' on input line 112.
-Package microtype Info: Applying patch `eqnum' on input line 112.
-Package microtype Info: Applying patch `footnote' on input line 112.
+LaTeX Info: Redefining \microtypecontext on input line 105.
+Package microtype Info: Applying patch `item' on input line 105.
+Package microtype Info: Applying patch `toc' on input line 105.
+Package microtype Info: Applying patch `eqnum' on input line 105.
+Package microtype Info: Applying patch `footnote' on input line 105.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 112.
+LaTeX Info: Redefining \showhyphens on input line 105.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -2620,7 +2620,7 @@ Package caption Info: rotating package is loaded.
 Package caption Info: supertabular package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \@sidenotes@extrawidth=\skip303
-Package hyperref Info: Link coloring ON on input line 112.
+Package hyperref Info: Link coloring ON on input line 105.
 
 (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -2634,10 +2634,10 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 \c@section@level=\count611
 LaTeX Info: Redefining \Ref on input line 520.
 )
-LaTeX Info: Redefining \ref on input line 112.
-LaTeX Info: Redefining \pageref on input line 112.
-LaTeX Info: Redefining \nameref on input line 112.
-LaTeX Info: Redefining \Ref on input line 112.
+LaTeX Info: Redefining \ref on input line 105.
+LaTeX Info: Redefining \pageref on input line 105.
+LaTeX Info: Redefining \nameref on input line 105.
+LaTeX Info: Redefining \Ref on input line 105.
 \c@lstlisting=\count612
 
 (/usr/share/texmf-dist/tex/latex/floatrow/fr-longtable.sty
@@ -2670,15 +2670,15 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
 \symgns@font=\mathgroup10
 LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
-(Font)                  TS1/zplLF/m/n --> TS1/zplLF/b/n on input line 112.
-Package gensymb Info: Math companion symbols declared on input line 112.
-LaTeX Info: Redefining \degree on input line 112.
-LaTeX Info: Redefining \celsius on input line 112.
+(Font)                  TS1/zplLF/m/n --> TS1/zplLF/b/n on input line 105.
+Package gensymb Info: Math companion symbols declared on input line 105.
+LaTeX Info: Redefining \degree on input line 105.
+LaTeX Info: Redefining \celsius on input line 105.
 Package gensymb Info: Using text companion symbols for \degree, \celsius and \p
-erthousand on input line 112.
-LaTeX Info: Redefining \ohm on input line 112.
-Package gensymb Info: Using \textohm for \ohm on input line 112.
-Package gensymb Info: Using \textmu for \micro on input line 112.
+erthousand on input line 105.
+LaTeX Info: Redefining \ohm on input line 105.
+Package gensymb Info: Using \textohm for \ohm on input line 105.
+Package gensymb Info: Using \textmu for \micro on input line 105.
 
 
 LaTeX hooks Warning: Generic hook
@@ -2695,7 +2695,7 @@ File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 112.
+or `english'. on input line 105.
 
 Package pgfplots notification 'compat/show suggested version=true': you might b
 enefit from \pgfplotsset{compat=1.18} (current compat level: 1.12).
@@ -2703,12 +2703,12 @@ enefit from \pgfplotsset{compat=1.18} (current compat level: 1.12).
 Package newfloat Info: `float' package detected.
 (./pythontex-files-me210/me210.pytxmcr)
 Package newfloat Info: New float `listing' with options `fileext=lopytx' on inp
-ut line 112.
+ut line 105.
 \c@listing=\count616
-Package newfloat Info: float type `listing'=8 on input line 112.
-Package newfloat Info: \listoflistings is already defined on input line 112.
+Package newfloat Info: float type `listing'=8 on input line 105.
+Package newfloat Info: \listoflistings is already defined on input line 105.
 Package tocbasic Info: babel extension for `lopytx' omitted
-(tocbasic)             because of missing \bbl@set@language on input line 112.
+(tocbasic)             because of missing \bbl@set@language on input line 105.
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
 
@@ -2736,9 +2736,9 @@ Package: blx-case-expl3 2020/12/31 v3.16 expl3 case changing code for biblatex
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'me210.bbl' found.
  (./me210.bbl)
-Package biblatex Info: Reference section=0 on input line 112.
-Package biblatex Info: Reference segment=0 on input line 112.
-Package scrhack Info: undefining \float@addtolists on input line 112.
+Package biblatex Info: Reference section=0 on input line 105.
+Package biblatex Info: Reference segment=0 on input line 105.
+Package scrhack Info: undefining \float@addtolists on input line 105.
 
 (./pythontex-files-me210/me210.pytxpyg)
 \openout4 = `me210.mw'.
@@ -2762,7 +2762,7 @@ e
 (marginnote)                changing the page numbering on page 2.
 
 Package marginnote Info: Using workaround for absolute page number on input lin
-e 114.
+e 107.
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: custom
@@ -2830,31 +2830,31 @@ e 114.
 <pictures/logo-tu.pdf, id=41, 597.50731pt x 421.10023pt>
 File: pictures/logo-tu.pdf Graphic file (type pdf)
 <use pictures/logo-tu.pdf>
-Package pdftex.def Info: pictures/logo-tu.pdf  used on input line 119.
+Package pdftex.def Info: pictures/logo-tu.pdf  used on input line 112.
 (pdftex.def)             Requested size: 99.46881pt x 70.1018pt.
 LaTeX Font Info:    Font shape `T1/zplLF/b/n' will be
-(Font)              scaled to size 9.70001pt on input line 125.
-LaTeX Font Info:    Trying to load font information for T1+qhv on input line 12
-5.
+(Font)              scaled to size 9.70001pt on input line 118.
+LaTeX Font Info:    Trying to load font information for T1+qhv on input line 11
+8.
 (/usr/share/texmf-dist/tex/latex/tex-gyre/t1qhv.fd
 File: t1qhv.fd 2009/09/25 v1.2 font definition file for T1/qhv
 )
 LaTeX Font Info:    Font shape `T1/qhv/b/n' will be
-(Font)              scaled to size 9.02084pt on input line 125.
+(Font)              scaled to size 9.02084pt on input line 118.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `qhv' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/qhv/m/n' will be
-(Font)              scaled to size 9.02084pt on input line 125.
+(Font)              scaled to size 9.02084pt on input line 118.
 LaTeX Font Info:    Font shape `T1/zplLF/m/n' will be
-(Font)              scaled to size 24.13362pt on input line 131.
+(Font)              scaled to size 24.13362pt on input line 124.
 LaTeX Font Info:    Font shape `T1/qhv/m/n' will be
-(Font)              scaled to size 22.44386pt on input line 131.
+(Font)              scaled to size 22.44386pt on input line 124.
 LaTeX Font Info:    Font shape `T1/zplLF/m/n' will be
-(Font)              scaled to size 16.76161pt on input line 134.
+(Font)              scaled to size 16.76161pt on input line 127.
 LaTeX Font Info:    Font shape `T1/qhv/m/n' will be
-(Font)              scaled to size 15.58801pt on input line 134.
+(Font)              scaled to size 15.58801pt on input line 127.
 \openout4 = `me210.mw'.
 
  [1
@@ -2866,11 +2866,11 @@ LaTeX Font Info:    Font shape `T1/qhv/m/n' will be
 \openout4 = `me210.mw'.
 
 LaTeX Font Info:    Font shape `T1/qhv/b/n' will be
-(Font)              scaled to size 18.70923pt on input line 139.
+(Font)              scaled to size 18.70923pt on input line 132.
 LaTeX Font Info:    Font shape `T1/zplLF/m/n' will be
-(Font)              scaled to size 20.11783pt on input line 139.
+(Font)              scaled to size 20.11783pt on input line 132.
 LaTeX Font Info:    Font shape `T1/zplLF/b/n' will be
-(Font)              scaled to size 20.11783pt on input line 139.
+(Font)              scaled to size 20.11783pt on input line 132.
 \openout4 = `me210.mw'.
 
  [2
@@ -2880,22 +2880,22 @@ LaTeX Font Info:    Font shape `T1/zplLF/b/n' will be
 \openout4 = `me210.mw'.
 
 LaTeX Font Info:    Trying to load font information for OT1+zplTLF on input lin
-e 172.
+e 165.
 
 (/usr/share/texmf-dist/tex/latex/newpx/ot1zpltlf.fd
 File: ot1zpltlf.fd 2021/05/25 v1.0 font definition file for OT1/zpl/TLF
 )
 LaTeX Font Info:    Font shape `OT1/zplTLF/m/n' will be
-(Font)              scaled to size 9.70001pt on input line 172.
+(Font)              scaled to size 9.70001pt on input line 165.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `zplTLF' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `OT1/zplTLF/m/n' will be
-(Font)              scaled to size 7.08101pt on input line 172.
+(Font)              scaled to size 7.08101pt on input line 165.
 LaTeX Font Info:    Font shape `OT1/zplTLF/m/n' will be
-(Font)              scaled to size 5.335pt on input line 172.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 172
+(Font)              scaled to size 5.335pt on input line 165.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 165
 .
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -2904,7 +2904,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/share/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 172
+LaTeX Font Info:    Trying to load font information for U+msb on input line 165
 .
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -2914,41 +2914,41 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Trying to load font information for U+npxmia on input line 
-172.
+165.
 
 (/usr/share/texmf-dist/tex/latex/newpx/unpxmia.fd
 File: unpxmia.fd 2013/03/24 Fontinst v1.933 font definitions for U/npxmia.
 )
 LaTeX Font Info:    Trying to load font information for U+npxsym on input line 
-172.
+165.
 
 (/usr/share/texmf-dist/tex/latex/newpx/unpxsym.fd
 File: unpxsym.fd 2015/03/21 Fontinst v1.933 font definitions for U/npxsym.
 )
 LaTeX Font Info:    Trying to load font information for U+npxsyc on input line 
-172.
+165.
 
 (/usr/share/texmf-dist/tex/latex/newpx/unpxsyc.fd
 File: unpxsyc.fd 2013/03/24 Fontinst v1.933 font definitions for U/npxsyc.
 )
 LaTeX Font Info:    Trying to load font information for TS1+zplLF on input line
- 172.
+ 165.
 
 (/usr/share/texmf-dist/tex/latex/newpx/ts1zpllf.fd
 File: ts1zpllf.fd 2021/11/24 v1.0 fd file for TS1/zplLF
 )
 LaTeX Font Info:    Font shape `TS1/zplLF/m/n' will be
-(Font)              scaled to size 9.70001pt on input line 172.
+(Font)              scaled to size 9.70001pt on input line 165.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `zplLF' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `TS1/zplLF/m/n' will be
-(Font)              scaled to size 7.08101pt on input line 172.
+(Font)              scaled to size 7.08101pt on input line 165.
 LaTeX Font Info:    Font shape `TS1/zplLF/m/n' will be
-(Font)              scaled to size 5.335pt on input line 172.
+(Font)              scaled to size 5.335pt on input line 165.
 LaTeX Font Info:    Font shape `T1/zplLF/m/n' will be
-(Font)              scaled to size 7.08101pt on input line 172.
+(Font)              scaled to size 7.08101pt on input line 165.
 \tf@toc=\write22
 \openout4 = `me210.toc'.
 
@@ -2960,7 +2960,7 @@ LaTeX Font Info:    Font shape `T1/zplLF/m/n' will be
 \openout4 = `me210.mw'.
 
 Package tocbasic Info: character protrusion at toc deactivated on input line 18
-7.
+0.
 \openout4 = `me210.mw'.
 
  [4
@@ -2975,7 +2975,7 @@ Package tocbasic Info: character protrusion at toc deactivated on input line 18
 \openout4 = `me210.mw'.
 
 Package tocbasic Info: character protrusion at lof deactivated on input line 18
-8.
+1.
  (./me210.lof
 \openout4 = `me210.mw'.
 
@@ -2993,8 +2993,8 @@ Package tocbasic Info: character protrusion at lof deactivated on input line 18
  [7] (./me210.mw)
 \openout4 = `me210.mw'.
 
-Package tocbasic Info: character protrusion at lot deactivated on input line 19
-0.
+Package tocbasic Info: character protrusion at lot deactivated on input line 18
+3.
 
 (./me210.lot)
 \tf@lot=\write24
@@ -3042,22 +3042,22 @@ Package tocbasic Info: character protrusion at lot deactivated on input line 19
 
 chapter 1.
 LaTeX Font Info:    Font shape `T1/qhv/b/n' will be
-(Font)              scaled to size 12.99pt on input line 205.
+(Font)              scaled to size 12.99pt on input line 198.
 LaTeX Font Info:    Font shape `T1/zplLF/m/n' will be
-(Font)              scaled to size 13.968pt on input line 205.
+(Font)              scaled to size 13.968pt on input line 198.
 LaTeX Font Info:    Font shape `T1/zplLF/b/n' will be
-(Font)              scaled to size 13.968pt on input line 205.
+(Font)              scaled to size 13.968pt on input line 198.
 LaTeX Font Info:    Font shape `T1/zplLF/m/n' will be
-(Font)              scaled to size 8.73001pt on input line 209.
+(Font)              scaled to size 8.73001pt on input line 202.
 LaTeX Font Info:    Font shape `OT1/zplTLF/m/n' will be
-(Font)              scaled to size 8.73001pt on input line 209.
+(Font)              scaled to size 8.73001pt on input line 202.
 LaTeX Font Info:    Font shape `TS1/zplLF/m/n' will be
-(Font)              scaled to size 8.73001pt on input line 209.
+(Font)              scaled to size 8.73001pt on input line 202.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.235 
+l.228 
       
 \openout4 = `me210.mw'.
 
@@ -3070,17 +3070,17 @@ l.235
 \openout4 = `me210.mw'.
 
 LaTeX Font Info:    Font shape `T1/qhv/b/n' will be
-(Font)              scaled to size 10.82501pt on input line 251.
+(Font)              scaled to size 10.82501pt on input line 244.
 LaTeX Font Info:    Font shape `T1/zplLF/m/n' will be
-(Font)              scaled to size 11.64001pt on input line 251.
+(Font)              scaled to size 11.64001pt on input line 244.
 LaTeX Font Info:    Font shape `T1/zplLF/b/n' will be
-(Font)              scaled to size 11.64001pt on input line 251.
+(Font)              scaled to size 11.64001pt on input line 244.
 LaTeX Font Info:    Font shape `T1/zplLF/m/n' will be
-(Font)              scaled to size 7.76001pt on input line 285.
+(Font)              scaled to size 7.76001pt on input line 278.
 LaTeX Font Info:    Font shape `T1/zplLF/b/n' will be
-(Font)              scaled to size 7.76001pt on input line 285.
+(Font)              scaled to size 7.76001pt on input line 278.
 
-Underfull \hbox (badness 6842) in paragraph at lines 285--285
+Underfull \hbox (badness 6842) in paragraph at lines 278--278
 [][][]\T1/zplLF/b/n/8 (+20) Figure 1.1[][]: []\T1/zplLF/m/n/8 (+20) Stresses on
  a three-
  []
@@ -3089,7 +3089,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.307 
+l.300 
       
 \openout4 = `me210.mw'.
 
@@ -3097,7 +3097,7 @@ l.307
 \openout4 = `me210.mw'.
 
 LaTeX Font Info:    Font shape `T1/zplLF/m/it' will be
-(Font)              scaled to size 9.70001pt on input line 328.
+(Font)              scaled to size 9.70001pt on input line 321.
 \openout4 = `me210.mw'.
 
  [3] (./me210.mw)
@@ -3118,7 +3118,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 \openout4 = `me210.mw'.
 
 
-Overfull \hbox (35.63634pt too wide) in paragraph at lines 469--470
+Overfull \hbox (35.63634pt too wide) in paragraph at lines 462--463
  [][] 
  []
 
@@ -3128,7 +3128,7 @@ Overfull \hbox (35.63634pt too wide) in paragraph at lines 469--470
 \openout4 = `me210.mw'.
 
 
-Overfull \hbox (13.0616pt too wide) in paragraph at lines 495--496
+Overfull \hbox (13.0616pt too wide) in paragraph at lines 488--489
 [][] 
  []
 
@@ -3139,20 +3139,20 @@ LaTeX Warning: Marginpar on page 7 moved.
 LaTeX Warning: Marginpar on page 7 moved.
 
 LaTeX Font Info:    Font shape `T1/zplLF/m/n' will be
-(Font)              scaled to size 5.335pt on input line 506.
+(Font)              scaled to size 5.335pt on input line 499.
 \openout4 = `me210.mw'.
 
 [7] (./me210.mw)
 \openout4 = `me210.mw'.
 
 LaTeX Font Info:    Font shape `OT1/zplTLF/m/n' will be
-(Font)              scaled to size 7.76001pt on input line 565.
+(Font)              scaled to size 7.76001pt on input line 558.
 LaTeX Font Info:    Font shape `OT1/zplTLF/m/n' will be
-(Font)              scaled to size 6.01399pt on input line 565.
+(Font)              scaled to size 6.01399pt on input line 558.
 LaTeX Font Info:    Font shape `TS1/zplLF/m/n' will be
-(Font)              scaled to size 7.76001pt on input line 565.
+(Font)              scaled to size 7.76001pt on input line 558.
 LaTeX Font Info:    Font shape `TS1/zplLF/m/n' will be
-(Font)              scaled to size 6.01399pt on input line 565.
+(Font)              scaled to size 6.01399pt on input line 558.
 \openout4 = `me210.mw'.
 
  [8] (./me210.mw)
@@ -3168,7 +3168,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 \openout4 = `me210.mw'.
 
 
-Overfull \hbox (21.32616pt too wide) in paragraph at lines 644--666
+Overfull \hbox (21.32616pt too wide) in paragraph at lines 637--659
  [][] 
  []
 
@@ -3178,14 +3178,14 @@ LaTeX Warning: Marginpar on page 10 moved.
 
 LaTeX Warning: Marginpar on page 10 moved.
 
-Package mdframed Info: mdframed works in twoside mode on input line 669.
+Package mdframed Info: mdframed works in twoside mode on input line 662.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 669.
+(mdframed)              on input line 662.
 Package hyperref Info: bookmark level for unknown example defaults to 0 on inpu
-t line 669.
+t line 662.
 
-Overfull \hbox (3.05763pt too wide) in paragraph at lines 711--712
+Overfull \hbox (3.05763pt too wide) in paragraph at lines 704--705
 [][] 
  []
 
@@ -3200,10 +3200,10 @@ LaTeX Warning: Marginpar on page 10 moved.
 [10] (./me210.mw)
 \openout4 = `me210.mw'.
 
-Package mdframed Info: mdframed works in twoside mode on input line 746.
+Package mdframed Info: mdframed works in twoside mode on input line 739.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 746.
+(mdframed)              on input line 739.
 \openout4 = `me210.mw'.
 
  [11] (./me210.mw)
@@ -3375,7 +3375,7 @@ LaTeX Warning: Marginpar on page 14 moved.
 \openout4 = `me210.mw'.
 
 
-Overfull \hbox (27.40825pt too wide) in paragraph at lines 894--895
+Overfull \hbox (27.40825pt too wide) in paragraph at lines 887--888
  [][] 
  []
 
@@ -3397,7 +3397,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 \openout4 = `me210.mw'.
 
 
-Overfull \hbox (2.34601pt too wide) in paragraph at lines 971--972
+Overfull \hbox (2.34601pt too wide) in paragraph at lines 964--965
  [][] 
  []
 
@@ -3406,12 +3406,12 @@ Overfull \hbox (2.34601pt too wide) in paragraph at lines 971--972
 [16] (./me210.mw)
 \openout4 = `me210.mw'.
 
-Package mdframed Info: mdframed works in twoside mode on input line 1014.
+Package mdframed Info: mdframed works in twoside mode on input line 1007.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1014.
+(mdframed)              on input line 1007.
 
-Overfull \hbox (22.1761pt too wide) in paragraph at lines 1059--1060
+Overfull \hbox (22.1761pt too wide) in paragraph at lines 1052--1053
  [][] 
  []
 
@@ -3429,19 +3429,19 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 (./me210.mw)
 \openout4 = `me210.mw'.
 
-Package mdframed Info: mdframed works in twoside mode on input line 1107.
+Package mdframed Info: mdframed works in twoside mode on input line 1100.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1107.
+(mdframed)              on input line 1100.
 \openout4 = `me210.mw'.
 
  [19] (./me210.mw)
 \openout4 = `me210.mw'.
 
-Package mdframed Info: mdframed works in twoside mode on input line 1146.
+Package mdframed Info: mdframed works in twoside mode on input line 1139.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1146.
+(mdframed)              on input line 1139.
 \openout4 = `me210.mw'.
 
  [20] (./me210.mw)
@@ -3452,20 +3452,20 @@ Package mdframed Info: mdframed detected package amsthm
  [21] (./me210.mw)
 \openout4 = `me210.mw'.
 
-Package mdframed Info: mdframed works in twoside mode on input line 1215.
+Package mdframed Info: mdframed works in twoside mode on input line 1208.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1215.
+(mdframed)              on input line 1208.
 \openout4 = `me210.mw'.
 
  [22]
 (./me210.mw)
 \openout4 = `me210.mw'.
 
-Package mdframed Info: mdframed works in twoside mode on input line 1260.
+Package mdframed Info: mdframed works in twoside mode on input line 1253.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1260.
+(mdframed)              on input line 1253.
 \openout4 = `me210.mw'.
 
  [23] (./me210.mw)
@@ -3500,18 +3500,18 @@ LaTeX Warning: Marginpar on page 26 moved.
 [26] (./me210.mw)
 \openout4 = `me210.mw'.
 
-Package mdframed Info: mdframed works in twoside mode on input line 1421.
+Package mdframed Info: mdframed works in twoside mode on input line 1414.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1421.
+(mdframed)              on input line 1414.
 
-Overfull \hbox (4.08548pt too wide) detected at line 1453
+Overfull \hbox (4.08548pt too wide) detected at line 1446
 []
  []
 
 Package mdframed Info: You first box width is to small
  mdframed fixed it
-(mdframed)              on input line 1474.
+(mdframed)              on input line 1467.
 \openout4 = `me210.mw'.
 
 [27] (./me210.mw)
@@ -3738,12 +3738,12 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [36] (./me210.mw)
 \openout4 = `me210.mw'.
 
-Package mdframed Info: mdframed works in twoside mode on input line 1955.
+Package mdframed Info: mdframed works in twoside mode on input line 1948.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1955.
+(mdframed)              on input line 1948.
 
-Overfull \hbox (41.6331pt too wide) in paragraph at lines 1969--1970
+Overfull \hbox (41.6331pt too wide) in paragraph at lines 1962--1963
  [][] 
  []
 
@@ -3752,7 +3752,7 @@ Overfull \hbox (41.6331pt too wide) in paragraph at lines 1969--1970
 [37] (./me210.mw)
 \openout4 = `me210.mw'.
 
-Package mdframed Info: Not enough space on this page on input line 2001.
+Package mdframed Info: Not enough space on this page on input line 1994.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -3772,10 +3772,10 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [40] (./me210.mw)
 \openout4 = `me210.mw'.
 
-Package mdframed Info: mdframed works in twoside mode on input line 2115.
+Package mdframed Info: mdframed works in twoside mode on input line 2108.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2115.
+(mdframed)              on input line 2108.
 
 Underfull \vbox (badness 4647) has occurred while \output is active []
 
@@ -3790,12 +3790,12 @@ Underfull \vbox (badness 4647) has occurred while \output is active []
  [42] (./me210.mw)
 \openout4 = `me210.mw'.
 
-Package mdframed Info: mdframed works in twoside mode on input line 2189.
+Package mdframed Info: mdframed works in twoside mode on input line 2182.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2189.
+(mdframed)              on input line 2182.
 
-Overfull \hbox (23.49042pt too wide) in paragraph at lines 2212--2213
+Overfull \hbox (23.49042pt too wide) in paragraph at lines 2205--2206
  [][] 
  []
 
@@ -3805,7 +3805,7 @@ Overfull \hbox (23.49042pt too wide) in paragraph at lines 2212--2213
 \openout4 = `me210.mw'.
 
 
-Overfull \hbox (59.99617pt too wide) in paragraph at lines 2248--2249
+Overfull \hbox (59.99617pt too wide) in paragraph at lines 2241--2242
  [][] 
  []
 
@@ -3948,13 +3948,13 @@ chapter 4.
  [50] (./me210.mw)
 \openout4 = `me210.mw'.
 
-Package mdframed Info: mdframed works in twoside mode on input line 2547.
+Package mdframed Info: mdframed works in twoside mode on input line 2540.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2547.
+(mdframed)              on input line 2540.
 Package mdframed Info: Box was splittet wrong
  starting loop to iterate the splitting point
-(mdframed)              on input line 2578.
+(mdframed)              on input line 2571.
 \openout4 = `me210.mw'.
 
 
@@ -3980,12 +3980,12 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [54] (./me210.mw)
 \openout4 = `me210.mw'.
 
-Package mdframed Info: mdframed works in twoside mode on input line 2732.
+Package mdframed Info: mdframed works in twoside mode on input line 2725.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2732.
+(mdframed)              on input line 2725.
 
-Overfull \hbox (40.69614pt too wide) in paragraph at lines 2747--2749
+Overfull \hbox (40.69614pt too wide) in paragraph at lines 2740--2742
  [][] 
  []
 
@@ -4013,12 +4013,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [58] (./me210.mw)
 \openout4 = `me210.mw'.
 
-Package mdframed Info: mdframed works in twoside mode on input line 2894.
+Package mdframed Info: mdframed works in twoside mode on input line 2887.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2894.
+(mdframed)              on input line 2887.
 
-Overfull \hbox (25.42783pt too wide) in paragraph at lines 2910--2911
+Overfull \hbox (25.42783pt too wide) in paragraph at lines 2903--2904
  [][] 
  []
 
@@ -4051,16 +4051,16 @@ LaTeX Warning: `h' float specifier changed to `ht'.
  [63] (./me210.mw)
 \openout4 = `me210.mw'.
 
-Package mdframed Info: mdframed works in twoside mode on input line 3095.
+Package mdframed Info: mdframed works in twoside mode on input line 3088.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 3095.
+(mdframed)              on input line 3088.
 \openout4 = `me210.mw'.
 
  [64] (./me210.mw)
 \openout4 = `me210.mw'.
 
-Package mdframed Info: Not enough space on this page on input line 3131.
+Package mdframed Info: Not enough space on this page on input line 3124.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -4071,12 +4071,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 \openout4 = `me210.mw'.
 
 
-Overfull \hbox (76.4622pt too wide) in paragraph at lines 3167--3168
- [][] 
- []
-
-
-Underfull \vbox (badness 5954) has occurred while \output is active []
+Underfull \vbox (badness 2443) has occurred while \output is active []
 
 \openout4 = `me210.mw'.
 
@@ -4089,10 +4084,10 @@ Underfull \vbox (badness 5954) has occurred while \output is active []
  [67] (./me210.mw)
 \openout4 = `me210.mw'.
 
-Package mdframed Info: mdframed works in twoside mode on input line 3232.
+Package mdframed Info: mdframed works in twoside mode on input line 3225.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 3232.
+(mdframed)              on input line 3225.
 \openout4 = `me210.mw'.
 
  [68] (./me210.mw)
@@ -4110,7 +4105,7 @@ Package mdframed Info: mdframed detected package amsthm
 \openout4 = `me210.mw'.
 
 
-Overfull \hbox (22.57474pt too wide) in paragraph at lines 3376--3377
+Overfull \hbox (22.57474pt too wide) in paragraph at lines 3369--3370
  [][] 
  []
 
@@ -4284,7 +4279,7 @@ Overfull \hbox (22.57474pt too wide) in paragraph at lines 3376--3377
 \openout4 = `me210.mw'.
 
  (./pythontex-files-me210/py_default_default_50.stdout)
-Overfull \hbox (72.33334pt too wide) in paragraph at lines 3414--3415
+Overfull \hbox (15.42783pt too wide) in paragraph at lines 3407--3408
  [][] 
  []
 
@@ -4307,10 +4302,10 @@ chapter 5.
  [74] (./me210.mw)
 \openout4 = `me210.mw'.
 
-Package mdframed Info: mdframed works in twoside mode on input line 3514.
+Package mdframed Info: mdframed works in twoside mode on input line 3507.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 3514.
+(mdframed)              on input line 3507.
 \openout4 = `me210.mw'.
 
  [75] (./me210.mw)
@@ -4340,49 +4335,48 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [79] (./me210.mw)
 \openout4 = `me210.mw'.
 
-Package mdframed Info: mdframed works in twoside mode on input line 3660.
+Package mdframed Info: mdframed works in twoside mode on input line 3655.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 3660.
+(mdframed)              on input line 3655.
 
-Overfull \hbox (92.31534pt too wide) detected at line 3706
+Overfull \hbox (92.31534pt too wide) detected at line 3701
 []
  []
 
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 3732.
 Package mdframed Info: You first box width is to small
  mdframed fixed it
-(mdframed)              on input line 3737.
+(mdframed)              on input line 3732.
 \openout4 = `me210.mw'.
 
 [80] (./me210.mw)
 \openout4 = `me210.mw'.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 \openout4 = `me210.mw'.
 
- [81]
-(./me210.mw)
+ [81] (./me210.mw)
 \openout4 = `me210.mw'.
 
-Package mdframed Info: mdframed works in twoside mode on input line 3755.
+Package mdframed Info: mdframed works in twoside mode on input line 3750.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 3755.
+(mdframed)              on input line 3750.
 \openout4 = `me210.mw'.
 
  [82] (./me210.mw)
 \openout4 = `me210.mw'.
 
-<pictures/Static-body-load-analysis/beam-def-midpoint-exercise.pdf, id=1289, 25
+<pictures/Static-body-load-analysis/beam-def-midpoint-exercise.pdf, id=1290, 25
 9.97125pt x 130.4875pt>
 File: pictures/Static-body-load-analysis/beam-def-midpoint-exercise.pdf Graphic
  file (type pdf)
 <use pictures/Static-body-load-analysis/beam-def-midpoint-exercise.pdf>
 Package pdftex.def Info: pictures/Static-body-load-analysis/beam-def-midpoint-e
-xercise.pdf  used on input line 3790.
-(pdftex.def)             Requested size: 207.97728pt x 104.39012pt.
+xercise.pdf  used on input line 3785.
+(pdftex.def)             Requested size: 182.66885pt x 91.68706pt.
 \openout4 = `me210.mw'.
 
  [83 <./pictures/Static-body-load-analysis/beam-def-midpoint-exercise.pdf>] (./
@@ -4390,13 +4384,17 @@ me210.mw)
 \openout4 = `me210.mw'.
 
 
-Overfull \hbox (19.31863pt too wide) in paragraph at lines 3858--3859
+Overfull \hbox (19.31863pt too wide) in paragraph at lines 3853--3854
  [][] 
  []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
+\openout4 = `me210.mw'.
+
+ [84]
+(./me210.mw)
 \openout4 = `me210.mw'.
 
 \openout4 = `me210.mw'.
@@ -4477,7 +4475,9 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 \openout4 = `me210.mw'.
 
-(./pythontex-files-me210/py_default_default_57.stdout)
+\openout4 = `me210.mw'.
+
+ (./pythontex-files-me210/py_default_default_57.stdout)
 \openout4 = `me210.mw'.
 
 \openout4 = `me210.mw'.
@@ -4488,13 +4488,8 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 \openout4 = `me210.mw'.
 
- [84] (./me210.mw)
-\openout4 = `me210.mw'.
-
-\openout4 = `me210.mw'.
-
-
-[85] (./me210.mw)
+ [85]
+(./me210.mw)
 \openout4 = `me210.mw'.
 
 
@@ -4506,20 +4501,15 @@ LaTeX Warning: Marginpar on page 86 moved.
 LaTeX Warning: Marginpar on page 86 moved.
 
 
-Overfull \hbox (24.93907pt too wide) in paragraph at lines 3963--3965
- [][] 
- []
-
-
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (14.27327pt too wide) detected at line 3980
+Overfull \hbox (14.27327pt too wide) detected at line 3975
 []
  []
 
 
-Overfull \hbox (9.70001pt too wide) in paragraph at lines 3980--3980
+Overfull \hbox (9.70001pt too wide) in paragraph at lines 3975--3975
 [] 
  []
 
@@ -4536,17 +4526,17 @@ Overfull \hbox (9.70001pt too wide) in paragraph at lines 3980--3980
 \openout4 = `me210.mw'.
 
 
-Overfull \hbox (90.06847pt too wide) detected at line 4008
+Overfull \hbox (90.06847pt too wide) detected at line 4003
 []
  []
 
 
-Overfull \hbox (9.70001pt too wide) in paragraph at lines 4008--4008
+Overfull \hbox (9.70001pt too wide) in paragraph at lines 4003--4003
 [] 
  []
 
 
-Overfull \hbox (31.04001pt too wide) in paragraph at lines 4036--4037
+Overfull \hbox (31.04001pt too wide) in paragraph at lines 4031--4032
  [][] 
  []
 
@@ -4555,18 +4545,18 @@ Overfull \hbox (31.04001pt too wide) in paragraph at lines 4036--4037
 [88] (./me210.mw)
 \openout4 = `me210.mw'.
 
-Package mdframed Info: mdframed works in twoside mode on input line 4070.
+Package mdframed Info: mdframed works in twoside mode on input line 4065.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 4070.
-<pictures/Static-body-load-analysis/plane-stress-example.pdf, id=1346, 361.35pt
+(mdframed)              on input line 4065.
+<pictures/Static-body-load-analysis/plane-stress-example.pdf, id=1347, 361.35pt
  x 289.08pt>
 File: pictures/Static-body-load-analysis/plane-stress-example.pdf Graphic file 
 (type pdf)
 <use pictures/Static-body-load-analysis/plane-stress-example.pdf>
 Package pdftex.def Info: pictures/Static-body-load-analysis/plane-stress-exampl
-e.pdf  used on input line 4076.
-(pdftex.def)             Requested size: 180.67456pt x 144.53964pt.
+e.pdf  used on input line 4071.
+(pdftex.def)             Requested size: 176.66606pt x 141.33284pt.
 \openout4 = `me210.mw'.
 
  [89] (./me210.mw)
@@ -4599,17 +4589,17 @@ mw)
  [94] (./me210.mw)
 \openout4 = `me210.mw'.
 
-Package mdframed Info: mdframed works in twoside mode on input line 4326.
+Package mdframed Info: mdframed works in twoside mode on input line 4321.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 4326.
+(mdframed)              on input line 4321.
 \openout4 = `me210.mw'.
 
  [95] (./me210.mw)
 \openout4 = `me210.mw'.
 
 
-Overfull \hbox (50.93826pt too wide) in paragraph at lines 4368--4369
+Overfull \hbox (50.93826pt too wide) in paragraph at lines 4360--4361
  [][] 
  []
 
@@ -4617,7 +4607,7 @@ Overfull \hbox (50.93826pt too wide) in paragraph at lines 4368--4369
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (50.53825pt too wide) in paragraph at lines 4388--4389
+Overfull \hbox (50.53825pt too wide) in paragraph at lines 4380--4381
  [][] 
  []
 
@@ -4672,12 +4662,12 @@ LaTeX Warning: `h' float specifier changed to `ht'.
  [102] (./me210.mw)
 \openout4 = `me210.mw'.
 
-Package mdframed Info: mdframed works in twoside mode on input line 4708.
+Package mdframed Info: mdframed works in twoside mode on input line 4700.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 4708.
+(mdframed)              on input line 4700.
 
-Overfull \hbox (12.56407pt too wide) in paragraph at lines 4770--4771
+Overfull \hbox (12.56407pt too wide) in paragraph at lines 4762--4763
  [][] 
  []
 
@@ -4691,47 +4681,38 @@ Overfull \hbox (12.56407pt too wide) in paragraph at lines 4770--4771
  [104] (./me210.mw)
 \openout4 = `me210.mw'.
 
-<pictures/Static-body-load-analysis/plane-stress-exercise1.pdf, id=1500, 361.35
+<pictures/Static-body-load-analysis/plane-stress-exercise1.pdf, id=1501, 361.35
 pt x 289.08pt>
 File: pictures/Static-body-load-analysis/plane-stress-exercise1.pdf Graphic fil
 e (type pdf)
 <use pictures/Static-body-load-analysis/plane-stress-exercise1.pdf>
 Package pdftex.def Info: pictures/Static-body-load-analysis/plane-stress-exerci
-se1.pdf  used on input line 4788.
-(pdftex.def)             Requested size: 234.87471pt x 187.89977pt.
-<pictures/Static-body-load-analysis/plane-stress-exercise2.pdf, id=1501, 361.35
+se1.pdf  used on input line 4780.
+(pdftex.def)             Requested size: 182.66502pt x 146.132pt.
+<pictures/Static-body-load-analysis/plane-stress-exercise2.pdf, id=1502, 361.35
 pt x 289.08pt>
 File: pictures/Static-body-load-analysis/plane-stress-exercise2.pdf Graphic fil
 e (type pdf)
 <use pictures/Static-body-load-analysis/plane-stress-exercise2.pdf>
 Package pdftex.def Info: pictures/Static-body-load-analysis/plane-stress-exerci
-se2.pdf  used on input line 4789.
-(pdftex.def)             Requested size: 234.87471pt x 187.89977pt.
-<pictures/Static-body-load-analysis/plane-stress-exercise3.pdf, id=1502, 361.35
+se2.pdf  used on input line 4781.
+(pdftex.def)             Requested size: 182.66502pt x 146.132pt.
+<pictures/Static-body-load-analysis/plane-stress-exercise3.pdf, id=1503, 361.35
 pt x 289.08pt>
 File: pictures/Static-body-load-analysis/plane-stress-exercise3.pdf Graphic fil
 e (type pdf)
 <use pictures/Static-body-load-analysis/plane-stress-exercise3.pdf>
 Package pdftex.def Info: pictures/Static-body-load-analysis/plane-stress-exerci
-se3.pdf  used on input line 4790.
-(pdftex.def)             Requested size: 234.87471pt x 187.89977pt.
-\openout4 = `me210.mw'.
+se3.pdf  used on input line 4782.
+(pdftex.def)             Requested size: 182.66502pt x 146.132pt.
 
- [105] (./me210.mw)
-\openout4 = `me210.mw'.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Overfull \hbox (62.34212pt too wide) in paragraph at lines 4780--4783
+[][] [] 
+ []
 
 \openout4 = `me210.mw'.
 
- [106 <./pictures/Static-body-load-analysis/plane-stress-exercise1.pdf> <./pict
-ures/Static-body-load-analysis/plane-stress-exercise2.pdf
-
-pdfTeX warning: pdflatex (file ./pictures/Static-body-load-analysis/plane-stres
-s-exercise2.pdf): PDF inclusion: multiple pdfs with page group included in a si
-ngle page
->] (./me210.mw)
+[105] (./me210.mw)
 \openout4 = `me210.mw'.
 
 \openout4 = `me210.mw'.
@@ -4884,14 +4865,21 @@ ngle page
 \openout4 = `me210.mw'.
 
 )
-Underfull \vbox (badness 2970) has occurred while \output is active []
-
 \openout4 = `me210.mw'.
 
- [107 <./pictures/Static-body-load-analysis/plane-stress-exercise3.pdf>] (./me2
-10.mw)
-\openout4 = `me210.mw'.
 
+[106 <./pictures/Static-body-load-analysis/plane-stress-exercise1.pdf> <./pictu
+res/Static-body-load-analysis/plane-stress-exercise2.pdf
+
+pdfTeX warning: pdflatex (file ./pictures/Static-body-load-analysis/plane-stres
+s-exercise2.pdf): PDF inclusion: multiple pdfs with page group included in a si
+ngle page
+> <./pictures/Static-body-load-analysis/plane-stress-exercise3.pdf
+
+pdfTeX warning: pdflatex (file ./pictures/Static-body-load-analysis/plane-stres
+s-exercise3.pdf): PDF inclusion: multiple pdfs with page group included in a si
+ngle page
+>] (./me210.mw)
 \openout4 = `me210.mw'.
 
 \openout4 = `me210.mw'.
@@ -5034,8 +5022,9 @@ Underfull \vbox (badness 2970) has occurred while \output is active []
 
 \openout4 = `me210.mw'.
 
+\openout4 = `me210.mw'.
 
-[108] (./me210.mw)
+ [107] (./me210.mw)
 \openout4 = `me210.mw'.
 
 
@@ -5054,23 +5043,23 @@ Missing character: There is no ) in font nullfont!
 Missing character: There is no ) in font nullfont!
 Missing character: There is no ) in font nullfont!
 
-LaTeX Warning: Marginpar on page 109 moved.
+LaTeX Warning: Marginpar on page 108 moved.
 
 
-LaTeX Warning: Marginpar on page 109 moved.
+LaTeX Warning: Marginpar on page 108 moved.
 
 
-LaTeX Warning: Marginpar on page 109 moved.
+LaTeX Warning: Marginpar on page 108 moved.
 
 
-LaTeX Warning: Marginpar on page 109 moved.
+LaTeX Warning: Marginpar on page 108 moved.
 
 
-LaTeX Warning: Marginpar on page 109 moved.
+LaTeX Warning: Marginpar on page 108 moved.
 
 \openout4 = `me210.mw'.
 
-[109
+[108
 
 ] (./me210.mw)
 \openout4 = `me210.mw'.
@@ -5111,65 +5100,65 @@ Missing character: There is no c in font nullfont!
 Missing character: There is no m in font nullfont!
 Missing character: There is no ) in font nullfont!
 
-Overfull \hbox (24.81572pt too wide) in paragraph at lines 4982--4984
+Overfull \hbox (24.81572pt too wide) in paragraph at lines 4974--4976
  [][] 
  []
 
 
-LaTeX Warning: Marginpar on page 110 moved.
+LaTeX Warning: Marginpar on page 109 moved.
 
 
-LaTeX Warning: Marginpar on page 110 moved.
+LaTeX Warning: Marginpar on page 109 moved.
 
-Package mdframed Info: mdframed works in twoside mode on input line 5042.
+Package mdframed Info: mdframed works in twoside mode on input line 5034.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 5042.
+(mdframed)              on input line 5034.
 \openout4 = `me210.mw'.
 
-[110] (./me210.mw)
+[109] (./me210.mw)
 \openout4 = `me210.mw'.
 
-Package mdframed Info: mdframed works in twoside mode on input line 5067.
+Package mdframed Info: mdframed works in twoside mode on input line 5059.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 5067.
+(mdframed)              on input line 5059.
 \openout4 = `me210.mw'.
 
- [111] (./me210.mw)
+ [110] (./me210.mw)
 \openout4 = `me210.mw'.
 
 <pictures/Static-body-load-analysis/multiaxial-cantilever-beam-exercise.pdf, id
-=1592, 390.45876pt x 180.675pt>
+=1588, 390.45876pt x 180.675pt>
 File: pictures/Static-body-load-analysis/multiaxial-cantilever-beam-exercise.pd
 f Graphic file (type pdf)
 <use pictures/Static-body-load-analysis/multiaxial-cantilever-beam-exercise.pdf
 >
 Package pdftex.def Info: pictures/Static-body-load-analysis/multiaxial-cantilev
-er-beam-exercise.pdf  used on input line 5111.
-(pdftex.def)             Requested size: 273.31926pt x 126.47162pt.
+er-beam-exercise.pdf  used on input line 5103.
+(pdftex.def)             Requested size: 243.55353pt x 112.69827pt.
 <pictures/Static-body-load-analysis/multiaxial-generator-shaft-exercise.pdf, id
-=1594, 79.29625pt x 209.78375pt>
+=1590, 79.29625pt x 209.78375pt>
 File: pictures/Static-body-load-analysis/multiaxial-generator-shaft-exercise.pd
 f Graphic file (type pdf)
 <use pictures/Static-body-load-analysis/multiaxial-generator-shaft-exercise.pdf
 >
 Package pdftex.def Info: pictures/Static-body-load-analysis/multiaxial-generato
-r-shaft-exercise.pdf  used on input line 5119.
-(pdftex.def)             Requested size: 91.3412pt x 241.64954pt.
+r-shaft-exercise.pdf  used on input line 5111.
+(pdftex.def)             Requested size: 60.88889pt x 161.08582pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 \openout4 = `me210.mw'.
 
-[112 <./pictures/Static-body-load-analysis/multiaxial-cantilever-beam-exercise.
+[111 <./pictures/Static-body-load-analysis/multiaxial-cantilever-beam-exercise.
 pdf>] (./me210.mw)
 \openout4 = `me210.mw'.
 
 \openout4 = `me210.mw'.
 
- [113 <./pictures/Static-body-load-analysis/multiaxial-generator-shaft-exercise
+ [112 <./pictures/Static-body-load-analysis/multiaxial-generator-shaft-exercise
 .pdf>] (./me210.mw)
 \openout4 = `me210.mw'.
 
@@ -5303,11 +5292,6 @@ pdf>] (./me210.mw)
 
 \openout4 = `me210.mw'.
 
- [114] (./me210.mw)
-\openout4 = `me210.mw'.
-
-\openout4 = `me210.mw'.
-
 \openout4 = `me210.mw'.
 
 \openout4 = `me210.mw'.
@@ -5384,58 +5368,68 @@ pdf>] (./me210.mw)
 \openout4 = `me210.mw'.
 
 
-Overfull \hbox (27.39307pt too wide) in paragraph at lines 5233--5234
+Overfull \hbox (27.39307pt too wide) in paragraph at lines 5224--5225
  [][] 
  []
 
 \openout4 = `me210.mw'.
 
-[115] (./me210.mw)
+[113] (./me210.mw)
+\openout4 = `me210.mw'.
+
+\openout4 = `me210.mw'.
+
+ [114] (./me210.mw)
 \openout4 = `me210.mw'.
 
 
 chapter 8.
 \openout4 = `me210.mw'.
 
-[116
+[115
 
 ] (./me210.mw)
 \openout4 = `me210.mw'.
 
 
-Overfull \hbox (6.73346pt too wide) in paragraph at lines 5295--5296
+Overfull \hbox (6.73346pt too wide) in paragraph at lines 5286--5287
  [][] 
  []
 
 
-LaTeX Warning: Marginpar on page 117 moved.
+LaTeX Warning: Marginpar on page 116 moved.
 
 
-LaTeX Warning: Marginpar on page 117 moved.
-
-\openout4 = `me210.mw'.
-
-[117] (./me210.mw)
-\openout4 = `me210.mw'.
+LaTeX Warning: Marginpar on page 116 moved.
 
 \openout4 = `me210.mw'.
 
- [118] (./me210.mw)
+[116] (./me210.mw)
+\openout4 = `me210.mw'.
+
+\openout4 = `me210.mw'.
+
+ [117] (./me210.mw)
 \openout4 = `me210.mw'.
 
 
-Overfull \hbox (0.55553pt too wide) detected at line 5388
+Overfull \hbox (0.55553pt too wide) detected at line 5379
 [][]\OML/npxmi/m/it/10 U \U/npxmia/m/it/10 = [][] [] \OML/npxmi/m/it/10 dV
  []
 
 
-Overfull \hbox (49.85439pt too wide) detected at line 5394
+Overfull \hbox (49.85439pt too wide) detected at line 5385
 [][]\OML/npxmi/m/it/10 U \U/npxmia/m/it/10 = [][] [] \OML/npxmi/m/it/10 dV
  []
 
 \openout4 = `me210.mw'.
 
-[119] (./me210.mw)
+[118] (./me210.mw)
+\openout4 = `me210.mw'.
+
+\openout4 = `me210.mw'.
+
+ [119] (./me210.mw)
 \openout4 = `me210.mw'.
 
 \openout4 = `me210.mw'.
@@ -5448,37 +5442,34 @@ Overfull \hbox (49.85439pt too wide) detected at line 5394
  [121] (./me210.mw)
 \openout4 = `me210.mw'.
 
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+Package mdframed Info: mdframed works in twoside mode on input line 5548.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 5548.
+Package mdframed Info: mdframed works in twoside mode on input line 5569.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 5569.
 \openout4 = `me210.mw'.
+
 
 [122] (./me210.mw)
 \openout4 = `me210.mw'.
 
-Package mdframed Info: mdframed works in twoside mode on input line 5557.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 5557.
 \openout4 = `me210.mw'.
 
  [123] (./me210.mw)
 \openout4 = `me210.mw'.
 
-Package mdframed Info: mdframed works in twoside mode on input line 5578.
+Package mdframed Info: mdframed works in twoside mode on input line 5637.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 5578.
+(mdframed)              on input line 5637.
 \openout4 = `me210.mw'.
 
  [124] (./me210.mw)
 \openout4 = `me210.mw'.
 
-Package mdframed Info: mdframed works in twoside mode on input line 5646.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 5646.
 \openout4 = `me210.mw'.
 
  [125] (./me210.mw)
@@ -5490,22 +5481,33 @@ Package mdframed Info: mdframed detected package amsthm
 [126] (./me210.mw)
 \openout4 = `me210.mw'.
 
-\openout4 = `me210.mw'.
-
- [127] (./me210.mw)
-\openout4 = `me210.mw'.
-
 
 chapter 9.
 \openout4 = `me210.mw'.
 
-[128
+[127
 
 ] (./me210.mw)
 \openout4 = `me210.mw'.
 
 
-Overfull \hbox (4.39806pt too wide) in paragraph at lines 5767--5769
+Overfull \hbox (4.39806pt too wide) in paragraph at lines 5758--5760
+ [][] 
+ []
+
+
+LaTeX Warning: Marginpar on page 128 moved.
+
+
+LaTeX Warning: Marginpar on page 128 moved.
+
+\openout4 = `me210.mw'.
+
+[128] (./me210.mw)
+\openout4 = `me210.mw'.
+
+
+Overfull \hbox (2.81984pt too wide) in paragraph at lines 5830--5832
  [][] 
  []
 
@@ -5515,40 +5517,47 @@ LaTeX Warning: Marginpar on page 129 moved.
 
 LaTeX Warning: Marginpar on page 129 moved.
 
+Package mdframed Info: mdframed works in twoside mode on input line 5842.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 5842.
 \openout4 = `me210.mw'.
 
 [129] (./me210.mw)
 \openout4 = `me210.mw'.
 
+\openout4 = `me210.mw'.
 
-Overfull \hbox (2.81984pt too wide) in paragraph at lines 5839--5841
+ [130] (./me210.mw)
+\openout4 = `me210.mw'.
+
+
+
+LaTeX Warning: Marginpar on page 131 moved.
+
+
+LaTeX Warning: Marginpar on page 131 moved.
+
+\openout4 = `me210.mw'.
+
+[131] (./me210.mw)
+\openout4 = `me210.mw'.
+
+
+Overfull \hbox (1.57996pt too wide) in paragraph at lines 5964--5966
  [][] 
  []
 
 
-LaTeX Warning: Marginpar on page 130 moved.
+LaTeX Warning: Marginpar on page 132 moved.
 
 
-LaTeX Warning: Marginpar on page 130 moved.
-
-Package mdframed Info: mdframed works in twoside mode on input line 5851.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 5851.
-\openout4 = `me210.mw'.
-
-[130] (./me210.mw)
-\openout4 = `me210.mw'.
+LaTeX Warning: Marginpar on page 132 moved.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-\openout4 = `me210.mw'.
-
- [131]
-(./me210.mw)
-\openout4 = `me210.mw'.
-
+Overfull \hbox (15.59978pt too wide) in paragraph at lines 6015--6017
+ [][] 
+ []
 
 
 LaTeX Warning: Marginpar on page 132 moved.
@@ -5562,72 +5571,58 @@ LaTeX Warning: Marginpar on page 132 moved.
 \openout4 = `me210.mw'.
 
 
-Overfull \hbox (1.57996pt too wide) in paragraph at lines 5973--5975
+Overfull \hbox (48.28412pt too wide) in paragraph at lines 6040--6041
  [][] 
  []
 
 
-LaTeX Warning: Marginpar on page 133 moved.
-
-
-LaTeX Warning: Marginpar on page 133 moved.
-
-
-Overfull \hbox (15.59978pt too wide) in paragraph at lines 6024--6026
+Overfull \hbox (12.58464pt too wide) in paragraph at lines 6061--6062
  [][] 
  []
 
 
-LaTeX Warning: Marginpar on page 133 moved.
-
-
-LaTeX Warning: Marginpar on page 133 moved.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 \openout4 = `me210.mw'.
 
 [133] (./me210.mw)
 \openout4 = `me210.mw'.
 
-
-Overfull \hbox (48.28412pt too wide) in paragraph at lines 6049--6050
- [][] 
- []
-
-
-Overfull \hbox (12.58464pt too wide) in paragraph at lines 6070--6071
- [][] 
- []
-
 \openout4 = `me210.mw'.
 
-[134] (./me210.mw)
+ [134] (./me210.mw)
 \openout4 = `me210.mw'.
 
+Package mdframed Info: mdframed works in twoside mode on input line 6163.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 6163.
 \openout4 = `me210.mw'.
 
  [135] (./me210.mw)
 \openout4 = `me210.mw'.
 
-Package mdframed Info: mdframed works in twoside mode on input line 6172.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 6172.
 \openout4 = `me210.mw'.
 
  [136] (./me210.mw)
 \openout4 = `me210.mw'.
 
+
+
+LaTeX Warning: Command \textendash invalid in math mode on input line 6225.
+
+
+Overfull \hbox (43.369pt too wide) in paragraph at lines 6247--6248
+ [][] 
+ []
+
 \openout4 = `me210.mw'.
 
- [137] (./me210.mw)
+[137] (./me210.mw)
 \openout4 = `me210.mw'.
 
 
-
-LaTeX Warning: Command \textendash invalid in math mode on input line 6234.
-
-
-Overfull \hbox (43.369pt too wide) in paragraph at lines 6256--6257
+Overfull \hbox (55.4055pt too wide) in paragraph at lines 6319--6320
  [][] 
  []
 
@@ -5636,56 +5631,42 @@ Overfull \hbox (43.369pt too wide) in paragraph at lines 6256--6257
 [138] (./me210.mw)
 \openout4 = `me210.mw'.
 
-\openout4 = `me210.mw'.
 
- [139] (./me210.mw)
-\openout4 = `me210.mw'.
-
-
-Overfull \hbox (55.4055pt too wide) in paragraph at lines 6328--6329
+Overfull \hbox (55.4055pt too wide) in paragraph at lines 6346--6347
  [][] 
  []
 
 
-Overfull \hbox (55.4055pt too wide) in paragraph at lines 6355--6356
- [][] 
- []
+LaTeX Warning: Command \textendash invalid in math mode on input line 6366.
 
 
-LaTeX Warning: Command \textendash invalid in math mode on input line 6375.
-
-\openout4 = `me210.mw'.
-
-[140] (./me210.mw)
-\openout4 = `me210.mw'.
-
-
-Overfull \hbox (19.59615pt too wide) in paragraph at lines 6392--6393
+Overfull \hbox (19.59615pt too wide) in paragraph at lines 6383--6384
  [][] 
  []
 
 \openout4 = `me210.mw'.
 
-[141] (./me210.mw)
+[139] (./me210.mw)
 \openout4 = `me210.mw'.
 
-Package mdframed Info: mdframed works in twoside mode on input line 6461.
+\openout4 = `me210.mw'.
+
+ [140] (./me210.mw)
+\openout4 = `me210.mw'.
+
+Package mdframed Info: mdframed works in twoside mode on input line 6452.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 6461.
-<pictures/Failure-theories/Rail_buckle.jpg, id=1894, 351.3125pt x 214.8025pt>
+(mdframed)              on input line 6452.
+<pictures/Failure-theories/Rail_buckle.jpg, id=1896, 351.3125pt x 214.8025pt>
 File: pictures/Failure-theories/Rail_buckle.jpg Graphic file (type jpg)
 <use pictures/Failure-theories/Rail_buckle.jpg>
 Package pdftex.def Info: pictures/Failure-theories/Rail_buckle.jpg  used on inp
-ut line 6465.
+ut line 6456.
 (pdftex.def)             Requested size: 245.91707pt x 150.36072pt.
-Package mdframed Info: Box was splittet wrong
- starting loop to iterate the splitting point
-(mdframed)              on input line 6506.
 \openout4 = `me210.mw'.
 
- [142 <./pictures/Failure-theories/Rail_buckle.jpg>]
-(./me210.mw)
+ [141 <./pictures/Failure-theories/Rail_buckle.jpg>] (./me210.mw)
 \openout4 = `me210.mw'.
 
 
@@ -5693,12 +5674,22 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 \openout4 = `me210.mw'.
 
- [143]
+ [142]
 (./me210.mw)
 \openout4 = `me210.mw'.
 
 
-Overfull \hbox (34.91347pt too wide) in paragraph at lines 6568--6569
+Overfull \hbox (34.91347pt too wide) in paragraph at lines 6559--6560
+ [][] 
+ []
+
+\openout4 = `me210.mw'.
+
+[143] (./me210.mw)
+\openout4 = `me210.mw'.
+
+
+Overfull \hbox (3.11647pt too wide) in paragraph at lines 6570--6571
  [][] 
  []
 
@@ -5707,16 +5698,6 @@ Overfull \hbox (34.91347pt too wide) in paragraph at lines 6568--6569
 [144] (./me210.mw)
 \openout4 = `me210.mw'.
 
-
-Overfull \hbox (3.11647pt too wide) in paragraph at lines 6579--6580
- [][] 
- []
-
-\openout4 = `me210.mw'.
-
-[145] (./me210.mw)
-\openout4 = `me210.mw'.
-
 \openout4 = `me210.mw'.
 
 \openout4 = `me210.mw'.
@@ -5915,7 +5896,7 @@ Overfull \hbox (3.11647pt too wide) in paragraph at lines 6579--6580
 
 \openout4 = `me210.mw'.
 
- [146] (./me210.mw)
+ [145] (./me210.mw)
 \openout4 = `me210.mw'.
 
 \openout4 = `me210.mw'.
@@ -5984,7 +5965,7 @@ Overfull \hbox (3.11647pt too wide) in paragraph at lines 6579--6580
 
 \openout4 = `me210.mw'.
 
- [147] (./me210.mw)
+ [146] (./me210.mw)
 \openout4 = `me210.mw'.
 
 *geometry* verbose mode - [ newgeometry ] result:
@@ -6099,7 +6080,7 @@ chapter without number
 
 \openout4 = `me210.mw'.
 
-[148
+[147
 
 
 
@@ -9028,6 +9009,9 @@ chapter without number
 \openout4 = `me210.mw'.
 
 )
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 \openout4 = `me210.pytxcode'.
 
 \openout4 = `me210.mw'.
@@ -9047,31 +9031,64 @@ Package logreq Info: Writing requests to 'me210.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 80507 strings out of 478353
- 1801189 string characters out of 5854634
- 3147608 words of memory out of 5000000
- 95698 multiletter control sequences out of 15000+600000
- 530503 words of font info for 320 fonts, out of 8000000 for 9000
+ 80520 strings out of 478353
+ 1801473 string characters out of 5854636
+ 3148777 words of memory out of 5000000
+ 95707 multiletter control sequences out of 15000+600000
+ 530295 words of font info for 318 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  133i,20n,159p,10601b,4747s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf-dist/fonts/enc/dvips/newpx/zpl_OsF.enc}{/usr/share/texmf-di
-st/fonts/enc/dvips/newtx/ntx-ec-lf.enc}{/usr/share/texmf-dist/fonts/enc/dvips/n
-ewtx/ntx-ecth-tlf.enc}{/usr/share/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.
-enc}{/usr/share/texmf-dist/fonts/enc/dvips/tex-gyre/q-ec.enc}{/usr/share/texmf-
-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf-dist/fonts/type
-1/public/newpx/NewPXMI.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/NewP
-XMI_gnu.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/pxmiaX.pfb></usr/sh
-are/texmf-dist/fonts/type1/public/newpx/pxsys.pfb></usr/share/texmf-dist/fonts/
-type1/public/tex-gyre/qhvb.pfb></usr/share/texmf-dist/fonts/type1/public/tex-gy
-re/qhvr.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></u
-sr/share/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/share/texmf-dist/f
-onts/type1/public/txfonts/txsya.pfb></usr/share/texmf-dist/fonts/type1/public/n
-ewpx/zplb.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/zplr.pfb></usr/sh
-are/texmf-dist/fonts/type1/public/newpx/zplri.pfb>
-Output written on me210.pdf (158 pages, 1338521 bytes).
+pdfTeX warning (dest): name{table.caption.358} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.caption.317} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.359} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.343} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.339} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.336} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.333} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.326} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.297} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.284} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter*.368} has been referenced but does not exis
+t, replaced by a fixed one
+
+{/usr/share/texmf-dist/fonts/enc/dvips/newpx/zpl_OsF.enc}{/usr/share/texmf-dist
+/fonts/enc/dvips/newtx/ntx-ec-lf.enc}{/usr/share/texmf-dist/fonts/enc/dvips/new
+tx/ntx-ecth-tlf.enc}{/usr/share/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.en
+c}{/usr/share/texmf-dist/fonts/enc/dvips/tex-gyre/q-ec.enc}{/usr/share/texmf-di
+st/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf-dist/fonts/type1/
+public/newpx/NewPXMI.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/NewPXM
+I_gnu.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/pxmiaX.pfb></usr/shar
+e/texmf-dist/fonts/type1/public/newpx/pxsys.pfb></usr/share/texmf-dist/fonts/ty
+pe1/public/tex-gyre/qhvb.pfb></usr/share/texmf-dist/fonts/type1/public/tex-gyre
+/qhvr.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr
+/share/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/share/texmf-dist/fon
+ts/type1/public/txfonts/txsya.pfb></usr/share/texmf-dist/fonts/type1/public/new
+px/zplb.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/zplr.pfb></usr/shar
+e/texmf-dist/fonts/type1/public/newpx/zplri.pfb>
+Output written on me210.pdf (157 pages, 1339408 bytes).
 PDF statistics:
- 2398 PDF objects out of 2487 (max. 8388607)
- 2114 compressed objects within 22 object streams
- 968 named destinations out of 1000 (max. 500000)
+ 2407 PDF objects out of 2487 (max. 8388607)
+ 2124 compressed objects within 22 object streams
+ 978 named destinations out of 1000 (max. 500000)
  65200 words of extra memory for PDF output out of 74296 (max. 10000000)
 

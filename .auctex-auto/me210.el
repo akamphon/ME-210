@@ -107,6 +107,7 @@
     "eq:3"
     "fig: 3d shear deformation"
     "fig: stress-strain diagram"
+    "subsection: strain energy"
     "eq: strain energy density"
     "eq: strain energy density - linear elastic"
     "eq: modulus of resilience"

@@ -520,7 +520,7 @@ Brittle materials in general shows much higher resistance to compressive loading
 
 In general it can be said that most materials can exhibit both ductile and brittle behavior. At high carbon content or very low temperature, steel tends to become more brittle. At higher temperature, most brittle materials become more ductile.
 
-\subsection{Strain Energy}
+\subsection{Strain Energy} \label{subsection: strain energy}
 
 When a material is deformed, it stores energy internally under its deformed state. Since this energy is related to the strains in the material, it is called \emph{strain energy}. To determine this energy, consider a volume under a tensile test for which force $F = \sigma A = \sigma xy$. The force increases linearly from when there is no deformation to its final magnitude $F$, hence the average force over the range of deformation is $F/2$. The work done by this force then is $F/2*\varepsilon z$. Assuming that there is no loss from the externally applied force to the internal strain energy in the form of heat, the strain energy is equal to the external work, which is $U = \sigma\varepsilon xyz/2$. Since $V = xyz$ is the original volume, we can write that $U = \frac{1}{2}\sigma\varepsilon V$. In another word, the strain energy density $u$, the strain energy per volume is
 
@@ -3129,7 +3129,7 @@ The flexure formula applies to a prismatic member that is straight, since it was
 
 First, we must assume that the cross-sectional area is constant and that the axis of symmetry is perpendicular to the applied moment. Like the case of a straight beam, we will assume that the cross sections of the member remain plane after the moment is applied, and that any distortion of the cross section within its own plane will be neglected.
 
-\begin{figure}[h]
+\begin{figure*}[h]
   \centering
   \begin{tikzpicture}[>=latex]
      \draw [LightBlue, line width=60pt] (0,0) arc [radius=8, start angle=120, end angle=60]{};
@@ -3159,7 +3159,7 @@ First, we must assume that the cross-sectional area is constant and that the axi
      \draw [<->] (dA) ++ (0:5) --++ (90:0.46) node[midway, left]{$y$};
   \end{tikzpicture}
   \caption{Curved beam geometry and dimensions.}
-\end{figure}
+\end{figure*}
 
 To perform the analysis, three radii extending from the center of curvature of the member must be identified: $r_c$ references the radius to the centroid for the cross-sectional area, $R$ references the yet unspecified radius to the neutral axis, and $r$ indicates a radius to an arbitrary point or an infinitesimal area $dA$ on the cross section. Notice that the neutral axis lies within the cross section, since a bending moment always creates tension on one side of the member and compression on the other, and by definition, the neutral axis is a line of zero stress and strain.
 
@@ -3385,27 +3385,27 @@ We then consider the cases where the applied bending moment is not perpendicular
 
   \item A \py{L}-m long compound rectangular cross-sectioned beam is simply supported on both ends with load $P$ applied downward at \py{x} m from the left support. The top layer of the beam is made of carbon-fiber-reinforced polymer (CFRP) whose Young's modulus is $E_{\text{CFRP}}$ = \py{round(E_cfrp/1e9)} GPa and allowable compressive stress is $\sigma_{\text{CFRP}}$ = \py{round(sigma_cfrp/1e6)}. The bottom layer is made of steel whose is $E_{\text{steel}}$ = \py{round(E_steel/1e9)} and allowable tensile stress is $\sigma_{\text{steel}}$ = \py{round(sigma_steel/1e6)}. The CFRP layer is \py{round(h_cfrp/1e-2,1)} cm thick, while the steel layer is \py{round(h_steel/1e-2,1)} thick. The two layers are assembled with a very thin layer of glue whose maximum allowable shear stress $\tau_{\text{glue}}$ = \py{round(tau_glue/1e6)} MPa. The beam cross-section is \py{round(b/1e-2)} wide. Determine the maximum force $P$ that can be applied.
 
-        \begin{figure}[htbp]
-          \centering
-          \begin{tikzpicture}[>=latex]
-            \node [draw, fill=LightGrey, rectangle, minimum height=1cm, minimum width=2cm] (bottomcross) {};
-            \node at (bottomcross.north) [anchor=south, draw, fill=LightSkyBlue, rectangle, minimum height=1.5cm, minimum width=2cm] (topcross) {};
-            %%% bottom layer thickness %%%%%
-            \draw[|<->|] (bottomcross.south east) ++ (0:0.5) --++ (90:1) node[midway, right]{\py{round(h_steel/1e-2,1)} cm};
-            %%% top layer thickness %%%%%
-            \draw[|<->|] (bottomcross.north east) ++ (0:0.5) --++ (90:1.5) node[midway, right]{\py{round(h_cfrp/1e-2,1)} cm};
-            \draw[|<->|] (topcross.north west) ++ (90:0.5) --++ (0:2) node[midway, above]{\py{round(b/1e-2)} cm};
-            % beam with load
-            \node at (topcross.east) [anchor=west, xshift=4cm, draw, fill=LightSkyBlue, rectangle, minimum height=0.6cm, minimum width=7cm](top){};
-            \node at (top.south) [anchor=north, draw, fill=LightGrey, rectangle, minimum height=0.4cm, minimum width=7cm](bottom){};
-            \begin{pycode}
-              print(r'\draw [<-, ultra thick] (top.north west) ++ (0:'+str(7*frac)+r') --++ (90:1) node[above]{$P$};')
-              print(r'\draw [|<->|] (top.north west) ++ (90:0.3) --++ (0:'+str(7*frac)+r') node[midway,  above]{'+str(round(x,1))+r' m};')
-            \end{pycode}
-            \node at (bottom.south west) [anchor=north, draw, regular polygon, regular polygon sides=3, minimum height=0.5cm, fill=white, inner sep=0]{};
-            \node at (bottom.south east) [anchor=north, draw, circle, minimum height=0.4cm, fill=white, inner sep=0]{};
-          \end{tikzpicture}
-        \end{figure}
+  \begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}[>=latex]
+      \node [draw, fill=LightGrey, rectangle, minimum height=1cm, minimum width=2cm] (bottomcross) {};
+      \node at (bottomcross.north) [anchor=south, draw, fill=LightSkyBlue, rectangle, minimum height=1.5cm, minimum width=2cm] (topcross) {};
+      %%% bottom layer thickness %%%%%
+      \draw[|<->|] (bottomcross.south east) ++ (0:0.5) --++ (90:1) node[midway, right]{\py{round(h_steel/1e-2,1)} cm};
+      %%% top layer thickness %%%%%
+      \draw[|<->|] (bottomcross.north east) ++ (0:0.5) --++ (90:1.5) node[midway, right]{\py{round(h_cfrp/1e-2,1)} cm};
+      \draw[|<->|] (topcross.north west) ++ (90:0.5) --++ (0:2) node[midway, above]{\py{round(b/1e-2)} cm};
+      % beam with load
+      \node at (topcross.east) [anchor=west, xshift=2cm, draw, fill=LightSkyBlue, rectangle, minimum height=0.6cm, minimum width=7cm](top){};
+      \node at (top.south) [anchor=north, draw, fill=LightGrey, rectangle, minimum height=0.4cm, minimum width=7cm](bottom){};
+      \begin{pycode}
+        print(r'\draw [<-, ultra thick] (top.north west) ++ (0:'+str(7*frac)+r') --++ (90:1) node[above]{$P$};')
+        print(r'\draw [|<->|] (top.north west) ++ (90:0.3) --++ (0:'+str(7*frac)+r') node[midway,  above]{'+str(round(x,1))+r' m};')
+      \end{pycode}
+      \node at (bottom.south west) [anchor=north, draw, regular polygon, regular polygon sides=3, minimum height=0.5cm, fill=white, inner sep=0]{};
+      \node at (bottom.south east) [anchor=north, draw, circle, minimum height=0.4cm, fill=white, inner sep=0]{};
+    \end{tikzpicture}
+  \end{figure}
   
 \end{exercises}
 
@@ -3560,6 +3560,8 @@ The equation of the deflection curve may also be obtained by integrating the dif
 Conditions on the shear forces are equivalent to conditions on the third derivative. In a similar manner, conditions on the bending moments are equivalent to the conditions on the second derivative. Once these have been applied, we will have enough conditions to solve for all constants of integrations.
 
 \section{Energy Approach}
+
+Another approach to determining beam deflection is through strain energy stored in the beam due to bending. Obviously, the more energy stored, the more the beam has bent. We have determined the strain energy in axially loaded beam in \cref{subsection: strain energy}. In this section, we will determine the strain energy due to beam bending in order to derive its deflection.
 
 \subsection{Strain Energy of Bending}
 
@@ -3780,7 +3782,7 @@ This chapter presents two methods that can be used to determine lateral deflecti
 
   \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.8]{pictures/Static-body-load-analysis/beam-def-midpoint-exercise}
+    \includegraphics[width=0.6\textwidth]{pictures/Static-body-load-analysis/beam-def-midpoint-exercise}
     \caption{Exercise \ref{exercise: beam-deflection-midpoint}}
   \end{figure}
   
@@ -3822,7 +3824,7 @@ This chapter presents two methods that can be used to determine lateral deflecti
 
 A 10-N mouse is chased by a 50-N cat onto a \emph{circular} cross-sectioned tree branch ($r$ = 5 mm) which is 10 m long and is 5 cm above ground. The cat is always 5 m behind the mouse. When the mouse gets to the end of the branch, it immediately jumps down to the ground and keeps running away. The branch material properties are $E$ = 10 GPa and $\sigma_{allow}$ = 3 MPa.
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \begin{tikzpicture}[>=latex]
     \draw (0,0) --++ (-90:0.5) arc (180:270:0.1) node(A){} --++ (0:10) node[midway](B){} node(C){} --++ (-90:0.4) --++ (180:10) arc (90:180:0.1) --++ (-90:1) node(D){};
@@ -3869,7 +3871,7 @@ Questions:
 
   \item A \py{L}-m long circular cross-sectioned cantilever beam with radius $r$ made of aluminum with $E$ = \py{E/1e9} GPa and $\sigma_{\text{allow}}$ = \py{sigma_allow/1e6} MPa. An upward load $F$ is applied at length \py{round(x,3)} m from the fixed end. Determine the radius $r$ so that the free end of the beam can bend upward at least \py{round(delta/1e-2,2)} cm without failing.
 
-  \begin{figure}[htbp]
+  \begin{figure}[H]
     \centering
     \begin{tikzpicture}[>=latex]
       \node[minimum height=1cm, minimum width=5mm, pattern=north west lines](wall){};
@@ -3946,7 +3948,7 @@ Given the state of plane stress, the orientation of the inclined plane on which 
     \draw [dashed] (A.north west) ++ (-90:0.5) node(F){} ++ (135:1) --++ (-45:6);
     \node at (A.west) [above right]{$\theta$};
     %%%% cut section %%%%
-    \draw [fill=LightBlue] (F) ++ (0:8) node(G){} --++ (-90:2.3) node(H){} --++ (0:2.3) node(I){} -- cycle node[midway](J){};
+    \draw [fill=LightBlue] (F) ++ (0:6) node(G){} --++ (-90:2.3) node(H){} --++ (0:2.3) node(I){} -- cycle node[midway](J){};
     \draw [->, very thick] (G.center) ++ (-90:1) --++ (180:1) node[above]{$\sigma_x$};
     \draw [->, very thick] (H.center) ++ (0:1.3) --++ (-90:1) node[right]{$\sigma_y$};
     \draw [-left to, very thick] (I.center) ++ (-135:0.5) --++ (180:1.8);
@@ -4066,7 +4068,7 @@ Since the angle between the principal stresses and maximum shear stress on Mohrâ
 
   \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.5]{pictures/Static-body-load-analysis/plane-stress-example}
+    \includegraphics[width=0.6\textwidth]{pictures/Static-body-load-analysis/plane-stress-example}
     \caption{\Cref{example: plane stress}}
   \end{figure}
 
@@ -4319,15 +4321,12 @@ where $K$ is called the \emph{volume modulus of elasticity} or \emph{bulk modulu
 A 0.25-m$^3$ cube is being submerged under water where the water pressure is 30 MPa. If the material has $E$ = 3 GPa and Poissonâ€™s ratio of 0.3, find the final volume of the element.
 
 Hydrostatic pressure situation represents the state where the pressure is equal in all direction, this means that we can assume that the element is under spherical stress. The unit volume change is
-
 \begin{align*}
   e &= \frac{3\sigma_o}{E}(1 - 2\nu ) \\ 
     &= \frac{3(-30 \times 10^6 \text{ Pa})(1 - 2(0.3))}{(3 \times 10^9 \text{ Pa})} \\ 
     &= -0.012 
 \end{align*}	
-
 This means that the volume reduced by 1.2\% (since hydrostatic pressure in this case is compressive), and thus the final volume is
-
 \begin{align*}
   V_f &= (1 + e)V \\ 
       &= 0.988(0.25 \text{ m}^3) \\ 
@@ -4778,9 +4777,9 @@ Finally, interesting cases in analysis of multiaxial stress are presented includ
   
   \item \label{exercise: stress transformation} Determine the principal stresses, maximum shear stresses, and principal direction in each of these elements using stress transformation equations.
   
-  \includegraphics[scale=0.65]{pictures/Static-body-load-analysis/plane-stress-exercise1}
-  \includegraphics[scale=0.65]{pictures/Static-body-load-analysis/plane-stress-exercise2} \\
-  \includegraphics[scale=0.65]{pictures/Static-body-load-analysis/plane-stress-exercise3}
+    \includegraphics[width=0.6\textwidth]{pictures/Static-body-load-analysis/plane-stress-exercise1}
+    \includegraphics[width=0.6\textwidth]{pictures/Static-body-load-analysis/plane-stress-exercise2} \\
+    \includegraphics[width=0.6\textwidth]{pictures/Static-body-load-analysis/plane-stress-exercise3}
 
   \item With Mohr's circle, determine the principal stresses, maximum shear stresses, and principal direction for the elements in exercise \ref{exercise: stress transformation}.
 
@@ -5101,7 +5100,7 @@ In this chapter, the concept in Chapter 6 is utilized. In the first part, one of
   \item \label{exercise: cantilever beam} A cantilever beam of rectangular cross section is subjected to a concentrated load $P$ = 75000 N acting at the free end. The beam has width $b$ = 10 cm and height $h$ = 25 cm. Point A is located at distance $c$ = 60 cm from the free end and distance $d$ = 8 cm from the bottom of the beam. Calculate the principal stresses 1 and 2 and the maximum shear stress max at point A.
   \begin{figure}[h]
     \centering
-    \includegraphics[scale=0.7]{pictures/Static-body-load-analysis/multiaxial-cantilever-beam-exercise}
+    \includegraphics[width=0.8\textwidth]{pictures/Static-body-load-analysis/multiaxial-cantilever-beam-exercise}
     \caption{Exercise \ref{exercise: cantilever beam}}
   \end{figure}
   
@@ -5109,7 +5108,7 @@ In this chapter, the concept in Chapter 6 is utilized. In the first part, one of
   
   \begin{figure}[h]
     \centering
-    \includegraphics[width=0.3\textwidth]{pictures/Static-body-load-analysis/multiaxial-generator-shaft-exercise}
+    \includegraphics[width=0.2\textwidth]{pictures/Static-body-load-analysis/multiaxial-generator-shaft-exercise}
     \caption{Exercise \ref{exercise: generator shaft}}
   \end{figure}
   
@@ -5171,11 +5170,10 @@ p0 = round(random.randint(1,5)*1e3) # 1 - 5 kPa
 \end{pycode}
 
   \item You want to play a prank on your friend by shaking a can of coke and let him open it so that the can would spray all over him. You want to make sure, however, that the can would not explode before said prank is complete. The can is made of aluminum whose allowable normal stress is $\sigma_{\text{allow}}$ = \py{round(sigma_allow/1e6)} MPa and allowable shear stress is $\tau_{\text{allow}}$ = \py{round(tau_allow/1e6)} MPa. The can dimensions are $r$ = \py{round(r/1e-2,1)} cm, $h$ = \py{round(h/1e-2)} cm, and wall thickness $t$ = \py{round(t/1e-3,1)} mm. Each time you shake, the pressure build up following a function:
-
-        \begin{align*}
-          p = (\py{p0})1.2^{n}
-        \end{align*}
-        where $p$ is the pressure in Pa and $n$ is the number of times you shake the soda can. Determine how many times you can shake the can without ruining your own prank.
+  \begin{align*}
+    p = (\py{p0})1.2^{n}
+  \end{align*}
+  where $p$ is the pressure in Pa and $n$ is the number of times you shake the soda can. Determine how many times you can shake the can without ruining your own prank.
 
 \begin{pycode}
 F = random.randint(10,30)*100 # 1000 - 3000
