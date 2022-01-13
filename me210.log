@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.1.5)  11 JAN 2022 14:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.1.5)  13 JAN 2022 14:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -3159,24 +3159,15 @@ LaTeX Font Info:    Font shape `TS1/zplLF/m/n' will be
 \openout4 = `me210.mw'.
 
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-\openout4 = `me210.mw'.
-
-[9] (./me210.mw)
-\openout4 = `me210.mw'.
-
-
-Overfull \hbox (21.32616pt too wide) in paragraph at lines 637--659
+Overfull \hbox (74.10634pt too wide) in paragraph at lines 617--618
  [][] 
  []
 
 
-LaTeX Warning: Marginpar on page 10 moved.
+LaTeX Warning: Marginpar on page 9 moved.
 
 
-LaTeX Warning: Marginpar on page 10 moved.
+LaTeX Warning: Marginpar on page 9 moved.
 
 Package mdframed Info: mdframed works in twoside mode on input line 662.
 Package mdframed Info: mdframed detected package amsthm 
@@ -3184,38 +3175,56 @@ Package mdframed Info: mdframed detected package amsthm
 (mdframed)              on input line 662.
 Package hyperref Info: bookmark level for unknown example defaults to 0 on inpu
 t line 662.
+\openout4 = `me210.mw'.
 
-Overfull \hbox (3.05763pt too wide) in paragraph at lines 704--705
+[9] (./me210.mw)
+\openout4 = `me210.mw'.
+
+Package mdframed Info: Not enough space on this page on input line 689.
+\openout4 = `me210.mw'.
+
+ [10] (./me210.mw)
+\openout4 = `me210.mw'.
+
+<./pictures/Stress-strain-intro/auxetic-footwear.jpg, id=641, 451.6875pt x 602.
+25pt>
+File: ./pictures/Stress-strain-intro/auxetic-footwear.jpg Graphic file (type jp
+g)
+<use ./pictures/Stress-strain-intro/auxetic-footwear.jpg>
+Package pdftex.def Info: ./pictures/Stress-strain-intro/auxetic-footwear.jpg  u
+sed on input line 695.
+(pdftex.def)             Requested size: 108.57262pt x 144.76349pt.
+
+
+LaTeX Warning: Marginpar on page 11 moved.
+
+
+LaTeX Warning: Marginpar on page 11 moved.
+
+
+Overfull \hbox (3.05763pt too wide) in paragraph at lines 713--714
 [][] 
  []
 
 
-LaTeX Warning: Marginpar on page 10 moved.
+LaTeX Warning: Marginpar on page 11 moved.
 
 
-LaTeX Warning: Marginpar on page 10 moved.
+LaTeX Warning: Marginpar on page 11 moved.
 
 \openout4 = `me210.mw'.
 
-[10] (./me210.mw)
+[11 <./pictures/Stress-strain-intro/auxetic-footwear.jpg>] (./me210.mw)
 \openout4 = `me210.mw'.
 
-Package mdframed Info: mdframed works in twoside mode on input line 739.
+Package mdframed Info: mdframed works in twoside mode on input line 750.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 739.
+(mdframed)              on input line 750.
 \openout4 = `me210.mw'.
 
- [11] (./me210.mw)
-\openout4 = `me210.mw'.
 
-\openout4 = `me210.mw'.
-
-\openout4 = `me210.mw'.
-
-\openout4 = `me210.mw'.
-
- [12] (./me210.mw)
+[12] (./me210.mw)
 \openout4 = `me210.mw'.
 
 \openout4 = `me210.mw'.
@@ -3227,12 +3236,21 @@ Package mdframed Info: mdframed detected package amsthm
  [13] (./me210.mw)
 \openout4 = `me210.mw'.
 
+\openout4 = `me210.mw'.
+
+\openout4 = `me210.mw'.
+
+\openout4 = `me210.mw'.
+
+ [14] (./me210.mw)
+\openout4 = `me210.mw'.
+
 
 
-LaTeX Warning: Marginpar on page 14 moved.
+LaTeX Warning: Marginpar on page 15 moved.
 
 
-LaTeX Warning: Marginpar on page 14 moved.
+LaTeX Warning: Marginpar on page 15 moved.
 
 \openout4 = `me210.mw'.
 
@@ -3375,13 +3393,13 @@ LaTeX Warning: Marginpar on page 14 moved.
 \openout4 = `me210.mw'.
 
 
-Overfull \hbox (27.40825pt too wide) in paragraph at lines 887--888
+Overfull \hbox (27.40825pt too wide) in paragraph at lines 898--899
  [][] 
  []
 
 \openout4 = `me210.mw'.
 
-[14] (./me210.mw)
+[15] (./me210.mw)
 \openout4 = `me210.mw'.
 
 
@@ -3391,27 +3409,13 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 \openout4 = `me210.mw'.
 
-[15
+[16
 
 ] (./me210.mw)
 \openout4 = `me210.mw'.
 
 
-Overfull \hbox (2.34601pt too wide) in paragraph at lines 964--965
- [][] 
- []
-
-\openout4 = `me210.mw'.
-
-[16] (./me210.mw)
-\openout4 = `me210.mw'.
-
-Package mdframed Info: mdframed works in twoside mode on input line 1007.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 1007.
-
-Overfull \hbox (22.1761pt too wide) in paragraph at lines 1052--1053
+Overfull \hbox (2.34601pt too wide) in paragraph at lines 975--976
  [][] 
  []
 
@@ -3420,72 +3424,77 @@ Overfull \hbox (22.1761pt too wide) in paragraph at lines 1052--1053
 [17] (./me210.mw)
 \openout4 = `me210.mw'.
 
+Package mdframed Info: mdframed works in twoside mode on input line 1018.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1018.
+
+Overfull \hbox (22.1761pt too wide) in paragraph at lines 1063--1064
+ [][] 
+ []
+
+\openout4 = `me210.mw'.
+
+[18] (./me210.mw)
+\openout4 = `me210.mw'.
+
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 \openout4 = `me210.mw'.
 
- [18]
+ [19]
 (./me210.mw)
 \openout4 = `me210.mw'.
 
-Package mdframed Info: mdframed works in twoside mode on input line 1100.
+Package mdframed Info: mdframed works in twoside mode on input line 1111.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1100.
-\openout4 = `me210.mw'.
-
- [19] (./me210.mw)
-\openout4 = `me210.mw'.
-
-Package mdframed Info: mdframed works in twoside mode on input line 1139.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 1139.
+(mdframed)              on input line 1111.
 \openout4 = `me210.mw'.
 
  [20] (./me210.mw)
 \openout4 = `me210.mw'.
 
+Package mdframed Info: mdframed works in twoside mode on input line 1150.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1150.
 \openout4 = `me210.mw'.
 
  [21] (./me210.mw)
 \openout4 = `me210.mw'.
 
-Package mdframed Info: mdframed works in twoside mode on input line 1208.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 1208.
 \openout4 = `me210.mw'.
 
- [22]
+ [22] (./me210.mw)
+\openout4 = `me210.mw'.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1219.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1219.
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 1264.
+\openout4 = `me210.mw'.
+
+ [23]
 (./me210.mw)
 \openout4 = `me210.mw'.
 
-Package mdframed Info: mdframed works in twoside mode on input line 1253.
+Package mdframed Info: mdframed works in twoside mode on input line 1266.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1253.
-\openout4 = `me210.mw'.
-
- [23] (./me210.mw)
-\openout4 = `me210.mw'.
-
+(mdframed)              on input line 1266.
 \openout4 = `me210.mw'.
 
  [24] (./me210.mw)
 \openout4 = `me210.mw'.
 
-
-
-LaTeX Warning: Marginpar on page 25 moved.
-
-
-LaTeX Warning: Marginpar on page 25 moved.
-
 \openout4 = `me210.mw'.
 
-[25] (./me210.mw)
+ [25] (./me210.mw)
 \openout4 = `me210.mw'.
 
 
@@ -3500,35 +3509,38 @@ LaTeX Warning: Marginpar on page 26 moved.
 [26] (./me210.mw)
 \openout4 = `me210.mw'.
 
-Package mdframed Info: mdframed works in twoside mode on input line 1414.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 1414.
 
-Overfull \hbox (4.08548pt too wide) detected at line 1446
-[]
- []
 
-Package mdframed Info: You first box width is to small
- mdframed fixed it
-(mdframed)              on input line 1467.
+LaTeX Warning: Marginpar on page 27 moved.
+
+
+LaTeX Warning: Marginpar on page 27 moved.
+
 \openout4 = `me210.mw'.
 
 [27] (./me210.mw)
 \openout4 = `me210.mw'.
 
+Package mdframed Info: mdframed works in twoside mode on input line 1429.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1429.
+
+Overfull \hbox (4.08548pt too wide) detected at line 1461
+[]
+ []
+
+Package mdframed Info: You first box width is to small
+ mdframed fixed it
+(mdframed)              on input line 1482.
 \openout4 = `me210.mw'.
 
- [28] (./me210.mw)
+[28] (./me210.mw)
 \openout4 = `me210.mw'.
-
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
 
 \openout4 = `me210.mw'.
 
-[29] (./me210.mw)
+ [29] (./me210.mw)
 \openout4 = `me210.mw'.
 
 \openout4 = `me210.mw'.
@@ -3543,13 +3555,13 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 \openout4 = `me210.mw'.
 
- [32] (./me210.mw)
-\openout4 = `me210.mw'.
 
+[32] (./me210.mw)
 \openout4 = `me210.mw'.
 
 \openout4 = `me210.mw'.
 
+ [33] (./me210.mw)
 \openout4 = `me210.mw'.
 
 \openout4 = `me210.mw'.
@@ -3708,13 +3720,18 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 \openout4 = `me210.mw'.
 
+\openout4 = `me210.mw'.
 
-[33] (./me210.mw)
 \openout4 = `me210.mw'.
 
 \openout4 = `me210.mw'.
 
  [34] (./me210.mw)
+\openout4 = `me210.mw'.
+
+\openout4 = `me210.mw'.
+
+ [35] (./me210.mw)
 \openout4 = `me210.mw'.
 
 
@@ -3724,7 +3741,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 \openout4 = `me210.mw'.
 
-[35
+[36
 
 ] (./me210.mw)
 \openout4 = `me210.mw'.
@@ -3735,36 +3752,31 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 \openout4 = `me210.mw'.
 
-[36] (./me210.mw)
+[37] (./me210.mw)
 \openout4 = `me210.mw'.
 
-Package mdframed Info: mdframed works in twoside mode on input line 1948.
+Package mdframed Info: mdframed works in twoside mode on input line 1963.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1948.
+(mdframed)              on input line 1963.
 
-Overfull \hbox (41.6331pt too wide) in paragraph at lines 1962--1963
+Overfull \hbox (41.6331pt too wide) in paragraph at lines 1977--1978
  [][] 
  []
 
 \openout4 = `me210.mw'.
 
-[37] (./me210.mw)
+[38] (./me210.mw)
 \openout4 = `me210.mw'.
 
-Package mdframed Info: Not enough space on this page on input line 1994.
+Package mdframed Info: Not enough space on this page on input line 2009.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 \openout4 = `me210.mw'.
 
- [38]
+ [39]
 (./me210.mw)
-\openout4 = `me210.mw'.
-
-\openout4 = `me210.mw'.
-
- [39] (./me210.mw)
 \openout4 = `me210.mw'.
 
 \openout4 = `me210.mw'.
@@ -3772,40 +3784,35 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [40] (./me210.mw)
 \openout4 = `me210.mw'.
 
-Package mdframed Info: mdframed works in twoside mode on input line 2108.
+\openout4 = `me210.mw'.
+
+ [41] (./me210.mw)
+\openout4 = `me210.mw'.
+
+Package mdframed Info: mdframed works in twoside mode on input line 2123.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2108.
+(mdframed)              on input line 2123.
 
 Underfull \vbox (badness 4647) has occurred while \output is active []
 
 \openout4 = `me210.mw'.
 
- [41]
+ [42]
 (./me210.mw)
 \openout4 = `me210.mw'.
 
 \openout4 = `me210.mw'.
 
- [42] (./me210.mw)
+ [43] (./me210.mw)
 \openout4 = `me210.mw'.
 
-Package mdframed Info: mdframed works in twoside mode on input line 2182.
+Package mdframed Info: mdframed works in twoside mode on input line 2197.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2182.
+(mdframed)              on input line 2197.
 
-Overfull \hbox (23.49042pt too wide) in paragraph at lines 2205--2206
- [][] 
- []
-
-\openout4 = `me210.mw'.
-
-[43] (./me210.mw)
-\openout4 = `me210.mw'.
-
-
-Overfull \hbox (59.99617pt too wide) in paragraph at lines 2241--2242
+Overfull \hbox (23.49042pt too wide) in paragraph at lines 2220--2221
  [][] 
  []
 
@@ -3814,6 +3821,14 @@ Overfull \hbox (59.99617pt too wide) in paragraph at lines 2241--2242
 [44] (./me210.mw)
 \openout4 = `me210.mw'.
 
+
+Overfull \hbox (59.99617pt too wide) in paragraph at lines 2256--2257
+ [][] 
+ []
+
+\openout4 = `me210.mw'.
+
+[45] (./me210.mw)
 \openout4 = `me210.mw'.
 
 \openout4 = `me210.mw'.
@@ -3914,9 +3929,6 @@ Overfull \hbox (59.99617pt too wide) in paragraph at lines 2241--2242
 
 \openout4 = `me210.mw'.
 
-\openout4 = `me210.mw'.
-
- [45] (./me210.mw)
 \openout4 = `me210.mw'.
 
 \openout4 = `me210.mw'.
@@ -3924,18 +3936,18 @@ Overfull \hbox (59.99617pt too wide) in paragraph at lines 2241--2242
  [46] (./me210.mw)
 \openout4 = `me210.mw'.
 
+\openout4 = `me210.mw'.
+
+ [47] (./me210.mw)
+\openout4 = `me210.mw'.
+
 
 chapter 4.
 \openout4 = `me210.mw'.
 
-[47
+[48
 
 ] (./me210.mw)
-\openout4 = `me210.mw'.
-
-\openout4 = `me210.mw'.
-
- [48] (./me210.mw)
 \openout4 = `me210.mw'.
 
 \openout4 = `me210.mw'.
@@ -3948,22 +3960,22 @@ chapter 4.
  [50] (./me210.mw)
 \openout4 = `me210.mw'.
 
-Package mdframed Info: mdframed works in twoside mode on input line 2540.
+\openout4 = `me210.mw'.
+
+ [51] (./me210.mw)
+\openout4 = `me210.mw'.
+
+Package mdframed Info: mdframed works in twoside mode on input line 2555.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2540.
+(mdframed)              on input line 2555.
 Package mdframed Info: Box was splittet wrong
  starting loop to iterate the splitting point
-(mdframed)              on input line 2571.
+(mdframed)              on input line 2586.
 \openout4 = `me210.mw'.
 
 
-[51] (./me210.mw)
-\openout4 = `me210.mw'.
-
-\openout4 = `me210.mw'.
-
- [52] (./me210.mw)
+[52] (./me210.mw)
 \openout4 = `me210.mw'.
 
 \openout4 = `me210.mw'.
@@ -3971,27 +3983,32 @@ Package mdframed Info: Box was splittet wrong
  [53] (./me210.mw)
 \openout4 = `me210.mw'.
 
+\openout4 = `me210.mw'.
+
+ [54] (./me210.mw)
+\openout4 = `me210.mw'.
+
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 \openout4 = `me210.mw'.
 
-[54] (./me210.mw)
+[55] (./me210.mw)
 \openout4 = `me210.mw'.
 
-Package mdframed Info: mdframed works in twoside mode on input line 2725.
+Package mdframed Info: mdframed works in twoside mode on input line 2740.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2725.
+(mdframed)              on input line 2740.
 
-Overfull \hbox (40.69614pt too wide) in paragraph at lines 2740--2742
+Overfull \hbox (40.69614pt too wide) in paragraph at lines 2755--2757
  [][] 
  []
 
 \openout4 = `me210.mw'.
 
-[55] (./me210.mw)
+[56] (./me210.mw)
 \openout4 = `me210.mw'.
 
 
@@ -3999,13 +4016,8 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 \openout4 = `me210.mw'.
 
- [56]
+ [57]
 (./me210.mw)
-\openout4 = `me210.mw'.
-
-\openout4 = `me210.mw'.
-
- [57] (./me210.mw)
 \openout4 = `me210.mw'.
 
 \openout4 = `me210.mw'.
@@ -4013,23 +4025,28 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [58] (./me210.mw)
 \openout4 = `me210.mw'.
 
-Package mdframed Info: mdframed works in twoside mode on input line 2887.
+\openout4 = `me210.mw'.
+
+ [59] (./me210.mw)
+\openout4 = `me210.mw'.
+
+Package mdframed Info: mdframed works in twoside mode on input line 2902.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2887.
+(mdframed)              on input line 2902.
 
-Overfull \hbox (25.42783pt too wide) in paragraph at lines 2903--2904
+Overfull \hbox (25.42783pt too wide) in paragraph at lines 2918--2919
  [][] 
  []
 
 \openout4 = `me210.mw'.
 
-[59] (./me210.mw)
+[60] (./me210.mw)
 \openout4 = `me210.mw'.
 
 \openout4 = `me210.mw'.
 
- [60] (./me210.mw)
+ [61] (./me210.mw)
 \openout4 = `me210.mw'.
 
 
@@ -4038,12 +4055,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 \openout4 = `me210.mw'.
 
-[61] (./me210.mw)
-\openout4 = `me210.mw'.
-
-\openout4 = `me210.mw'.
-
- [62] (./me210.mw)
+[62] (./me210.mw)
 \openout4 = `me210.mw'.
 
 \openout4 = `me210.mw'.
@@ -4051,22 +4063,27 @@ LaTeX Warning: `h' float specifier changed to `ht'.
  [63] (./me210.mw)
 \openout4 = `me210.mw'.
 
-Package mdframed Info: mdframed works in twoside mode on input line 3088.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 3088.
 \openout4 = `me210.mw'.
 
  [64] (./me210.mw)
 \openout4 = `me210.mw'.
 
-Package mdframed Info: Not enough space on this page on input line 3124.
+Package mdframed Info: mdframed works in twoside mode on input line 3103.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 3103.
+\openout4 = `me210.mw'.
+
+ [65] (./me210.mw)
+\openout4 = `me210.mw'.
+
+Package mdframed Info: Not enough space on this page on input line 3139.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 \openout4 = `me210.mw'.
 
- [65]
+ [66]
 (./me210.mw)
 \openout4 = `me210.mw'.
 
@@ -4075,24 +4092,19 @@ Underfull \vbox (badness 2443) has occurred while \output is active []
 
 \openout4 = `me210.mw'.
 
- [66]
+ [67]
 (./me210.mw)
 \openout4 = `me210.mw'.
 
 \openout4 = `me210.mw'.
 
- [67] (./me210.mw)
-\openout4 = `me210.mw'.
-
-Package mdframed Info: mdframed works in twoside mode on input line 3225.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 3225.
-\openout4 = `me210.mw'.
-
  [68] (./me210.mw)
 \openout4 = `me210.mw'.
 
+Package mdframed Info: mdframed works in twoside mode on input line 3240.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 3240.
 \openout4 = `me210.mw'.
 
  [69] (./me210.mw)
@@ -4100,12 +4112,17 @@ Package mdframed Info: mdframed detected package amsthm
 
 \openout4 = `me210.mw'.
 
- [70]
+ [70] (./me210.mw)
+\openout4 = `me210.mw'.
+
+\openout4 = `me210.mw'.
+
+ [71]
 (./me210.mw)
 \openout4 = `me210.mw'.
 
 
-Overfull \hbox (22.57474pt too wide) in paragraph at lines 3369--3370
+Overfull \hbox (22.57474pt too wide) in paragraph at lines 3384--3385
  [][] 
  []
 
@@ -4239,7 +4256,7 @@ Overfull \hbox (22.57474pt too wide) in paragraph at lines 3369--3370
 
 \openout4 = `me210.mw'.
 
-[71] (./me210.mw)
+[72] (./me210.mw)
 \openout4 = `me210.mw'.
 
 \openout4 = `me210.mw'.
@@ -4279,36 +4296,36 @@ Overfull \hbox (22.57474pt too wide) in paragraph at lines 3369--3370
 \openout4 = `me210.mw'.
 
  (./pythontex-files-me210/py_default_default_50.stdout)
-Overfull \hbox (15.42783pt too wide) in paragraph at lines 3407--3408
+Overfull \hbox (15.42783pt too wide) in paragraph at lines 3422--3423
  [][] 
  []
 
 \openout4 = `me210.mw'.
 
-[72] (./me210.mw)
+[73] (./me210.mw)
 \openout4 = `me210.mw'.
 
 
 chapter 5.
 \openout4 = `me210.mw'.
 
-[73
+[74
 
 ] (./me210.mw)
 \openout4 = `me210.mw'.
 
 \openout4 = `me210.mw'.
 
- [74] (./me210.mw)
+ [75] (./me210.mw)
 \openout4 = `me210.mw'.
 
-Package mdframed Info: mdframed works in twoside mode on input line 3507.
+Package mdframed Info: mdframed works in twoside mode on input line 3522.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 3507.
+(mdframed)              on input line 3522.
 \openout4 = `me210.mw'.
 
- [75] (./me210.mw)
+ [76] (./me210.mw)
 \openout4 = `me210.mw'.
 
 
@@ -4316,13 +4333,8 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 \openout4 = `me210.mw'.
 
- [76]
+ [77]
 (./me210.mw)
-\openout4 = `me210.mw'.
-
-\openout4 = `me210.mw'.
-
- [77] (./me210.mw)
 \openout4 = `me210.mw'.
 
 \openout4 = `me210.mw'.
@@ -4335,56 +4347,61 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [79] (./me210.mw)
 \openout4 = `me210.mw'.
 
-Package mdframed Info: mdframed works in twoside mode on input line 3655.
+\openout4 = `me210.mw'.
+
+ [80] (./me210.mw)
+\openout4 = `me210.mw'.
+
+Package mdframed Info: mdframed works in twoside mode on input line 3670.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 3655.
+(mdframed)              on input line 3670.
 
-Overfull \hbox (92.31534pt too wide) detected at line 3701
+Overfull \hbox (92.31534pt too wide) detected at line 3716
 []
  []
 
 Package mdframed Info: Box was splittet wrong
  starting loop to iterate the splitting point
-(mdframed)              on input line 3732.
+(mdframed)              on input line 3747.
 Package mdframed Info: You first box width is to small
  mdframed fixed it
-(mdframed)              on input line 3732.
+(mdframed)              on input line 3747.
 \openout4 = `me210.mw'.
 
-[80] (./me210.mw)
+[81] (./me210.mw)
 \openout4 = `me210.mw'.
 
-\openout4 = `me210.mw'.
-
- [81] (./me210.mw)
-\openout4 = `me210.mw'.
-
-Package mdframed Info: mdframed works in twoside mode on input line 3750.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 3750.
 \openout4 = `me210.mw'.
 
  [82] (./me210.mw)
 \openout4 = `me210.mw'.
 
-<pictures/Static-body-load-analysis/beam-def-midpoint-exercise.pdf, id=1290, 25
+Package mdframed Info: mdframed works in twoside mode on input line 3765.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 3765.
+\openout4 = `me210.mw'.
+
+ [83] (./me210.mw)
+\openout4 = `me210.mw'.
+
+<pictures/Static-body-load-analysis/beam-def-midpoint-exercise.pdf, id=1299, 25
 9.97125pt x 130.4875pt>
 File: pictures/Static-body-load-analysis/beam-def-midpoint-exercise.pdf Graphic
  file (type pdf)
 <use pictures/Static-body-load-analysis/beam-def-midpoint-exercise.pdf>
 Package pdftex.def Info: pictures/Static-body-load-analysis/beam-def-midpoint-e
-xercise.pdf  used on input line 3785.
+xercise.pdf  used on input line 3800.
 (pdftex.def)             Requested size: 182.66885pt x 91.68706pt.
 \openout4 = `me210.mw'.
 
- [83 <./pictures/Static-body-load-analysis/beam-def-midpoint-exercise.pdf>] (./
+ [84 <./pictures/Static-body-load-analysis/beam-def-midpoint-exercise.pdf>] (./
 me210.mw)
 \openout4 = `me210.mw'.
 
 
-Overfull \hbox (19.31863pt too wide) in paragraph at lines 3853--3854
+Overfull \hbox (19.31863pt too wide) in paragraph at lines 3868--3869
  [][] 
  []
 
@@ -4393,7 +4410,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 \openout4 = `me210.mw'.
 
- [84]
+ [85]
 (./me210.mw)
 \openout4 = `me210.mw'.
 
@@ -4488,89 +4505,84 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 \openout4 = `me210.mw'.
 
- [85]
+ [86]
 (./me210.mw)
 \openout4 = `me210.mw'.
 
 
 chapter 6.
 
-LaTeX Warning: Marginpar on page 86 moved.
+LaTeX Warning: Marginpar on page 87 moved.
 
 
-LaTeX Warning: Marginpar on page 86 moved.
+LaTeX Warning: Marginpar on page 87 moved.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (14.27327pt too wide) detected at line 3975
+Overfull \hbox (14.27327pt too wide) detected at line 3990
 []
  []
 
 
-Overfull \hbox (9.70001pt too wide) in paragraph at lines 3975--3975
+Overfull \hbox (9.70001pt too wide) in paragraph at lines 3990--3990
 [] 
  []
 
 \openout4 = `me210.mw'.
 
-[86
+[87
 
 ] (./me210.mw)
 \openout4 = `me210.mw'.
 
 \openout4 = `me210.mw'.
 
- [87] (./me210.mw)
+ [88] (./me210.mw)
 \openout4 = `me210.mw'.
 
 
-Overfull \hbox (90.06847pt too wide) detected at line 4003
+Overfull \hbox (90.06847pt too wide) detected at line 4018
 []
  []
 
 
-Overfull \hbox (9.70001pt too wide) in paragraph at lines 4003--4003
+Overfull \hbox (9.70001pt too wide) in paragraph at lines 4018--4018
 [] 
  []
 
 
-Overfull \hbox (31.04001pt too wide) in paragraph at lines 4031--4032
+Overfull \hbox (31.04001pt too wide) in paragraph at lines 4046--4047
  [][] 
  []
 
 \openout4 = `me210.mw'.
 
-[88] (./me210.mw)
+[89] (./me210.mw)
 \openout4 = `me210.mw'.
 
-Package mdframed Info: mdframed works in twoside mode on input line 4065.
+Package mdframed Info: mdframed works in twoside mode on input line 4080.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 4065.
-<pictures/Static-body-load-analysis/plane-stress-example.pdf, id=1347, 361.35pt
+(mdframed)              on input line 4080.
+<pictures/Static-body-load-analysis/plane-stress-example.pdf, id=1357, 361.35pt
  x 289.08pt>
 File: pictures/Static-body-load-analysis/plane-stress-example.pdf Graphic file 
 (type pdf)
 <use pictures/Static-body-load-analysis/plane-stress-example.pdf>
 Package pdftex.def Info: pictures/Static-body-load-analysis/plane-stress-exampl
-e.pdf  used on input line 4071.
+e.pdf  used on input line 4086.
 (pdftex.def)             Requested size: 176.66606pt x 141.33284pt.
 \openout4 = `me210.mw'.
 
- [89] (./me210.mw)
+ [90] (./me210.mw)
 \openout4 = `me210.mw'.
 
 \openout4 = `me210.mw'.
 
- [90 <./pictures/Static-body-load-analysis/plane-stress-example.pdf>] (./me210.
+ [91 <./pictures/Static-body-load-analysis/plane-stress-example.pdf>] (./me210.
 mw)
-\openout4 = `me210.mw'.
-
-\openout4 = `me210.mw'.
-
- [91] (./me210.mw)
 \openout4 = `me210.mw'.
 
 \openout4 = `me210.mw'.
@@ -4580,26 +4592,31 @@ mw)
 
 \openout4 = `me210.mw'.
 
-
-[93] (./me210.mw)
+ [93] (./me210.mw)
 \openout4 = `me210.mw'.
 
 \openout4 = `me210.mw'.
 
- [94] (./me210.mw)
+
+[94] (./me210.mw)
 \openout4 = `me210.mw'.
 
-Package mdframed Info: mdframed works in twoside mode on input line 4321.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 4321.
 \openout4 = `me210.mw'.
 
  [95] (./me210.mw)
 \openout4 = `me210.mw'.
 
+Package mdframed Info: mdframed works in twoside mode on input line 4336.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 4336.
+\openout4 = `me210.mw'.
 
-Overfull \hbox (50.93826pt too wide) in paragraph at lines 4360--4361
+ [96] (./me210.mw)
+\openout4 = `me210.mw'.
+
+
+Overfull \hbox (50.93826pt too wide) in paragraph at lines 4375--4376
  [][] 
  []
 
@@ -4607,7 +4624,7 @@ Overfull \hbox (50.93826pt too wide) in paragraph at lines 4360--4361
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (50.53825pt too wide) in paragraph at lines 4380--4381
+Overfull \hbox (50.53825pt too wide) in paragraph at lines 4395--4396
  [][] 
  []
 
@@ -4616,12 +4633,12 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 \openout4 = `me210.mw'.
 
-[96] (./me210.mw)
+[97] (./me210.mw)
 \openout4 = `me210.mw'.
 
 \openout4 = `me210.mw'.
 
- [97] (./me210.mw)
+ [98] (./me210.mw)
 \openout4 = `me210.mw'.
 
 
@@ -4630,7 +4647,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 \openout4 = `me210.mw'.
 
-[98
+[99
 
 ] (./me210.mw)
 \openout4 = `me210.mw'.
@@ -4644,12 +4661,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 \openout4 = `me210.mw'.
 
-[99] (./me210.mw)
-\openout4 = `me210.mw'.
-
-\openout4 = `me210.mw'.
-
- [100] (./me210.mw)
+[100] (./me210.mw)
 \openout4 = `me210.mw'.
 
 \openout4 = `me210.mw'.
@@ -4662,57 +4674,62 @@ LaTeX Warning: `h' float specifier changed to `ht'.
  [102] (./me210.mw)
 \openout4 = `me210.mw'.
 
-Package mdframed Info: mdframed works in twoside mode on input line 4700.
+\openout4 = `me210.mw'.
+
+ [103] (./me210.mw)
+\openout4 = `me210.mw'.
+
+Package mdframed Info: mdframed works in twoside mode on input line 4715.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 4700.
+(mdframed)              on input line 4715.
 
-Overfull \hbox (12.56407pt too wide) in paragraph at lines 4762--4763
+Overfull \hbox (12.56407pt too wide) in paragraph at lines 4777--4778
  [][] 
  []
 
 \openout4 = `me210.mw'.
 
-[103] (./me210.mw)
+[104] (./me210.mw)
 \openout4 = `me210.mw'.
 
 \openout4 = `me210.mw'.
 
- [104] (./me210.mw)
+ [105] (./me210.mw)
 \openout4 = `me210.mw'.
 
-<pictures/Static-body-load-analysis/plane-stress-exercise1.pdf, id=1501, 361.35
+<pictures/Static-body-load-analysis/plane-stress-exercise1.pdf, id=1511, 361.35
 pt x 289.08pt>
 File: pictures/Static-body-load-analysis/plane-stress-exercise1.pdf Graphic fil
 e (type pdf)
 <use pictures/Static-body-load-analysis/plane-stress-exercise1.pdf>
 Package pdftex.def Info: pictures/Static-body-load-analysis/plane-stress-exerci
-se1.pdf  used on input line 4780.
+se1.pdf  used on input line 4795.
 (pdftex.def)             Requested size: 182.66502pt x 146.132pt.
-<pictures/Static-body-load-analysis/plane-stress-exercise2.pdf, id=1502, 361.35
+<pictures/Static-body-load-analysis/plane-stress-exercise2.pdf, id=1512, 361.35
 pt x 289.08pt>
 File: pictures/Static-body-load-analysis/plane-stress-exercise2.pdf Graphic fil
 e (type pdf)
 <use pictures/Static-body-load-analysis/plane-stress-exercise2.pdf>
 Package pdftex.def Info: pictures/Static-body-load-analysis/plane-stress-exerci
-se2.pdf  used on input line 4781.
+se2.pdf  used on input line 4796.
 (pdftex.def)             Requested size: 182.66502pt x 146.132pt.
-<pictures/Static-body-load-analysis/plane-stress-exercise3.pdf, id=1503, 361.35
+<pictures/Static-body-load-analysis/plane-stress-exercise3.pdf, id=1513, 361.35
 pt x 289.08pt>
 File: pictures/Static-body-load-analysis/plane-stress-exercise3.pdf Graphic fil
 e (type pdf)
 <use pictures/Static-body-load-analysis/plane-stress-exercise3.pdf>
 Package pdftex.def Info: pictures/Static-body-load-analysis/plane-stress-exerci
-se3.pdf  used on input line 4782.
+se3.pdf  used on input line 4797.
 (pdftex.def)             Requested size: 182.66502pt x 146.132pt.
 
-Overfull \hbox (62.34212pt too wide) in paragraph at lines 4780--4783
+Overfull \hbox (62.34212pt too wide) in paragraph at lines 4795--4798
 [][] [] 
  []
 
 \openout4 = `me210.mw'.
 
-[105] (./me210.mw)
+[106] (./me210.mw)
 \openout4 = `me210.mw'.
 
 \openout4 = `me210.mw'.
@@ -4868,7 +4885,7 @@ Overfull \hbox (62.34212pt too wide) in paragraph at lines 4780--4783
 \openout4 = `me210.mw'.
 
 
-[106 <./pictures/Static-body-load-analysis/plane-stress-exercise1.pdf> <./pictu
+[107 <./pictures/Static-body-load-analysis/plane-stress-exercise1.pdf> <./pictu
 res/Static-body-load-analysis/plane-stress-exercise2.pdf
 
 pdfTeX warning: pdflatex (file ./pictures/Static-body-load-analysis/plane-stres
@@ -5024,7 +5041,7 @@ ngle page
 
 \openout4 = `me210.mw'.
 
- [107] (./me210.mw)
+ [108] (./me210.mw)
 \openout4 = `me210.mw'.
 
 
@@ -5043,23 +5060,23 @@ Missing character: There is no ) in font nullfont!
 Missing character: There is no ) in font nullfont!
 Missing character: There is no ) in font nullfont!
 
-LaTeX Warning: Marginpar on page 108 moved.
+LaTeX Warning: Marginpar on page 109 moved.
 
 
-LaTeX Warning: Marginpar on page 108 moved.
+LaTeX Warning: Marginpar on page 109 moved.
 
 
-LaTeX Warning: Marginpar on page 108 moved.
+LaTeX Warning: Marginpar on page 109 moved.
 
 
-LaTeX Warning: Marginpar on page 108 moved.
+LaTeX Warning: Marginpar on page 109 moved.
 
 
-LaTeX Warning: Marginpar on page 108 moved.
+LaTeX Warning: Marginpar on page 109 moved.
 
 \openout4 = `me210.mw'.
 
-[108
+[109
 
 ] (./me210.mw)
 \openout4 = `me210.mw'.
@@ -5100,51 +5117,51 @@ Missing character: There is no c in font nullfont!
 Missing character: There is no m in font nullfont!
 Missing character: There is no ) in font nullfont!
 
-Overfull \hbox (24.81572pt too wide) in paragraph at lines 4974--4976
+Overfull \hbox (24.81572pt too wide) in paragraph at lines 4989--4991
  [][] 
  []
 
 
-LaTeX Warning: Marginpar on page 109 moved.
+LaTeX Warning: Marginpar on page 110 moved.
 
 
-LaTeX Warning: Marginpar on page 109 moved.
+LaTeX Warning: Marginpar on page 110 moved.
 
-Package mdframed Info: mdframed works in twoside mode on input line 5034.
+Package mdframed Info: mdframed works in twoside mode on input line 5049.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 5034.
+(mdframed)              on input line 5049.
 \openout4 = `me210.mw'.
 
-[109] (./me210.mw)
+[110] (./me210.mw)
 \openout4 = `me210.mw'.
 
-Package mdframed Info: mdframed works in twoside mode on input line 5059.
+Package mdframed Info: mdframed works in twoside mode on input line 5074.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 5059.
+(mdframed)              on input line 5074.
 \openout4 = `me210.mw'.
 
- [110] (./me210.mw)
+ [111] (./me210.mw)
 \openout4 = `me210.mw'.
 
 <pictures/Static-body-load-analysis/multiaxial-cantilever-beam-exercise.pdf, id
-=1588, 390.45876pt x 180.675pt>
+=1597, 390.45876pt x 180.675pt>
 File: pictures/Static-body-load-analysis/multiaxial-cantilever-beam-exercise.pd
 f Graphic file (type pdf)
 <use pictures/Static-body-load-analysis/multiaxial-cantilever-beam-exercise.pdf
 >
 Package pdftex.def Info: pictures/Static-body-load-analysis/multiaxial-cantilev
-er-beam-exercise.pdf  used on input line 5103.
+er-beam-exercise.pdf  used on input line 5118.
 (pdftex.def)             Requested size: 243.55353pt x 112.69827pt.
 <pictures/Static-body-load-analysis/multiaxial-generator-shaft-exercise.pdf, id
-=1590, 79.29625pt x 209.78375pt>
+=1599, 79.29625pt x 209.78375pt>
 File: pictures/Static-body-load-analysis/multiaxial-generator-shaft-exercise.pd
 f Graphic file (type pdf)
 <use pictures/Static-body-load-analysis/multiaxial-generator-shaft-exercise.pdf
 >
 Package pdftex.def Info: pictures/Static-body-load-analysis/multiaxial-generato
-r-shaft-exercise.pdf  used on input line 5111.
+r-shaft-exercise.pdf  used on input line 5126.
 (pdftex.def)             Requested size: 60.88889pt x 161.08582pt.
 
 
@@ -5152,13 +5169,13 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 \openout4 = `me210.mw'.
 
-[111 <./pictures/Static-body-load-analysis/multiaxial-cantilever-beam-exercise.
+[112 <./pictures/Static-body-load-analysis/multiaxial-cantilever-beam-exercise.
 pdf>] (./me210.mw)
 \openout4 = `me210.mw'.
 
 \openout4 = `me210.mw'.
 
- [112 <./pictures/Static-body-load-analysis/multiaxial-generator-shaft-exercise
+ [113 <./pictures/Static-body-load-analysis/multiaxial-generator-shaft-exercise
 .pdf>] (./me210.mw)
 \openout4 = `me210.mw'.
 
@@ -5368,68 +5385,63 @@ pdf>] (./me210.mw)
 \openout4 = `me210.mw'.
 
 
-Overfull \hbox (27.39307pt too wide) in paragraph at lines 5224--5225
+Overfull \hbox (27.39307pt too wide) in paragraph at lines 5239--5240
  [][] 
  []
 
 \openout4 = `me210.mw'.
 
-[113] (./me210.mw)
+[114] (./me210.mw)
 \openout4 = `me210.mw'.
 
 \openout4 = `me210.mw'.
 
- [114] (./me210.mw)
+ [115] (./me210.mw)
 \openout4 = `me210.mw'.
 
 
 chapter 8.
 \openout4 = `me210.mw'.
 
-[115
+[116
 
 ] (./me210.mw)
 \openout4 = `me210.mw'.
 
 
-Overfull \hbox (6.73346pt too wide) in paragraph at lines 5286--5287
+Overfull \hbox (6.73346pt too wide) in paragraph at lines 5301--5302
  [][] 
  []
 
 
-LaTeX Warning: Marginpar on page 116 moved.
+LaTeX Warning: Marginpar on page 117 moved.
 
 
-LaTeX Warning: Marginpar on page 116 moved.
-
-\openout4 = `me210.mw'.
-
-[116] (./me210.mw)
-\openout4 = `me210.mw'.
+LaTeX Warning: Marginpar on page 117 moved.
 
 \openout4 = `me210.mw'.
 
- [117] (./me210.mw)
+[117] (./me210.mw)
+\openout4 = `me210.mw'.
+
+\openout4 = `me210.mw'.
+
+ [118] (./me210.mw)
 \openout4 = `me210.mw'.
 
 
-Overfull \hbox (0.55553pt too wide) detected at line 5379
+Overfull \hbox (0.55553pt too wide) detected at line 5394
 [][]\OML/npxmi/m/it/10 U \U/npxmia/m/it/10 = [][] [] \OML/npxmi/m/it/10 dV
  []
 
 
-Overfull \hbox (49.85439pt too wide) detected at line 5385
+Overfull \hbox (49.85439pt too wide) detected at line 5400
 [][]\OML/npxmi/m/it/10 U \U/npxmia/m/it/10 = [][] [] \OML/npxmi/m/it/10 dV
  []
 
 \openout4 = `me210.mw'.
 
-[118] (./me210.mw)
-\openout4 = `me210.mw'.
-
-\openout4 = `me210.mw'.
-
- [119] (./me210.mw)
+[119] (./me210.mw)
 \openout4 = `me210.mw'.
 
 \openout4 = `me210.mw'.
@@ -5442,34 +5454,37 @@ Overfull \hbox (49.85439pt too wide) detected at line 5385
  [121] (./me210.mw)
 \openout4 = `me210.mw'.
 
-Package mdframed Info: mdframed works in twoside mode on input line 5548.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 5548.
-Package mdframed Info: mdframed works in twoside mode on input line 5569.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 5569.
-\openout4 = `me210.mw'.
 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+\openout4 = `me210.mw'.
 
 [122] (./me210.mw)
 \openout4 = `me210.mw'.
 
+Package mdframed Info: mdframed works in twoside mode on input line 5563.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 5563.
 \openout4 = `me210.mw'.
 
  [123] (./me210.mw)
 \openout4 = `me210.mw'.
 
-Package mdframed Info: mdframed works in twoside mode on input line 5637.
+Package mdframed Info: mdframed works in twoside mode on input line 5584.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 5637.
+(mdframed)              on input line 5584.
 \openout4 = `me210.mw'.
 
  [124] (./me210.mw)
 \openout4 = `me210.mw'.
 
+Package mdframed Info: mdframed works in twoside mode on input line 5652.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 5652.
 \openout4 = `me210.mw'.
 
  [125] (./me210.mw)
@@ -5481,33 +5496,22 @@ Package mdframed Info: mdframed detected package amsthm
 [126] (./me210.mw)
 \openout4 = `me210.mw'.
 
+\openout4 = `me210.mw'.
+
+ [127] (./me210.mw)
+\openout4 = `me210.mw'.
+
 
 chapter 9.
 \openout4 = `me210.mw'.
 
-[127
+[128
 
 ] (./me210.mw)
 \openout4 = `me210.mw'.
 
 
-Overfull \hbox (4.39806pt too wide) in paragraph at lines 5758--5760
- [][] 
- []
-
-
-LaTeX Warning: Marginpar on page 128 moved.
-
-
-LaTeX Warning: Marginpar on page 128 moved.
-
-\openout4 = `me210.mw'.
-
-[128] (./me210.mw)
-\openout4 = `me210.mw'.
-
-
-Overfull \hbox (2.81984pt too wide) in paragraph at lines 5830--5832
+Overfull \hbox (4.39806pt too wide) in paragraph at lines 5773--5775
  [][] 
  []
 
@@ -5517,47 +5521,40 @@ LaTeX Warning: Marginpar on page 129 moved.
 
 LaTeX Warning: Marginpar on page 129 moved.
 
-Package mdframed Info: mdframed works in twoside mode on input line 5842.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 5842.
 \openout4 = `me210.mw'.
 
 [129] (./me210.mw)
 \openout4 = `me210.mw'.
 
-\openout4 = `me210.mw'.
 
- [130] (./me210.mw)
-\openout4 = `me210.mw'.
-
-
-
-LaTeX Warning: Marginpar on page 131 moved.
-
-
-LaTeX Warning: Marginpar on page 131 moved.
-
-\openout4 = `me210.mw'.
-
-[131] (./me210.mw)
-\openout4 = `me210.mw'.
-
-
-Overfull \hbox (1.57996pt too wide) in paragraph at lines 5964--5966
+Overfull \hbox (2.81984pt too wide) in paragraph at lines 5845--5847
  [][] 
  []
 
 
-LaTeX Warning: Marginpar on page 132 moved.
+LaTeX Warning: Marginpar on page 130 moved.
 
 
-LaTeX Warning: Marginpar on page 132 moved.
+LaTeX Warning: Marginpar on page 130 moved.
+
+Package mdframed Info: mdframed works in twoside mode on input line 5857.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 5857.
+\openout4 = `me210.mw'.
+
+[130] (./me210.mw)
+\openout4 = `me210.mw'.
 
 
-Overfull \hbox (15.59978pt too wide) in paragraph at lines 6015--6017
- [][] 
- []
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+\openout4 = `me210.mw'.
+
+ [131]
+(./me210.mw)
+\openout4 = `me210.mw'.
+
 
 
 LaTeX Warning: Marginpar on page 132 moved.
@@ -5571,58 +5568,72 @@ LaTeX Warning: Marginpar on page 132 moved.
 \openout4 = `me210.mw'.
 
 
-Overfull \hbox (48.28412pt too wide) in paragraph at lines 6040--6041
+Overfull \hbox (1.57996pt too wide) in paragraph at lines 5979--5981
  [][] 
  []
 
 
-Overfull \hbox (12.58464pt too wide) in paragraph at lines 6061--6062
+LaTeX Warning: Marginpar on page 133 moved.
+
+
+LaTeX Warning: Marginpar on page 133 moved.
+
+
+Overfull \hbox (15.59978pt too wide) in paragraph at lines 6030--6032
  [][] 
  []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: Marginpar on page 133 moved.
+
+
+LaTeX Warning: Marginpar on page 133 moved.
 
 \openout4 = `me210.mw'.
 
 [133] (./me210.mw)
 \openout4 = `me210.mw'.
 
-\openout4 = `me210.mw'.
 
- [134] (./me210.mw)
-\openout4 = `me210.mw'.
-
-Package mdframed Info: mdframed works in twoside mode on input line 6163.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 6163.
-\openout4 = `me210.mw'.
-
- [135] (./me210.mw)
-\openout4 = `me210.mw'.
-
-\openout4 = `me210.mw'.
-
- [136] (./me210.mw)
-\openout4 = `me210.mw'.
+Overfull \hbox (48.28412pt too wide) in paragraph at lines 6055--6056
+ [][] 
+ []
 
 
-
-LaTeX Warning: Command \textendash invalid in math mode on input line 6225.
-
-
-Overfull \hbox (43.369pt too wide) in paragraph at lines 6247--6248
+Overfull \hbox (12.58464pt too wide) in paragraph at lines 6076--6077
  [][] 
  []
 
 \openout4 = `me210.mw'.
 
-[137] (./me210.mw)
+[134] (./me210.mw)
+\openout4 = `me210.mw'.
+
+\openout4 = `me210.mw'.
+
+ [135] (./me210.mw)
+\openout4 = `me210.mw'.
+
+Package mdframed Info: mdframed works in twoside mode on input line 6178.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 6178.
+\openout4 = `me210.mw'.
+
+ [136] (./me210.mw)
+\openout4 = `me210.mw'.
+
+\openout4 = `me210.mw'.
+
+ [137] (./me210.mw)
 \openout4 = `me210.mw'.
 
 
-Overfull \hbox (55.4055pt too wide) in paragraph at lines 6319--6320
+
+LaTeX Warning: Command \textendash invalid in math mode on input line 6240.
+
+
+Overfull \hbox (43.369pt too wide) in paragraph at lines 6262--6263
  [][] 
  []
 
@@ -5631,42 +5642,56 @@ Overfull \hbox (55.4055pt too wide) in paragraph at lines 6319--6320
 [138] (./me210.mw)
 \openout4 = `me210.mw'.
 
+\openout4 = `me210.mw'.
 
-Overfull \hbox (55.4055pt too wide) in paragraph at lines 6346--6347
+ [139] (./me210.mw)
+\openout4 = `me210.mw'.
+
+
+Overfull \hbox (55.4055pt too wide) in paragraph at lines 6334--6335
  [][] 
  []
 
 
-LaTeX Warning: Command \textendash invalid in math mode on input line 6366.
+Overfull \hbox (55.4055pt too wide) in paragraph at lines 6361--6362
+ [][] 
+ []
 
 
-Overfull \hbox (19.59615pt too wide) in paragraph at lines 6383--6384
+LaTeX Warning: Command \textendash invalid in math mode on input line 6381.
+
+\openout4 = `me210.mw'.
+
+[140] (./me210.mw)
+\openout4 = `me210.mw'.
+
+
+Overfull \hbox (19.59615pt too wide) in paragraph at lines 6398--6399
  [][] 
  []
 
 \openout4 = `me210.mw'.
 
-[139] (./me210.mw)
+[141] (./me210.mw)
 \openout4 = `me210.mw'.
 
-\openout4 = `me210.mw'.
-
- [140] (./me210.mw)
-\openout4 = `me210.mw'.
-
-Package mdframed Info: mdframed works in twoside mode on input line 6452.
+Package mdframed Info: mdframed works in twoside mode on input line 6467.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 6452.
-<pictures/Failure-theories/Rail_buckle.jpg, id=1896, 351.3125pt x 214.8025pt>
+(mdframed)              on input line 6467.
+<pictures/Failure-theories/Rail_buckle.jpg, id=1899, 351.3125pt x 214.8025pt>
 File: pictures/Failure-theories/Rail_buckle.jpg Graphic file (type jpg)
 <use pictures/Failure-theories/Rail_buckle.jpg>
 Package pdftex.def Info: pictures/Failure-theories/Rail_buckle.jpg  used on inp
-ut line 6456.
+ut line 6471.
 (pdftex.def)             Requested size: 245.91707pt x 150.36072pt.
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 6512.
 \openout4 = `me210.mw'.
 
- [141 <./pictures/Failure-theories/Rail_buckle.jpg>] (./me210.mw)
+ [142 <./pictures/Failure-theories/Rail_buckle.jpg>]
+(./me210.mw)
 \openout4 = `me210.mw'.
 
 
@@ -5674,22 +5699,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 \openout4 = `me210.mw'.
 
- [142]
+ [143]
 (./me210.mw)
 \openout4 = `me210.mw'.
 
 
-Overfull \hbox (34.91347pt too wide) in paragraph at lines 6559--6560
- [][] 
- []
-
-\openout4 = `me210.mw'.
-
-[143] (./me210.mw)
-\openout4 = `me210.mw'.
-
-
-Overfull \hbox (3.11647pt too wide) in paragraph at lines 6570--6571
+Overfull \hbox (34.91347pt too wide) in paragraph at lines 6574--6575
  [][] 
  []
 
@@ -5698,6 +5713,16 @@ Overfull \hbox (3.11647pt too wide) in paragraph at lines 6570--6571
 [144] (./me210.mw)
 \openout4 = `me210.mw'.
 
+
+Overfull \hbox (3.11647pt too wide) in paragraph at lines 6585--6586
+ [][] 
+ []
+
+\openout4 = `me210.mw'.
+
+[145] (./me210.mw)
+\openout4 = `me210.mw'.
+
 \openout4 = `me210.mw'.
 
 \openout4 = `me210.mw'.
@@ -5896,7 +5921,7 @@ Overfull \hbox (3.11647pt too wide) in paragraph at lines 6570--6571
 
 \openout4 = `me210.mw'.
 
- [145] (./me210.mw)
+ [146] (./me210.mw)
 \openout4 = `me210.mw'.
 
 \openout4 = `me210.mw'.
@@ -5965,7 +5990,7 @@ Overfull \hbox (3.11647pt too wide) in paragraph at lines 6570--6571
 
 \openout4 = `me210.mw'.
 
- [146] (./me210.mw)
+ [147] (./me210.mw)
 \openout4 = `me210.mw'.
 
 *geometry* verbose mode - [ newgeometry ] result:
@@ -6080,7 +6105,7 @@ chapter without number
 
 \openout4 = `me210.mw'.
 
-[147
+[148
 
 
 
@@ -9008,10 +9033,23 @@ chapter without number
 
 \openout4 = `me210.mw'.
 
+\openout4 = `me210.mw'.
+
+\openout4 = `me210.mw'.
+
+\openout4 = `me210.mw'.
+
+\openout4 = `me210.mw'.
+
+\openout4 = `me210.mw'.
+
+\openout4 = `me210.mw'.
+
+\openout4 = `me210.mw'.
+
+\openout4 = `me210.mw'.
+
 )
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 \openout4 = `me210.pytxcode'.
 
 \openout4 = `me210.mw'.
@@ -9031,64 +9069,31 @@ Package logreq Info: Writing requests to 'me210.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 80520 strings out of 478353
- 1801473 string characters out of 5854636
- 3148777 words of memory out of 5000000
- 95707 multiletter control sequences out of 15000+600000
+ 80519 strings out of 478353
+ 1801673 string characters out of 5854636
+ 3164578 words of memory out of 5000000
+ 95708 multiletter control sequences out of 15000+600000
  530295 words of font info for 318 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  133i,20n,159p,10601b,4747s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{table.caption.358} has been referenced but does n
-ot exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{table.caption.317} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.359} has been referenced but does no
-t exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.343} has been referenced but does no
-t exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.339} has been referenced but does no
-t exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.336} has been referenced but does no
-t exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.333} has been referenced but does no
-t exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.326} has been referenced but does no
-t exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.297} has been referenced but does no
-t exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.284} has been referenced but does no
-t exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{chapter*.368} has been referenced but does not exis
-t, replaced by a fixed one
-
-{/usr/share/texmf-dist/fonts/enc/dvips/newpx/zpl_OsF.enc}{/usr/share/texmf-dist
-/fonts/enc/dvips/newtx/ntx-ec-lf.enc}{/usr/share/texmf-dist/fonts/enc/dvips/new
-tx/ntx-ecth-tlf.enc}{/usr/share/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.en
-c}{/usr/share/texmf-dist/fonts/enc/dvips/tex-gyre/q-ec.enc}{/usr/share/texmf-di
-st/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf-dist/fonts/type1/
-public/newpx/NewPXMI.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/NewPXM
-I_gnu.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/pxmiaX.pfb></usr/shar
-e/texmf-dist/fonts/type1/public/newpx/pxsys.pfb></usr/share/texmf-dist/fonts/ty
-pe1/public/tex-gyre/qhvb.pfb></usr/share/texmf-dist/fonts/type1/public/tex-gyre
-/qhvr.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr
-/share/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/share/texmf-dist/fon
-ts/type1/public/txfonts/txsya.pfb></usr/share/texmf-dist/fonts/type1/public/new
-px/zplb.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/zplr.pfb></usr/shar
-e/texmf-dist/fonts/type1/public/newpx/zplri.pfb>
-Output written on me210.pdf (157 pages, 1339408 bytes).
+{/usr/share/texmf-dist/fonts/enc/dvips/newpx/zpl_OsF.enc}{/usr/share/texmf-di
+st/fonts/enc/dvips/newtx/ntx-ec-lf.enc}{/usr/share/texmf-dist/fonts/enc/dvips/n
+ewtx/ntx-ecth-tlf.enc}{/usr/share/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.
+enc}{/usr/share/texmf-dist/fonts/enc/dvips/tex-gyre/q-ec.enc}{/usr/share/texmf-
+dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf-dist/fonts/type
+1/public/newpx/NewPXMI.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/NewP
+XMI_gnu.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/pxmiaX.pfb></usr/sh
+are/texmf-dist/fonts/type1/public/newpx/pxsys.pfb></usr/share/texmf-dist/fonts/
+type1/public/tex-gyre/qhvb.pfb></usr/share/texmf-dist/fonts/type1/public/tex-gy
+re/qhvr.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></u
+sr/share/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/share/texmf-dist/f
+onts/type1/public/txfonts/txsya.pfb></usr/share/texmf-dist/fonts/type1/public/n
+ewpx/zplb.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/zplr.pfb></usr/sh
+are/texmf-dist/fonts/type1/public/newpx/zplri.pfb>
+Output written on me210.pdf (158 pages, 1429970 bytes).
 PDF statistics:
- 2407 PDF objects out of 2487 (max. 8388607)
- 2124 compressed objects within 22 object streams
- 978 named destinations out of 1000 (max. 500000)
- 65200 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 2404 PDF objects out of 2487 (max. 8388607)
+ 2119 compressed objects within 22 object streams
+ 972 named destinations out of 1000 (max. 500000)
+ 65205 words of extra memory for PDF output out of 74296 (max. 10000000)
 

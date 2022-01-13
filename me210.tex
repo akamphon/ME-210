@@ -586,15 +586,7 @@ Here $E$ represents the constant of proportionality, which is called the modulus
 
 \subsection{Poisson’s Ratio}
 
-When a deformable body is subjected to an axial tensile force, not only does it elongate but it also contracts laterally. A French scientist S. D. Poisson found that the ratio between lateral and the longitudinal strains are always constant in the elastic regime. This constant is referred to as Poisson’s ratio, $\nu$, defined as
-
-\begin{equation}
-  \nu  =  - \frac{\varepsilon _{lat}}{\varepsilon _{long}}
-\end{equation}
-  
-Notice the negative sign here since longitudinal elongation causes lateral contraction, and vice versa, as illustrated in \cref{fig: poisson's ratio}. It is also important to note that Poisson’s ratio has no unit, i.e. it is dimensionless. 
-
-\begin{figure}[h]
+\begin{marginfigure}
   \centering
   \begin{tikzpicture}[>=latex]
     \node [draw, rectangle, minimum height=2cm, minimum width=2cm, fill=LightBlue!90, inner sep=0](A){};
@@ -625,11 +617,19 @@ Notice the negative sign here since longitudinal elongation causes lateral contr
   \end{tikzpicture}
   \caption{The effect of Poisson's ratio in an element under uniaxial loading.}
   \label{fig: poisson's ratio}
-\end{figure}
+\end{marginfigure}
+
+When a deformable body is subjected to an axial tensile force, not only does it elongate but it also contracts laterally. A French scientist S. D. Poisson found that the ratio between lateral and the longitudinal strains are always constant in the elastic regime. This constant is referred to as Poisson’s ratio, $\nu$, defined as
+
+\begin{equation}
+  \nu  =  - \frac{\varepsilon _{lat}}{\varepsilon _{long}}
+\end{equation}
+  
+Notice the negative sign here since longitudinal elongation causes lateral contraction, and vice versa, as illustrated in \cref{fig: poisson's ratio}. It is also important to note that Poisson’s ratio has no unit, i.e. it is dimensionless. 
 
 Poisson's ratios for various common materials are tabulated in \cref{table: poisson's of materials}. Note that the ratios are listed in descending order, and that they stay between 0 and 0.5. Why is that? Can you have $\nu > 0.5$? What about $\nu < 0$?
 
-\begin{margintable}
+\begin{table}[htbp]
   \centering
   \caption{Poisson's ratio of various engineering materials.}
   \label{table: poisson's of materials}
@@ -656,41 +656,50 @@ Poisson's ratios for various common materials are tabulated in \cref{table: pois
       cork            & 0               \\
       \bottomrule
     \end{tabular}}
-\end{margintable}
+\end{table}
 
 \begin{example}
-A thin rubber sheet of material with dimension 2 m x 4 m ($W \times L$) has $E$ = 200 MPa. A normal stress of 20 MPa is applied along the width of the sheet. What is the change in area of the material once the stress is applied. Assume the material has $\nu$ = 0.25
+  A thin rubber sheet of material with dimension 2 m x 4 m ($W \times L$) has $E$ = 200 MPa. A normal stress of 20 MPa is applied along the width of the sheet. What is the change in area of the material once the stress is applied. Assume the material has $\nu$ = 0.25
 
-To determine the change in area, we need to find the dimension of the length and width of the sheet after the application of stress. First, we have to determine the strain in the longitudinal direction by applying Hooke’s law, from which we have
+  To determine the change in area, we need to find the dimension of the length and width of the sheet after the application of stress. First, we have to determine the strain in the longitudinal direction by applying Hooke’s law, from which we have
 
-\begin{align*}
-  \sigma _{long} &= E{\varepsilon _{long}} \\
-  \varepsilon _{long} &= \frac{20 \times 10^6 \text{ Pa}}{200 \times 10^6 \text{ Pa}} = 0.1
-\end{align*}
+  \begin{align*}
+    \sigma _{long} &= E{\varepsilon _{long}} \\
+    \varepsilon _{long} &= \frac{20 \times 10^6 \text{ Pa}}{200 \times 10^6 \text{ Pa}} = 0.1
+  \end{align*}
 
-From the strain, we can calculate the final length by
+  From the strain, we can calculate the final length by
 
-\[{L_f} = (1 + {\varepsilon _{long}}){L} = (1 + 0.1)4 = 2.2 \text{ m}\]
+  \[{L_f} = (1 + {\varepsilon _{long}}){L} = (1 + 0.1)4 = 2.2 \text{ m}\]
 
-We can find the transversal strain by using the Poisson’s ratio and calculate the final width by
+  We can find the transversal strain by using the Poisson’s ratio and calculate the final width by
 
-\begin{align*}
-  W_{f} = (1 + {\varepsilon _{width}})W & = (1 - \nu {\varepsilon _{long}})W \\ 
-                                        & = (1 - (0.25)(0.1))(4) \\ 
-                                        &= 3.9 \text{ m} 
-\end{align*}
+  \begin{align*}
+    W_{f} = (1 + {\varepsilon _{width}})W & = (1 - \nu {\varepsilon _{long}})W \\
+                                          & = (1 - (0.25)(0.1))(4) \\
+                                          &= 3.9 \text{ m}
+  \end{align*}
 
-Therefore, the total area change is
+  Therefore, the total area change is
 
-\[\begin{gathered}
-  \Delta A = (2.2)(3.9) - (2)(4) \\ 
-   = 0.58 \text{ m}^2 \\ 
-\end{gathered} \]
+  \[\begin{gathered}
+      \Delta A = (2.2)(3.9) - (2)(4) \\
+      = 0.58 \text{ m}^2 \\
+    \end{gathered} \]
 \end{example}
 
-\subsection{Shear stress-shear strain relationship}
+\subsection{Auxetic Materials}
 
-Much like the way there is a relationship between normal stress and normal strain in most engineering materials, shear stress and shear strain also exhibit relationship which can be illustrated in \cref{fig: shear stress-strain diagram}
+\begin{marginfigure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{./pictures/Stress-strain-intro/auxetic-footwear.jpg}
+\end{marginfigure}
+
+There are in fact materials that exhibit negative Poisson's ratio: when a load is exerted and material expanded along one direction, the material is expanded laterally as well. These materials are called \emph{auxetic materials}. For the most part, these are not naturally-occuring materials--they are usually microstructurally engineered.
+
+Auxetic materials are useful in many design situations. For example, they can be used as shoe soles--if the wearer's foot is slightly too large or too small for the sole, it will expand--both laterally and longitudinally--to size.
+
+\subsection{Shear stress-shear strain relationship}
 
 \begin{marginfigure}
   \begin{tikzpicture}[>=latex, scale=0.8]
@@ -706,13 +715,15 @@ Much like the way there is a relationship between normal stress and normal strai
   \label{fig: shear stress-strain diagram}
 \end{marginfigure}
 
+Much like the way there is a relationship between normal stress and normal strain in most engineering materials, shear stress and shear strain also exhibit relationship which can be illustrated in \cref{fig: shear stress-strain diagram}
+
 This relationship can be studied using specimens of thin tubes under torsion. At first, the material with exhibit linear-elastic behavior up until its \emph{proportionality limit}, $\tau_{pl}$. Afterwards, strain hardening occurs until the material reaches its maximum shear stress limit, aka its \emph{ultimate shear stress}, $\tau_{u}$. Finally, the material will lose its shear strength until it reaches the point of fracture at $\tau_{f}$.
 
 \begin{equation}
   \tau  = G\gamma
 \end{equation}
 
-$G$ is called the shear modulus of elasticity and has the same unit as Young’s modulus. It can also be shown, later in ..., hat $G$, $E$, and $\nu$ are related by the equation
+$G$ is called the shear modulus of elasticity and has the same unit as Young’s modulus. It can also be shown, later in ..., that $G$, $E$, and $\nu$ are related by the equation
 
 \begin{equation}
   \label{eq: young and shear}
@@ -1206,20 +1217,22 @@ In statically indeterminate structures, the total change in length when consider
 
 \begin{example}
   Using the previous example of the bar fixed at both ends between the walls. Once the force $P$ is applied, what is the change in temperature so that there is no stress in segment AC? Assume that the material of the bar has Young’s modulus $E$ and cross-sectional area $A$.
-  
-  \centering
-  \begin{tikzpicture}
-    \node [rectangle, pattern=north east lines, minimum height=3cm, minimum width=1.5cm](lwall){};
-    \draw (lwall.south east) -- (lwall.north east);
-    \node at (lwall.east) [anchor=west, draw, rectangle, top color=LightSkyBlue, bottom color=LightSkyBlue, middle color=LightSkyBlue!50, minimum height=5mm, minimum width=7cm](bar){};
-    \node at (bar.east) [anchor=west, rectangle, pattern=north east lines, minimum height=3cm, minimum width=1.5cm](rwall){};
-    \draw (rwall.south west) -- (rwall.north west);
-    \node at (bar.north west) [above right]{A};
-    \node at (bar.north east) [above left]{B};
-    \draw [->, line width=3pt] (bar.center) ++ (0:0.5) node[above, yshift=0.2cm]{C} --++ (180:1.5) node[left]{$P$};
-    \draw [|<->|] (bar.south west) ++ (-90:0.5) --++ (0:4) node[midway, below]{$L_{AC}$};
-    \draw [|<->|] (bar.south east) ++ (-90:0.5) --++ (180:3) node[midway, below]{$L_{CB}$};
-  \end{tikzpicture}
+
+  \begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+      \node [rectangle, pattern=north east lines, minimum height=3cm, minimum width=1.5cm](lwall){};
+      \draw (lwall.south east) -- (lwall.north east);
+      \node at (lwall.east) [anchor=west, draw, rectangle, top color=LightSkyBlue, bottom color=LightSkyBlue, middle color=LightSkyBlue!50, minimum height=5mm, minimum width=7cm](bar){};
+      \node at (bar.east) [anchor=west, rectangle, pattern=north east lines, minimum height=3cm, minimum width=1.5cm](rwall){};
+      \draw (rwall.south west) -- (rwall.north west);
+      \node at (bar.north west) [above right]{A};
+      \node at (bar.north east) [above left]{B};
+      \draw [->, line width=3pt] (bar.center) ++ (0:0.5) node[above, yshift=0.2cm]{C} --++ (180:1.5) node[left]{$P$};
+      \draw [|<->|] (bar.south west) ++ (-90:0.5) --++ (0:4) node[midway, below]{$L_{AC}$};
+      \draw [|<->|] (bar.south east) ++ (-90:0.5) --++ (180:3) node[midway, below]{$L_{CB}$};
+    \end{tikzpicture}
+  \end{figure}
 
   There are still support forces at A and B. The equilibrium equation in this case would remain the same
 
@@ -1254,15 +1267,17 @@ In statically indeterminate structures, the total change in length when consider
 
   The leftmost and rightmost members have identical thermal properties $\alpha_1$, while the middle member has $\alpha_2$.
 
-  \centering
-  \begin{tikzpicture}[>=latex]
-    \node [draw, rectangle, minimum height=0.5cm, minimum width=5cm, fill=Grey](rigid){};
-    \node at (rigid.south west) [anchor=north west, draw, fill=LightGrey, minimum height=3cm, minimum width=3mm](left){};
-    \node at (rigid.south) [anchor=north, draw, fill=LightGrey, minimum height=3cm, minimum width=3mm](mid){};
-    \node at (rigid.south east) [anchor=north east, draw, fill=LightGrey, minimum height=3cm, minimum width=3mm](right){};
-    \node at (mid.south) [anchor=north, minimum height=5mm, minimum width=6cm, pattern=north east lines](ceil){};
-    \draw (ceil.north west) -- (ceil.north east);
-  \end{tikzpicture}
+  \begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[>=latex]
+      \node [draw, rectangle, minimum height=0.5cm, minimum width=5cm, fill=Grey](rigid){};
+      \node at (rigid.south west) [anchor=north west, draw, fill=LightGrey, minimum height=3cm, minimum width=3mm](left){};
+      \node at (rigid.south) [anchor=north, draw, fill=LightGrey, minimum height=3cm, minimum width=3mm](mid){};
+      \node at (rigid.south east) [anchor=north east, draw, fill=LightGrey, minimum height=3cm, minimum width=3mm](right){};
+      \node at (mid.south) [anchor=north, minimum height=5mm, minimum width=6cm, pattern=north east lines](ceil){};
+      \draw (ceil.north west) -- (ceil.north east);
+    \end{tikzpicture}
+  \end{figure}
 
   If the temperatures of the vertical bars are increased by $\Delta T$, determine the internal force in each member.
 
@@ -1502,9 +1517,9 @@ Using these assumptions, we can now calculate the maximum deformation and the st
 
 Notice that $mg$ is simply the weight of mass $m$. So let $mg = W$
 
-\begin{align}
+\begin{align*}
   \delta_{\max} = \frac{WL}{EA} + \left[ \left( \frac{WL}{EA} \right)^2 + 2h \left( \frac{WL}{EA} \right) \right]^{1/2}
-\end{align}
+\end{align*}
 
 Notice that $W\mspace{-2mu}L/EA$ is simply the deformation of the bar due to static weight $W$. In other words, $\delta_{st} = W\mspace{-2mu}L/EA$.
 
