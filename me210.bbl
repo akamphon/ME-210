@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex bbl format version 3.1 $
+% $ biblatex bbl format version 3.2 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -76,8 +76,8 @@
       \strng{authorbibnamehash}{a3aecd0213852614f3555ebd350231bf}
       \strng{authornamehash}{a3aecd0213852614f3555ebd350231bf}
       \strng{authorfullhash}{b3a5dedcb51883b7aad552e1c210bdb3}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Introduction to Continuum Mechanics}
@@ -111,8 +111,8 @@
       \strng{authorbibnamehash}{3f0987cf107e297a7cd3a534e1796d59}
       \strng{authornamehash}{3f0987cf107e297a7cd3a534e1796d59}
       \strng{authorfullhash}{3f0987cf107e297a7cd3a534e1796d59}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Mechanical Engineering Design}
@@ -141,8 +141,8 @@
       \strng{authorbibnamehash}{da8fde998960f47497869648cee85508}
       \strng{authornamehash}{da8fde998960f47497869648cee85508}
       \strng{authorfullhash}{da8fde998960f47497869648cee85508}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{3}
@@ -175,8 +175,8 @@
       \strng{authorbibnamehash}{8a5290154d333b0e63e87fd15393af9b}
       \strng{authornamehash}{8a5290154d333b0e63e87fd15393af9b}
       \strng{authorfullhash}{8a5290154d333b0e63e87fd15393af9b}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{2}
@@ -211,8 +211,8 @@
       \strng{authorbibnamehash}{1e108a3b1e2f0fcc81108b697ae7056d}
       \strng{authornamehash}{1e108a3b1e2f0fcc81108b697ae7056d}
       \strng{authorfullhash}{1e108a3b1e2f0fcc81108b697ae7056d}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Advanced Mechanics of Materials}

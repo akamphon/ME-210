@@ -5,6 +5,7 @@
                      '(("kaobook" "fontsize=10pt" "a4paper" "twosides=false" "open=any" "svgnames" "")))
    (TeX-add-to-alist 'LaTeX-provided-package-options
                      '(("pythontex" "gobble=auto") ("kaotheorems" "framed=true")))
+   (add-to-list 'LaTeX-verbatim-environments-local "VerbEnv")
    (add-to-list 'LaTeX-verbatim-environments-local "Verbatim")
    (add-to-list 'LaTeX-verbatim-environments-local "Verbatim*")
    (add-to-list 'LaTeX-verbatim-environments-local "BVerbatim")
@@ -48,6 +49,8 @@
    (add-to-list 'LaTeX-verbatim-macros-with-braces-local "sympycon")
    (add-to-list 'LaTeX-verbatim-macros-with-braces-local "sympyconc")
    (add-to-list 'LaTeX-verbatim-macros-with-braces-local "sympyconv")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "Verb")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "Verb*")
    (add-to-list 'LaTeX-verbatim-macros-with-delims-local "path")
    (add-to-list 'LaTeX-verbatim-macros-with-delims-local "Verb")
    (add-to-list 'LaTeX-verbatim-macros-with-delims-local "Verb*")
@@ -188,6 +191,9 @@
     "eqn: gen solution"
     "eqn: mode shape sub"
     "eqn: Euler's formula")
-   (LaTeX-add-bibliographies))
+   (LaTeX-add-bibliographies)
+   (LaTeX-add-xcolor-definecolors
+    "titlepagecolor"
+    "namecolor"))
  :latex)
 
